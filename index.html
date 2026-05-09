@@ -1,85 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
+<meta charset="UTF-8">
+<title>binzywu — Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fafaf7;
+    --ink: #1f1a14;
+    --muted: #6b5d3c;
+    --line: #d8d3c5;
+    --accent: #2b2b2b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 48px 16px 80px;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
 
-  <title>binzywu/binzywu @ GitHub</title>
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+  }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 16px;
+    font-style: italic;
+    font-family: Georgia, serif;
+  }
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #5594e2;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #aa6b1d; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #aa6b1d; }
-    h3 { text-align: center; color: #aa6b1d; }
-    a { color: #aa6b1d; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+  section { margin-top: 36px; }
+
+  .toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .toc-item {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 22px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .toc-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .toc-item a {
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+  .toc-title {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+  }
+  .toc-meta {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .toc-desc {
+    color: #3a3525;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  footer a { color: var(--muted); }
+</style>
 </head>
-
 <body>
-  <a href="https://github.com/binzywu/binzywu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<div class="container">
 
-  <div id="container">
+<header>
+  <h1>binzywu</h1>
+  <div class="tagline">An index of things written here.</div>
+</header>
 
-    <div class="download">
-      <a href="https://github.com/binzywu/binzywu/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/binzywu/binzywu/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+<section>
+  <h2>Memex · 2026-05-09</h2>
+  <ul class="toc">
+    <li class="toc-item">
+      <a href="2026-05-09-memex-design-visual.html">
+        <div class="toc-meta">Industrial Design</div>
+        <div class="toc-title">Memex — Industrial Design</div>
+        <p class="toc-desc">Front, side, and back renders of the 10.3" color e-ink slate. Materials, colorway, design principles, and open questions.</p>
+      </a>
+    </li>
+    <li class="toc-item">
+      <a href="2026-05-09-memex-poc-shopping-list.html">
+        <div class="toc-meta">PoC Build</div>
+        <div class="toc-title">Memex PoC — Amazon Shopping List</div>
+        <p class="toc-desc">Scope B build, ~$650 core. Every part orderable from Amazon (or noted manufacturer alt) with search links, prices, and gotchas.</p>
+      </a>
+    </li>
+  </ul>
+</section>
 
-    <h1><a href="https://github.com/binzywu/binzywu">binzywu</a>
-      <span class="small">by <a href="https://github.com/binzywu">binzywu</a></span></h1>
+<footer>
+  <div>Source on <a href="https://github.com/binzywu/binzywu.github.com">GitHub</a> · binzywu@msn.com</div>
+</footer>
 
-    <div class="description">
-      
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Contact</h2>
-      <p> (binzywu@msn.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/binzywu/binzywu/zipball/master">zip</a> or
-      <a href="https://github.com/binzywu/binzywu/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/binzywu/binzywu</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/binzywu/binzywu">binzywu/binzywu</a>
-    </div>
-
-  </div>
-
+</div>
 </body>
 </html>

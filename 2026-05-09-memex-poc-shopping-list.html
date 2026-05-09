@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Memex PoC — Amazon Shopping List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fafaf7;
+    --ink: #1f1a14;
+    --muted: #6b5d3c;
+    --line: #d8d3c5;
+    --accent: #2b2b2b;
+    --warn: #c2410c;
+    --ok: #15803d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 32px 16px 80px;
+  }
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .badge.req { background: #fee2e2; color: #991b1b; }
+  .badge.opt { background: #e0e7ff; color: #3730a3; }
+  .badge.tool { background: #fef3c7; color: #92400e; }
+  .badge.skip { background: #ecfccb; color: #365314; }
+
+  section {
+    margin-top: 36px;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 14px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    vertical-align: top;
+    font-size: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  thead th {
+    background: #ece8db;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.qty { text-align: center; }
+  td.price { text-align: right; font-weight: 600; }
+  td.actions { white-space: nowrap; }
+
+  .part-name { font-weight: 600; color: var(--ink); }
+  .part-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .search-q {
+    display: inline-block;
+    margin-top: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    background: #f0ede2;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #3a3526;
+  }
+  a.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #ff9900;
+    color: #111;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  a.btn:hover { background: #f57c00; }
+  a.btn.alt {
+    background: #2b2b2b;
+    color: #fff;
+    margin-left: 6px;
+  }
+  a.btn.alt:hover { background: #444; }
+
+  .totals {
+    background: var(--paper);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-top: 24px;
+  }
+  .totals-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 15px;
+  }
+  .totals-row.grand {
+    border-top: 1px solid var(--line);
+    margin-top: 8px;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .callout {
+    background: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 14px 18px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .callout.info {
+    background: #dbeafe;
+    border-left-color: #1d4ed8;
+  }
+  .callout strong { display: block; margin-bottom: 6px; }
+  .check-cell input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  @media (max-width: 720px) {
+    table thead { display: none; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
+    }
+    td { border: none; padding: 4px 14px; }
+    td.actions { padding-top: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Memex PoC — Amazon Shopping List</h1>
+  <div class="subtitle">Scope B build · ~$650 core · all parts orderable from Amazon (or noted manufacturer alternative)</div>
+  <div class="legend">
+    <span><span class="badge req">required</span> Core build</span>
+    <span><span class="badge opt">optional</span> Nice-to-have for demo polish</span>
+    <span><span class="badge tool">tool</span> Skip if you have it</span>
+    <span><span class="badge skip">manuf. preferred</span> Buy from manufacturer if possible</span>
+  </div>
+</header>
+
+<div class="callout info">
+  <strong>About these links</strong>
+  Each row has an <strong>Amazon search</strong> button (always works, returns current listings) and the exact <strong>search query</strong> you can paste into Amazon. For specialty parts (e-paper panel, ReSpeaker HAT, 18650 cells), buying direct from the manufacturer is usually cheaper and more reliable — links provided where applicable.
+</div>
+
+<!-- =================== CORE COMPUTE =================== -->
+<section>
+<h2>Core Compute · ~$166</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">1</td>
+  <td>
+    <div class="part-name">Raspberry Pi 5 — 8GB <span class="badge req">required</span></div>
+    <div class="part-note">First-class Linux, plenty of CPU for OCR, audio, UI. Get the 8GB; the extra RAM matters for image buffers.</div>
+    <div class="search-q">raspberry pi 5 8gb</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$80</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=raspberry+pi+5+8gb" target="_blank">Amazon</a>
+    <a class="btn alt" href="https://www.canakit.com/raspberry-pi-5-8gb.html" target="_blank">CanaKit</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">2</td>
+  <td>
+    <div class="part-name">Pi 5 Active Cooler (official) <span class="badge req">required</span></div>
+    <div class="part-note">Pi 5 throttles aggressively without one. The official cooler is silent at idle, fits all HAT stacks.</div>
+    <div class="search-q">raspberry pi 5 active cooler official</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$5</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=raspberry+pi+5+active+cooler+official" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">3</td>
+  <td>
+    <div class="part-name">microSD 128GB · Samsung Pro Plus or SanDisk Extreme (A2 / U3) <span class="badge req">required</span></div>
+    <div class="part-note">Boot + scratch storage. Must be A2 / U3 class for acceptable IO; cheap cards will make the device feel broken.</div>
+    <div class="search-q">samsung pro plus 128gb microsd</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$18</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=samsung+pro+plus+128gb+microsd" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">4a</td>
+  <td>
+    <div class="part-name">NVMe HAT for Pi 5 — Pimoroni NVMe Base (or 52Pi M.2) <span class="badge req">required</span></div>
+    <div class="part-note">NVMe is night-and-day faster than microSD. Pimoroni's HAT is the most reliable; 52Pi works fine and is cheaper.</div>
+    <div class="search-q">pi 5 nvme hat pimoroni</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$20</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=pi+5+nvme+hat+pimoroni" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">4b</td>
+  <td>
+    <div class="part-name">NVMe SSD — 256GB, M.2 2230 or 2242 form factor <span class="badge req">required</span></div>
+    <div class="part-note">Check the size your NVMe HAT supports. 2230 fits in tighter cases. Crucial P3 Plus or WD SN740 are good picks.</div>
+    <div class="search-q">m.2 2230 256gb nvme ssd</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$30</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=m.2+2230+256gb+nvme+ssd" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">5</td>
+  <td>
+    <div class="part-name">Pi 5 27W USB-C Power Supply (official) <span class="badge req">required</span></div>
+    <div class="part-note">Pi 5 needs 5V@5A to enable full USB power. Cheap chargers cause brownouts and random reboots — use the official one.</div>
+    <div class="search-q">raspberry pi 5 27w power supply official</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$13</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=raspberry+pi+5+27w+power+supply+official" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<!-- =================== DISPLAY =================== -->
+<section>
+<h2>Display · ~$230 (or $270 with front light)</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">6</td>
+  <td>
+    <div class="part-name">Waveshare 10.3" e-Paper HAT — 1872×1404, 16-grey <span class="badge req">required</span> <span class="badge skip">manuf. preferred</span></div>
+    <div class="part-note">Includes IT8951 controller, FFC cable, Pi HAT carrier. <strong>Buy direct from Waveshare for ~$230;</strong> Amazon resellers often markup to $280+.</div>
+    <div class="search-q">waveshare 10.3 inch e-paper hat 1872x1404</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$230</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=waveshare+10.3+inch+e-paper+hat" target="_blank">Amazon</a>
+    <a class="btn alt" href="https://www.waveshare.com/10.3inch-e-paper-hat.htm" target="_blank">Waveshare</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">7</td>
+  <td>
+    <div class="part-name">Waveshare front-light kit (10.3" e-paper) <span class="badge opt">optional</span></div>
+    <div class="part-note">Hobbyist e-ink panels are unlit by default. You'll want this for demo lighting and any non-daylight use.</div>
+    <div class="search-q">waveshare 10.3 e-paper front light</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$40</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=waveshare+10.3+e-paper+front+light" target="_blank">Amazon</a>
+    <a class="btn alt" href="https://www.waveshare.com/" target="_blank">Waveshare</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+<div class="callout">
+  <strong>VCOM voltage gotcha</strong>
+  Each Waveshare panel ships with a sticker showing its specific VCOM value (e.g., <code>-2.06V</code>). You <em>must</em> configure this in the IT8951 driver or the panel will look washed-out or too dark. Don't lose the sticker.
+</div>
+</section>
+
+<!-- =================== AUDIO =================== -->
+<section>
+<h2>Audio · ~$34 (or ~$209 with UMA-8)</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">8a</td>
+  <td>
+    <div class="part-name">ReSpeaker 2-Mics Pi HAT v2 (Seeed Studio) <span class="badge req">required</span> <span class="badge skip">manuf. preferred</span></div>
+    <div class="part-note">Cheap, mounts flush, fine for one-on-one and small meetings. <strong>Buy from Seeed for $25;</strong> Amazon often $35+.</div>
+    <div class="search-q">seeed respeaker 2 mics pi hat</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$25</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=seeed+respeaker+2+mics+pi+hat" target="_blank">Amazon</a>
+    <a class="btn alt" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html" target="_blank">Seeed</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">8b</td>
+  <td>
+    <div class="part-name">MiniDSP UMA-8 — 7-mic far-field array (USB) <span class="badge opt">optional alternative</span></div>
+    <div class="part-note">Far better lecture/conference room performance. Replaces the ReSpeaker, doesn't stack with it. Pricey.</div>
+    <div class="search-q">minidsp uma-8</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$200</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=minidsp+uma-8" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">9</td>
+  <td>
+    <div class="part-name">USB-C audio dongle (Apple / UGREEN) <span class="badge req">required</span></div>
+    <div class="part-note">For wired headphone output during testing. Apple's $9 dongle is reliable; UGREEN works too.</div>
+    <div class="search-q">usb c headphone adapter ugreen</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$9</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=usb+c+headphone+adapter+ugreen" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<!-- =================== POWER =================== -->
+<section>
+<h2>Power · ~$59</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">10a</td>
+  <td>
+    <div class="part-name">Waveshare UPS HAT (E) for Pi 5 <span class="badge req">required</span></div>
+    <div class="part-note">Battery management + clean shutdown. Holds 2× 18650 cells, ~3-4 hours runtime with the e-ink panel active.</div>
+    <div class="search-q">waveshare ups hat pi 5</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$35</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=waveshare+ups+hat+pi+5" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">10b</td>
+  <td>
+    <div class="part-name">18650 cells — Samsung 35E or Sony VTC6 (button-top, protected) <span class="badge req">required</span> <span class="badge skip">authorized vendor only</span></div>
+    <div class="part-note"><strong>Buy from a reputable battery shop only</strong> (IMR Batteries, 18650BatteryStore, Liion Wholesale). Amazon listings are often counterfeit and can vent. Counterfeit lithium cells are a fire hazard.</div>
+    <div class="search-q">samsung 35e 18650 button top protected</div>
+  </td>
+  <td class="qty num">2</td>
+  <td class="price">$20</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=samsung+35e+18650+button+top+protected" target="_blank">Amazon ⚠</a>
+    <a class="btn alt" href="https://www.imrbatteries.com/" target="_blank">IMR Batteries</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">11</td>
+  <td>
+    <div class="part-name">Slide switch — panel-mount SP3T <span class="badge req">required</span></div>
+    <div class="part-note">Master power slider in the side of the shell. Channels the "minimalist slate" ID — no front buttons.</div>
+    <div class="search-q">panel mount slide switch sp3t</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$4</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=panel+mount+slide+switch+sp3t" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<!-- =================== SENSORS / NICETIES =================== -->
+<section>
+<h2>Sensors &amp; Niceties · ~$24</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">12</td>
+  <td>
+    <div class="part-name">MPU-6050 IMU breakout (I²C) <span class="badge req">required</span></div>
+    <div class="part-note">Auto-rotate the canvas + tap-to-wake. Cheap, well-documented, plenty of Python libs.</div>
+    <div class="search-q">mpu-6050 breakout module</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$5</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=mpu+6050+breakout+module" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">13</td>
+  <td>
+    <div class="part-name">12mm panel-mount tactile pushbutton <span class="badge req">required</span></div>
+    <div class="part-note">The programmable side button — default action: start/stop recording.</div>
+    <div class="search-q">12mm panel mount push button momentary</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$3</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=12mm+panel+mount+push+button+momentary" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">14</td>
+  <td>
+    <div class="part-name">5mm LED + 220Ω resistors (assortment kit) <span class="badge req">required</span></div>
+    <div class="part-note">Recording-state indicator. A kit is fine — you'll use the rest later.</div>
+    <div class="search-q">5mm led resistor assortment kit</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$1</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=5mm+led+resistor+assortment+kit" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">15</td>
+  <td>
+    <div class="part-name">M2.5 standoff + screw kit (brass, mixed lengths) <span class="badge req">required</span></div>
+    <div class="part-note">Mounting hardware for HAT stack. Get a 380-piece assortment so you have spares.</div>
+    <div class="search-q">m2.5 brass standoff screw assortment kit</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$15</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=m2.5+brass+standoff+screw+assortment+kit" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<!-- =================== ENCLOSURE =================== -->
+<section>
+<h2>Enclosure (3D Printed) · ~$60</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">16</td>
+  <td>
+    <div class="part-name">PETG filament — matte stone-grey, 1kg (Polymaker PolyTerra or Prusament) <span class="badge req">required</span></div>
+    <div class="part-note">Matte hides print lines, looks closer to production. Pick a stone-grey to match the "Slate" colorway.</div>
+    <div class="search-q">polymaker polyterra petg matte grey</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$25</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=polymaker+polyterra+petg+matte+grey" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">17</td>
+  <td>
+    <div class="part-name">TPU 95A filament — black, 250–500g <span class="badge opt">optional</span></div>
+    <div class="part-note">Soft TPU for the corner bumpers and grip strip. Big spool is fine; you'll use it on future projects.</div>
+    <div class="search-q">tpu 95a filament black 250g</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$15</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=tpu+95a+filament+black+250g" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">18</td>
+  <td>
+    <div class="part-name">M2.5 brass heat-set inserts — 50-pack <span class="badge req">required</span></div>
+    <div class="part-note">For real threaded mount points in the printed shell. Buy generous; you will lose some.</div>
+    <div class="search-q">m2.5 brass heat set inserts threaded</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$10</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=m2.5+brass+heat+set+inserts" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">19</td>
+  <td>
+    <div class="part-name">Heat-set insert iron tip (M2.5/M3) <span class="badge tool">tool — skip if you have one</span></div>
+    <div class="part-note">A specialized tip for your soldering iron. Generic tips work but make a mess; the dedicated tip is worth the $10.</div>
+    <div class="search-q">heat set insert soldering iron tip m2.5</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$10</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=heat+set+insert+soldering+iron+tip" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+<div class="callout info">
+  <strong>No 3D printer? Outsource it.</strong>
+  Upload your STLs to <a href="https://craftcloud3d.com/" target="_blank">Craftcloud3D</a>, <a href="https://jlc3dp.com/" target="_blank">JLC3DP</a>, or <a href="https://www.printables.com/print-services" target="_blank">Printables Print Services</a>. Expect ~$80–150 for the full enclosure set vs. ~$25 in filament if you own a printer.
+</div>
+</section>
+
+<!-- =================== TOOLS =================== -->
+<section>
+<h2>Tools (skip if you have them) · ~$82</h2>
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Part</th><th>Qty</th><th>Price</th><th>Buy</th></tr></thead>
+<tbody>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">20</td>
+  <td>
+    <div class="part-name">Soldering iron starter kit (iron + solder + flux + cutters) <span class="badge tool">tool</span></div>
+    <div class="part-note">A Pinecil V2 or Hakko FX-888D is the right tool for life. Avoid the $15 "instant" pencil irons.</div>
+    <div class="search-q">pinecil v2 soldering iron kit</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$40</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=pinecil+v2+soldering+iron+kit" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">21</td>
+  <td>
+    <div class="part-name">Hex driver / Phillips precision screwdriver kit <span class="badge tool">tool</span></div>
+    <div class="part-note">iFixit Mako (or generic equivalent). You'll use it constantly during assembly iterations.</div>
+    <div class="search-q">ifixit mako precision screwdriver kit</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$15</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=ifixit+mako+precision+screwdriver" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">22</td>
+  <td>
+    <div class="part-name">Heat-shrink tubing + hookup wire kit <span class="badge tool">tool</span></div>
+    <div class="part-note">For wiring up the slide switch, button, and LED. Get an assortment with multiple gauges.</div>
+    <div class="search-q">hookup wire heat shrink kit assortment</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$12</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=hookup+wire+heat+shrink+kit" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="check-cell"><input type="checkbox"></td>
+  <td class="num">23</td>
+  <td>
+    <div class="part-name">USB power meter (volt/amp readout) <span class="badge tool">tool — strongly recommended</span></div>
+    <div class="part-note">Will save you hours when diagnosing brownouts on the Pi 5. Buy this <em>before</em> you start, not after the third unexplained reboot.</div>
+    <div class="search-q">usb c power meter voltage current</div>
+  </td>
+  <td class="qty num">1</td>
+  <td class="price">$15</td>
+  <td class="actions">
+    <a class="btn" href="https://www.amazon.com/s?k=usb+c+power+meter+voltage+current" target="_blank">Amazon</a>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
+
+<!-- =================== TOTALS =================== -->
+<div class="totals">
+  <div class="totals-row"><span>Core compute (rows 1–5)</span><span class="num">$166</span></div>
+  <div class="totals-row"><span>Display — base (row 6)</span><span class="num">$230</span></div>
+  <div class="totals-row"><span>Audio — ReSpeaker path (rows 8a + 9)</span><span class="num">$34</span></div>
+  <div class="totals-row"><span>Power (rows 10–11)</span><span class="num">$59</span></div>
+  <div class="totals-row"><span>Sensors &amp; niceties (rows 12–15)</span><span class="num">$24</span></div>
+  <div class="totals-row"><span>Enclosure — PETG only (rows 16, 18)</span><span class="num">$35</span></div>
+  <div class="totals-row grand"><span>Core build subtotal</span><span class="num">≈ $548</span></div>
+  <div class="totals-row" style="margin-top:14px;color:var(--muted);font-size:13px;"><span>+ Front light (row 7)</span><span class="num">+$40</span></div>
+  <div class="totals-row" style="color:var(--muted);font-size:13px;"><span>+ TPU bumpers (row 17) + heat-set tip (row 19)</span><span class="num">+$25</span></div>
+  <div class="totals-row" style="color:var(--muted);font-size:13px;"><span>+ Tool kit (rows 20–23)</span><span class="num">+$82</span></div>
+  <div class="totals-row" style="color:var(--muted);font-size:13px;"><span>Upgrade: UMA-8 instead of ReSpeaker</span><span class="num">+$175</span></div>
+  <div class="totals-row grand"><span>Fully loaded with everything</span><span class="num">≈ $870</span></div>
+</div>
+
+<div class="callout">
+  <strong>Buy in this order</strong>
+  <ol style="margin:6px 0 0 20px; padding:0;">
+    <li>Place the <strong>Waveshare panel</strong> order first — it has the longest lead time and ships from Shenzhen.</li>
+    <li>While that ships, order Pi 5 + HATs + filament from Amazon (next-day usually).</li>
+    <li>Order 18650 cells from a reputable battery shop separately. Don't combine.</li>
+    <li>Don't print the enclosure until you have the panel in hand and have measured it yourself — the tolerances are tight.</li>
+  </ol>
+</div>
+
+<footer>
+  <div>Generated 2026-05-09 · Pairs with <code>2026-05-09-memex-poc-build-guide.md</code></div>
+  <div style="margin-top:6px;">Prices are 2026 estimates and may shift. Search links do not contain affiliate codes. Manufacturer links go directly to the product page.</div>
+</footer>
+
+</div>
+</body>
+</html>

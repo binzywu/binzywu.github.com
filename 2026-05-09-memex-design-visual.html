@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Memex — Industrial Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fafaf7;
+    --ink: #1f1a14;
+    --muted: #6b5d3c;
+    --line: #d8d3c5;
+    --accent: #2b2b2b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 32px 16px 80px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 16px;
+    font-style: italic;
+    font-family: Georgia, serif;
+  }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 0 0 14px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+  section { margin-top: 44px; }
+
+  /* Stage / lighting backdrop for renders */
+  .device-stage {
+    background: linear-gradient(180deg, #ece9e0 0%, #d8d3c5 100%);
+    padding: 60px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .view-label {
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  /* ---------- FRONT VIEW ---------- */
+  .device-front {
+    width: 320px;
+    height: 430px;
+    background: linear-gradient(180deg, #5b5b5b 0%, #4a4a4a 50%, #424242 100%);
+    border-radius: 18px;
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.35),
+      0 8px 18px rgba(0,0,0,0.2),
+      inset 0 1px 0 rgba(255,255,255,0.08),
+      inset 0 -1px 0 rgba(0,0,0,0.3);
+    position: relative;
+    padding: 22px 22px 60px 32px;
+  }
+  .device-front .screen {
+    width: 100%; height: 100%;
+    background: #f4f1e8;
+    border-radius: 4px;
+    box-shadow:
+      inset 0 0 0 1px rgba(0,0,0,0.15),
+      inset 0 2px 6px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    font-family: Georgia, serif;
+    color: #2b2b2b;
+  }
+  .device-front .grip-zone {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 32px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.04), transparent);
+    border-radius: 18px 0 0 18px;
+  }
+  .device-front .power-slider {
+    position: absolute; right: -3px; top: 60px;
+    width: 4px; height: 36px;
+    background: #2a2a2a; border-radius: 2px;
+    box-shadow: -1px 0 2px rgba(0,0,0,0.3);
+  }
+  .device-front .side-button {
+    position: absolute; right: -3px; top: 110px;
+    width: 4px; height: 18px;
+    background: #2a2a2a; border-radius: 2px;
+  }
+  .device-front .mic-array {
+    position: absolute; top: 8px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 80px;
+  }
+  .device-front .mic-dot {
+    width: 4px; height: 4px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+  }
+  .device-front .wordmark {
+    position: absolute; bottom: 22px; left: 50%;
+    transform: translateX(-50%);
+    color: #6e6e6e;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+  }
+
+  .screen-content h4 {
+    margin: 0 0 6px 0;
+    font-size: 13px; letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b5d3c;
+    font-family: Georgia, serif;
+  }
+  .screen-content .title {
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    color: #1f1a14;
+    font-family: Georgia, serif;
+  }
+  .handwriting {
+    font-family: 'Caveat', 'Bradley Hand', cursive;
+    color: #2b2620;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .underline-link {
+    border-bottom: 1px dotted #6b5d3c;
+    color: #1f1a14;
+  }
+  .ink-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b3a880, transparent);
+    margin: 12px 0;
+  }
+  .small-text {
+    font-size: 10px;
+    color: #6b5d3c;
+    line-height: 1.5;
+  }
+
+  /* ---------- SIDE VIEW ---------- */
+  .device-side {
+    width: 360px; height: 80px;
+    background: linear-gradient(180deg, #5b5b5b 0%, #3d3d3d 100%);
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.3);
+  }
+  .device-side .magnetic-stylus {
+    position: absolute; top: -8px; left: 30px;
+    width: 220px; height: 8px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+  .device-side .stylus-tip {
+    position: absolute; top: -8px; left: 250px;
+    width: 14px; height: 8px;
+    background: linear-gradient(90deg, #1a1a1a 0%, #4a4a4a 50%, #888 100%);
+    border-radius: 0 4px 4px 0;
+  }
+  .device-side .usb-c {
+    position: absolute; bottom: -3px; left: 50%;
+    transform: translateX(-50%);
+    width: 28px; height: 6px;
+    background: #1a1a1a;
+    border-radius: 3px;
+  }
+  .device-side .power-bump {
+    position: absolute; top: 22px; right: -2px;
+    width: 4px; height: 36px;
+    background: #2a2a2a; border-radius: 2px;
+  }
+
+  /* ---------- BACK VIEW ---------- */
+  .device-back {
+    width: 320px; height: 430px;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.08), transparent 60%),
+      linear-gradient(180deg, #707070 0%, #5a5a5a 60%, #4d4d4d 100%);
+    border-radius: 18px;
+    position: relative;
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.35),
+      0 8px 18px rgba(0,0,0,0.2),
+      inset 0 1px 0 rgba(255,255,255,0.1),
+      inset 0 -1px 0 rgba(0,0,0,0.3);
+  }
+  .device-back .etched {
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgba(255,255,255,0.18);
+    letter-spacing: 6px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+  }
+  .device-back .etched-sub {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    color: rgba(255,255,255,0.12);
+  }
+  .device-back .stylus-channel {
+    position: absolute; right: -2px; top: 50%;
+    transform: translateY(-50%);
+    width: 4px; height: 220px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    border-radius: 2px;
+  }
+
+  /* ---------- LIFESTYLE: device + stylus ---------- */
+  .device-lifestyle {
+    width: 360px;
+    position: relative;
+  }
+  .device-lifestyle .lift-shadow {
+    position: absolute; bottom: -12px; left: 30px; right: 30px;
+    height: 30px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.25), transparent 70%);
+    filter: blur(6px);
+  }
+  .stylus-floating {
+    width: 230px; height: 9px;
+    background: linear-gradient(90deg, #2a2a2a 0%, #1a1a1a 80%, #888 100%);
+    border-radius: 4px;
+    margin: 24px auto 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  .stylus-floating::after {
+    content: '';
+    position: absolute; right: -8px; top: 1px;
+    width: 8px; height: 7px;
+    background: linear-gradient(90deg, #888, #444);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 14px;
+  }
+  @media (max-width: 880px) {
+    .layout-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-top: 12px;
+  }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    font-size: 14px;
+  }
+  @media (max-width: 700px) {
+    .spec-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 460px) {
+    .spec-grid { grid-template-columns: 1fr; }
+  }
+  .spec-label {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Callouts */
+  .callout {
+    background: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 14px 18px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .callout.info {
+    background: #dbeafe;
+    border-left-color: #1d4ed8;
+  }
+  .callout strong { display: block; margin-bottom: 6px; }
+
+  /* Material swatches */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .swatch {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .swatch-chip {
+    width: 50px; height: 50px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+  }
+  .swatch-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .swatch-spec {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* Design principles list */
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .principle {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .principle h4 {
+    margin: 0 0 6px 0;
+    font-family: Georgia, serif;
+    font-size: 15px;
+  }
+  .principle p {
+    margin: 0;
+    font-size: 13px;
+    color: #3a3525;
+    line-height: 1.55;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Memex — Industrial Design</h1>
+  <div class="tagline">Your second brain, on paper.</div>
+  <div class="meta">10.3" color e-ink slate · "Minimalist Slate" direction · 2026-05-09</div>
+</header>
+
+<!-- ============== HERO: FRONT VIEW ============== -->
+<section>
+  <h2>Front · with stylus</h2>
+  <div class="device-stage">
+    <div class="device-lifestyle">
+      <div class="device-front">
+        <div class="grip-zone"></div>
+        <div class="mic-array">
+          <div class="mic-dot"></div>
+          <div class="mic-dot"></div>
+        </div>
+        <div class="power-slider"></div>
+        <div class="side-button"></div>
+        <div class="screen">
+          <div class="screen-content">
+            <h4>Notebook · Mar 14</h4>
+            <div class="title">Q2 Planning Mtg</div>
+            <div class="handwriting">
+              Notes from <span class="underline-link">Sarah's review</span>:<br>
+              • ship the wiki view first<br>
+              • cut sync from v1<br>
+              • <em>follow up w/ infra team re: GPU</em>
+            </div>
+            <div class="ink-divider"></div>
+            <div class="small-text">
+              🎙 recording · 14:32<br>
+              ↳ linked to 3 prior meetings
+            </div>
+            <div style="margin-top:24px;" class="handwriting">
+              "We've been circling the same<br>
+              question for weeks — what is<br>
+              the <span style="border-bottom:1px solid #2b2620;">single thing</span> we're shipping?"
+            </div>
+            <div style="margin-top: 60px;" class="small-text">
+              ⌁ wiki suggests: <em>Q1 Planning</em>, <em>roadmap-2026</em>
+            </div>
+          </div>
+        </div>
+        <div class="wordmark">m e m e x</div>
+      </div>
+      <div class="lift-shadow"></div>
+      <div class="stylus-floating"></div>
+    </div>
+  </div>
+  <div class="view-label">EMR stylus magnetically attached below · asymmetric bezel for thumb grip</div>
+</section>
+
+<!-- ============== SIDE + BACK ============== -->
+<section>
+  <h2>Side &amp; Back</h2>
+  <div class="layout-grid">
+    <div>
+      <div class="device-stage" style="padding: 100px 30px;">
+        <div class="device-side">
+          <div class="magnetic-stylus"></div>
+          <div class="stylus-tip"></div>
+          <div class="usb-c"></div>
+          <div class="power-bump"></div>
+        </div>
+      </div>
+      <div class="view-label">Side · 7.2mm thin · USB-C bottom · stylus magnetized to long edge</div>
+    </div>
+    <div>
+      <div class="device-stage" style="padding: 30px;">
+        <div class="device-back">
+          <div class="stylus-channel"></div>
+          <div class="etched">memex
+            <div class="etched-sub">— a memory machine —</div>
+          </div>
+        </div>
+      </div>
+      <div class="view-label">Back · recycled aluminum unibody · subtle etched wordmark</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AT A GLANCE ============== -->
+<section>
+  <h2>At a glance</h2>
+  <div class="spec-strip">
+    <div class="spec-grid">
+      <div>
+        <div class="spec-label">Display</div>
+        <div>10.3" color e-ink (Kaleido 3 / Gallery 3 class)</div>
+      </div>
+      <div>
+        <div class="spec-label">Dimensions</div>
+        <div>~196 × 246 × 7.2 mm · ~430 g</div>
+      </div>
+      <div>
+        <div class="spec-label">Materials</div>
+        <div>Recycled aluminum back · matte composite frame</div>
+      </div>
+      <div>
+        <div class="spec-label">Colors</div>
+        <div>"Slate" stone-grey · "Linen" cream (KS stretch)</div>
+      </div>
+      <div>
+        <div class="spec-label">Controls</div>
+        <div>Side power slider · 1 programmable button · no front buttons</div>
+      </div>
+      <div>
+        <div class="spec-label">I/O</div>
+        <div>USB-C bottom · BT 5.3 · Wi-Fi 6 · dual-mic top edge</div>
+      </div>
+      <div>
+        <div class="spec-label">Stylus</div>
+        <div>Wacom EMR · battery-free · magnetic side dock</div>
+      </div>
+      <div>
+        <div class="spec-label">Storage</div>
+        <div>256 GB base · 512 GB Pro</div>
+      </div>
+      <div>
+        <div class="spec-label">Battery</div>
+        <div>~2 weeks reading · 8–10 hrs recording · 6 hrs music</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MATERIALS / COLORWAY ============== -->
+<section>
+  <h2>Materials &amp; Colorway</h2>
+  <p style="color:var(--muted); margin-top:0;">Single-material body. Quiet, intellectual, ages well. The screen is the protagonist.</p>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-chip" style="background: linear-gradient(135deg, #5b5b5b 0%, #3d3d3d 100%);"></div>
+      <div>
+        <div class="swatch-name">Slate (default)</div>
+        <div class="swatch-spec">Matte stone-grey · recycled aluminum</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background: linear-gradient(135deg, #ece6d5 0%, #c8c0a8 100%);"></div>
+      <div>
+        <div class="swatch-name">Linen</div>
+        <div class="swatch-spec">Cream · KS stretch goal · limited</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background: linear-gradient(135deg, #2a2a2a 0%, #0f0f10 100%);"></div>
+      <div>
+        <div class="swatch-name">Stylus</div>
+        <div class="swatch-spec">Black anodized · battery-free EMR</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background: #f4f1e8;"></div>
+      <div>
+        <div class="swatch-name">E-Ink Paper Tone</div>
+        <div class="swatch-spec">Warm white · Gallery 3 surface</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== DESIGN PRINCIPLES ============== -->
+<section>
+  <h2>Design Principles</h2>
+  <div class="principles">
+    <div class="principle">
+      <h4>Quiet by default</h4>
+      <p>No logo on the writing face. No status LEDs visible at rest. The screen is the protagonist — every other element recedes.</p>
+    </div>
+    <div class="principle">
+      <h4>Asymmetric on purpose</h4>
+      <p>The wider left bezel is a thumb grip, not a styling choice. Hand-tested for one-handed reading and recording.</p>
+    </div>
+    <div class="principle">
+      <h4>Tactile, not touchy</h4>
+      <p>A side power slider and one programmable button. No menus. The hardware always feels honest about what it is.</p>
+    </div>
+    <div class="principle">
+      <h4>Fewer holes</h4>
+      <p>USB-C only. No 3.5mm jack, no SD card slot, no hidden reset pin. The body is one continuous surface.</p>
+    </div>
+    <div class="principle">
+      <h4>Object, not gadget</h4>
+      <p>Single material, single color, etched wordmark. Should look at home next to a Moleskine, not a smartphone.</p>
+    </div>
+    <div class="principle">
+      <h4>The stylus has a home</h4>
+      <p>Magnetic dock along the right edge. It clicks into place and never wanders. Battery-free, so it never needs charging.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ON-SCREEN UX (CALLOUT) ============== -->
+<section>
+  <h2>On-screen UX language</h2>
+  <p style="color:var(--muted); margin-top:0;">The on-screen mockup above isn't decorative — it's the actual UI direction.</p>
+  <div class="callout info">
+    <strong>Reading the front render</strong>
+    <ul style="margin:6px 0 0 18px; padding:0;">
+      <li><strong>Header strip</strong> — context line ("Notebook · Mar 14") + page title ("Q2 Planning Mtg"), serif typography for editorial feel.</li>
+      <li><strong>Handwriting layer</strong> — the user's strokes, rendered as-is. No auto-correct, no replatting.</li>
+      <li><strong>Hairline ink divider</strong> — separates user content from system layer. Refresh-friendly: a single horizontal line instead of a card boundary.</li>
+      <li><strong>System line in muted gold</strong> — recording state, transcript progress, AI suggestions. Lives at the edges, never interrupts.</li>
+      <li><strong>Wiki suggestions ("⌁ wiki suggests:")</strong> — the LLM-wiki proposing related notes. Subtle, tappable, easy to dismiss.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== SIZE COMPARISON ============== -->
+<section>
+  <h2>Size in context</h2>
+  <p style="color:var(--muted); margin-top:0;">10.3" is the "everywhere" size — pocketable in a jacket, fits a small bag, one-handable.</p>
+  <div class="device-stage" style="padding: 50px 30px; min-height: 280px;">
+    <div style="display:flex; align-items:flex-end; gap: 32px;">
+      <!-- Trade paperback -->
+      <div style="text-align:center;">
+        <div style="background:#a87a4a; width:90px; height:140px; border-radius:2px; box-shadow:0 4px 10px rgba(0,0,0,0.2); position:relative;">
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:rgba(255,255,255,0.3); font-size:10px; font-family:Georgia,serif;">book</div>
+        </div>
+        <div style="font-size:11px; color:var(--muted); margin-top:8px; letter-spacing:1px; text-transform:uppercase;">Trade paperback</div>
+      </div>
+      <!-- Memex -->
+      <div style="text-align:center;">
+        <div style="background:linear-gradient(180deg,#5b5b5b,#424242); width:120px; height:155px; border-radius:8px; box-shadow:0 8px 20px rgba(0,0,0,0.3); padding:6px;">
+          <div style="background:#f4f1e8; width:100%; height:100%; border-radius:2px;"></div>
+        </div>
+        <div style="font-size:11px; color:var(--accent); margin-top:8px; letter-spacing:1px; text-transform:uppercase; font-weight:600;">Memex 10.3"</div>
+      </div>
+      <!-- iPad mini -->
+      <div style="text-align:center;">
+        <div style="background:#1a1a1a; width:108px; height:155px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.25); padding:5px;">
+          <div style="background:#0f0f10; width:100%; height:100%; border-radius:6px;"></div>
+        </div>
+        <div style="font-size:11px; color:var(--muted); margin-top:8px; letter-spacing:1px; text-transform:uppercase;">iPad mini</div>
+      </div>
+      <!-- A4 sheet -->
+      <div style="text-align:center;">
+        <div style="background:#fafaf7; width:130px; height:184px; border-radius:1px; box-shadow:0 3px 8px rgba(0,0,0,0.15); border:1px solid #ddd;"></div>
+        <div style="font-size:11px; color:var(--muted); margin-top:8px; letter-spacing:1px; text-transform:uppercase;">A4 sheet</div>
+      </div>
+    </div>
+  </div>
+  <div class="view-label">Approximate scale · 10.3" sits between paperback and A4 — reads like a book, takes notes like a pad</div>
+</section>
+
+<!-- ============== OPEN DESIGN QUESTIONS ============== -->
+<section>
+  <h2>Open design questions</h2>
+  <div class="callout">
+    <strong>To resolve before tooling</strong>
+    <ol style="margin:6px 0 0 18px; padding:0;">
+      <li><strong>Capacitive touch on the writing surface</strong> — full multi-touch (more useful) vs. recessed off-by-default (preserves paper feel). Decide with EE prototyping in hand.</li>
+      <li><strong>Mic opening style</strong> — two pinholes (current render) vs. a slim laser-etched microperforation strip. The strip looks more premium but is harder to seal against dust.</li>
+      <li><strong>Wordmark treatment</strong> — etched on back (current render, subtle) vs. embossed on bottom bezel (more visible, more "branded"). Stay subtle.</li>
+      <li><strong>Stylus dock</strong> — long edge (current render) vs. top edge. Long edge keeps the stylus out of the way of the asymmetric grip; top edge looks tidier on a desk.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div>Generated 2026-05-09 · Pairs with <code>2026-05-09-memex-eink-second-brain-design.md</code> and <code>2026-05-09-memex-poc-build-guide.md</code></div>
+  <div style="margin-top:6px;">All renders are HTML/CSS — no images. Production renders will be done in Keyshot or Blender.</div>
+</footer>
+
+</div>
+</body>
+</html>
