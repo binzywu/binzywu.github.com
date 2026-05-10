@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Memex — Design Spec</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fafaf7;
+    --ink: #1f1a14;
+    --muted: #6b5d3c;
+    --line: #d8d3c5;
+    --accent: #2b2b2b;
+    --gold: #b3a880;
+    --warn: #c2410c;
+    --ok: #15803d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    padding: 32px 16px 80px;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(180deg, #ece9e0 0%, #d8d3c5 100%);
+    border-radius: 12px;
+    padding: 50px 40px;
+    margin-bottom: 36px;
+    text-align: center;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .hero h1 {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    margin: 0 0 8px 0;
+    letter-spacing: -1px;
+  }
+  .hero .tagline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--muted);
+    margin: 0 0 18px 0;
+  }
+  .hero .meta {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* ===== STATUS PILLS ===== */
+  .status-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .pill {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--accent);
+  }
+  .pill strong { color: var(--ink); margin-right: 4px; }
+
+  /* ===== SECTIONS ===== */
+  section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  section h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.3px;
+  }
+  section .section-num {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  section h3 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin: 22px 0 10px 0;
+  }
+  p { margin: 0 0 14px 0; }
+  ul { margin: 0 0 14px 0; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  strong { color: var(--ink); }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    margin: 14px 0;
+    padding: 4px 14px;
+    font-style: italic;
+    color: #3a3525;
+    background: #f3efe2;
+    border-radius: 0 4px 4px 0;
+  }
+
+  code {
+    background: #f0ede2;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: #3a3525;
+  }
+
+  /* ===== TABLES ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  thead th {
+    background: #ece8db;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+  }
+  td.center { text-align: center; }
+  .yes { color: var(--ok); font-weight: 600; }
+  .no { color: var(--warn); font-weight: 600; }
+
+  /* ===== TAGLINE PULL ===== */
+  .pull-quote {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 18px 0;
+    padding: 16px 22px;
+    border-left: 4px solid var(--accent);
+    background: #f3efe2;
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote em {
+    color: var(--muted);
+  }
+
+  /* ===== CALLOUT BOXES ===== */
+  .callout {
+    background: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .callout.info {
+    background: #dbeafe;
+    border-left-color: #1d4ed8;
+  }
+  .callout.privacy {
+    background: #ecfccb;
+    border-left-color: #4d7c0f;
+  }
+  .callout strong { display: block; margin-bottom: 6px; }
+
+  /* ===== SUBSECTION BLOCK ===== */
+  .subsection {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .subsection h4 {
+    font-family: Georgia, serif;
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: var(--accent);
+  }
+
+  /* ===== TOC ===== */
+  .toc {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 28px;
+    margin-bottom: 24px;
+  }
+  .toc h3 {
+    margin: 0 0 12px 0;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 28px;
+  }
+  .toc li {
+    break-inside: avoid;
+    margin-bottom: 4px;
+  }
+  .toc a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .toc a:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .toc ol { columns: 1; }
+  }
+
+  /* ===== PRICING TIERS ===== */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .tier {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+  .tier.featured {
+    border: 2px solid var(--accent);
+    background: var(--paper);
+  }
+  .tier-name {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .tier-price {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .tier-desc {
+    font-size: 13px;
+    color: #3a3525;
+    line-height: 1.5;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+    margin: 14px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--gold);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 14px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -22px; top: 6px;
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .timeline-when {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .timeline-what {
+    font-weight: 600;
+    margin: 2px 0;
+  }
+  .timeline-detail {
+    font-size: 13px;
+    color: #3a3525;
+  }
+
+  /* ===== LINK BAR (siblings) ===== */
+  .siblings {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .siblings a {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .siblings a:hover {
+    background: var(--bg);
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* anchor offsets so sticky doesn't matter */
+  section[id] { scroll-margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>Memex</h1>
+  <div class="tagline">Your second brain, on paper.</div>
+  <div class="meta">Design Spec · v1 Kickstarter Hardware</div>
+  <div class="status-row">
+    <span class="pill"><strong>Status:</strong> Brainstorm draft</span>
+    <span class="pill"><strong>Date:</strong> 2026-05-09</span>
+    <span class="pill"><strong>Working name:</strong> Memex (backup: Cairn)</span>
+  </div>
+  <div class="siblings">
+    <a href="2026-05-09-memex-design-visual.html">Industrial Design →</a>
+    <a href="2026-05-09-memex-poc-build-guide.md">PoC Build Guide →</a>
+    <a href="2026-05-09-memex-poc-shopping-list.html">Shopping List →</a>
+  </div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="toc">
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#audience">Target audience</a></li>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#software">Software</a></li>
+    <li><a href="#wiki">The LLM-Wiki</a></li>
+    <li><a href="#privacy">Privacy &amp; data</a></li>
+    <li><a href="#cloud">Cloud / AI infrastructure</a></li>
+    <li><a href="#pricing">Pricing &amp; business model</a></li>
+    <li><a href="#campaign">Campaign &amp; timeline</a></li>
+    <li><a href="#open">Open questions</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+  </ol>
+</div>
+
+<!-- ===== 1. VISION ===== -->
+<section id="vision">
+  <span class="section-num">1 · Vision</span>
+  <h2>A 10.3" color e-ink slate that captures everything you think, hear, and read.</h2>
+  <p>And turns it into a personal LLM-powered wiki that lives on your device.</p>
+
+  <div class="pull-quote">
+    Memex is a paper-feel device for thinkers. Write notes by hand, record meetings and lectures, read books and papers, and let an AI quietly link it all together into your own personal wiki — a living knowledge base that grows with you.
+    <br><br>
+    <em>Cloud is used as a stateless processor for transcription and reasoning; nothing about you is stored on our servers. Everything lives on the device, where it belongs.</em>
+  </div>
+</section>
+
+<!-- ===== 2. AUDIENCE ===== -->
+<section id="audience">
+  <span class="section-num">2 · Target audience</span>
+  <h2>The polymath / lifestyle buyer</h2>
+  <p>Knowledge workers, researchers, writers, students, and curious generalists who already own a Kindle, take notes by hand, record meetings, and have flirted with Obsidian, Notion, or Roam. They want one thoughtful object that replaces several.</p>
+  <p>The campaign will speak the language of the <strong>knowledge-worker / second-brain</strong> audience first; the music and DJ features are the "and one more thing" delight, not the lead.</p>
+</section>
+
+<!-- ===== 3. HARDWARE ===== -->
+<section id="hardware">
+  <span class="section-num">3 · Hardware</span>
+  <h2>The slate</h2>
+
+  <div class="subsection">
+    <h4>3.1 Display</h4>
+    <ul>
+      <li><strong>10.3" color e-ink</strong> (Kaleido 3 or Gallery 3 panel class).</li>
+      <li>Resolution target: ~1872×1404 (B&amp;W) / ~624×468 color sub-pixel grid.</li>
+      <li>Front light + warm/cool color temperature.</li>
+      <li>Wacom EMR digitizer overlaid for stylus input. No capacitive touch on the writing surface (or a recessed off-by-default touch layer to preserve writing feel; final TBD with panel vendor — see Open Questions).</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>3.2 Form factor &amp; industrial design</h4>
+    <ul>
+      <li><strong>Direction:</strong> Minimalist Slate. Single material body, no front buttons, no logo on the writing face. Power slider on the side.</li>
+      <li><strong>Color:</strong> matte stone-grey ("Slate"). Second color limited edition unlocked as Kickstarter stretch goal.</li>
+      <li><strong>Weight target:</strong> ~430 g.</li>
+      <li><strong>Materials:</strong> Recycled aluminum unibody back, matte composite frame.</li>
+      <li><strong>Bezel:</strong> asymmetric — wider on one edge for thumb grip when held one-handed.</li>
+      <li><strong>Mic openings:</strong> discreet, top edge, two openings for stereo/beamforming array.</li>
+      <li><strong>No speakers</strong> on device. Audio out via USB-C only.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>3.3 Inputs</h4>
+    <ul>
+      <li><strong>Stylus:</strong> Wacom EMR, battery-free, magnetic side attachment. Included in box.</li>
+      <li><strong>Microphone:</strong> dual-mic beamforming array. Tuned for meetings up to ~6 people in a typical room. Background-noise suppression as a software feature.</li>
+      <li><strong>Audio out:</strong> USB-C only. Box ships with USB-C to 3.5mm dongle so users have a wired headphone path day one.</li>
+      <li><strong>Speakers:</strong> none.</li>
+      <li><strong>Buttons:</strong> side power slider; one programmable side button (default: start/stop recording).</li>
+      <li><strong>Wireless:</strong> Wi-Fi 6, Bluetooth 5.3 (A2DP sink, AVRCP, HFP for headset use during recording playback review).</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>3.4 Compute &amp; storage</h4>
+    <ul>
+      <li><strong>SoC:</strong> mid-range ARM (e.g. Rockchip RK3588 class) — enough headroom for on-device OCR, embeddings, and a small reasoning model in the roadmap.</li>
+      <li><strong>RAM:</strong> 8 GB.</li>
+      <li><strong>Storage tiers:</strong>
+        <ul>
+          <li>Base: <strong>256 GB</strong> UFS — covers ~10 years of typical use.</li>
+          <li>Pro: <strong>512 GB</strong> — heavier audio users, full music libraries.</li>
+        </ul>
+      </li>
+      <li><strong>Battery:</strong> ~5000 mAh, target <strong>2 weeks</strong> typical reading, <strong>8–10 hrs</strong> continuous recording, <strong>6 hrs</strong> music streaming with screen off.</li>
+      <li><strong>Charging:</strong> USB-C, fast charge to 50% in 30 min.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>3.5 Sensors</h4>
+    <ul>
+      <li>Accelerometer (auto-rotate writing canvas, double-tap-to-wake).</li>
+      <li>Ambient light sensor (front-light auto-tune).</li>
+      <li><strong>No camera</strong> (deliberate — privacy posture).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 4. SOFTWARE ===== -->
+<section id="software">
+  <span class="section-num">4 · Software</span>
+  <h2>MemexOS</h2>
+
+  <div class="subsection">
+    <h4>4.1 OS strategy</h4>
+    <p><strong>Custom Linux</strong> ("MemexOS"), curated app set. No third-party app store at launch.</p>
+    <p>Trade-off accepted: no native Spotify, Apple Music, Tidal, Kindle, Audible apps. Music integrations work via standardized streaming receiver protocols (see §4.4). E-reader is native, supports common open formats.</p>
+  </div>
+
+  <div class="subsection">
+    <h4>4.2 Core apps (v1)</h4>
+    <ol>
+      <li><strong>Notebook</strong> — primary canvas. Pages, notebooks, tags, layers, templates (Cornell, dot-grid, lined, blank).</li>
+      <li><strong>Capture</strong> — voice/meeting recorder with live timestamping. Hardware button starts a session that timestamps any concurrent handwriting against the audio stream.</li>
+      <li><strong>Library</strong> — e-reader. Supports EPUB, PDF, MOBI, plus annotation export. Highlights and margin notes flow into the wiki.</li>
+      <li><strong>Wiki</strong> — the LLM-powered second brain (see §5).</li>
+      <li><strong>Music</strong> — streaming receiver UI + smart-queue / ambient-DJ controls (see §4.4).</li>
+      <li><strong>Files</strong> — local file browser, USB-C and Wi-Fi transfer.</li>
+      <li><strong>Settings</strong> — including AI mode (Subscription / BYO-keys / Off).</li>
+    </ol>
+  </div>
+
+  <div class="subsection">
+    <h4>4.3 Note ↔ audio integration</h4>
+    <p>When a recording session is active, every stroke on a Notebook page is timestamped against the audio.</p>
+    <p>After processing returns from cloud:</p>
+    <ul>
+      <li>Audio transcript appears as a panel beside the page.</li>
+      <li>Tap a handwritten word → jumps to that timestamp in the audio + transcript.</li>
+      <li>Tap a transcript line → jumps to the page region you were writing at that moment.</li>
+      <li>Cloud also produces a "merged document": cleaned-up bullets, action items extracted, full transcript collapsed beneath as expandable detail. Saved as a wiki page.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>4.4 Music — the "ambient DJ"</h4>
+    <ul>
+      <li><strong>Streaming sources at launch:</strong> Spotify Connect target, AirPlay 2 receiver, Bluetooth A2DP sink. Local FLAC/MP3/audiobook files synced via USB-C or companion app.</li>
+      <li><strong>Phone is the source of truth</strong> for streaming auth, library, and recommendations. Memex is the player + controller.</li>
+      <li><strong>Ambient-DJ features:</strong>
+        <ul>
+          <li>Crossfade between tracks (manual + auto).</li>
+          <li>BPM-aware playlist transitions ("smart shuffle that flows").</li>
+          <li>Two-deck queue with pre-cue on Bluetooth headphones.</li>
+          <li>Slow waveform / mood-gradient visualizer tuned to e-ink refresh constraints.</li>
+          <li>Lyrics where available (from streaming source metadata).</li>
+        </ul>
+      </li>
+      <li><strong>Out of scope:</strong> scratch, beat-juggling, real-time effects chains.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>4.5 What we're explicitly <em>not</em> shipping in v1</h4>
+    <ul>
+      <li>Capacitive multi-touch keyboard accessory (roadmap).</li>
+      <li>Apple Music native browse/search (AirPlay only at launch).</li>
+      <li>Third-party app store / SDK (roadmap as stretch goal).</li>
+      <li>Cloud sync of the wiki (deliberate — see §6).</li>
+      <li>Camera. Ever.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 5. LLM WIKI ===== -->
+<section id="wiki">
+  <span class="section-num">5 · The LLM-Wiki</span>
+  <h2>Memex's differentiator</h2>
+  <p>The product's defining feature. A personal, ever-growing, queryable knowledge base that lives on the device. Inspired by Karpathy's notion of an LLM-powered personal wiki.</p>
+
+  <div class="subsection">
+    <h4>5.1 What gets ingested</h4>
+    <ul>
+      <li>Every meeting/voice recording → cloud transcription → on-device storage.</li>
+      <li>Every handwritten page → cloud OCR + on-device embedding storage.</li>
+      <li>Every book highlight, margin note, and reading session.</li>
+      <li>Imported docs (Markdown, PDF) via USB-C / companion app.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>5.2 How it works</h4>
+    <ul>
+      <li><strong>Chunking + embedding:</strong> content is chunked and embedded by a cloud model. The vectors come back; <strong>only the device retains them</strong>.</li>
+      <li><strong>On-device store:</strong> SQLite + sqlite-vss (or LanceDB) for vectors and metadata. No managed vector DB.</li>
+      <li><strong>Query path:</strong> when the user asks a question, the device retrieves relevant chunks locally → sends just those chunks + the question to a cloud LLM → receives the answer → optionally saves the answer as a new wiki page on-device.</li>
+      <li><strong>Surfacing connections</strong> (a daily/weekly background pass):
+        <ul>
+          <li>Bidirectional links between recurring themes (Obsidian-style backlinks).</li>
+          <li>"Related notes" cards: open a meeting → "you discussed this with Bob in March, here are 3 related decisions."</li>
+          <li>Synthesis pages: "this week you kept returning to X — want a synthesis page?"</li>
+        </ul>
+      </li>
+      <li><strong>Graph view</strong> of the wiki available in the companion app (read-only against the on-device source).</li>
+      <li><strong>Export-friendly:</strong> wiki can export as Markdown + links so users can take it to Obsidian / Logseq / etc. The user owns their second brain.</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h4>5.3 What stays on device vs. goes to cloud</h4>
+    <table>
+      <thead>
+        <tr><th>Asset</th><th class="center">On device</th><th>Sent to cloud (transient)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Audio files</td><td class="center"><span class="yes">✓ permanent</span></td><td>For ASR, then deleted</td></tr>
+        <tr><td>Transcripts</td><td class="center"><span class="yes">✓ permanent</span></td><td>(Only when transcribing)</td></tr>
+        <tr><td>Handwriting strokes</td><td class="center"><span class="yes">✓ permanent</span></td><td>For OCR, then deleted</td></tr>
+        <tr><td>Embeddings</td><td class="center"><span class="yes">✓ permanent</span></td><td><span class="no">Never stored cloud-side</span></td></tr>
+        <tr><td>Wiki pages</td><td class="center"><span class="yes">✓ permanent</span></td><td><span class="no">—</span></td></tr>
+        <tr><td>Books, highlights</td><td class="center"><span class="yes">✓ permanent</span></td><td><span class="no">—</span></td></tr>
+        <tr><td>Q&amp;A query</td><td class="center">—</td><td>Retrieved chunks + question, transient, scrubbed logs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 6. PRIVACY ===== -->
+<section id="privacy">
+  <span class="section-num">6 · Privacy &amp; data architecture</span>
+  <h2>Local-first, cloud-as-stateless-processor</h2>
+
+  <ul>
+    <li>All user content lives on the device. Nothing is retained on Memex servers.</li>
+    <li>Cloud endpoints (transcription, embedding, LLM) are stateless: requests are scrubbed from logs after processing, no training on user data, no user account tied to processing requests beyond an opaque billing token.</li>
+    <li><strong>Backup is opt-in and user-owned:</strong> when enabled, encrypted snapshots are written to the user's own destination — iCloud Drive, Google Drive, Dropbox, S3-compatible, or a self-hosted endpoint via WebDAV. Encryption keys derived on-device from a passphrase Memex never sees.</li>
+    <li><strong>Companion app:</strong> read-mostly + capture. Connects to the device over local Wi-Fi (LAN); no cloud middleman. Capture-from-phone (record on phone, sync to device) supported.</li>
+  </ul>
+
+  <div class="callout privacy">
+    <strong>Trade-offs we'll be explicit about in marketing</strong>
+    <ul style="margin:6px 0 0 18px; padding:0;">
+      <li>No "log in on the web at app.memex.com and see your wiki." Deliberately.</li>
+      <li>Multi-device sync requires opt-in user-owned backup.</li>
+      <li>If you lose the device and never enabled backup, your wiki is gone. Onboarding pushes backup setup hard, but the choice is the user's.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 7. CLOUD / AI INFRA ===== -->
+<section id="cloud">
+  <span class="section-num">7 · Cloud / AI infrastructure</span>
+  <h2>Stateless utility, not a store</h2>
+
+  <table>
+    <thead>
+      <tr><th>Layer</th><th>Provider strategy</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Transcription</strong></td><td>Hybrid. Rent (Whisper API / Deepgram) at launch; self-host whisper-large-v3 on Memex GPU infra once volume justifies.</td></tr>
+      <tr><td><strong>LLM</strong> (summarize, draft, Q&amp;A)</td><td>Hybrid. Frontier API (Claude / GPT-class) for heavy lifts; cheaper open-weights model (Llama / Qwen class) for the constant-rate stuff (embed, classify, link suggestion).</td></tr>
+      <tr><td><strong>Embeddings</strong></td><td>Cloud-hosted embedding model. Vectors returned to device, stored locally.</td></tr>
+      <tr><td><strong>Vector store</strong></td><td><strong>None.</strong> On-device only (sqlite-vss or LanceDB).</td></tr>
+      <tr><td><strong>Logging</strong></td><td>Stateless; no per-user logs retained beyond 24h debug window.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== 8. PRICING ===== -->
+<section id="pricing">
+  <span class="section-num">8 · Pricing &amp; business model</span>
+  <h2>Hardware + AI tier choice</h2>
+
+  <h3>8.1 AI access tiers (user picks)</h3>
+  <div class="tier-grid">
+    <div class="tier featured">
+      <div class="tier-name">Subscription (default)</div>
+      <div class="tier-price">$10–15<span style="font-size:13px;font-weight:400;color:var(--muted);">/mo</span></div>
+      <div class="tier-desc">Unlimited cloud transcription and AI Q&amp;A within fair-use limits. Mainstream users.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-name">Bring-your-own-keys</div>
+      <div class="tier-price">$0<span style="font-size:13px;font-weight:400;color:var(--muted);">/mo</span></div>
+      <div class="tier-desc">User plugs in their own OpenAI / Anthropic / Deepgram API keys via Settings. We don't run anything for them.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-name">AI Off</div>
+      <div class="tier-price">—</div>
+      <div class="tier-desc">The device works as a beautiful e-reader and notebook with no AI features. Nothing phones home.</div>
+    </div>
+  </div>
+
+  <h3>8.2 Hardware tiers</h3>
+  <div class="tier-grid">
+    <div class="tier">
+      <div class="tier-name">Kickstarter early-bird (capped)</div>
+      <div class="tier-price">$399</div>
+      <div class="tier-desc">Slate (256 GB) + EMR stylus + folio + 2 yrs subscription <em>or</em> lifetime BYO-keys.</div>
+    </div>
+    <div class="tier featured">
+      <div class="tier-name">Kickstarter standard</div>
+      <div class="tier-price">$499</div>
+      <div class="tier-desc">Same bundle as early-bird, no cap.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-name">Kickstarter Pro</div>
+      <div class="tier-price">$649</div>
+      <div class="tier-desc">Slate Pro (512 GB) + premium folio + 2 yrs subscription / lifetime BYO.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-name">Retail (post-campaign)</div>
+      <div class="tier-price">$649<span style="font-size:13px;font-weight:400;color:var(--muted);"> / $799 Pro</span></div>
+      <div class="tier-desc">Standard pricing once Kickstarter rewards ship.</div>
+    </div>
+  </div>
+
+  <h3>8.3 Stretch goals (in order)</h3>
+  <ol>
+    <li><strong>Quad-mic 360° array</strong> upgrade — better lecture / conference room capture.</li>
+    <li><strong>Backers' choice second color</strong> — limited edition (e.g., "Linen" cream).</li>
+    <li><strong>Audiobook narration mode</strong> — your handwritten notes read back to you in your own cloned voice (opt-in voice profile, fully on-device generation in roadmap).</li>
+    <li><strong>Field Notes / Moleskine collab folio</strong> (final: pending partnership).</li>
+  </ol>
+</section>
+
+<!-- ===== 9. CAMPAIGN ===== -->
+<section id="campaign">
+  <span class="section-num">9 · Campaign &amp; timeline</span>
+  <h2>Q3 2026 launch · Q4 2027 ship</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-when">Q3 2026</div>
+      <div class="timeline-what">Campaign launch</div>
+      <div class="timeline-detail">Working prototype demo, lifestyle imagery, full pricing live.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-when">Q4 2026 – Q1 2027</div>
+      <div class="timeline-what">EVT (engineering validation)</div>
+      <div class="timeline-detail">First handful of working units; fix electrical and mechanical issues.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-when">Q2 2027</div>
+      <div class="timeline-what">DVT (design validation)</div>
+      <div class="timeline-detail">Full software stack on production-intent hardware. Beta backers receive units.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-when">Q3 2027</div>
+      <div class="timeline-what">PVT (production validation)</div>
+      <div class="timeline-detail">Manufacturing line tested; full QA pass.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-when">Q4 2027</div>
+      <div class="timeline-what">Ship to backers</div>
+      <div class="timeline-detail">Backer fulfillment, retail availability follows ~3 months later.</div>
+    </div>
+  </div>
+
+  <h3>9.1 Campaign narrative beats</h3>
+  <ol>
+    <li><em>Memex was Vannevar Bush's 1945 dream of a memory machine. 80 years later, finally.</em></li>
+    <li>The five things this device is and is not.</li>
+    <li>Demo: live capture + handwritten notes during a meeting → AI-generated summary appears.</li>
+    <li>Demo: ask a question of your past six months ("when did I commit to that?").</li>
+    <li>Privacy story: it all lives here, on this device. Not on our servers.</li>
+    <li>Campaign tiers, stretch goals, ship timeline.</li>
+  </ol>
+</section>
+
+<!-- ===== 10. OPEN QUESTIONS ===== -->
+<section id="open">
+  <span class="section-num">10 · Open questions</span>
+  <h2>To resolve before plan stage</h2>
+  <ol>
+    <li><strong>Trademark clearance for "Memex"</strong> — needs IP search. If blocked, fall back to "Cairn."</li>
+    <li><strong>Capacitive touch on writing surface</strong> — full multi-touch (more useful) vs. recessed off-by-default (preserves paper-feel writing). Final call belongs with industrial design + EE prototyping.</li>
+    <li><strong>Companion app platforms at launch</strong> — iOS-only, Android-only, or both? Both is double the engineering; iOS-only is the right Kickstarter / early-adopter bet but excludes Android-only buyers.</li>
+    <li><strong>Subscription pricing tier</strong> — final number ($10 vs $12 vs $15) should be set after a small willingness-to-pay survey on the landing page.</li>
+    <li><strong>Backup destinations at launch</strong> — minimum viable set is probably (iCloud Drive, Google Drive, WebDAV self-hosted). Dropbox + S3 can be roadmap.</li>
+    <li><strong>Audio codec strategy</strong> — record as Opus (small, great quality) by default; offer FLAC for archival users. Confirm with cloud ASR provider that Opus is supported well.</li>
+  </ol>
+</section>
+
+<!-- ===== 11. GLOSSARY ===== -->
+<section id="glossary">
+  <span class="section-num">11 · Glossary</span>
+  <h2>Terms</h2>
+  <dl style="margin: 0;">
+    <dt style="font-weight:600; margin-top:10px;">Memex</dt>
+    <dd style="margin: 2px 0 0 0; color: #3a3525;">Vannevar Bush's 1945 conception of a personal memory-extension device with associative trails between everything one reads and writes. The product's namesake and philosophical north star.</dd>
+
+    <dt style="font-weight:600; margin-top:14px;">Ambient DJ</dt>
+    <dd style="margin: 2px 0 0 0; color: #3a3525;">The music mode — smart crossfade and BPM-aware queueing rather than scratch / effects DJing.</dd>
+
+    <dt style="font-weight:600; margin-top:14px;">LLM-Wiki</dt>
+    <dd style="margin: 2px 0 0 0; color: #3a3525;">Karpathy-inspired personal wiki where the LLM is both author and reader — surfacing connections, generating synthesis pages, answering questions across all your captured content.</dd>
+
+    <dt style="font-weight:600; margin-top:14px;">Local-first</dt>
+    <dd style="margin: 2px 0 0 0; color: #3a3525;">The architectural principle that all user data lives on the user's device(s); cloud services are stateless utilities, not stores.</dd>
+  </dl>
+</section>
+
+<footer>
+  <div>Memex · Design Spec · 2026-05-09</div>
+  <div style="margin-top:6px;">Pairs with the industrial design page, PoC build guide, and shopping list.</div>
+</footer>
+
+</div>
+</body>
+</html>
