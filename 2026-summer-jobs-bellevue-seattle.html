@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer 2026 Jobs &amp; Internships — Bellevue / Seattle</title>
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fafaf7;
+    --ink: #1f1a14;
+    --muted: #6b5d3c;
+    --line: #d8d3c5;
+    --accent: #2b2b2b;
+    --accent-warm: #8a6f3a;
+    --warn-bg: #f3e9cf;
+    --warn-border: #b3954a;
+    --closed-bg: #ecd9d4;
+    --closed-text: #7a3a2a;
+    --open-bg: #dde4cf;
+    --open-text: #4a5d2e;
+    --priority-bg: #f0e6c4;
+    --priority-border: #b3954a;
+    --code-bg: #ece6d5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+  header.title {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  header.title h1 {
+    font-family: Georgia, serif;
+    margin: 0 0 6px 0;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  header.title .meta {
+    color: var(--muted);
+    font-size: 14px;
+    font-style: italic;
+    font-family: Georgia, serif;
+  }
+  .toc {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 24px 0 32px;
+  }
+  .toc h2 {
+    margin: 0 0 8px 0;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    border: 0;
+    padding: 0;
+  }
+  .toc ol { margin: 0; padding-left: 22px; }
+  .toc a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+  .toc a:hover { border-bottom-color: var(--ink); }
+
+  .callout {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+  .callout strong { font-weight: 600; }
+
+  section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 22px 0;
+  }
+  section > h2 {
+    font-family: Georgia, serif;
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  section h3 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin: 22px 0 8px 0;
+  }
+  section h3 a { color: var(--ink); text-decoration: none; }
+
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--ink); border-bottom: 1px dotted var(--muted); text-decoration: none; }
+  a:hover { border-bottom-color: var(--ink); }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 8px;
+    vertical-align: middle;
+    border: 1px solid transparent;
+  }
+  .badge.closed { background: var(--closed-bg); color: var(--closed-text); border-color: #c9a89c; }
+  .badge.open { background: var(--open-bg); color: var(--open-text); border-color: #b3bf9e; }
+  .badge.partial { background: var(--code-bg); color: var(--muted); border-color: var(--line); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    color: var(--ink);
+    font-family: Georgia, serif;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  code, .mono {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13.5px;
+  }
+
+  .priority {
+    background: var(--priority-bg);
+    border: 2px solid var(--priority-border);
+    border-radius: 12px;
+    padding: 22px 26px;
+  }
+  .priority h2 { margin-top: 0; }
+  .priority ol { padding-left: 26px; }
+  .priority ol li { margin: 10px 0; }
+
+  .calendar {
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .calendar ul { margin: 6px 0 0 0; }
+
+  .small { font-size: 13.5px; color: var(--muted); }
+
+  .tip {
+    background: var(--paper);
+    border-left: 4px solid var(--accent-warm);
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 12px 0;
+    font-size: 14.5px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    section, .toc, .priority, .calendar, .tip, .callout { background: white; border-color: #ccc; box-shadow: none; }
+    a { color: black; border-bottom: 1px solid #888; }
+    .badge { border: 1px solid #888; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="title">
+  <h1>Summer 2026 Jobs &amp; Internships — Bellevue / Seattle</h1>
+  <div class="meta">For a rising high school senior (~17) · Compiled 2026-05-22</div>
+</header>
+
+<div class="tip" style="font-size: 16px; padding: 14px 18px; margin-bottom: 18px;">
+  <strong>New (2026-05-22):</strong> <a href="./2026-summer-jobs-live-listings.html">See live job postings →</a> — ~80 actively-posted Indeed/Snagajob openings scraped today, organized by category, with apply links and pay.
+</div>
+
+<div class="callout">
+  <strong>Reality check on timing.</strong> Most "prestige" summer programs (Microsoft Discovery, Fred Hutch SHIP, SYEP internships, hospital teen volunteer cohorts) had January–May application windows. By late May the door is closed for those — your best remaining bets are: city/parks rec jobs that hire rolling, retail/food, library volunteering, YMCA seasonal, private tutoring, and gig work. Items already closed are explicitly marked <span class="badge closed">Closed 2026</span>.
+</div>
+
+<p class="small">
+  WA state minimum wage 2026: <strong>$16.66/hr</strong>. Seattle minimum: <strong>$20.76/hr</strong>.
+  At 16–17 you can work most jobs except a list of "hazardous" occupations (no roofing, no commercial driving, restricted machinery). A signed parent/school <em>work permit form</em> (issued by your school) is required by WA L&amp;I before your first day.
+</p>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#sec1">City / Government Youth Programs</a></li>
+    <li><a href="#sec2">Summer Camps &amp; Recreation</a></li>
+    <li><a href="#sec3">Retail / Food Service</a></li>
+    <li><a href="#sec4">Libraries &amp; Tutoring</a></li>
+    <li><a href="#sec5">Research / Pre-College / Academic</a></li>
+    <li><a href="#sec6">Tech Internships for High Schoolers</a></li>
+    <li><a href="#sec7">Volunteering That Looks Good on Apps</a></li>
+    <li><a href="#sec8">Babysitting / Pet-sitting / Gigs</a></li>
+    <li><a href="#priority">Priority Apply List (start here)</a></li>
+    <li><a href="#calendar">Calendar for Summer 2027</a></li>
+  </ol>
+</nav>
+
+<!-- ========================= 1 ========================= -->
+<section id="sec1">
+  <h2>1. City / Government Youth Programs</h2>
+
+  <h3>Seattle Youth Employment Program (SYEP) <span class="badge closed">Closed 2026</span></h3>
+  <ul>
+    <li><strong>Age:</strong> 16–24, must live in Seattle city limits or attend Seattle public schools.</li>
+    <li><strong>Pay:</strong> $21.30/hr min, 6–8 week paid internships.</li>
+    <li><strong>Status:</strong> 2026 internship apps closed May 5, 2026; 250 chosen by lottery. Pathways track due Jan 15, 2026. Track for 2027.</li>
+    <li><strong>Link:</strong> <a href="https://www.seattle.gov/syep">seattle.gov/syep</a> · SYEP@seattle.gov</li>
+  </ul>
+
+  <h3>Bellevue Youth Link (City of Bellevue) <span class="badge partial">Rolling</span></h3>
+  <ul>
+    <li>Not primarily a paid jobs program — focus is leadership, action teams (BYTE Back Tech, Youth Climate Action), Bellevue Youth Council, community service. Great for college apps as leadership/service.</li>
+    <li><strong>Status:</strong> Council/board apps usually open spring; some action teams recruit year-round. Worth emailing now.</li>
+    <li><strong>Contact:</strong> youthlink@bellevuewa.gov · 425-452-2846</li>
+    <li><strong>Link:</strong> <a href="https://bellevuewa.gov/city-government/departments/parks/youth-and-teen-programs/youth-link">bellevuewa.gov · Youth Link</a></li>
+  </ul>
+
+  <h3>Bellevue Parks &amp; Community Services — Lifeguards / Camp Staff <span class="badge open">Still hiring</span></h3>
+  <ul>
+    <li><strong>Roles:</strong> Lifeguard (Bellevue Aquatic Center, Red Cross cert required), summer camp counselor, junior camp counselor.</li>
+    <li><strong>Age:</strong> Lifeguards 15+ with cert; camp counselors typically 16+.</li>
+    <li><strong>Pay:</strong> Lifeguards ~$19–22/hr; counselors $17–20/hr.</li>
+    <li><strong>Apply:</strong> <a href="https://bellevuewa.gov/city-government/jobs-volunteering/jobs-careers">City of Bellevue careers</a></li>
+  </ul>
+
+  <h3>Seattle Parks &amp; Recreation — Summer Jobs <span class="badge open">Still hiring</span></h3>
+  <ul>
+    <li><strong>Roles:</strong> Lifeguard, Camp Counselor, Junior Counselor (Discover the Outdoors, Specialized Camps, Late Night, Get Moving).</li>
+    <li><strong>Age:</strong> 16+ for most; lifeguards 15+ with current Red Cross cert.</li>
+    <li><strong>Pay:</strong> $20.76/hr (Seattle min) up to ~$24/hr lifeguard.</li>
+    <li><strong>Link:</strong> <a href="https://www.seattle.gov/parks/about-us/jobs/summer-employment-opportunities">seattle.gov/parks/jobs/summer</a></li>
+  </ul>
+
+  <h3>King County Parks — Trails &amp; Recreation <span class="badge partial">Some open</span></h3>
+  <ul>
+    <li>Camp counselor, marine science aide, trails work. 16+, $18–22/hr.</li>
+    <li>Search "seasonal" or "youth" on <a href="https://kingcounty.gov/about/jobs.aspx">kingcounty.gov careers</a>.</li>
+  </ul>
+</section>
+
+<!-- ========================= 2 ========================= -->
+<section id="sec2">
+  <h2>2. Summer Camps &amp; Recreation</h2>
+
+  <h3>YMCA of Greater Seattle <span class="badge open">Open &amp; hiring</span></h3>
+  <ul>
+    <li><strong>Branches:</strong> Bellevue, Sammamish, Coal Creek (Newcastle), Mercer Island, Northshore (Bothell), Downtown Seattle. Sleepaway: Camp Orkila (Orcas Island), Camp Colman (Longbranch), Camp Terry (Mercer Island day camp).</li>
+    <li><strong>Roles:</strong> Day Camp Counselor (16+), Counselor-in-Training, Lifeguard (15+ with cert), Kids' Zone, Youth Sports.</li>
+    <li><strong>Pay:</strong> $17–22/hr day camps; resident camps $400–550/week + room/board.</li>
+    <li><strong>Apply:</strong> <a href="https://jobs.seattleymca.org">jobs.seattleymca.org</a></li>
+  </ul>
+
+  <h3>Boys &amp; Girls Clubs of King County <span class="badge open">Open</span></h3>
+  <ul>
+    <li>Mercer Island, Bellevue, Eastside (Redmond), Capitol Hill, Rainier Vista. Summer Camp Staff $20–22/hr (Indeed). 16+.</li>
+    <li><a href="https://www.bgcking.org">bgcking.org</a></li>
+  </ul>
+
+  <h3>Mercer Island Parks &amp; Rec — Camp Counselors <span class="badge partial">Likely open</span></h3>
+  <ul>
+    <li>Day camps; counselor / junior counselor 15+, ~$17–20/hr. Apply at mercerisland.gov careers.</li>
+  </ul>
+
+  <h3>Pacific Science Center — Discovery Corps <span class="badge closed">Closed 2026</span></h3>
+  <ul>
+    <li>Teen volunteer/internship; some paid roles for returning members. Stellar STEM teaching/public-speaking experience.</li>
+    <li>Cohort apps usually March/April — track for 2027 starting Feb 2027.</li>
+    <li><a href="https://pacificsciencecenter.org/learn/discovery-corps/">pacificsciencecenter.org/learn/discovery-corps</a></li>
+  </ul>
+
+  <h3>Woodland Park Zoo — ZooCorps <span class="badge closed">Likely closed</span></h3>
+  <ul>
+    <li>Teen volunteer ambassador, 14–18. Unpaid but iconic for college apps. Spring training cohort closed; check <a href="https://www.zoo.org">zoo.org</a> for late-spring add-on.</li>
+  </ul>
+
+  <h3>Seattle Aquarium — Youth Ocean Advocates <span class="badge partial">Apply for fall cohort</span></h3>
+  <ul>
+    <li>Teen volunteer cohort, 14–18. Unpaid. Cohorts start in fall — apply for 2026–27 cohort (runs through summer 2027).</li>
+    <li><strong>Apply:</strong> YOA@seattleaquarium.org</li>
+  </ul>
+
+  <h3>MoPOP, Burke Museum, Seattle Art Museum — Camp Counselors <span class="badge partial">Check weekly</span></h3>
+  <ul>
+    <li>Run summer art/music/STEM camps and hire teen counselors (16+). $19–22/hr typical. Most hiring done by April; check careers pages weekly into June.</li>
+  </ul>
+
+  <h3>iD Tech (UW Seattle campus) <span class="badge closed">Not eligible</span></h3>
+  <ul>
+    <li>Instructor positions require <strong>18+ and college experience</strong> — not a fit for a 17-year-old.</li>
+  </ul>
+
+  <h3>Code Ninjas (Bellevue, Issaquah, Redmond) <span class="badge open">Apply directly</span></h3>
+  <ul>
+    <li>"Code Sensei" teaches kids JS / Roblox / Minecraft. Many locations 16+; $17–20/hr. Apply directly to local franchise via codeninjas.com.</li>
+  </ul>
+</section>
+
+<!-- ========================= 3 ========================= -->
+<section id="sec3">
+  <h2>3. Retail / Food Service</h2>
+
+  <p class="small">
+    WA hiring rules: 16–17 year olds can work up to 28 hrs/school week and 48 hrs/week during non-school weeks. No work past 12 AM on non-school nights. Need a <strong>work permit form</strong> signed by school + parent.
+  </p>
+
+  <h3>Reliably hires 16-year-olds — target these first <span class="badge open">Walk in this week</span></h3>
+  <table>
+    <thead><tr><th>Employer</th><th>Age</th><th>Typical pay</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Trader Joe's</strong> (Bellevue, Redmond, U-Village, Capitol Hill)</td><td>16+</td><td>$19–23/hr + tips on demos</td><td>Excellent reputation; apply in person, ask for hiring manager.</td></tr>
+      <tr><td><strong>Starbucks</strong></td><td>16+</td><td>$18.50–21/hr + tips</td><td>Apply at starbucks.com/careers; mention specific store.</td></tr>
+      <tr><td><strong>Chipotle</strong></td><td>16+</td><td>$19–21/hr</td><td>Online only — careers.chipotle.com.</td></tr>
+      <tr><td><strong>Target</strong> (Bellevue, Northgate, Redmond, Issaquah)</td><td>16+</td><td>$17–19/hr</td><td>corporate.target.com/careers.</td></tr>
+      <tr><td><strong>QFC / Fred Meyer / Safeway</strong></td><td>16+ (courtesy clerk), 18+ cashier in some stores</td><td>$17–19/hr</td><td>Union (UFCW), decent benefits even part-time.</td></tr>
+      <tr><td><strong>Whole Foods</strong></td><td>16+ in some depts (bakery, grocery, prepared foods)</td><td>$19–22/hr</td><td>careers.wholefoodsmarket.com.</td></tr>
+      <tr><td><strong>Barnes &amp; Noble</strong> (Bellevue Square, U-Village)</td><td>16+</td><td>$17–18/hr</td><td>College-friendly; book chat = good interview material.</td></tr>
+      <tr><td><strong>Salt &amp; Straw</strong> (U-Village, Cap Hill, Ballard)</td><td>16+</td><td>$17/hr + generous tips ($23–28 effective)</td><td>"Scoopers" program; saltandstraw.com/careers.</td></tr>
+      <tr><td><strong>Molly Moon's Ice Cream</strong> (Bellevue Sq, Cap Hill, Wallingford, U-Dist)</td><td>16+</td><td>$17/hr + tips</td><td>mollymoon.com/jobs — known for hiring teens.</td></tr>
+      <tr><td><strong>Boba shops</strong> — Sharetea, Yifang, Boba Up, Tea Madame</td><td>16+</td><td>$17–19/hr + tips</td><td>Apply in person; high turnover = frequent openings.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Where to walk in / drop a resume</h3>
+  <ul>
+    <li><strong>Bellevue Square</strong> — weekdays 11am–2pm. Lululemon (16+ Educator at some stores), ice cream/boba kiosks, Crate &amp; Barrel. Skip Apple, Sephora (18+).</li>
+    <li><strong>Crossroads Bellevue</strong> — food court is the easiest entry point.</li>
+    <li><strong>Bell-Red corridor / Spring District</strong> — newer cafes, QFC at Spring District, Whole Foods Bellevue.</li>
+    <li><strong>University Village</strong> — Trader Joe's, Apple, Crate &amp; Barrel, Barnes &amp; Noble, Eileen Fisher, Mr. West Cafe.</li>
+    <li><strong>U-District / The Ave</strong> — boba, ice cream, sandwich shops; lots of 16+ hiring.</li>
+    <li><strong>Downtown Seattle (Pike Place / Westlake)</strong> — Pike Place stalls, Pacific Place, Beecher's Cheese.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Walk-in tip:</strong> Dress one notch up from the dress code. Ask "Are you hiring? Could I leave a resume with the manager?" — works astonishingly well.
+  </div>
+</section>
+
+<!-- ========================= 4 ========================= -->
+<section id="sec4">
+  <h2>4. Libraries &amp; Tutoring</h2>
+
+  <h3>King County Library System (KCLS) <span class="badge open">Open year-round</span></h3>
+  <ul>
+    <li>Volunteer roles: Study Zone tutor (K-12), Reading Buddy, Summer Learning Program assistant. Typically 14+. Unpaid.</li>
+    <li>Branches: Bellevue, Newport Way, Lake Hills, Crossroads, Redmond.</li>
+    <li><a href="https://kcls.org/teens/volunteer/">kcls.org/teens/volunteer</a></li>
+  </ul>
+
+  <h3>Seattle Public Library — Teen Pages <span class="badge partial">Apply ASAP</span></h3>
+  <ul>
+    <li>Paid "Teen Page" / Library Assistant; 14–18; ~$20.76/hr (Seattle min).</li>
+    <li>Hiring usually opens late spring; may still be open. <a href="https://www.spl.org/programs-and-services/youth-and-teens/teens">spl.org · teens</a></li>
+  </ul>
+
+  <h3>Mathnasium (Bellevue, Sammamish, Issaquah, Bothell, Redmond) <span class="badge open">Always hiring</span></h3>
+  <ul>
+    <li>Math instructor/coach for grades 2–12. 16+ at some locations, most prefer 17+. Math assessment required. $18–24/hr.</li>
+  </ul>
+
+  <h3>Russian School of Math (Bellevue, Redmond, Sammamish) <span class="badge open">Hiring</span></h3>
+  <ul>
+    <li>TA for elementary–middle school math. 16+ TA; 18+ to lead. TA $17–20/hr; lead $25–35/hr.</li>
+    <li>Strong fit if you have AMC/AIME background. <a href="https://www.russianschool.com/careers">russianschool.com/careers</a></li>
+  </ul>
+
+  <h3>Kumon Centers <span class="badge open">Apply in person</span></h3>
+  <ul>
+    <li>Grader / classroom assistant. 16+ (sometimes 14–15 for grading). $17–18/hr — low end of tutoring options.</li>
+  </ul>
+
+  <h3>Sylvan / Best in Class / Ardent Academy <span class="badge partial">18+ usually</span></h3>
+  <ul>
+    <li>Most require 18+. <strong>Ardent Academy</strong> (Bellevue) is worth applying to if you have STEM contest experience.</li>
+  </ul>
+
+  <h3>Private 1:1 tutoring <span class="badge open">Best $/hr available</span></h3>
+  <ul>
+    <li><strong>Wyzant / Varsity Tutors</strong> require 18+. Skip.</li>
+    <li><strong>Workaround:</strong> Post on <strong>Nextdoor</strong>, parent FB groups, school district listservs ("17yo offering tutoring in [subjects], $30/hr"). Include free Red Cross/online certifications. Realistically the highest hourly rate available to a high schooler — $25–60/hr realistic for HS subjects, $50–80/hr for SAT/ACT prep.</li>
+  </ul>
+</section>
+
+<!-- ========================= 5 ========================= -->
+<section id="sec5">
+  <h2>5. Research / Pre-College / Academic Programs</h2>
+
+  <h3>Paid research programs — most CLOSED for 2026</h3>
+  <table>
+    <thead><tr><th>Program</th><th>Pay</th><th>2026 status</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fred Hutch SHIP</strong> (Summer High School Internship)</td><td>~$5,000 stipend, 8 weeks</td><td><span class="badge closed">Closed</span></td><td>Apps due late Jan / early Feb 2026. Highly selective; underrepresented backgrounds. Track for 2027 — opens Dec 2026. <a href="https://www.fredhutch.org/en/education-training.html">fredhutch.org/education-training</a></td></tr>
+      <tr><td><strong>Fred Hutch Pathways for Cancer Research</strong></td><td>Stipend</td><td><span class="badge closed">Closed</span></td><td>Same calendar as SHIP.</td></tr>
+      <tr><td><strong>Seattle Children's Summer Scholars</strong></td><td>Paid stipend</td><td><span class="badge closed">Closed</span></td><td>Jan–Feb deadline. Track for 2027.</td></tr>
+      <tr><td><strong>UW Genome Sciences Summer Program</strong></td><td>Paid for selected students</td><td><span class="badge closed">Closed</span></td><td>March deadline. Track for 2027.</td></tr>
+      <tr><td><strong>UW Bioengineering High School Research</strong></td><td>Volunteer / some paid</td><td><span class="badge closed">Closed</span></td><td>Cold-email faculty for a <strong>fall semester</strong> lab gig instead.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Tuition-based UW summer programs <span class="badge open">Still open</span></h3>
+  <ul>
+    <li><strong>UW Summer Sessions</strong> — open to high schoolers; classes start <strong>June 22, 2026</strong>, registration opened April 16. ~$750–1,200 per credit. Worth it for a transcripted college course (rigor signal), not as "research experience." <a href="https://summer.uw.edu/">summer.uw.edu</a></li>
+    <li><strong>UW Robinson Center</strong> — gifted ed; mostly middle school but some HS courses. <a href="https://robinsoncenter.uw.edu/programs/summer/">robinsoncenter.uw.edu/programs/summer</a></li>
+  </ul>
+
+  <h3>Bellevue College <span class="badge open">Open</span></h3>
+  <ul>
+    <li>BC summer quarter — high schoolers can enroll for ~$130/credit (in-state). Registration opens early May 2026; classes start late June. Solid college-app signal at low cost. <a href="https://www.bellevuecollege.edu/registration/">bellevuecollege.edu/registration</a></li>
+  </ul>
+
+  <h3>DigiPen Pre-College <span class="badge partial">Tuition-based</span></h3>
+  <ul>
+    <li>Two-week game-design / animation workshops, ~$2,000–3,500. Strong signal for game-design / CS programs. Registration usually still open in May for July sessions. <a href="https://www.digipen.edu">digipen.edu</a></li>
+  </ul>
+
+  <div class="tip">
+    <strong>Honest framing.</strong> For summer 2026, paid research is essentially off the table — windows have closed. The realistic academic-flavored options that <em>remain open</em>:
+    <ol>
+      <li>Take a UW or Bellevue College course for credit.</li>
+      <li>Cold-email 30+ UW / Fred Hutch / Seattle Children's PIs for unpaid lab volunteer time. Bioinformatics / data-heavy labs are most receptive on short notice. Aim for fall start.</li>
+      <li>Independent project: pick a research question, write code or analysis, post to GitHub + writeup. <strong>This is what admissions officers care about more than another resume bullet.</strong></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========================= 6 ========================= -->
+<section id="sec6">
+  <h2>6. Tech Internships for High Schoolers</h2>
+
+  <p>Realistic-for-a-rising-senior framing: <strong>almost no Seattle-area tech company runs a paid summer internship for 17-year-old high schoolers.</strong> Most "high school programs" target rising college freshmen.</p>
+
+  <h3>Microsoft Discovery Program <span class="badge closed">Wrong audience</span></h3>
+  <ul>
+    <li>Targets rising <em>college</em> freshmen, not high schoolers (despite ambiguous web copy). Four-week paid internship in Redmond/Atlanta.</li>
+    <li>For a 2026 high school senior: not eligible this summer. Eligible <strong>summer 2027</strong> after HS graduation.</li>
+    <li>Apps for summer 2027 typically open <strong>fall 2026</strong> — calendar this for September.</li>
+    <li><a href="https://careers.microsoft.com/v2/global/en/students">careers.microsoft.com/students</a></li>
+  </ul>
+
+  <h3>Amazon Future Engineer (AFE) <span class="badge partial">Apply in fall senior year</span></h3>
+  <ul>
+    <li>Scholarship + virtual learning, not an in-person Seattle HS summer internship. Apply for the AFE Scholarship in fall senior year ($40,000 + guaranteed paid Amazon internship after freshman year of college). Deadline late January.</li>
+    <li><a href="https://www.amazonfutureengineer.com/scholarships">amazonfutureengineer.com/scholarships</a></li>
+  </ul>
+
+  <h3>Boeing High School Internship <span class="badge closed">Closed 2026</span></h3>
+  <ul>
+    <li>Boeing's Pre-MEP and Career Discovery Programs occasionally hire HS interns in Renton/Everett. Apps due Jan–Feb. Track for 2027.</li>
+  </ul>
+
+  <h3>T-Mobile, Expedia, F5, Concur, Smartsheet, Zillow</h3>
+  <ul>
+    <li>None publicly run a high school internship program. Stick to college pipelines.</li>
+  </ul>
+
+  <h3>What's actually attainable as a 17-year-old in May 2026</h3>
+  <ol>
+    <li><strong>Small startups via cold outreach.</strong> Search YC W26/S26 batch + Seattle. Email founders directly: "I'm a high school senior. I built [X]. I'd work ~15 hrs/week for free or low rate this summer." Hit rate ~5%, but one yes beats 100 LinkedIn applications.</li>
+    <li><strong>Open source contributions.</strong> Find an active project, fix bugs / add features. Visible on GitHub, free, signals stronger than most internships.</li>
+    <li><strong>Freelance</strong> on Upwork / Fiverr — under-18 needs a parent's account, but feasible. Web dev / Python / data cleanup pays $20–50/hr.</li>
+    <li><strong>Hackathons</strong> — Major League Hacking lists Seattle-area events; some pay prize money.</li>
+    <li><strong>Build &amp; ship something.</strong> A web app, Chrome extension, small SaaS. Doesn't pay, but is the single highest-leverage thing for CS-track college apps.</li>
+  </ol>
+</section>
+
+<!-- ========================= 7 ========================= -->
+<section id="sec7">
+  <h2>7. Volunteering That Looks Good on Apps</h2>
+
+  <h3>Hospitals — almost all closed for summer 2026</h3>
+  <table>
+    <thead><tr><th>Hospital</th><th>Teen volunteer status (summer 2026)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Overlake (Bellevue)</strong></td><td><span class="badge closed">Closed</span> Site says "check back January 2027." Adult volunteer apps reopen Aug 2026 (must be 18+).</td></tr>
+      <tr><td><strong>Seattle Children's</strong></td><td><span class="badge open">Apply for fall</span> Teen volunteer (16+) apps year-round, but onboarding takes 6–8 weeks — summer start unlikely. Apply now for fall start; will count for senior year. <a href="https://seattlechildrens.vsyslive.com">seattlechildrens.vsyslive.com</a></td></tr>
+      <tr><td><strong>Swedish Medical Center</strong></td><td><span class="badge closed">Likely closed</span> Junior volunteer (15–17). Apps usually due March. Check swedish.org/services/volunteer.</td></tr>
+      <tr><td><strong>Virginia Mason Franciscan Health</strong></td><td><span class="badge partial">Rolling, slow</span> Teen volunteer (16+), 100-hour minimum. Slow onboarding.</td></tr>
+      <tr><td><strong>EvergreenHealth (Kirkland)</strong></td><td><span class="badge closed">Closed</span> Junior Volunteer summer program closed for 2026; opens January 2027. <a href="https://www.evergreenhealth.com/volunteer">evergreenhealth.com/volunteer</a></td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    For senior year: Apply to <strong>Seattle Children's</strong> now for a fall start. Hospital volunteering is strong for med-school-track apps and gives you 100+ hours by application time.
+  </div>
+
+  <h3>Other strong volunteer angles</h3>
+  <ul>
+    <li><strong>Hopelink</strong> (food bank, Bellevue/Redmond/Kirkland) — 14+, drop-in shifts. <a href="https://www.hopelink.org/volunteer">hopelink.org/volunteer</a></li>
+    <li><strong>Northwest Harvest</strong> (Kent warehouse) — 14+, open shifts daily. <a href="https://www.northwestharvest.org/volunteer">northwestharvest.org/volunteer</a></li>
+    <li><strong>Bellevue Botanical Garden / Mercer Slough Nature Park</strong> — environmental volunteer, 14+.</li>
+    <li><strong>Habitat for Humanity Seattle-King County</strong> — 16+ for build sites, ReStore retail 14+. <a href="https://www.habitatskc.org">habitatskc.org</a></li>
+    <li><strong>Teen Feed</strong> (homeless youth meals, U-District) — 16+ with adult, recurring Sunday shifts.</li>
+    <li><strong>Bellevue / Sammamish / Issaquah school district summer school TA roles</strong> — usually unpaid; some districts pay $15–17/hr. Check district HR pages.</li>
+  </ul>
+</section>
+
+<!-- ========================= 8 ========================= -->
+<section id="sec8">
+  <h2>8. Babysitting / Pet-sitting / Yardwork Gigs</h2>
+
+  <p>Highest hourly rate available with the lowest barrier to entry. Available <strong>right now</strong>.</p>
+
+  <h3>Babysitting <span class="badge open">$22–35/hr</span></h3>
+  <ul>
+    <li><strong>Rate in Bellevue/Seattle 2026:</strong> $22–30/hr; $35+/hr for multiple kids or special needs. Date-night Saturday rates trend higher.</li>
+    <li><strong>Care.com</strong> — must be 18+. Skip.</li>
+    <li><strong>Bambino app</strong> — teen-friendly, parent invites only; ask people who know you.</li>
+    <li><strong>Nextdoor</strong> — post in your neighborhood; include Red Cross Babysitting cert (free online via American Red Cross, ~5 hours).</li>
+    <li><strong>School / community / synagogue / church listservs</strong> — highest-trust, well-paying.</li>
+  </ul>
+
+  <h3>Pet-sitting / Dog-walking <span class="badge open">$25–35/walk, $75–100/overnight</span></h3>
+  <ul>
+    <li><strong>Rover.com</strong> — must be 18+. Skip directly.</li>
+    <li><strong>Workaround:</strong> Advertise as a private dog walker on Nextdoor. Drop-in pet-sit visits $25/visit. Overnight pet-sits $75–100/night. Summer travel = high demand.</li>
+    <li>Pet first-aid certified ($30 online) — adds credibility.</li>
+  </ul>
+
+  <h3>Yardwork / Lawn / Power-Washing / Trash-out <span class="badge open">$25–40/hr</span></h3>
+  <ul>
+    <li>Mowing, weeding, bark-mulching, gutter cleaning, garage organization, moving help. Post on Nextdoor + door-flyer your block. June–August is peak.</li>
+    <li>Used pressure washer (~$150) → charge $200–400/house for half-day driveway/deck wash.</li>
+  </ul>
+
+  <h3>Tech setup / "geek squad" gigs <span class="badge open">$30–50/hr</span></h3>
+  <ul>
+    <li>Older neighbors pay well for iPhone setup, smart-TV config, photo backup, password resets, printer fixing. High signal-to-noise — 1 Nextdoor post often books 4–6 sessions.</li>
+  </ul>
+</section>
+
+<!-- ========================= PRIORITY ========================= -->
+<section id="priority" class="priority">
+  <h2>What to Apply To FIRST — Priority List</h2>
+  <p class="small">Ordered by likelihood of getting it × value × urgency. Aim for 2–3 from this list before next weekend.</p>
+
+  <ol>
+    <li><strong>Trader Joe's, Salt &amp; Straw, Molly Moon's, Starbucks</strong> (whichever is nearest). Walk in this week with a printed resume between 11am–2pm on a weekday. Highest hire rate, best teen workplace culture, $19–23/hr + tips.</li>
+    <li><strong>YMCA of Greater Seattle — Bellevue or Sammamish branch day camp counselor.</strong> Open positions, fast hiring cycle, looks good as "leadership of children." Apply today: <a href="https://jobs.seattleymca.org">jobs.seattleymca.org</a></li>
+    <li><strong>Bellevue / Seattle / Mercer Island Parks lifeguard or junior camp counselor.</strong> If you have (or can get in 2 weeks at Bellevue Aquatic Center for ~$300) a Red Cross Lifeguarding cert, this is the highest-paying teen-friendly municipal job ($20–24/hr). Pays back in 1–2 weeks.</li>
+    <li><strong>Private tutoring on Nextdoor + parent listservs.</strong> Set rate at $30/hr. Lead with strongest subjects (probably AP-level by senior year). Highest $/hr available; flexible; excellent college-app narrative if framed as "ran a small tutoring practice."</li>
+    <li><strong>Mathnasium or Russian School of Math</strong> (Bellevue / Redmond / Sammamish). Apply this week — hiring summer staff now. $18–24/hr. College-app relevant if STEM-track.</li>
+    <li><strong>Cold-email 20–30 UW / Fred Hutch faculty about volunteer lab time.</strong> Not paid (those are gone), but a fall-start unpaid research position you can list on Common App by November. Bioinformatics labs most receptive to remote/asynchronous student help.</li>
+    <li><strong>Apply to Seattle Children's hospital volunteer (16+) for a fall start.</strong> Onboarding 6–8 weeks → active by September with hours accumulating through application season.</li>
+  </ol>
+</section>
+
+<!-- ========================= CALENDAR ========================= -->
+<section id="calendar" class="calendar">
+  <h2>Calendar for Summer 2027 — Don't Miss These Next Year</h2>
+  <ul>
+    <li><strong>Sept 2026:</strong> Microsoft Discovery (rising college freshmen) — apply when you know your college; AFE Scholarship opens.</li>
+    <li><strong>Nov 2026:</strong> Pacific Science Center Discovery Corps (high school program).</li>
+    <li><strong>Dec 2026:</strong> Fred Hutch SHIP, Seattle Children's Summer Scholars apps open.</li>
+    <li><strong>Jan 2027:</strong> SYEP, Overlake / Swedish / EvergreenHealth teen volunteer apps, AFE Scholarship deadline, Boeing high school internship.</li>
+    <li><strong>Feb 2027:</strong> UW Genome Sciences high school program; UW Summer Sessions registration windows announced.</li>
+  </ul>
+</section>
+
+<footer>
+  <strong>Sources &amp; verification (2026-05-22):</strong>
+  Seattle SYEP eligibility &amp; May 5, 2026 close — <a href="https://www.seattle.gov/syep">seattle.gov/syep</a> ·
+  Overlake teen volunteer closed, reopens Jan 2027 — overlakehospital.org/volunteer ·
+  Seattle Children's 16+ rolling volunteer — seattlechildrens.org ·
+  UW Summer Sessions Apr 16 / Jun 22 — summer.uw.edu ·
+  YMCA hiring Orkila/Colman/Terry — jobs.seattleymca.org ·
+  Boys &amp; Girls Clubs of King County (Mercer Island) $20–22/hr — Indeed posting.
+  Pay rates marked "approximate" reflect 2025–2026 Indeed/Glassdoor postings and 2026 WA/Seattle minimum wages; confirm with employer.
+</footer>
+
+</div>
+</body>
+</html>
