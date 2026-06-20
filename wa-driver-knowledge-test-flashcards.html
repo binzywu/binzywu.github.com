@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WA Driver Knowledge Test — Flash Cards</title>
+<style>
+  :root {
+    --bg: #0f1f3d;
+    --bg2: #14294f;
+    --card: #ffffff;
+    --accent: #1b7f4b;     /* WA evergreen */
+    --accent2: #2e6db5;
+    --gold: #f2c037;
+    --text: #1a2433;
+    --muted: #5b6b80;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(160deg, var(--bg), var(--bg2));
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  header { text-align: center; max-width: 880px; margin: 0 auto 16px; }
+  h1 { margin: 0 0 4px; font-size: 1.6rem; }
+  .sub { color: #b9c6db; font-size: .9rem; margin-bottom: 4px; }
+  .controls {
+    max-width: 880px; margin: 0 auto 16px; display: flex;
+    flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;
+  }
+  select, button {
+    font: inherit; border: none; border-radius: 8px; padding: 9px 14px;
+    cursor: pointer; background: #25406e; color: #fff; transition: .15s;
+  }
+  select { background: #1d3157; }
+  button:hover { background: #34548a; }
+  button.primary { background: var(--accent); }
+  button.primary:hover { background: #239659; }
+  .stats { max-width: 880px; margin: 0 auto 10px; text-align: center; color: #b9c6db; font-size: .85rem; }
+  .stats b { color: var(--gold); }
+
+  .scene { max-width: 880px; margin: 0 auto; perspective: 1600px; }
+  .card {
+    position: relative; width: 100%; min-height: 320px;
+    transform-style: preserve-3d; transition: transform .5s;
+    cursor: pointer;
+  }
+  .card.flipped { transform: rotateY(180deg); }
+  .face {
+    position: absolute; inset: 0; backface-visibility: hidden;
+    background: var(--card); color: var(--text); border-radius: 18px;
+    padding: 40px 36px; display: flex; flex-direction: column;
+    justify-content: center; box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  }
+  .face .tag {
+    position: absolute; top: 16px; left: 20px; font-size: .72rem;
+    text-transform: uppercase; letter-spacing: .08em; font-weight: 700;
+    color: #fff; background: var(--accent2); padding: 4px 10px; border-radius: 999px;
+  }
+  .face .side {
+    position: absolute; top: 16px; right: 20px; font-size: .72rem;
+    color: var(--muted); text-transform: uppercase; letter-spacing: .08em;
+  }
+  .back { transform: rotateY(180deg); border-top: 6px solid var(--accent); }
+  .front { border-top: 6px solid var(--gold); }
+  .q { font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
+  .a { font-size: 1.35rem; line-height: 1.5; }
+  .hint { margin-top: 20px; font-size: .8rem; color: var(--muted); }
+
+  .nav { max-width: 880px; margin: 18px auto; display: flex; gap: 10px; justify-content: center; align-items: center; }
+  .nav .count { min-width: 110px; text-align: center; color: #b9c6db; }
+  .mark { max-width: 880px; margin: 0 auto; display: flex; gap: 10px; justify-content: center; }
+  button.know { background: var(--accent); }
+  button.dontknow { background: #b3402f; }
+  button.dontknow:hover { background: #cf4d39; }
+  .progress-bar { max-width: 880px; margin: 14px auto 0; height: 8px; background: #1d3157; border-radius: 99px; overflow: hidden; }
+  .progress-bar > div { height: 100%; background: var(--gold); width: 0; transition: width .3s; }
+  footer { max-width: 880px; margin: 24px auto 0; text-align: center; color: #8295b0; font-size: .78rem; }
+  kbd { background:#25406e; border-radius:5px; padding:1px 6px; font-size:.78rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🚗 WA Driver Knowledge Test — Flash Cards</h1>
+  <div class="sub">Based on the official Washington State Driver Guide (DOL)</div>
+  <div class="sub">Click the card or press <kbd>Space</kbd> to flip · <kbd>←</kbd>/<kbd>→</kbd> to navigate</div>
+</header>
+
+<div class="controls">
+  <select id="category"></select>
+  <button id="shuffle">🔀 Shuffle</button>
+  <button id="reset">↺ Reset deck</button>
+  <button id="reviewMode" class="primary">★ Review missed only</button>
+</div>
+
+<div class="stats" id="stats"></div>
+
+<div class="scene">
+  <div class="card" id="card">
+    <div class="face front">
+      <span class="tag" id="frontTag"></span>
+      <span class="side">Question</span>
+      <div class="q" id="question"></div>
+      <div class="hint">Tap to reveal answer</div>
+    </div>
+    <div class="face back">
+      <span class="tag" id="backTag"></span>
+      <span class="side">Answer</span>
+      <div class="a" id="answer"></div>
+    </div>
+  </div>
+</div>
+
+<div class="progress-bar"><div id="prog"></div></div>
+
+<div class="nav">
+  <button id="prev">‹ Prev</button>
+  <span class="count" id="count"></span>
+  <button id="next">Next ›</button>
+</div>
+
+<div class="mark">
+  <button class="dontknow" id="markDont">✗ Still learning</button>
+  <button class="know" id="markKnow">✓ Got it</button>
+</div>
+
+<footer>
+  Study aid only — always verify against the current
+  <a style="color:#9ec5ff" href="https://dol.wa.gov/driver-licenses-and-permits" target="_blank" rel="noopener">WA DOL Driver Guide</a>.
+  Progress is saved in your browser.
+</footer>
+
+<script>
+const CARDS = [
+  // Licensing
+  ["Licensing","How old must you be to take the knowledge exam if NOT in a driver-training course?","15½ years old. (You can apply for a permit as early as 15 if enrolled in a driver training course.)"],
+  ["Licensing","How long is an instruction permit valid?","1 year (renewable for a fee)."],
+  ["Licensing","How long is your knowledge exam score valid?","2 years."],
+  ["Licensing","New residents have how many days to get a WA driver license?","30 days."],
+  ["Licensing","Ages 16–17: how long must you hold your instruction permit before getting a license?","At least 6 months."],
+  ["Licensing","Ages 16–17: how many practice-driving hours are required?","50 total — 40 hours day + 10 hours night, with a licensed driver who has 3+ years' experience."],
+  ["Licensing","A traffic safety course must include how much instruction?","30 hours classroom + 6 hours behind-the-wheel."],
+  ["Licensing","Intermediate license — passenger rule for the FIRST 6 months?","No passengers under age 20 (except immediate family)."],
+  ["Licensing","Intermediate license — passenger rule AFTER 6 months?","No more than 3 passengers under age 20 (except immediate family)."],
+  ["Licensing","Intermediate license — nighttime driving restriction?","No driving 1 a.m.–5 a.m. unless with a parent/guardian or licensed driver at least 25. Expires after 1 year of safe driving."],
+  ["Licensing","Can an intermediate license / permit holder use a cell phone while driving?","No — not even hands-free. Only to report an emergency."],
+  ["Licensing","A temporary license (issued in person) is good for how long?","45 days; the official license is mailed."],
+  ["Licensing","If your license is expired 8+ years, what must you do?","Retake BOTH the knowledge and skills exams."],
+  ["Licensing","How soon must you update your address after moving?","Within 10 days, in License Express."],
+
+  // DUI
+  ["DUI & Drugs","Legal BAC limit — drivers age 21 and older?","0.08% or higher = DUI."],
+  ["DUI & Drugs","Legal BAC limit — drivers under 21?","0.02% or higher = DUI."],
+  ["DUI & Drugs","THC (cannabis) limit — drivers 21 and older?","More than 5 nanograms active THC per mL of blood = DUI."],
+  ["DUI & Drugs","THC limit — drivers under 21?","More than 0 ng (any amount) = DUI."],
+  ["DUI & Drugs","What is the Implied Consent Law?","Everyone who drives in WA agrees to be tested if an officer suspects impairment."],
+  ["DUI & Drugs","Penalty for REFUSING a breath/blood test?","Lose driving privilege 90 to 730 days, or until age 21 — whichever is longer."],
+  ["DUI & Drugs","Can you get a DUI in a parked car?","Yes — DUI applies to being in physical control even when parked."],
+  ["DUI & Drugs","Open container law — where can open alcohol/cannabis be carried?","Only in the trunk or truck bed — not within driver's reach."],
+  ["DUI & Drugs","How long do alcohol/drug offenses stay on your record?","For life."],
+
+  // Speed
+  ["Speed Limits","School zone speed limit?","20 mph."],
+  ["Speed Limits","Speed limit on ocean beaches (Grays Harbor & Pacific counties)?","25 mph."],
+  ["Speed Limits","Recommended roundabout speed?","15 to 25 mph."],
+  ["Speed Limits","Max speed in an emergency zone (flashing roadside lights)?","At least 10 mph below posted limit; never faster than 50 mph."],
+  ["Speed Limits","Do posted limits apply in bad weather?","Posted = max under IDEAL conditions; you must slow for poor conditions or risk a ticket."],
+
+  // Distance
+  ["Distance & Time","Space to keep behind the vehicle ahead?","At least twice the length of your vehicle."],
+  ["Distance & Time","Space when passing/following a bicyclist?","At least 3 feet."],
+  ["Distance & Time","A loaded truck at 55 mph needs how far to stop?","About 450 feet."],
+  ["Distance & Time","A train can take how far to stop?","Up to a mile."],
+  ["Distance & Time","How far should you be able to stop when driving at night?","Within the glow of your headlights (about 400 feet)."],
+  ["Distance & Time","Following distance behind a light rail train?","At least one car length (or more)."],
+
+  // Lights & signals
+  ["Lights & Signals","When does WA law require headlights on?","From a half hour after sunset to a half hour before sunrise (and when dark/rainy/snowy/foggy/smoky)."],
+  ["Lights & Signals","Dim high beams within how far of an ONCOMING vehicle?","500 feet."],
+  ["Lights & Signals","Dim high beams how far BEHIND another vehicle?","300 feet."],
+  ["Lights & Signals","Brake lights must be visible from how far?","100 feet."],
+  ["Lights & Signals","How far before a turn must you signal?","At least 100 feet."],
+  ["Lights & Signals","Hand signal for STOP / slowing?","Left arm out, fingers pointing DOWN."],
+  ["Lights & Signals","Hand signal for LEFT turn?","Left arm straight out, pointing left."],
+  ["Lights & Signals","Hand signal for RIGHT turn?","Left arm out, bent UP (fingers to the sky)."],
+
+  // Traffic lights
+  ["Traffic Lights","Solid red — can you turn right?","Yes, after a full stop, if no 'No Turn on Red' sign and there's room. Left on red only onto a one-way street."],
+  ["Traffic Lights","Flashing red light means?","Treat as a STOP sign — full stop, then go when it's your turn."],
+  ["Traffic Lights","Red arrow means?","Stop — no turn in the direction of the arrow."],
+  ["Traffic Lights","Solid yellow means?","Slow down, prepare to stop. Don't speed up to beat it."],
+  ["Traffic Lights","Flashing yellow means?","Same as a YIELD sign — proceed when you have right-of-way."],
+  ["Traffic Lights","Signal completely dark / not working — what do you do?","Treat as a 4-way stop; yield to traffic on your right."],
+  ["Traffic Lights","Turning left on a solid green — who has right-of-way?","Oncoming traffic; yield and turn on a gap."],
+
+  // Sign colors
+  ["Sign Colors","RED sign means?","Prohibited or restricted action."],
+  ["Sign Colors","ORANGE sign means?","Construction / maintenance (work zone)."],
+  ["Sign Colors","YELLOW sign means?","General warning of road conditions."],
+  ["Sign Colors","FLUORESCENT YELLOW-GREEN sign means?","School, pedestrian, and bicycle activity."],
+  ["Sign Colors","WHITE sign means?","Regulatory (speed limit, keep right…)."],
+  ["Sign Colors","GREEN sign means?","Guide / directional information."],
+  ["Sign Colors","BLUE sign means?","Motorist services (hospital, gas, food, EV charging)."],
+  ["Sign Colors","BROWN sign means?","Public recreation / cultural / historical area."],
+  ["Sign Colors","An octagon (8-sided) sign is always?","A STOP sign."],
+  ["Sign Colors","A triangle emblem on the back of a vehicle means?","Slow-moving vehicle (25 mph or less), e.g. farm equipment."],
+
+  // Road markings
+  ["Road Markings","Yellow lines separate traffic going which way?","Opposite directions."],
+  ["Road Markings","White lines separate traffic going which way?","Same direction."],
+  ["Road Markings","Dashed yellow line means?","Center of a two-way road — you may pass when safe."],
+  ["Road Markings","Solid yellow line on YOUR side means?","No passing — do not cross to pass."],
+  ["Road Markings","Double solid yellow lines mean?","No passing in either direction."],
+  ["Road Markings","Dashed white line means?","You may cross to change lanes if safe."],
+  ["Road Markings","Double solid white lines mean?","Barrier between lanes — illegal to cross."],
+  ["Road Markings","Solid white line means?","Stay in your lane unless needed; marks road edge / bike lanes."],
+  ["Road Markings","How far can you travel in a center two-way left-turn lane?","No more than 300 feet."],
+  ["Road Markings","The diamond symbol on a lane means?","HOV / carpool lane (motorcycles allowed)."],
+  ["Road Markings","Reversible lane signals: green arrow / red X / steady yellow X?","Green = use it; red X = don't; steady yellow X = changing direction, move out safely."],
+
+  // Right of way
+  ["Right-of-Way","4-way stop, two cars arrive together — who goes?","Yield to the vehicle on your RIGHT."],
+  ["Right-of-Way","4-way stop — who goes first overall?","First to arrive; a left-turner yields to those going straight/right."],
+  ["Right-of-Way","Two-way stop — who has right-of-way?","The vehicle going straight; turning vehicles yield."],
+  ["Right-of-Way","Who always has right-of-way at crosswalks (marked or not)?","Pedestrians and bicyclists."],
+  ["Right-of-Way","Emergency vehicle with lights/siren approaching?","Pull to the RIGHT and stop; reenter in order after it passes."],
+  ["Right-of-Way","Who always has right-of-way at railroad crossings?","Trains — always."],
+  ["Right-of-Way","Uncontrolled intersection — when must you yield?","If a car is already in it; entering a highway from a secondary/unpaved road; or turning left with oncoming traffic."],
+  ["Right-of-Way","Transit bus signaling to pull back onto the road?","Yield to it."],
+
+  // School buses
+  ["School Buses","Red flashing lights + extended stop sign — what do you do?","STOP. All same-direction drivers stop; don't pass using a center turn lane."],
+  ["School Buses","When can you go after a school bus stops?","After lights stop flashing, sign retracts, and arm returns. Keep watching for children."],
+  ["School Buses","Oncoming traffic on a MULTILANE road — when need NOT stop?","If 3+ lanes AND separated by a median or barrier."],
+  ["School Buses","On a 2-lane road, do oncoming vehicles stop for a bus?","Yes — all vehicles stop."],
+  ["School Buses","Penalty for passing a stopped school bus?","Fines are doubled."],
+
+  // Railroad
+  ["Railroad","How far from the nearest rail must you stop for a train?","Between 15 and 50 feet."],
+  ["Railroad","Flashing red lights at a crossing mean?","Train approaching — stay outside the gates; never drive around a lowered gate."],
+  ["Railroad","Your car stalls on the tracks — what do you do?","Get everyone out immediately, then call for help."],
+
+  // Parking
+  ["Parking","No parking within how many feet of a fire hydrant?","15 feet."],
+  ["Parking","No parking within how many feet of a traffic signal/stop/yield sign?","30 feet."],
+  ["Parking","No parking within how many feet of a railroad crossing?","50 feet."],
+  ["Parking","No parking within how many feet of a driveway/alley?","5 feet."],
+  ["Parking","No parking within how many feet of a fire station driveway (opposite side)?","75 feet."],
+  ["Parking","Max distance wheels may be from the curb?","12 inches."],
+  ["Parking","White curb means?","Only short stops permitted."],
+  ["Parking","Yellow or red curb means?","Loading zone or other restriction."],
+  ["Parking","Facing UPHILL with a curb — which way turn your wheels?","Away from the curb (rolls back into curb)."],
+  ["Parking","Facing DOWNHILL — which way turn your wheels?","Toward the curb."],
+  ["Parking","Parking with NO curb — which way?","Toward the road's edge, so it rolls away from traffic."],
+  ["Parking","What is the 'Dutch Reach'?","Open the door with the hand FARTHEST from it, forcing you to check for bicyclists."],
+
+  // Sharing road
+  ["Sharing Road","Can you share a lane with a motorcycle or bicycle?","No — they get the full lane width."],
+  ["Sharing Road","Turning right, how do you check for motorcycles?","Look left, right, then left again — looking twice can save a life."],
+  ["Sharing Road","Passing a bicyclist with 2 lanes same direction?","Move over one full lane."],
+  ["Sharing Road","A bicyclist in a crosswalk is treated as?","A pedestrian — yield."],
+  ["Sharing Road","Large-vehicle blind spots are called?","'No zones.' If you can't see their mirrors, they can't see you."],
+  ["Sharing Road","Space a large vehicle needs in a roundabout?","2 lanes — don't pass a turning large vehicle."],
+
+  // Roundabouts
+  ["Roundabouts","Which direction do you travel in a roundabout?","Counterclockwise, entering to the right."],
+  ["Roundabouts","Who has right-of-way in a roundabout?","Traffic already in it — look left and yield."],
+  ["Roundabouts","Can you change lanes inside a roundabout?","No — pick your lane before entering."],
+  ["Roundabouts","What is a truck apron?","Area around the central island for large vehicles to cross."],
+
+  // Conditions
+  ["Conditions & Skids","What is hydroplaning and how do you prevent it?","Water lifts tires off the road; prevent it by slowing on wet roads."],
+  ["Conditions & Skids","What do you do if you start to skid?","Ease off gas, press/pump brakes (steady with ABS), steer in the SAME direction the vehicle is moving."],
+  ["Conditions & Skids","What is black ice, and where is it common?","Thin, hard-to-see ice — on shady spots, overpasses, and bridges near freezing."],
+  ["Conditions & Skids","Why is pavement most slippery when rain first starts on a hot day?","Heat brings asphalt oil to the surface until it washes away."],
+  ["Conditions & Skids","What do you do if a tire blows out?","Grip wheel, keep straight, ease off gas, don't brake hard, slow gradually, pull off."],
+  ["Conditions & Skids","Engine loses power while driving?","Firm grip (steering gets hard), brake steadily, pull off the road."],
+  ["Conditions & Skids","Accelerator stuck (car speeds up)?","Eyes on road, shift to NEUTRAL, pull off, turn off engine."],
+  ["Conditions & Skids","Minimum legal tire tread depth?","2/32 of an inch."],
+
+  // Crashes
+  ["Crashes","File a collision report within how many days (if police don't)?","Within 4 days."],
+  ["Crashes","A power line falls on your car — what do you do?","Stay inside, call 911, keep others 35 feet away."],
+  ["Crashes","Must exit a car touching a power line (fire) — how?","Jump clear, feet together, arms in; don't touch car and ground at once; shuffle 35 ft away."],
+  ["Crashes","How far behind your vehicle do you place warning flares?","200 to 300 feet."],
+  ["Crashes","Should you give an injured person water?","No — nothing to drink."],
+  ["Crashes","Should you move an injured person?","No, unless in immediate danger (e.g. burning vehicle)."],
+
+  // Pulled over
+  ["Pulled Over","First thing to do when an officer pulls you over?","Signal, pull right, turn off engine/audio, stay in vehicle, hands on wheel."],
+  ["Pulled Over","Three documents an officer asks for?","Driver license, proof of insurance, vehicle registration."],
+  ["Pulled Over","Does signing a ticket admit guilt?","No — but refusing to sign could lead to arrest."],
+  ["Pulled Over","Follow ticket instructions within how many days?","15 days, or risk suspension."],
+
+  // Vehicle & insurance
+  ["Vehicle & Insurance","Minimum WA liability — one person injured?","$25,000."],
+  ["Vehicle & Insurance","Minimum liability — two or more persons?","$50,000."],
+  ["Vehicle & Insurance","Minimum liability — property damage?","$10,000."],
+  ["Vehicle & Insurance","File a report of sale within how many days of selling?","5 days (remove the plates)."],
+  ["Vehicle & Insurance","A buyer must transfer the title within how many days?","15 days."],
+  ["Vehicle & Insurance","Children under what age should never sit in the front (airbags)?","Under 13."],
+  ["Vehicle & Insurance","Rear-facing car seat up to what age?","Up to age 2."],
+  ["Vehicle & Insurance","Booster seat until belt fits — typically what age?","Between 8 and 12 (or until 4'9\")."],
+  ["Vehicle & Insurance","Your chest should be at least how far from the wheel?","At least 10 inches."],
+];
+
+// ---- state ----
+const KEY = "wa-flashcards-progress";
+let known = JSON.parse(localStorage.getItem(KEY) || "{}");
+let deck = [];
+let idx = 0;
+let reviewOnly = false;
+
+const el = id => document.getElementById(id);
+const cardEl = el("card");
+
+function cardId(c){ return c[1]; } // question is unique enough
+
+function buildDeck(){
+  const cat = el("category").value;
+  deck = CARDS
+    .map((c,i)=>({c,i}))
+    .filter(o => cat === "ALL" || o.c[0] === cat)
+    .filter(o => !reviewOnly || known[cardId(o.c)] !== "yes");
+  if (deck.length === 0) deck = CARDS.map((c,i)=>({c,i})); // fallback
+  idx = 0;
+  render();
+}
+
+function populateCategories(){
+  const cats = ["ALL", ...Array.from(new Set(CARDS.map(c=>c[0])))];
+  el("category").innerHTML = cats.map(c =>
+    `<option value="${c}">${c === "ALL" ? "All categories ("+CARDS.length+")" : c}</option>`
+  ).join("");
+}
+
+function render(){
+  if(deck.length === 0) return;
+  const {c} = deck[idx];
+  cardEl.classList.remove("flipped");
+  el("frontTag").textContent = c[0];
+  el("backTag").textContent = c[0];
+  el("question").textContent = c[1];
+  el("answer").textContent = c[2];
+  el("count").textContent = `${idx+1} / ${deck.length}`;
+  const total = CARDS.length;
+  const learned = Object.values(known).filter(v=>v==="yes").length;
+  el("stats").innerHTML = `Mastered <b>${learned}</b> of <b>${total}</b> cards · Deck: ${deck.length}`;
+  el("prog").style.width = (learned/total*100) + "%";
+  const mark = known[cardId(c)];
+  el("markKnow").style.opacity = mark==="yes" ? 1 : .8;
+  el("markDont").style.opacity = mark==="no" ? 1 : .8;
+}
+
+function flip(){ cardEl.classList.toggle("flipped"); }
+function next(){ idx = (idx+1) % deck.length; render(); }
+function prev(){ idx = (idx-1+deck.length) % deck.length; render(); }
+function save(){ localStorage.setItem(KEY, JSON.stringify(known)); }
+
+function shuffle(){
+  for(let i=deck.length-1;i>0;i--){
+    // simple Fisher–Yates; Math.random fine in browser
+    const j = Math.floor(Math.random()*(i+1));
+    [deck[i],deck[j]] = [deck[j],deck[i]];
+  }
+  idx = 0; render();
+}
+
+// ---- events ----
+cardEl.addEventListener("click", flip);
+el("next").addEventListener("click", next);
+el("prev").addEventListener("click", prev);
+el("shuffle").addEventListener("click", shuffle);
+el("category").addEventListener("change", ()=>{ reviewOnly=false; el("reviewMode").classList.add("primary"); buildDeck(); });
+el("reset").addEventListener("click", ()=>{
+  if(confirm("Reset all progress?")){ known={}; save(); reviewOnly=false; buildDeck(); }
+});
+el("reviewMode").addEventListener("click", ()=>{
+  reviewOnly = !reviewOnly;
+  el("reviewMode").textContent = reviewOnly ? "● Reviewing missed" : "★ Review missed only";
+  buildDeck();
+});
+el("markKnow").addEventListener("click", ()=>{
+  known[cardId(deck[idx].c)] = "yes"; save(); render(); setTimeout(next,150);
+});
+el("markDont").addEventListener("click", ()=>{
+  known[cardId(deck[idx].c)] = "no"; save(); render(); setTimeout(next,150);
+});
+
+document.addEventListener("keydown", e=>{
+  if(e.code==="Space"){ e.preventDefault(); flip(); }
+  else if(e.code==="ArrowRight") next();
+  else if(e.code==="ArrowLeft") prev();
+});
+
+populateCategories();
+buildDeck();
+</script>
+</body>
+</html>
