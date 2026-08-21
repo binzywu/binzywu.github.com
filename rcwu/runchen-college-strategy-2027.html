@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Runchen — College Application Strategy (Fall 2027)</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --plane:          #f9f9f7;
+    --ink:            #0b0b0b;
+    --ink-2:          #52514e;
+    --muted:          #898781;
+    --grid:           #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;  /* blue  — magnitude / accent */
+    --bar-track:      #e8ecf2;
+    /* tier semantics: reach=hard(red) … likely=good(green); always paired with text */
+    --tier-hireach:   #d03b3b;  /* critical */
+    --tier-reach:     #ec835a;  /* serious  */
+    --tier-target:    #eda100;  /* warning-ish yellow */
+    --tier-likely:    #0ca30c;  /* good     */
+    --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: var(--font);
+    color: var(--ink);
+    background: var(--plane);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- deck frame ---- */
+  .deck { height: 100vh; overflow: hidden; position: relative; }
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column;
+    padding: 4.5vh 7vw 8vh;
+    overflow-y: auto;
+    background: var(--surface-1);
+    animation: fade .25s ease;
+  }
+  .slide.active { display: flex; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  h1 { font-size: clamp(28px, 4.2vw, 52px); line-height: 1.05; margin: 0 0 .4em; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(22px, 3vw, 36px); line-height: 1.1; margin: 0 0 .5em; letter-spacing: -0.015em; }
+  h3 { font-size: clamp(15px, 1.4vw, 19px); margin: 0 0 .3em; color: var(--ink); }
+  p, li { font-size: clamp(14px, 1.35vw, 18px); line-height: 1.5; color: var(--ink-2); }
+  .lead { font-size: clamp(16px, 1.7vw, 22px); color: var(--ink); max-width: 42ch; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.2em; font-weight: 600; }
+  strong { color: var(--ink); }
+  .accent { color: var(--series-1); }
+  ul { margin: .2em 0 .8em; padding-left: 1.1em; }
+  li { margin: .3em 0; }
+  a { color: var(--series-1); }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4em; align-items: start; }
+  .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4em; }
+  @media (max-width: 820px) { .cols, .cols-3 { grid-template-columns: 1fr; gap: 1.2em; } }
+
+  .card { background: var(--plane); border: 1px solid var(--border); border-radius: 12px; padding: 1.1em 1.2em; }
+  .card h3 { margin-top: 0; }
+
+  /* stat tiles */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; margin: .6em 0 1.4em; }
+  @media (max-width: 820px) { .tiles { grid-template-columns: repeat(2,1fr); } }
+  .tile { background: var(--plane); border: 1px solid var(--border); border-radius: 12px; padding: 1em 1.1em; }
+  .tile .v { font-size: clamp(24px, 3.2vw, 40px); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+  .tile .k { font-size: 13px; color: var(--muted); margin-top: .2em; }
+
+  /* tier chip */
+  .chip { display: inline-flex; align-items: center; gap: .4em; font-size: 12px; font-weight: 600;
+          padding: .18em .6em; border-radius: 999px; color: #fff; white-space: nowrap; }
+  .chip .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.85); }
+  .c-hireach { background: var(--tier-hireach); }
+  .c-reach   { background: var(--tier-reach); }
+  .c-target  { background: var(--tier-target); color: #3a2c00; }
+  .c-likely  { background: var(--tier-likely); }
+
+  /* school list table */
+  table { border-collapse: collapse; width: 100%; font-size: clamp(12.5px, 1.15vw, 15px); }
+  th, td { text-align: left; padding: .5em .6em; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  td.name { font-weight: 600; color: var(--ink); }
+  .plan { font-variant-numeric: tabular-nums; color: var(--ink-2); white-space: nowrap; }
+  .plan b { color: var(--series-1); }
+
+  /* admit-rate bar (sequential magnitude, single hue) */
+  .bar { display: flex; align-items: center; gap: .55em; }
+  .bar .track { flex: 1; height: 9px; background: var(--bar-track); border-radius: 5px; overflow: hidden; min-width: 60px; }
+  .bar .fill { height: 100%; background: var(--series-1); border-radius: 5px; }
+  .bar .num { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); min-width: 3.4em; text-align: right; }
+
+  /* timeline */
+  .timeline { border-left: 2px solid var(--grid); margin-left: .4em; padding-left: 1.4em; }
+  .tl-item { position: relative; margin: 0 0 1.1em; }
+  .tl-item::before { content: ""; position: absolute; left: calc(-1.4em - 6px); top: .35em;
+                     width: 10px; height: 10px; border-radius: 50%; background: var(--series-1); box-shadow: 0 0 0 3px var(--surface-1); }
+  .tl-date { font-weight: 700; color: var(--ink); font-size: clamp(14px,1.4vw,18px); }
+  .tl-body { color: var(--ink-2); font-size: clamp(13px,1.25vw,16px); }
+
+  .callout { border-left: 3px solid var(--series-1); background: var(--plane); padding: .8em 1.1em; border-radius: 0 10px 10px 0; margin: .4em 0; }
+  .callout.warn { border-left-color: var(--tier-target); }
+
+  .spacer { flex: 1; }
+  .footnote { font-size: 12px; color: var(--muted); margin-top: auto; padding-top: 1.2em; }
+
+  /* nav */
+  .nav { position: fixed; bottom: 14px; left: 0; right: 0; display: flex; align-items: center;
+         justify-content: center; gap: 14px; z-index: 20; pointer-events: none; }
+  .nav button { pointer-events: auto; border: 1px solid var(--border); background: var(--surface-1);
+                color: var(--ink); width: 34px; height: 34px; border-radius: 8px; font-size: 16px; cursor: pointer; }
+  .nav button:hover { background: var(--plane); }
+  .counter { pointer-events: auto; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 4em; text-align: center; }
+  .dots { position: fixed; top: 0; left: 0; right: 0; height: 4px; background: var(--grid); z-index: 20; }
+  .dots .prog { height: 100%; background: var(--series-1); width: 0; transition: width .2s ease; }
+  .kbd-hint { position: fixed; bottom: 16px; right: 18px; font-size: 11px; color: var(--muted); z-index: 20; }
+
+  @media print {
+    .slide { display: flex !important; position: static; height: auto; page-break-after: always; padding: 3em; }
+    .nav, .dots, .kbd-hint { display: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<div class="dots"><div class="prog" id="prog"></div></div>
+<div class="deck" id="deck">
+
+  <!-- 1 — TITLE / PROFILE -->
+  <section class="slide active">
+    <p class="eyebrow">College Application Strategy · Fall 2027 Cycle · Family Working Deck</p>
+    <h1>Runchen Wu</h1>
+    <p class="lead">Rising senior, Bellevue HS (Class of 2027) — building a robotics&nbsp;→&nbsp;bioengineering / medical-device path.</p>
+    <div class="tiles">
+      <div class="tile"><div class="v">3.982</div><div class="k">Unweighted GPA (one B, AP Lit)</div></div>
+      <div class="tile"><div class="v">1550</div><div class="k">SAT superscore (760 EBRW / 790 Math)</div></div>
+      <div class="tile"><div class="v">10</div><div class="k">AP exams — six 5s, four 4s</div></div>
+      <div class="tile"><div class="v">7 yrs</div><div class="k">VEX robotics — Worlds Division Champion</div></div>
+    </div>
+    <p>Lead designer / builder / programmer, WA State Champion + VEX Worlds Division Champion & Builder Award. Advanced percussionist (SYSO, marching, rock band). CAD (Fusion 360, Blender); Python / C++ / Java. Immigrated from China at 3.5, bilingual.</p>
+    <p class="footnote">Sources: Runchen's profile note, the active 10-school shortlist, the bioengineering/essay/rec research note, and counselor (Red Gateways) guidance — all in the family wiki. Admit rates are overall (no school publishes a BME-specific rate); verify each in a browser before relying on it.</p>
+  </section>
+
+  <!-- 2 — THE NARRATIVE -->
+  <section class="slide">
+    <p class="eyebrow">The story the whole application should tell</p>
+    <h2>One thread: hands-on robotics, aimed at the human body</h2>
+    <div class="cols">
+      <div>
+        <p class="lead">Seven years of building competitive robots → wants to point that skill at medical devices and bioengineering. His own filter: <strong>"it needs to involve electricity."</strong></p>
+        <p>That's a genuine, specific narrative — not a résumé of clubs. Every essay, activity description, and teacher rec should reinforce <em>builder who wants to build for medicine</em>, not scatter across ten interests.</p>
+      </div>
+      <div class="card">
+        <h3>What makes it credible</h3>
+        <ul>
+          <li><strong>Depth over breadth</strong> — Worlds-level VEX is a rare, verifiable hook.</li>
+          <li><strong>Cross-domain</strong> — CAD + code + percussion shows range without diluting the thread.</li>
+          <li><strong>The pivot is real</strong> — robotics → biomedical/electrical is a coherent "why," not a stretch.</li>
+        </ul>
+        <div class="callout">The hook is <strong>robotics builder</strong>. The direction is <strong>bioengineering / medical devices with an electrical emphasis</strong>. Keep both in every school's essays.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 — STRENGTHS & HONEST GAPS -->
+  <section class="slide">
+    <p class="eyebrow">Candid read — where he's strong, where the odds bite</p>
+    <h2>Strong profile, but the reaches are genuinely long</h2>
+    <div class="cols">
+      <div class="card">
+        <h3 style="color:var(--tier-likely)">Working for him</h3>
+        <ul>
+          <li>Near-perfect GPA and a 1550 that sits at/above the 75th percentile for most of the list.</li>
+          <li>A national-level robotics hook few applicants can match.</li>
+          <li>Clear, buildable "why engineering / why biomedical" story.</li>
+          <li>Washington residency → UW is genuine in-state leverage.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--tier-reach)">The honest constraints</h3>
+        <ul>
+          <li><strong>Top reaches admit ~4–8%</strong> — Penn, Cornell, USC-ED, Harvey Mudd. Great stats are the price of entry, not a guarantee.</li>
+          <li><strong>Direct-to-major BME</strong> (all UCs, Cal Poly, GT) raises the real bar above the headline rate — worse as an out-of-state applicant.</li>
+          <li><strong>One ED bullet.</strong> Only one school gets the early-commit boost; spend it where it moves the needle most.</li>
+          <li>Essay load is heavy (Cornell = 6 prompts, USC = 11) — quality needs a focused list.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">Counselor's frame: a <strong>balanced list</strong> — 1–2 Hi-Reach, 2–4 Reach, 4–6 Target, 2 Likely — so energy goes to strong essays, not volume.</div>
+  </section>
+
+  <!-- 4 — THE LIST BY TIER -->
+  <section class="slide">
+    <p class="eyebrow">The active list — now 13 with Rice, Northeastern & Georgia Tech added · admit rate = overall, not BME-specific</p>
+    <h2>Where the list stands</h2>
+    <table>
+      <thead>
+        <tr><th>School</th><th>Tier</th><th style="width:26%">Admit rate</th><th>Tentative plan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="name">Cornell — Engineering</td><td><span class="chip c-hireach"><span class="dot"></span>Hi Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:10%"></span></span><span class="num">7%</span></div></td><td class="plan"><b>ED?</b> · RD 01/02</td></tr>
+        <tr><td class="name">UPenn</td><td><span class="chip c-hireach"><span class="dot"></span>Hi Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:6%"></span></span><span class="num">4%</span></div></td><td class="plan"><b>ED?</b> · RD 01/05</td></tr>
+        <tr><td class="name">Harvey Mudd</td><td><span class="chip c-reach"><span class="dot"></span>Hi-Reach/Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:17%"></span></span><span class="num">12%</span></div></td><td class="plan"><b>ED / ED II?</b></td></tr>
+        <tr><td class="name">Tufts — Engineering</td><td><span class="chip c-reach"><span class="dot"></span>Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:14%"></span></span><span class="num">10%</span></div></td><td class="plan"><b>ED II?</b></td></tr>
+        <tr><td class="name">USC — Viterbi</td><td><span class="chip c-reach"><span class="dot"></span>Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:10%"></span></span><span class="num">7%</span></div></td><td class="plan"><b>ED or EA</b> 11/01</td></tr>
+        <tr><td class="name">Northeastern <span style="color:var(--series-1);font-size:11px;font-weight:700">NEW</span></td><td><span class="chip c-reach"><span class="dot"></span>Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:9%"></span></span><span class="num">~6%</span></div></td><td class="plan">EA? <span style="color:var(--muted)">· verify</span></td></tr>
+        <tr><td class="name">Rice <span style="color:var(--series-1);font-size:11px;font-weight:700">NEW</span></td><td><span class="chip c-reach"><span class="dot"></span>Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:12%"></span></span><span class="num">8%</span></div></td><td class="plan">RD? <span style="color:var(--muted)">· verify</span></td></tr>
+        <tr><td class="name">Georgia Tech — BME <span style="color:var(--series-1);font-size:11px;font-weight:700">NEW</span></td><td><span class="chip c-reach"><span class="dot"></span>Reach</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:15%"></span></span><span class="num">~10% OOS</span></div></td><td class="plan">EA? <span style="color:var(--muted)">· verify</span></td></tr>
+        <tr><td class="name">Case Western Reserve</td><td><span class="chip c-target"><span class="dot"></span>Target</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:52%"></span></span><span class="num">36%*</span></div></td><td class="plan"><b>EA</b> 11/01</td></tr>
+        <tr><td class="name">UC San Diego</td><td><span class="chip c-target"><span class="dot"></span>Target</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:41%"></span></span><span class="num">28%</span></div></td><td class="plan"><b>RD</b> 12/01</td></tr>
+        <tr><td class="name">UW — CSE (resident)</td><td><span class="chip c-target"><span class="dot"></span>Target</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:54%"></span></span><span class="num">37%</span></div></td><td class="plan"><b>RD</b> 11/15</td></tr>
+        <tr><td class="name">Santa Clara — Engineering</td><td><span class="chip c-likely"><span class="dot"></span>Likely</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:67%"></span></span><span class="num">46%*</span></div></td><td class="plan"><b>EA</b> 11/01</td></tr>
+        <tr><td class="name">Worcester Polytechnic (WPI)</td><td><span class="chip c-likely"><span class="dot"></span>Likely</span></td>
+            <td><div class="bar"><span class="track"><span class="fill" style="width:100%"></span></span><span class="num">69%</span></div></td><td class="plan"><b>EA</b> 01/05</td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">* Rate may reflect an early/specific pool. Bar length is proportional to overall admit rate — a rough visual of selectivity, not of <em>his</em> odds (direct-to-major BME programs are tighter than the headline).</p>
+  </section>
+
+  <!-- 4b — ON THE BUBBLE -->
+  <section class="slide">
+    <p class="eyebrow">Cut from the draft 22 — but worth a second look on the robotics thread</p>
+    <h2>On the bubble: CMU, Michigan, UIUC</h2>
+    <div class="cols-3">
+      <div class="card" style="border-left:3px solid var(--tier-likely)">
+        <h3>Carnegie Mellon <span class="chip c-hireach" style="vertical-align:middle"><span class="dot"></span>~11.7%</span></h3>
+        <p style="margin:.3em 0"><strong>Robotics minor: yes</strong> — Robotics Institute minor (open to CoE), plus a standalone Robotics BS.</p>
+        <p style="margin:.3em 0">But <strong>no standalone BME</strong> — biomedical is only an additional major/minor, and switching colleges is gated.</p>
+        <p style="margin:.5em 0 0; color:var(--ink)"><strong>Best robotics fit; compromised BME fit.</strong></p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--tier-target)">
+        <h3>U Michigan <span class="chip c-reach" style="vertical-align:middle"><span class="dot"></span>~16%</span></h3>
+        <p style="margin:.3em 0"><strong>Declare-later</strong> — admit to the College of Eng, choose BME or Robotics after year 1. Real flexibility.</p>
+        <p style="margin:.3em 0">Robotics is a <strong>full major, no minor</strong> — great for a builder, but can't pair with BME as a minor.</p>
+        <p style="margin:.5em 0 0; color:var(--ink)"><strong>Catch: ~17–20% OOS + out-of-state cost.</strong></p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--tier-reach)">
+        <h3>UIUC (Grainger) <span class="chip c-target" style="vertical-align:middle"><span class="dot"></span>~21%</span></h3>
+        <p style="margin:.3em 0"><strong>Direct-to-major BME</strong> (higher risk) and <strong>no robotics minor</strong>.</p>
+        <p style="margin:.3em 0">Correction: it's <strong>Common App, not myIllini</strong> — the platform reason for dropping it was wrong.</p>
+        <p style="margin:.5em 0 0; color:var(--ink)"><strong>Fit reasons for the drop still stand.</strong></p>
+      </div>
+    </div>
+    <div class="callout">If the thread is <strong>"robotics builder"</strong> more than BME specifically, <strong>CMU and Michigan are stronger robotics fits than several current Targets</strong> — CMU for the pairable minor, Michigan for the full major + declare-later flexibility. <strong>UIUC</strong> adds nothing his current Targets don't. Bringing CMU or Michigan back would mean trading a current Reach, not expanding the list past a balanced 10.</div>
+  </section>
+
+  <!-- 4c — ADDED + STILL WORTH EXPLORING -->
+  <section class="slide">
+    <p class="eyebrow">Two promoted to the list · three still worth a look</p>
+    <h2>Rice & Northeastern — added (verified)</h2>
+    <div class="cols">
+      <div>
+        <div class="card" style="border-left:3px solid var(--tier-likely); margin-bottom:.7em">
+          <h3>Rice <span style="color:var(--muted);font-weight:400">· Reach, 8% (official CDS)</span></h3>
+          <p style="margin:.2em 0">Small, residential-college system — the anti-"feel-lost" school. Declare-later (non-binding major selection). Strong BME. <strong>No robotics minor</strong> — robotics via electives only. Supplement: 2×150w + 1×500w; 1 counselor + 2 teacher recs.</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--tier-likely)">
+          <h3>Northeastern <span style="color:var(--muted);font-weight:400">· Reach, ~6%</span></h3>
+          <p style="margin:.2em 0">Co-op powerhouse — the hands-on lane, bigger name. <strong>Has a real robotics minor a BME major can add.</strong> No supplement essay; 1 counselor + 1 teacher rec. Odds are Reach-level, not a Target.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--muted)">Still worth a look (unverified — my suggestions)</h3>
+        <div class="card" style="margin:.4em 0 .7em">
+          <h3>Olin College <span style="color:var(--muted);font-weight:400">· Reach</span></h3>
+          <p style="margin:.2em 0">Tiny, entirely project-based engineering — VEX-Worlds energy as a college. Possibly the best culture match on the page.</p>
+        </div>
+        <div class="card" style="margin-bottom:.7em">
+          <h3>Johns Hopkins <span style="color:var(--muted);font-weight:400">· Hi-Reach ~7%</span></h3>
+          <p style="margin:.2em 0">The #1 BME destination — but no robotics minor. A fit only if the thread tips toward <em>biomedical</em> over robotics.</p>
+        </div>
+        <div class="card">
+          <h3>U Rochester <span style="color:var(--muted);font-weight:400">· Target</span></h3>
+          <p style="margin:.2em 0">Supportive mid-size, strong BME, genuine Target odds — a "safety with a great program."</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout warn"><strong>Note the surprise:</strong> Northeastern turns out to have the robotics minor Rice lacks — but both are ~6–8% Reaches, not the Targets the list is still light on. If safety-with-fit matters, <strong>U Rochester</strong> is the one to research next. Olin/JHU/Rochester facts are still my general-knowledge suggestions — verify before committing.</div>
+  </section>
+
+  <!-- 5 — ADMISSION MODEL -->
+  <section class="slide">
+    <p class="eyebrow">Question 1 — can he explore, or must he commit to BME on day one?</p>
+    <h2>Admission model decides how much room he keeps</h2>
+    <div class="cols">
+      <div class="card">
+        <h3 style="color:var(--tier-likely)">Admit broadly, declare later — room to explore</h3>
+        <p style="margin:.2em 0 .5em">Best fit for a student still weighing BME vs. robotics/EE.</p>
+        <ul>
+          <li><strong>Cornell</strong> — affiliate with major sophomore year</li>
+          <li><strong>Harvey Mudd</strong> — one General Eng degree, declare after arrival</li>
+          <li><strong>Tufts</strong> — declare by Feb 15 of year 1</li>
+          <li><strong>Case Western</strong> — flexible, declare after enrolling</li>
+          <li><strong>UW</strong> — Engineering Undeclared → place after year 1</li>
+          <li><strong>WPI</strong> — declare after enrolling</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--tier-reach)">Direct-to-major — commit at application</h3>
+        <p style="margin:.2em 0 .5em">Higher-risk: if he doesn't get BME, switching in is competitive or gated.</p>
+        <ul>
+          <li><strong>UC San Diego</strong> — capped/selective; one switch window ~a year after admit. <em>If he doesn't get the major, he may not be able to change.</em></li>
+          <li><strong>Georgia Tech</strong> — direct-to-major at application; switching in competitive. As an OOS applicant into capped BME, the real bar sits above the ~10% OOS headline.</li>
+          <li><strong>USC Viterbi</strong> — names first-choice major (not a rigid lock)</li>
+        </ul>
+        <div class="callout warn">UCSD is the one on the list where a "wrong major" outcome is hard to undo. Worth a family conversation before ranking it above a declare-later Target.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 — ROBOTICS MINOR -->
+  <section class="slide">
+    <p class="eyebrow">Question 2 — the "BME + robotics minor" plan, reality-checked</p>
+    <h2>A real robotics minor for a BME major exists at only 5 schools</h2>
+    <div class="cols">
+      <div>
+        <div class="card" style="border-left:3px solid var(--tier-likely)">
+          <h3>Robotics minor a BME major can actually declare</h3>
+          <ul>
+            <li><strong>Cornell</strong> — MAE robotics minor, open to BME</li>
+            <li><strong>Northeastern</strong> — ECE robotics minor, open to all students <span style="color:var(--series-1);font-size:11px;font-weight:700">NEW</span></li>
+            <li><strong>Georgia Tech</strong> — minor <em>explicitly lists BME</em> as eligible</li>
+            <li><strong>Carnegie Mellon</strong> — Robotics Institute minor, open to CoE</li>
+            <li><strong>WPI</strong> — Robotics Eng minor names BME as complementary</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p>Everywhere else on the list, "robotics" is <strong>not a declarable minor</strong> — it's a concentration (BU, UCSD), a full major with no minor option (Michigan), an adjacent minor (Penn MEAM, Berkeley EECS), or just electives, labs, and clubs (Rice, UCLA, USC, Tufts, Santa Clara, UW, Harvey Mudd, Case Western, UIUC, the other UCs).</p>
+        <div class="callout">Of his current list, <strong>Cornell, WPI, Georgia Tech, and Northeastern</strong> deliver the literal "BME major + robotics minor" combo. That doesn't rule the others out — but the essays for them shouldn't be built around a minor that doesn't exist. Lead with the <em>robotics-builder-for-medicine</em> story instead.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 — THE ED DECISION -->
+  <section class="slide">
+    <p class="eyebrow">The single biggest lever on this list</p>
+    <h2>Where does the one ED go?</h2>
+    <p class="lead">Only one school gets the early-commitment boost. Five are tentatively marked ED — Cornell, Penn, Harvey Mudd, Tufts (ED II), USC. Pick one.</p>
+    <div class="cols-3">
+      <div class="card">
+        <h3>Cornell</h3>
+        <p>His <strong>visit favorite</strong>. Best engineering in the Ivy League; declare-later so he keeps BME/robotics open; one of only two list schools with a real robotics minor.</p>
+      </div>
+      <div class="card">
+        <h3>Penn</h3>
+        <p>Positive ESAP experience; <strong>smaller, more supportive</strong> engineering school; admits to SEAS (not a hard major lock). Lowest admit rate on the list (~4%).</p>
+      </div>
+      <div class="card">
+        <h3>USC (as ED)</h3>
+        <p>First year Viterbi offers ED — no track record, but <strong>ED converts USC to a Target</strong>. Strong robotics fit; BMEN has the electrical emphasis he wants.</p>
+      </div>
+    </div>
+    <div class="callout warn"><strong>Live decision:</strong> Cornell vs. Penn is the real question — visit-favorite vs. more supportive environment. USC-ED is the "spend it to lock a likely admit" alternative. This is the family's highest-leverage call; make it before essays start.</div>
+  </section>
+
+  <!-- 7b — RECOMMENDED PATH -->
+  <section class="slide">
+    <p class="eyebrow">If I had to call it — the smartest way to play this list</p>
+    <h2>The recommended path</h2>
+    <div class="cols-3">
+      <div class="card" style="border-top:4px solid var(--tier-hireach)">
+        <h3>The leveraged reach</h3>
+        <p style="font-size:clamp(20px,2.2vw,28px);font-weight:700;color:var(--ink);margin:.1em 0">Cornell — ED</p>
+        <p style="margin:.3em 0">Visit favorite, declare-later flexibility, and a real BME-pairable robotics minor. ED is the only tool that moves a 7% school — spend it where fit + preference + flexibility all line up.</p>
+        <p style="margin:.4em 0 0;font-size:13px;color:var(--muted)">Penn if "supportive" &gt; "favorite"; USC-ED to convert a reach into a near-lock.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--tier-target)">
+        <h3>The anchor bet</h3>
+        <p style="font-size:clamp(20px,2.2vw,28px);font-weight:700;color:var(--ink);margin:.1em 0">Case Western — EA</p>
+        <p style="margin:.3em 0">The one I'd bank on. ~36% odds, elite biotech anchored by the med school — closest to his real destination — declare-later, and <strong>non-binding</strong>, so an early strong admit costs nothing.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--tier-likely)">
+        <h3>The safety net</h3>
+        <p style="font-size:clamp(20px,2.2vw,28px);font-weight:700;color:var(--ink);margin:.1em 0">WPI — EA</p>
+        <p style="margin:.3em 0">His robotics background is the most natural narrative fit on the whole list. A Likely he'd genuinely be happy to attend — and a robotics minor that names BME.</p>
+      </div>
+    </div>
+    <div class="callout"><strong>One leveraged shot at the dream, two high-probability outcomes he'd be glad to attend.</strong> That's the balanced shape the counselor is after — and it means the reaches can stay ambitious without making the list nervous.</div>
+  </section>
+
+  <!-- 8 — APPLICATION PLAN -->
+  <section class="slide">
+    <p class="eyebrow">Tentative round-by-round plan</p>
+    <h2>Sequencing the applications</h2>
+    <div class="cols">
+      <div>
+        <h3 style="color:var(--series-1)">November 1 — the busy wall</h3>
+        <ul>
+          <li><strong>The ONE ED</strong> (Cornell / Penn / USC — decide first)</li>
+          <li><strong>Case Western</strong> — EA (Target, non-binding)</li>
+          <li><strong>Santa Clara</strong> — EA (Likely)</li>
+          <li><strong>Georgia Tech, Northeastern</strong> — EA, non-binding (verify exact dates)</li>
+          <li>USC 11/01 whether ED or EA</li>
+        </ul>
+        <h3 style="color:var(--series-1); margin-top:1em">Mid–late November</h3>
+        <ul>
+          <li><strong>UW CSE</strong> — 11/15 (resident, Target)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color:var(--series-1)">December</h3>
+        <ul>
+          <li><strong>UC San Diego</strong> — RD 12/01 (UC app, 4 PIQs)</li>
+        </ul>
+        <h3 style="color:var(--series-1); margin-top:1em">January</h3>
+        <ul>
+          <li><strong>Harvey Mudd</strong> — ED II or RD 01/05</li>
+          <li><strong>Tufts</strong> — ED II 01/04 (if ED not spent)</li>
+          <li><strong>WPI</strong> — EA 01/05 (Likely)</li>
+          <li><strong>Rice</strong> — RD (verify date)</li>
+          <li>Any remaining RD (Cornell 01/02, Penn 01/05)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">If the ED admit lands in mid-December, several January RD apps can be withdrawn — another reason to concentrate effort on the ED and the 11/01 EA Targets first.</div>
+  </section>
+
+  <!-- 9 — ESSAY PLAN -->
+  <section class="slide">
+    <p class="eyebrow">Question 3 — essays (Fall 2027 cycle, with this cycle's changes)</p>
+    <h2>Essay load is front-loaded and lumpy</h2>
+    <div class="cols">
+      <div>
+        <h3>Heaviest lifts</h3>
+        <ul>
+          <li><strong>USC — 11 pieces</strong> (1×250 + 10 short answers)</li>
+          <li><strong>Cornell — 6 required</strong> (2×200 + 4×100). <em>Changed ↑ this cycle</em> — dropped the pick-1-of-4, both short answers now mandatory. No university-wide essay.</li>
+          <li><strong>Harvey Mudd — new prompts</strong> (500 + 250). Mudd screens hard for program fit; these matter unusually much.</li>
+        </ul>
+        <h3 style="margin-top:.8em">Lightest / free wins</h3>
+        <ul>
+          <li><strong>Case Western, UW</strong> — Common App base essay only</li>
+          <li><strong>WPI</strong> — one 500 (likely no supplement)</li>
+          <li><strong>Georgia Tech</strong> — Common App essay only; <em>supplement eliminated</em> this cycle — a genuinely low-effort app for a school with the BME + robotics minor</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Strategy</h3>
+        <ul>
+          <li>Write <strong>one strong Common App essay</strong> on the robotics-to-medicine thread — it carries Case Western, UW, WPI, and the base of every Common App school.</li>
+          <li>Draft <strong>Cornell and Harvey Mudd early</strong> — highest count / highest fit-sensitivity.</li>
+          <li>USC's 10 shorts are quick but numerous — batch them in one sitting.</li>
+          <li>UCSD's 4 PIQs (350 each) are a separate voice — reuse robotics + biomedical material, don't restart.</li>
+        </ul>
+        <div class="callout warn">Prompts finalize ~Aug 1; the wiki's master list needs a browser re-verify before drafting (a few rows predate Aug 1).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 — REC LETTERS -->
+  <section class="slide">
+    <p class="eyebrow">Question 4 — recommendation letters</p>
+    <h2>Two teachers cover almost everything</h2>
+    <div class="cols">
+      <div>
+        <div class="callout"><strong>The move:</strong> line up <strong>one STEM teacher + one humanities teacher</strong>. That single pair satisfies MIT, Harvey Mudd, and Cornell's subject rules — and covers every other school on the list at the same time.</div>
+        <h3 style="margin-top:1em">Subject-specific rules to plan around</h3>
+        <ul>
+          <li><strong>Cornell</strong> — 2 teacher + counselor; ≥1 teacher must be math/science/CS</li>
+          <li><strong>Harvey Mudd</strong> — 1 STEM + 1 humanities; counselor optional</li>
+          <li><strong>MIT</strong> (if added) — 1 math/sci + 1 humanities</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Counts by school</h3>
+        <ul>
+          <li><strong>Case Western / Rice</strong> — 1 counselor + 2 teacher (Rice recommends one in-field)</li>
+          <li><strong>Cornell</strong> — 2 teacher + 1 counselor</li>
+          <li><strong>WPI / Northeastern</strong> — 1 counselor + 1 teacher</li>
+          <li><strong>USC / Santa Clara</strong> — 1 (teacher or counselor)</li>
+          <li><strong>Georgia Tech</strong> — optional / not considered</li>
+          <li><strong>UCs (UCSD) & UW</strong> — do <em>not</em> use letters</li>
+        </ul>
+        <p style="margin-top:.6em; font-size:13px; color:var(--muted)">The one STEM + one humanities pair covers all of these too. Ask both teachers before the fall term gets busy — a math/science teacher who has seen his robotics work is ideal for the STEM slot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — TIMELINE -->
+  <section class="slide">
+    <p class="eyebrow">What happens when · today is Aug 17, 2026</p>
+    <h2>Fall timeline</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">By Aug 19–20 (this week)</div><div class="tl-body">Tell counselor which of the 22 draft schools get <strong>dropped</strong> (strikethrough in the sheet) so essay priorities are set. Counselor Li Er is in the UK Aug 24–Sep 8.</div></div>
+      <div class="tl-item"><div class="tl-date">Late August</div><div class="tl-body"><strong>Decide the single ED target</strong> (Cornell vs Penn vs USC). Ask two teachers for recs. Lock senior schedule (AP Physics C vs AP Env Sci is still open).</div></div>
+      <div class="tl-item"><div class="tl-date">September</div><div class="tl-body">Finalize Common App base essay. Draft Cornell (6) and Harvey Mudd (500+250) first. Re-verify all prompts against live portals.</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 1</div><div class="tl-body"><strong>ED + Case Western EA + Santa Clara EA + USC</strong> all due. The heaviest single day — front-load it.</div></div>
+      <div class="tl-item"><div class="tl-date">Nov 15 → Dec 1</div><div class="tl-body">UW (11/15) → UC San Diego (12/01). ED decision typically arrives mid-December.</div></div>
+      <div class="tl-item"><div class="tl-date">Jan 2–5</div><div class="tl-body">Harvey Mudd / Tufts ED II, WPI EA, remaining RD — trim these if the ED admit lands.</div></div>
+    </div>
+  </section>
+
+  <!-- 12 — DECISIONS & NEXT ACTIONS -->
+  <section class="slide">
+    <p class="eyebrow">The decisions only the family can make</p>
+    <h2>Open questions & next actions</h2>
+    <div class="cols">
+      <div class="card" style="border-left:3px solid var(--tier-reach)">
+        <h3>Decide now</h3>
+        <ul>
+          <li><strong>The single ED</strong> — Cornell (visit favorite) vs Penn (more supportive) vs USC (locks a Target). Highest-leverage call.</li>
+          <li><strong>USC: ED or EA?</strong> ED makes it a Target; EA keeps optionality. Both 11/01.</li>
+          <li><strong>UCSD risk tolerance</strong> — capped direct-to-major BME; hard to switch if not admitted to it.</li>
+          <li><strong>Which schools to drop</strong> from 22 → counselor needs it this week.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Then execute</h3>
+        <ul>
+          <li>Request 1 STEM + 1 humanities teacher rec.</li>
+          <li>Write the Common App base essay on the robotics→medicine thread.</li>
+          <li>Draft Cornell + Harvey Mudd essays first.</li>
+          <li>Re-verify every prompt & rec count in a live portal (a few wiki rows predate Aug 1).</li>
+          <li>Now added to the list: <strong>Georgia Tech</strong> (no supplement, BME + robotics minor), <strong>Rice</strong>, and <strong>Northeastern</strong> (also has the robotics minor). Confirm each one's deadlines/round before locking the plan.</li>
+          <li>Still-open low-effort option not yet added: <strong>UIUC</strong> (Common App after all; direct-to-major, no robotics minor).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 — BOTTOM LINE -->
+  <section class="slide">
+    <p class="eyebrow">Bottom line</p>
+    <h2>The plan in one breath</h2>
+    <p class="lead">A strong, hooked applicant with a clear robotics→bioengineering story. Keep the list balanced, spend the one ED where it matters most, protect flexibility by favoring declare-later schools, and let one great essay carry the lighter targets.</p>
+    <div class="tiles" style="margin-top:1.4em">
+      <div class="tile"><div class="v accent">1</div><div class="k">ED bullet — decide first (Cornell / Penn / USC)</div></div>
+      <div class="tile"><div class="v accent">2</div><div class="k">teacher recs — one STEM, one humanities</div></div>
+      <div class="tile"><div class="v accent">4</div><div class="k">schools with a real BME + robotics minor</div></div>
+      <div class="tile"><div class="v accent">10</div><div class="k">balanced, buildable list</div></div>
+    </div>
+    <p class="footnote">Working deck for family strategy — not admissions advice. Every figure traces to the family wiki; admit rates are overall and should be re-checked against Common App and each college's site before decisions.</p>
+  </section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Previous slide">‹</button>
+  <span class="counter" id="counter">1 / 16</span>
+  <button id="next" aria-label="Next slide">›</button>
+</div>
+<div class="kbd-hint">← → arrows · F fullscreen · P print</div>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  const prog = document.getElementById('prog');
+  const counter = document.getElementById('counter');
+  let i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => s.classList.toggle('active', k === i));
+    prog.style.width = ((i + 1) / slides.length * 100) + '%';
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    slides[i].scrollTop = 0;
+  }
+  document.getElementById('next').onclick = () => show(i + 1);
+  document.getElementById('prev').onclick = () => show(i - 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { show(i + 1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { show(i - 1); e.preventDefault(); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(slides.length - 1);
+    else if (e.key.toLowerCase() === 'f') { document.documentElement.requestFullscreen?.(); }
+    else if (e.key.toLowerCase() === 'p') { window.print(); }
+  });
+  show(0);
+</script>
+</body>
+</html>
