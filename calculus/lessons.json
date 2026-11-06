@@ -1,0 +1,930 @@
+[
+  {
+    "id": "sequences",
+    "part": "Sequences & series",
+    "title": "A sequence is a list with a destination",
+    "time": "20–25 min",
+    "goal": "Find a sequence’s limit and explain what convergence actually means.",
+    "idea": "A sequence aₙ gives one number for each positive integer n. Convergence to L means every term sufficiently far along is as close to L as you demand. It does not mean a term eventually equals L.",
+    "formula": "aₙ = (3n + 2)/(n + 1) = 3 − 1/(n + 1)  ⟶  3",
+    "steps": [
+      "Divide numerator and denominator by n: aₙ = (3 + 2/n)/(1 + 1/n).",
+      "As n grows, both fractions involving 1/n approach zero, so the limit is 3.",
+      "For an accuracy of 0.01, solve |aₙ − 3| = 1/(n + 1) < 0.01. Every n ≥ 100 works.",
+      "The terms increase toward 3 from below. This pattern supports the calculation; a graph alone is not a proof."
+    ],
+    "trap": "Oscillation matters. (−1)ⁿ has no limit, although it stays bounded. In contrast, (−1)ⁿ/n converges to 0 because the oscillation shrinks.",
+    "challenge": "Does aₙ = (−1)ⁿ(2 + 1/n) converge?",
+    "solution": "No. The even terms approach 2 and the odd terms approach −2. Two subsequences with different limits rule out one common limit.",
+    "questions": [
+      {
+        "prompt": "What is limₙ→∞ (5n² − 1)/(2n² + 7)?",
+        "answer": 2.5,
+        "hint": "Divide by the highest power, n².",
+        "explain": "The limit is 5/2: the lower-order terms disappear after division by n²."
+      },
+      {
+        "prompt": "Which claim is true?",
+        "options": [
+          "Every bounded sequence converges.",
+          "Every increasing sequence converges.",
+          "Every bounded, monotone sequence converges.",
+          "Every sequence that oscillates diverges."
+        ],
+        "answer": 2,
+        "hint": "You need both a direction and a bound.",
+        "explain": "The monotone convergence theorem applies when a sequence is both monotone and bounded. For example, n is increasing but unbounded."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/5-1-sequences",
+    "lab": "series-lab"
+  },
+  {
+    "id": "partial-sums",
+    "part": "Sequences & series",
+    "title": "A series is a sequence of running totals",
+    "time": "25–30 min",
+    "goal": "Separate terms aₙ from partial sums Sₙ, and evaluate a geometric series.",
+    "idea": "A sequence asks where individual terms go. A series asks where their accumulated total goes. We define an infinite sum using the limit of its finite partial sums—not by pretending we can finish adding infinitely many terms.",
+    "formula": "Sₙ = a₁ + a₂ + ⋯ + aₙ       ∑ aₙ converges exactly when Sₙ has a finite limit.",
+    "steps": [
+      "Consider 1/2 + 1/4 + 1/8 + ⋯. Its terms go to zero, but we still need the totals.",
+      "After N terms, Sₙ = 1 − 2⁻ᴺ. For example, S₁ = 0.5, S₂ = 0.75 and S₃ = 0.875.",
+      "As N → ∞, 2⁻ᴺ → 0, so the infinite sum is 1.",
+      "More generally, a + ar + ar² + ⋯ = a/(1 − r) when |r| < 1. If a ≠ 0 and |r| ≥ 1, it diverges."
+    ],
+    "trap": "aₙ → 0 is necessary, not sufficient. The harmonic series ∑1/n diverges even though 1/n → 0. If aₙ does not approach 0, divergence is immediate.",
+    "challenge": "Evaluate ∑ₙ₌₀∞ 3(−1/2)ⁿ.",
+    "solution": "The first term is a = 3 and the ratio is r = −1/2. Since |r| < 1, the sum is 3/[1 − (−1/2)] = 2. Partial sums alternate above and below 2.",
+    "questions": [
+      {
+        "prompt": "Find ∑ₙ₌₀∞ 4(1/3)ⁿ.",
+        "answer": 6,
+        "hint": "The first term is 4, not 4/3.",
+        "explain": "Use a/(1 − r) = 4/(1 − 1/3) = 6."
+      },
+      {
+        "prompt": "You know aₙ → 0. What can you conclude about ∑aₙ?",
+        "options": [
+          "It converges to 0.",
+          "It converges to a finite number.",
+          "It diverges.",
+          "There is not enough information."
+        ],
+        "answer": 3,
+        "hint": "Compare 1/2ⁿ and 1/n.",
+        "explain": "Both term sequences approach zero. The first series converges and the second diverges. You need another test."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/5-2-infinite-series",
+    "lab": "series-lab"
+  },
+  {
+    "id": "positive-tests",
+    "part": "Sequences & series",
+    "title": "Choose a test by the shape of the terms",
+    "time": "30–35 min",
+    "goal": "Use p-series, comparison and the integral test with the required conditions.",
+    "idea": "For nonnegative terms, partial sums only grow. Convergence asks whether that growth stays bounded. Compare with a series whose behavior you already understand.",
+    "formula": "∑ₙ₌₁∞ 1/nᵖ converges if p > 1; diverges if p ≤ 1.",
+    "steps": [
+      "Test ∑ₙ₌₁∞ 1/(n² + 3). For n ≥ 1, 0 < 1/(n² + 3) ≤ 1/n².",
+      "The benchmark ∑1/n² converges because p = 2 > 1.",
+      "A smaller nonnegative series also converges, by direct comparison.",
+      "For ∑ n/(n² + 1), compare with 1/n instead. The ratio [n/(n² + 1)]/(1/n) approaches 1, a positive finite number. Limit comparison shows both diverge."
+    ],
+    "trap": "A convergent smaller series says nothing about a larger one. Use: smaller than a convergent upper bound ⇒ convergence; larger than a divergent lower bound ⇒ divergence.",
+    "challenge": "Determine whether ∑ₙ₌₂∞ 1/[n(ln n)²] converges.",
+    "solution": "f(x) = 1/[x(ln x)²] is positive, continuous and decreasing for x ≥ 2. Substitution u = ln x gives ∫₂∞ f(x) dx = 1/ln 2, which is finite. The integral test proves convergence; it does not say the sum equals the integral.",
+    "questions": [
+      {
+        "prompt": "Does ∑ₙ₌₁∞ 1/n⁰·⁸ converge?",
+        "options": [
+          "Yes, because its terms go to 0.",
+          "Yes, by the geometric test.",
+          "No, because p ≤ 1.",
+          "The ratio test proves convergence."
+        ],
+        "answer": 2,
+        "hint": "It is a p-series with p = 0.8.",
+        "explain": "The series diverges. Terms approaching zero do not guarantee a finite total."
+      },
+      {
+        "prompt": "For positive terms, aₙ/bₙ → 7 and ∑bₙ converges. What follows?",
+        "options": [
+          "∑aₙ converges.",
+          "∑aₙ diverges.",
+          "The sum of aₙ is 7.",
+          "Nothing can be concluded."
+        ],
+        "answer": 0,
+        "hint": "A positive finite comparison limit means the tails have comparable size.",
+        "explain": "Limit comparison gives the same convergence behavior. The number 7 is a ratio limit, not the sum."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/5-4-comparison-tests",
+    "lab": "series-lab"
+  },
+  {
+    "id": "ratio-root",
+    "part": "Sequences & series",
+    "title": "Factorials and exponentials: ratio or root?",
+    "time": "25–30 min",
+    "goal": "Apply ratio/root tests without overinterpreting a limit of 1.",
+    "idea": "The ratio test asks how each term compares with the previous one. The root test asks for its effective exponential factor. Both detect tails that shrink at least geometrically.",
+    "formula": "L = lim |aₙ₊₁/aₙ|  or  lim ⁿ√|aₙ|:   L < 1 ⇒ absolute convergence; L > 1 ⇒ divergence; L = 1 ⇒ inconclusive.",
+    "steps": [
+      "For ∑ₙ₌₁∞ n/3ⁿ, compute |aₙ₊₁/aₙ| = [(n + 1)/n] · 1/3.",
+      "The limit is 1/3, which is below 1. The series converges absolutely.",
+      "For ∑ₙ₌₁∞ n!/4ⁿ, the ratio is (n + 1)/4, which tends to infinity. The series diverges.",
+      "For ∑(n/(2n + 1))ⁿ, the nth root of the term tends to 1/2. The root test proves convergence."
+    ],
+    "trap": "L = 1 means choose another test. Both ∑1/n and ∑1/n² have ratio-test limit 1, but only the second converges.",
+    "challenge": "Classify ∑ₙ₌₀∞ 2ⁿ/n!.",
+    "solution": "The ratio of consecutive terms is 2/(n + 1), which tends to 0. It converges absolutely. Its value is e², using the exponential Taylor series introduced later.",
+    "questions": [
+      {
+        "prompt": "What is the ratio-test limit for aₙ = 5ⁿ/n!, n ≥ 0?",
+        "answer": 0,
+        "hint": "aₙ₊₁/aₙ = 5/(n + 1).",
+        "explain": "The limit is 0, so the series converges absolutely."
+      },
+      {
+        "prompt": "The ratio-test limit is 1. What is the correct conclusion?",
+        "options": [
+          "Converges absolutely.",
+          "Converges conditionally.",
+          "Diverges.",
+          "The test is inconclusive."
+        ],
+        "answer": 3,
+        "hint": "Think of the two p-series 1/n and 1/n².",
+        "explain": "Try comparison, a p-series, the integral test, or an alternating-series test as appropriate."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/5-6-ratio-and-root-tests",
+    "lab": "series-lab"
+  },
+  {
+    "id": "alternating",
+    "part": "Sequences & series",
+    "title": "Alternating sums: convergence and honest accuracy",
+    "time": "30–35 min",
+    "goal": "Distinguish absolute from conditional convergence and bound truncation error.",
+    "idea": "Alternating signs can produce cancellation. If positive magnitudes bₙ eventually decrease to zero, the alternating series converges. Check absolute convergence separately by removing the signs.",
+    "formula": "For an alternating series with decreasing bₙ → 0:   |S − Sₙ| ≤ bₙ₊₁.",
+    "steps": [
+      "The alternating harmonic series 1 − 1/2 + 1/3 − ⋯ converges: bₙ = 1/n decreases to zero.",
+      "The absolute-value series ∑1/n diverges. Therefore the original series is conditionally convergent.",
+      "After N terms, the absolute error is at most 1/(N + 1).",
+      "To guarantee error < 0.01, choose N = 100: 1/101 < 0.01. With N = 99 the bound is only ≤ 0.01, not strictly less."
+    ],
+    "trap": "Alternating signs alone do not prove convergence. ∑(−1)ⁿ diverges because the terms do not approach zero. The next-term error bound also requires the alternating/decreasing conditions.",
+    "challenge": "Classify ∑ₙ₌₁∞ (−1)ⁿ⁻¹/n² and bound the error after 10 terms.",
+    "solution": "It converges absolutely because ∑1/n² converges. It is also alternating with decreasing magnitudes, so its 10-term truncation error is at most 1/11² = 1/121 ≈ 0.008264.",
+    "questions": [
+      {
+        "prompt": "For ∑ₙ₌₁∞ (−1)ⁿ⁻¹/n³, what error bound follows after 4 terms?",
+        "answer": 0.008,
+        "hint": "Use the magnitude of term 5.",
+        "explain": "The bound is 1/5³ = 1/125 = 0.008. This is a maximum error guarantee, not the actual error."
+      },
+      {
+        "prompt": "The alternating harmonic series is…",
+        "options": [
+          "Absolutely convergent.",
+          "Conditionally convergent.",
+          "Divergent.",
+          "Geometric."
+        ],
+        "answer": 1,
+        "hint": "Now remove the alternating signs.",
+        "explain": "The signed series converges, while its absolute-value series is the divergent harmonic series."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/5-5-alternating-series",
+    "lab": "series-lab"
+  },
+  {
+    "id": "power",
+    "part": "Power & Taylor series",
+    "title": "A power series has a region of trust",
+    "time": "30–35 min",
+    "goal": "Find the radius and check both endpoints separately.",
+    "idea": "A power series is an infinite polynomial centered at c. Changing x changes the numerical series. The radius describes the open interval of absolute convergence; endpoint behavior is a separate problem.",
+    "formula": "∑ₙ₌₁∞ (x − 2)ⁿ/n:   R = 1,   interval of convergence [1, 3).",
+    "steps": [
+      "The absolute ratio tends to |x − 2|, so convergence is absolute when |x − 2| < 1.",
+      "Solve: 1 < x < 3. The center is 2 and the radius is 1.",
+      "At x = 1, the series becomes ∑(−1)ⁿ/n, which converges conditionally.",
+      "At x = 3, it becomes ∑1/n, which diverges. Include 1, exclude 3: [1, 3)."
+    ],
+    "trap": "The ratio test cannot decide the endpoints because L = 1 there. Integrating or differentiating a power series preserves its radius, but endpoint inclusion can change.",
+    "challenge": "Find the interval of convergence of ∑ₙ₌₀∞ (x + 1)ⁿ/4ⁿ.",
+    "solution": "This is geometric with ratio (x + 1)/4. Require |x + 1| < 4, giving −5 < x < 3. At both endpoints the terms fail to approach zero. Radius 4, interval (−5, 3).",
+    "questions": [
+      {
+        "prompt": "What is the radius for ∑ₙ₌₁∞ xⁿ/(n·5ⁿ)?",
+        "answer": 5,
+        "hint": "The limiting ratio is |x|/5.",
+        "explain": "Require |x|/5 < 1, so R = 5. This alone does not decide x = ±5."
+      },
+      {
+        "prompt": "For ∑ₙ₌₁∞ xⁿ/n, which interval is correct?",
+        "options": [
+          "(−1, 1)",
+          "[−1, 1]",
+          "[−1, 1)",
+          "(−1, 1]"
+        ],
+        "answer": 2,
+        "hint": "At −1 it alternates; at +1 it is harmonic.",
+        "explain": "The negative endpoint converges conditionally, while the positive endpoint diverges."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/6-1-power-series-and-functions",
+    "lab": "series-lab"
+  },
+  {
+    "id": "taylor",
+    "part": "Power & Taylor series",
+    "title": "Taylor polynomials match local behavior",
+    "time": "30–35 min",
+    "goal": "Build a polynomial from derivatives and attach an error guarantee.",
+    "idea": "A Taylor polynomial matches a function’s value, slope, curvature and higher derivatives at a center. Close to that center, it can approximate a complicated function using arithmetic.",
+    "formula": "Tₙ(x) = ∑ₖ₌₀ⁿ [f⁽ᵏ⁾(a)/k!] (x − a)ᵏ.    If |f⁽ⁿ⁺¹⁾| ≤ M between a and x, |f(x) − Tₙ(x)| ≤ M|x − a|ⁿ⁺¹/(n + 1)!.",
+    "steps": [
+      "For f(x) = eˣ at a = 0, every derivative at the center equals 1.",
+      "The cubic polynomial is T₃(x) = 1 + x + x²/2 + x³/6.",
+      "At x = 0.2, T₃(0.2) = 1.221333333… .",
+      "On [0, 0.2], the fourth derivative eˣ is at most e⁰·². The error bound is e⁰·²(0.2)⁴/24 ≈ 0.00008143. The actual error is about 0.00006942."
+    ],
+    "trap": "Infinitely many derivatives do not automatically imply that a Taylor series equals its function. Equality requires the remainder to tend to zero. Also, degree and number of nonzero terms are different for sin and cos.",
+    "challenge": "Use a cubic approximation to estimate sin(0.2), and bound the error using the degree-3 Lagrange bound.",
+    "solution": "T₃(x) = x − x³/6, so T₃(0.2) = 0.198666667. Since the fourth derivative sin x has absolute value ≤ 1, the degree-3 bound gives error ≤ 0.2⁴/24 ≈ 0.000066667. A stronger bound is possible, but this one is valid.",
+    "questions": [
+      {
+        "prompt": "For eˣ centered at 0, what is the coefficient of x⁴?",
+        "answer": 0.041666666666666664,
+        "hint": "The coefficient is f⁽⁴⁾(0)/4!.",
+        "explain": "Every derivative of eˣ at zero is 1, so the coefficient is 1/24."
+      },
+      {
+        "prompt": "For sin x, T₃(x) = x − x³/6 has…",
+        "options": [
+          "Degree 2 and 3 nonzero terms.",
+          "Degree 3 and 2 nonzero terms.",
+          "Degree 3 and 4 nonzero terms.",
+          "Degree 1 and 2 nonzero terms."
+        ],
+        "answer": 1,
+        "hint": "The degree is the largest exponent with nonzero coefficient.",
+        "explain": "The largest exponent is 3; only the x and x³ terms are nonzero."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/6-3-taylor-and-maclaurin-series",
+    "lab": "taylor-lab"
+  },
+  {
+    "id": "series-tools",
+    "part": "Power & Taylor series",
+    "title": "Build new series from ones you know",
+    "time": "25–30 min",
+    "goal": "Substitute, differentiate and integrate familiar power series within their valid intervals.",
+    "idea": "You rarely need to calculate every derivative from scratch. Start with a known series and transform it, while keeping track of where the transformation is valid.",
+    "formula": "1/(1 − x) = ∑ₙ₌₀∞ xⁿ  (|x| < 1).    ln(1 + x) = ∑ₙ₌₁∞ (−1)ⁿ⁺¹ xⁿ/n  (−1 < x ≤ 1).",
+    "steps": [
+      "Replace x by −t in the geometric series: 1/(1 + t) = 1 − t + t² − ⋯ for |t| < 1.",
+      "Integrate from 0 to x inside (−1, 1): ln(1 + x) = x − x²/2 + x³/3 − ⋯ .",
+      "At x = 0.2, the first three terms give 0.2 − 0.02 + 0.008/3 = 0.182666667.",
+      "The terms alternate and decrease. The next-term bound is 0.2⁴/4 = 0.0004. At x = 1, check separately: the alternating harmonic series converges to ln 2."
+    ],
+    "trap": "A formula without its interval is incomplete. For example, the geometric series for 1/(1 − x) is not valid at x = 2 even though the rational function itself is defined there.",
+    "challenge": "Find a power series for 1/(1 + x²), centered at 0, and its radius.",
+    "solution": "Substitute −x² into the geometric series: ∑ₙ₌₀∞ (−1)ⁿx²ⁿ = 1 − x² + x⁴ − ⋯ for |x| < 1. Radius 1. At x = ±1 the terms fail to approach zero, so both endpoints are excluded.",
+    "questions": [
+      {
+        "prompt": "In ln(1 + x), what is the coefficient of x⁴?",
+        "answer": -0.25,
+        "hint": "The signs alternate, beginning positive.",
+        "explain": "It is −1/4. The first four terms are x − x²/2 + x³/3 − x⁴/4."
+      },
+      {
+        "prompt": "Inside |x| < 1, differentiate ∑ₙ₌₀∞ xⁿ. What do you get?",
+        "options": [
+          "∑ₙ₌₁∞ nxⁿ⁻¹ = 1/(1 − x)²",
+          "∑ₙ₌₁∞ nxⁿ = 1/(1 − x)²",
+          "∑ₙ₌₀∞ xⁿ = ln(1 − x)",
+          "∑ₙ₌₁∞ xⁿ/n = 1/(1 − x)²"
+        ],
+        "answer": 0,
+        "hint": "Differentiate both the rational function and each monomial.",
+        "explain": "d/dx [1/(1 − x)] = 1/(1 − x)², and d/dx xⁿ = nxⁿ⁻¹."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-2/pages/6-2-properties-of-power-series",
+    "lab": "taylor-lab"
+  },
+  {
+    "id": "parametric",
+    "part": "Parametric & polar calculus",
+    "title": "Follow a curve using a parameter",
+    "time": "25–30 min",
+    "goal": "Compute tangent slopes and second derivatives when x and y both depend on t.",
+    "idea": "A parameter describes how a point moves. The curve’s slope compares the rates at which y and x change: divide dy/dt by dx/dt, when dx/dt is nonzero.",
+    "formula": "dy/dx = y′(t)/x′(t).    d²y/dx² = [d/dt (dy/dx)] / x′(t), when these expressions are defined.",
+    "steps": [
+      "Let x = t² and y = t³, with t > 0. At t = 1 the point is (1, 1).",
+      "Differentiate: x′ = 2t and y′ = 3t². Therefore dy/dx = 3t/2.",
+      "At t = 1, the tangent line is y − 1 = (3/2)(x − 1).",
+      "Differentiate 3t/2 with respect to t, then divide by 2t: d²y/dx² = 3/(4t). At t = 1 it equals 3/4."
+    ],
+    "trap": "The second derivative is not y″(t)/x″(t). If x′ = 0 and y′ ≠ 0, a vertical tangent is possible; if both vanish, investigate the curve instead of dividing by zero.",
+    "challenge": "For x = t² + 1 and y = t³ − t, find the tangent slope at t = 1.",
+    "solution": "x′(1) = 2 and y′(1) = 2, so the slope is 1. The point is (2, 0), giving y = x − 2.",
+    "questions": [
+      {
+        "prompt": "For x = t² and y = t³, find d²y/dx² at t = 1.",
+        "answer": 0.75,
+        "hint": "Differentiate 3t/2 in t, then divide by dx/dt.",
+        "explain": "The result is 3/(4t), so the value is 3/4."
+      },
+      {
+        "prompt": "If x′(t₀) = 0 and y′(t₀) ≠ 0, which tangent direction is suggested?",
+        "options": [
+          "Horizontal.",
+          "Vertical.",
+          "Slope 0.",
+          "No motion."
+        ],
+        "answer": 1,
+        "hint": "The point is moving in y but not instantaneously in x.",
+        "explain": "The velocity vector is vertical and nonzero; dy/dx is not a finite slope there."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/1-2-calculus-of-parametric-curves",
+    "lab": "parametric-lab"
+  },
+  {
+    "id": "polar",
+    "part": "Parametric & polar calculus",
+    "title": "Polar curves: radius, angle and area",
+    "time": "30–35 min",
+    "goal": "Translate polar coordinates and use a correctly bounded polar-area integral.",
+    "idea": "Polar coordinates locate a point using an angle and a signed radius. Tiny sectors have area approximately (1/2)r² dθ, which leads to a new area formula.",
+    "formula": "x = r cos θ, y = r sin θ.    A = ½∫ₐᵇ r(θ)² dθ for a region swept once.",
+    "steps": [
+      "Consider r = 2 cos θ on −π/2 ≤ θ ≤ π/2. Multiplying by r gives x² + y² = 2x, a circle centered at (1, 0) with radius 1.",
+      "This interval traces the circle once. The radius is nonnegative throughout it.",
+      "Its area is (1/2) times the integral of 4cos²θ from −π/2 to π/2. Since 2cos²θ = 1 + cos 2θ, evaluating that integral gives π.",
+      "For an area between polar curves on an interval where 0 ≤ r_inner ≤ r_outer, use (1/2)∫(r_outer² − r_inner²)dθ."
+    ],
+    "trap": "Integrating r² over an interval that traces a region twice counts its area twice. Negative r places the point in the opposite direction; it is not a negative area.",
+    "challenge": "Find the area of the disk r = 3 using 0 ≤ θ ≤ 2π.",
+    "solution": "A = (1/2)∫₀²π 9 dθ = 9π. Check against the familiar circle-area formula.",
+    "questions": [
+      {
+        "prompt": "For the sector r = 2, 0 ≤ θ ≤ π/2, enter its area divided by π.",
+        "answer": 1,
+        "hint": "Area is (1/2)r² times the angle in radians.",
+        "explain": "The area is (1/2)·4·(π/2) = π, so area/π = 1."
+      },
+      {
+        "prompt": "Which Cartesian point is (r, θ) = (−2, 0)?",
+        "options": [
+          "(2, 0)",
+          "(0, −2)",
+          "(−2, 0)",
+          "(0, 2)"
+        ],
+        "answer": 2,
+        "hint": "Use x = r cos θ and y = r sin θ.",
+        "explain": "x = −2 and y = 0. A negative radius reverses direction."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/1-4-area-and-arc-length-in-polar-coordinates",
+    "lab": "parametric-lab"
+  },
+  {
+    "id": "vector-basics",
+    "part": "Vectors & geometry of space",
+    "title": "Vectors describe displacement, not location",
+    "time": "20–25 min",
+    "goal": "Add vectors, find lengths and normalize a nonzero direction.",
+    "idea": "A point tells you where you are. A displacement vector tells you how to move. The same vector can be drawn at many starting points without changing its components.",
+    "formula": "AB = B − A.    |v| = √(v₁² + v₂² + v₃²).    Unit direction: v/|v| for v ≠ 0.",
+    "steps": [
+      "Let A = (1, −2, 0) and B = (4, 2, 0). Subtract coordinates to get AB = ⟨3, 4, 0⟩.",
+      "Its length is √(9 + 16) = 5.",
+      "Divide by 5 to get the unit vector ⟨3/5, 4/5, 0⟩. Its length is 1.",
+      "Moving 10 units from A in this direction gives A + 10⟨3/5, 4/5, 0⟩ = (7, 6, 0)."
+    ],
+    "trap": "AB and BA have opposite signs. Normalizing the zero vector is undefined because it has no unique direction.",
+    "challenge": "Find the length and unit direction of v = ⟨−2, 1, 2⟩.",
+    "solution": "|v| = √(4 + 1 + 4) = 3. The unit direction is ⟨−2/3, 1/3, 2/3⟩.",
+    "questions": [
+      {
+        "prompt": "Find |⟨2, −3, 6⟩|.",
+        "answer": 7,
+        "hint": "Square each component, add, then take the square root.",
+        "explain": "√(4 + 9 + 36) = √49 = 7."
+      },
+      {
+        "prompt": "A unit vector always has…",
+        "options": [
+          "All components equal to 1.",
+          "Length 1.",
+          "Positive components.",
+          "Only one nonzero component."
+        ],
+        "answer": 1,
+        "hint": "Unit describes magnitude.",
+        "explain": "The length is 1; the components can be positive, negative or zero."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/2-2-vectors-in-three-dimensions",
+    "lab": "vectors-lab"
+  },
+  {
+    "id": "dot-cross",
+    "part": "Vectors & geometry of space",
+    "title": "Dot products measure alignment; cross products measure area",
+    "time": "30–35 min",
+    "goal": "Distinguish scalar and vector products, and use projection and orientation.",
+    "idea": "The dot product measures how strongly two directions align. In three dimensions, the cross product produces a vector perpendicular to both inputs, with length equal to the parallelogram’s area.",
+    "formula": "u · v = |u||v|cos θ.    |u × v| = |u||v|sin θ.    projᵤv = [(v · u)/(u · u)]u, u ≠ 0.",
+    "steps": [
+      "Take u = ⟨1, 2, 0⟩ and v = ⟨3, −1, 0⟩. Their dot product is 3 − 2 = 1.",
+      "Their cross product is ⟨0, 0, 1·(−1) − 2·3⟩ = ⟨0, 0, −7⟩.",
+      "The parallelogram area is 7 and the triangle area is 7/2. The negative z direction follows the right-hand rule.",
+      "The projection of v onto u is (1/5)⟨1, 2, 0⟩ = ⟨1/5, 2/5, 0⟩."
+    ],
+    "trap": "u · v is a number; u × v is a vector. Swapping the cross-product order changes its sign. A zero dot product implies perpendicularity for nonzero vectors.",
+    "challenge": "For u = ⟨2, 0, 0⟩ and v = ⟨0, 3, 0⟩, find the dot product and triangle area.",
+    "solution": "The dot product is 0. The cross product is ⟨0, 0, 6⟩, so the triangle area is 3.",
+    "questions": [
+      {
+        "prompt": "Find ⟨1, 2, 3⟩ · ⟨4, −1, 2⟩.",
+        "answer": 8,
+        "hint": "Multiply matching components and add.",
+        "explain": "1·4 + 2·(−1) + 3·2 = 8."
+      },
+      {
+        "prompt": "What happens to u × v if you reverse the order?",
+        "options": [
+          "It stays unchanged.",
+          "Its length doubles.",
+          "Its direction reverses.",
+          "It becomes a scalar."
+        ],
+        "answer": 2,
+        "hint": "The cross product is anti-commutative.",
+        "explain": "v × u = −(u × v), with the same magnitude."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/2-4-the-cross-product",
+    "lab": "vectors-lab"
+  },
+  {
+    "id": "lines-planes",
+    "part": "Vectors & geometry of space",
+    "title": "Lines use directions; planes use normals",
+    "time": "25–30 min",
+    "goal": "Write a spatial line and a plane, then find their intersection.",
+    "idea": "A direction vector lies along a line. A normal vector sticks out perpendicular to a plane. Using the right vector makes the equation nearly automatic.",
+    "formula": "Line: r(t) = p + tv.    Plane: n · (r − p₀) = 0, with n ≠ 0.",
+    "steps": [
+      "A plane through (1, 0, 2) with normal ⟨2, −1, 3⟩ has equation 2(x − 1) − y + 3(z − 2) = 0, or 2x − y + 3z = 8.",
+      "Consider the line r(t) = ⟨0, 1, 0⟩ + t⟨1, 0, 1⟩. Its coordinates are x = t, y = 1 and z = t.",
+      "Substitute into the plane: 2t − 1 + 3t = 8, so t = 9/5.",
+      "The intersection is (9/5, 1, 9/5). Substituting it back verifies the plane equation."
+    ],
+    "trap": "Do not use a plane’s normal as a direction lying in the plane. If n · v = 0, a line is parallel to the plane or lies entirely within it; check a point to distinguish those cases.",
+    "challenge": "Find the plane through (0, 1, 0) with normal ⟨1, 2, −1⟩.",
+    "solution": "x + 2(y − 1) − z = 0, equivalently x + 2y − z = 2.",
+    "questions": [
+      {
+        "prompt": "Find the distance from (1, 2, 3) to the plane z = 0.",
+        "answer": 3,
+        "hint": "This plane is the xy-plane.",
+        "explain": "The perpendicular distance is |z| = 3."
+      },
+      {
+        "prompt": "A line has direction v and a plane has normal n. If n · v ≠ 0, the line…",
+        "options": [
+          "Lies in the plane.",
+          "Intersects the plane exactly once.",
+          "Is parallel to the plane.",
+          "Has no direction."
+        ],
+        "answer": 1,
+        "hint": "Substitution gives a linear equation with a nonzero t coefficient.",
+        "explain": "There is one parameter value satisfying the plane equation."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/2-5-equations-of-lines-and-planes-in-space",
+    "lab": "vectors-lab"
+  },
+  {
+    "id": "vectors-preview",
+    "part": "Vector-valued calculus",
+    "title": "Differentiate a moving point in space",
+    "time": "15 min",
+    "goal": "Compute velocity, acceleration, speed and displacement component by component.",
+    "idea": "A vector-valued function gives a position rather than a single height. Differentiate each component to get velocity; take its length to get speed.",
+    "formula": "r(t) = ⟨cos t, sin t, t⟩.    v(t) = ⟨−sin t, cos t, 1⟩.    speed = |v(t)| = √2.",
+    "steps": [
+      "At t = 0, the particle is at r(0) = ⟨1, 0, 0⟩.",
+      "Differentiate component by component: v(0) = ⟨0, 1, 1⟩.",
+      "Speed is √[0² + 1² + 1²] = √2. A vector and its magnitude are different objects.",
+      "Arc length from t = 0 to t = 2 is ∫₀² |v(t)| dt = 2√2. Do not integrate the velocity vector to get distance.",
+      "Differentiate velocity once more: acceleration is ⟨−cos t, −sin t, 0⟩. Constant speed does not mean zero acceleration; the direction changes."
+    ],
+    "trap": "Speed is not the derivative of |r(t)|. The derivative of the distance from the origin only measures motion toward or away from the origin.",
+    "challenge": "For r(t) = ⟨3t, 4t, 0⟩, find speed and distance traveled on 0 ≤ t ≤ 2.",
+    "solution": "v(t) = ⟨3, 4, 0⟩, so speed is 5 and distance is ∫₀²5 dt = 10.",
+    "questions": [
+      {
+        "prompt": "For r(t) = ⟨t, t², 0⟩, what is speed at t = 0?",
+        "answer": 1,
+        "hint": "Differentiate first, then take the length.",
+        "explain": "v(t) = ⟨1, 2t, 0⟩, so |v(0)| = 1."
+      },
+      {
+        "prompt": "What is the geometric direction of r′(t), when nonzero?",
+        "options": [
+          "Normal to the curve.",
+          "Tangent to the curve.",
+          "Always toward the origin.",
+          "Always vertical."
+        ],
+        "answer": 1,
+        "hint": "Velocity points along instantaneous motion.",
+        "explain": "The derivative is a tangent vector in the direction of increasing t."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/3-2-calculus-of-vector-valued-functions",
+    "lab": "parametric-lab"
+  },
+  {
+    "id": "arc-curvature",
+    "part": "Vector-valued calculus",
+    "title": "Distance and bending along a curve",
+    "time": "30–35 min",
+    "goal": "Compute arc length and distinguish curvature from speed.",
+    "idea": "A curve can be traveled quickly or slowly without changing its shape. Speed measures the parameterization’s pace. Curvature measures how rapidly the unit tangent changes per unit distance.",
+    "formula": "L = ∫ₐᵇ |r′(t)| dt.    κ = |r′ × r″| / |r′|³ for a regular twice-differentiable spatial curve.",
+    "steps": [
+      "For r(t) = ⟨3cos t, 3sin t, 0⟩, the velocity is ⟨−3sin t, 3cos t, 0⟩ and its length is 3.",
+      "On 0 ≤ t ≤ π, arc length is ∫₀π3 dt = 3π: half a circle of radius 3.",
+      "Acceleration is ⟨−3cos t, −3sin t, 0⟩. The cross-product magnitude |r′ × r″| is 9.",
+      "Curvature is 9/27 = 1/3. Reparameterizing the circle changes speed but not its curvature at a point."
+    ],
+    "trap": "The integral of r′ gives displacement, a vector. The integral of |r′| gives distance. Curvature formulas with |r′| in the denominator require nonzero velocity.",
+    "challenge": "Find the curvature of a circle of radius 5.",
+    "solution": "For any circle of radius R, curvature is 1/R. Here it is 1/5.",
+    "questions": [
+      {
+        "prompt": "A particle travels a circle of radius 2 once. Enter its distance divided by π.",
+        "answer": 4,
+        "hint": "Use the circumference, 2πR.",
+        "explain": "Distance is 4π, even though net displacement is zero."
+      },
+      {
+        "prompt": "A particle moves around a circle at constant nonzero speed. Its acceleration…",
+        "options": [
+          "Must be zero.",
+          "Points toward the circle’s center.",
+          "Is always tangent to the circle.",
+          "Has no relation to the path."
+        ],
+        "answer": 1,
+        "hint": "The velocity’s direction is still changing.",
+        "explain": "For uniform circular motion the acceleration is centripetal, perpendicular to velocity."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/3-3-arc-length-and-curvature",
+    "lab": "parametric-lab"
+  },
+  {
+    "id": "surfaces",
+    "part": "Multivariable calculus",
+    "title": "Read a surface through its level curves",
+    "time": "20–25 min",
+    "goal": "Recognize domains and interpret contour curves as constant heights.",
+    "idea": "A function of two variables assigns a height to each point in its domain. Contours are slices at fixed heights; they compress a three-dimensional surface into a readable map.",
+    "formula": "A level curve of f is the set f(x, y) = c.    For f(x, y) = x² + 4y², contours are ellipses.",
+    "steps": [
+      "For z = x² + 4y², every (x, y) is allowed, so the domain is all of ℝ².",
+      "The height at (1, 1) is 5.",
+      "At height c = 4, the contour is x² + 4y² = 4, or x²/4 + y² = 1.",
+      "At y = 0, the vertical slice is z = x². At x = 0, it is z = 4y², which rises faster as |y| grows."
+    ],
+    "trap": "A contour is not a particle’s path unless you explicitly choose to move along it. Contour spacing indicates steepness only when the contour height increments are comparable.",
+    "challenge": "Find the domain of f(x, y) = √(9 − x² − y²).",
+    "solution": "Require 9 − x² − y² ≥ 0. The domain is the closed disk x² + y² ≤ 9, including its boundary.",
+    "questions": [
+      {
+        "prompt": "For f(x, y) = x² + 4y², find f(2, 1).",
+        "answer": 8,
+        "hint": "Substitute both coordinates.",
+        "explain": "2² + 4·1² = 8."
+      },
+      {
+        "prompt": "For f(x, y) = ln(y − x²), the domain requires…",
+        "options": [
+          "y ≥ x²",
+          "y > x²",
+          "y < x²",
+          "All real x and y."
+        ],
+        "answer": 1,
+        "hint": "The logarithm’s argument must be strictly positive.",
+        "explain": "y − x² > 0, so the boundary parabola is excluded."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-1-functions-of-several-variables",
+    "lab": "gradient-lab"
+  },
+  {
+    "id": "multivariable-limits",
+    "part": "Multivariable calculus",
+    "title": "A limit must survive every approach path",
+    "time": "25–30 min",
+    "goal": "Use disagreeing paths to disprove a limit, and a bound to prove one.",
+    "idea": "Near a point in the plane, there are infinitely many ways to approach. Two paths giving different limits disprove a common limit. Two paths agreeing do not prove one.",
+    "formula": "If two approach paths give different limiting values, the multivariable limit does not exist.",
+    "steps": [
+      "For f(x, y) = xy/(x² + y²) away from (0, 0), approach on y = 0. The value is 0.",
+      "Approach on y = x. The value is 1/2 for x ≠ 0. The limits disagree, so there is no limit at the origin.",
+      "For g(x, y) = x²y/(x² + y²), use a bound instead: |g(x, y)| ≤ |y|.",
+      "Since |y| ≤ √(x² + y²) → 0, the squeeze theorem proves g → 0 along every path."
+    ],
+    "trap": "Checking only the x- and y-axes can miss a diagonal or curved path. A successful proof needs control over every nearby point, not a large collection of examples.",
+    "challenge": "Does h(x, y) = x²y/(x⁴ + y²) have a limit at the origin?",
+    "solution": "No. On y = 0 it is 0, while on y = x² it is 1/2 for x ≠ 0. Both paths approach the origin.",
+    "questions": [
+      {
+        "prompt": "For xy/(x² + y²), what value occurs on y = −x, x ≠ 0?",
+        "answer": -0.5,
+        "hint": "Substitute y = −x and cancel x².",
+        "explain": "−x²/(2x²) = −1/2."
+      },
+      {
+        "prompt": "The limit agrees on both coordinate axes. What follows?",
+        "options": [
+          "The full limit exists.",
+          "The limit is zero.",
+          "More analysis is needed.",
+          "The function is differentiable."
+        ],
+        "answer": 2,
+        "hint": "A diagonal path may behave differently.",
+        "explain": "Agreement on two paths is necessary for a common limit but not sufficient."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-2-limits-and-continuity",
+    "lab": "gradient-lab"
+  },
+  {
+    "id": "partials-preview",
+    "part": "Multivariable calculus",
+    "title": "One surface, many partial derivatives",
+    "time": "20 min",
+    "goal": "Calculate first and mixed partials, interpret slices and distinguish partial from total change.",
+    "idea": "A surface z = f(x, y) has no single slope. Choose a direction first. For fₓ, freeze y and vary x; for fᵧ, freeze x and vary y.",
+    "formula": "f(x, y) = x² + xy + y².    fₓ = 2x + y.    fᵧ = x + 2y.    ∇f = ⟨fₓ, fᵧ⟩.",
+    "steps": [
+      "At (1, 2), the height is f(1, 2) = 1 + 2 + 4 = 7.",
+      "Along the x direction, freeze y = 2: the slice is z = x² + 2x + 4. Its slope at x = 1 is 4.",
+      "Along the y direction, freeze x = 1: z = 1 + y + y². Its slope at y = 2 is 5.",
+      "The tangent plane is z = 7 + 4(x − 1) + 5(y − 2). Nearby, f(1.01, 1.98) ≈ 7 + 0.04 − 0.10 = 6.94.",
+      "For this polynomial, fₓₓ = 2, fᵧᵧ = 2 and fₓᵧ = fᵧₓ = 1. Equality of mixed partials is guaranteed when the relevant mixed partials are continuous in a neighborhood."
+    ],
+    "trap": "Treat the other variable as a constant, not as zero. For ∂(xy)/∂x the result is y. A directional derivative uses a unit direction vector.",
+    "challenge": "For f(x, y) = x²y + sin y, find fₓ(2, 0) and fᵧ(2, 0).",
+    "solution": "fₓ = 2xy, so fₓ(2, 0) = 0. fᵧ = x² + cos y, so fᵧ(2, 0) = 5.",
+    "questions": [
+      {
+        "prompt": "For f(x, y) = x²y, what is fₓ(2, 3)?",
+        "answer": 12,
+        "hint": "Differentiate in x while holding y fixed.",
+        "explain": "fₓ = 2xy, so the value is 2·2·3 = 12."
+      },
+      {
+        "prompt": "For a differentiable f and unit vector u, Dᵤf equals…",
+        "options": [
+          "|∇f| for every u.",
+          "∇f · u.",
+          "fₓ + fᵧ for every u.",
+          "f/u."
+        ],
+        "answer": 1,
+        "hint": "Project the gradient onto the chosen unit direction.",
+        "explain": "The dot product ∇f · u gives the rate of change along that direction. Its maximum is |∇f|."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
+    "lab": "partial-lab"
+  },
+  {
+    "id": "tangent-plane",
+    "part": "Multivariable calculus",
+    "title": "A tangent plane is a local prediction machine",
+    "time": "25–30 min",
+    "goal": "Use linearization to estimate nearby function values and interpret differentials.",
+    "idea": "A differentiable surface looks nearly planar when you zoom in. Its two partial derivatives tell you how changes in x and y combine to produce a first-order change in height.",
+    "formula": "L(x, y) = f(a, b) + fₓ(a, b)(x − a) + fᵧ(a, b)(y − b).    df = fₓ dx + fᵧ dy.",
+    "steps": [
+      "Let f(x, y) = √(x² + y²). At (3, 4), the height is 5.",
+      "The partials are fₓ = x/√(x² + y²) and fᵧ = y/√(x² + y²), giving 3/5 and 4/5.",
+      "Use dx = 0.02 and dy = −0.01: df = (3/5)(0.02) + (4/5)(−0.01) = 0.004.",
+      "Predict f(3.02, 3.99) ≈ 5.004. This is a local approximation, not an exact identity."
+    ],
+    "trap": "Existing partial derivatives alone do not guarantee differentiability. Continuous partials in a neighborhood are a useful sufficient condition. A tangent-plane estimate needs a differentiable function at the center.",
+    "challenge": "Linearize f(x, y) = x² + y² at (1, 2) and estimate f(1.01, 1.98).",
+    "solution": "L = 5 + 2(x − 1) + 4(y − 2). The estimate is 5 + 0.02 − 0.08 = 4.94. The exact value is 4.9405, so the error here is 0.0005.",
+    "questions": [
+      {
+        "prompt": "For f = x² + y² at (1, 2), dx = 0.1 and dy = 0, what is df?",
+        "answer": 0.2,
+        "hint": "Use fₓ(1, 2) = 2 and fᵧ(1, 2) = 4.",
+        "explain": "df = 2(0.1) + 4(0) = 0.2. The exact height change would be 0.21."
+      },
+      {
+        "prompt": "A linearization is generally most reliable…",
+        "options": [
+          "Far from its center.",
+          "Near its center, where differentiability holds.",
+          "Only when all partials vanish.",
+          "At every point equally."
+        ],
+        "answer": 1,
+        "hint": "It captures first-order local behavior.",
+        "explain": "Moving farther away can make the neglected higher-order terms significant."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
+    "lab": "partial-lab"
+  },
+  {
+    "id": "chain-rule",
+    "part": "Multivariable calculus",
+    "title": "The chain rule adds every route of change",
+    "time": "25–30 min",
+    "goal": "Differentiate a multivariable quantity when its inputs change together.",
+    "idea": "If z depends on x and y, and both depend on time, then time affects z along two routes. Add the contribution from each route.",
+    "formula": "For differentiable f and paths: dz/dt = fₓ dx/dt + fᵧ dy/dt, evaluated along (x(t), y(t)).",
+    "steps": [
+      "Let z = x²y, with x = t and y = t².",
+      "The partials are fₓ = 2xy and fᵧ = x². The path derivatives are dx/dt = 1 and dy/dt = 2t.",
+      "Substitute the path: dz/dt = (2t·t²)(1) + (t²)(2t) = 4t³.",
+      "Check directly: z(t) = t²·t² = t⁴, whose derivative is 4t³. At t = 2 the rate is 32."
+    ],
+    "trap": "A partial derivative holds other independent variables fixed. A total derivative follows their actual changes. Do not take fₓ alone when y is also changing.",
+    "challenge": "For z = xy, x = eᵗ and y = t², find dz/dt at t = 0.",
+    "solution": "dz/dt = y eᵗ + x(2t) = eᵗ(t² + 2t). At t = 0 it is 0.",
+    "questions": [
+      {
+        "prompt": "If z = x² + y², x = t and y = 2t, find dz/dt at t = 1.",
+        "answer": 10,
+        "hint": "Direct substitution gives z = 5t².",
+        "explain": "dz/dt = 10t, so the value at 1 is 10."
+      },
+      {
+        "prompt": "In z = f(x(t), y(t)), the partials fₓ and fᵧ are evaluated…",
+        "options": [
+          "Only at (0, 0).",
+          "At (x(t), y(t)).",
+          "At (t, t), regardless of the path.",
+          "At the endpoint only."
+        ],
+        "answer": 1,
+        "hint": "The path tells you where on the surface you are.",
+        "explain": "Evaluate the partial derivatives at the current path coordinates before combining the rates."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-5-the-chain-rule",
+    "lab": "gradient-lab"
+  },
+  {
+    "id": "gradient",
+    "part": "Multivariable calculus",
+    "title": "The gradient turns direction into a rate",
+    "time": "25–30 min",
+    "goal": "Normalize a direction and calculate directional derivatives and steepest ascent.",
+    "idea": "The gradient bundles all partial derivatives into one vector. Dot it with a unit direction to obtain the rate of change per unit distance in that direction.",
+    "formula": "Dᵤf = ∇f · u for |u| = 1 and differentiable f.    Maximum directional derivative = |∇f|.",
+    "steps": [
+      "For f(x, y) = x² + 2y², the gradient at (1, 1) is ⟨2, 4⟩.",
+      "To move in direction v = ⟨3, 4⟩, first normalize: u = ⟨3/5, 4/5⟩.",
+      "The directional derivative is 2(3/5) + 4(4/5) = 22/5 = 4.4.",
+      "Steepest ascent is along ⟨1/√5, 2/√5⟩, with rate √20 = 2√5. A vector tangent to a smooth level curve is perpendicular to the nonzero gradient."
+    ],
+    "trap": "Using a nonunit vector changes the rate by its length. At a critical point where ∇f = 0, all first-order directional derivatives vanish; this alone does not classify the point.",
+    "challenge": "For f(x, y) = 3x − 4y, find the maximum directional derivative and its direction.",
+    "solution": "The gradient is ⟨3, −4⟩ with length 5. The maximum rate is 5, in unit direction ⟨3/5, −4/5⟩.",
+    "questions": [
+      {
+        "prompt": "At (1, 1) for f = x² + 2y², what is the rate in unit direction ⟨1, 0⟩?",
+        "answer": 2,
+        "hint": "Take the dot product with ⟨2, 4⟩.",
+        "explain": "⟨2, 4⟩ · ⟨1, 0⟩ = 2."
+      },
+      {
+        "prompt": "For a nonzero gradient, moving perpendicular to it gives…",
+        "options": [
+          "The largest increase.",
+          "The largest decrease.",
+          "Zero first-order directional derivative.",
+          "An undefined directional derivative."
+        ],
+        "answer": 2,
+        "hint": "Perpendicular vectors have dot product zero.",
+        "explain": "The instantaneous first-order rate is zero; the function can still change at higher order."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+    "lab": "gradient-lab"
+  },
+  {
+    "id": "optimization",
+    "part": "Multivariable calculus",
+    "title": "Classify critical points without guessing from a picture",
+    "time": "30–35 min",
+    "goal": "Use the second-derivative test and include boundaries in global-extremum problems.",
+    "idea": "Zero gradient identifies candidates, not automatic maxima or minima. Second derivatives describe the local bending. For absolute extrema on a closed bounded region, also inspect its boundary.",
+    "formula": "D = fₓₓfᵧᵧ − (fₓᵧ)² at a critical point.    D > 0: min if fₓₓ > 0, max if fₓₓ < 0.    D < 0: saddle.    D = 0: inconclusive.",
+    "steps": [
+      "For f(x, y) = x² + xy + y² − 4x − 2y, solve fₓ = 2x + y − 4 = 0 and fᵧ = x + 2y − 2 = 0.",
+      "The only critical point is (2, 0), with f(2, 0) = −4.",
+      "Second derivatives give fₓₓ = 2, fᵧᵧ = 2 and fₓᵧ = 1. Thus D = 4 − 1 = 3 > 0 and fₓₓ > 0: a local minimum.",
+      "In fact, with u = x − 2, f = (u + y/2)² + 3y²/4 − 4. The squared terms are nonnegative and vanish together only at (2, 0), proving this is the global minimum."
+    ],
+    "trap": "D = 0 is not a conclusion. For example x⁴ + y⁴ has a minimum at the origin while x⁴ − y⁴ has a saddle there; both give D = 0.",
+    "challenge": "Classify the critical point of f(x, y) = x² − y² at the origin.",
+    "solution": "fₓₓ = 2, fᵧᵧ = −2 and fₓᵧ = 0, so D = −4 < 0. The origin is a saddle: values rise along the x-axis and fall along the y-axis.",
+    "questions": [
+      {
+        "prompt": "At a critical point, fₓₓ = 4, fᵧᵧ = 3 and fₓᵧ = 2. Find D.",
+        "answer": 8,
+        "hint": "Subtract the square of the mixed partial from the product of the pure partials.",
+        "explain": "D = 4·3 − 2² = 8. Since fₓₓ > 0, it is a local minimum under the test’s smoothness assumptions."
+      },
+      {
+        "prompt": "To find absolute extrema of a continuous function on a closed disk, inspect…",
+        "options": [
+          "Only the center.",
+          "Only points with nonzero gradient.",
+          "Interior candidates and the boundary.",
+          "Only the point with the largest x-coordinate."
+        ],
+        "answer": 2,
+        "hint": "The best value may lie on the edge.",
+        "explain": "An absolute extremum can occur in the interior or on the boundary."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems",
+    "lab": "gradient-lab"
+  },
+  {
+    "id": "lagrange",
+    "part": "Optional extension · confirm with teacher",
+    "title": "Optimize while staying on a constraint",
+    "time": "30–35 min",
+    "goal": "Use Lagrange multipliers and compare all candidates on a regular constraint.",
+    "idea": "At a constrained extremum on a smooth curve with nonzero constraint gradient, there is no improvement along the curve’s tangent. The objective gradient must therefore align with the constraint’s normal.",
+    "formula": "For g(x, y) = c with ∇g ≠ 0, solve ∇f = λ∇g together with g = c. Then compare candidate values.",
+    "steps": [
+      "Maximize and minimize f(x, y) = xy on x² + y² = 1. The equations are y = 2λx and x = 2λy, plus the circle constraint.",
+      "Neither x nor y can be zero in a solution of these gradient equations on the circle. Combining them gives λ = ±1/2.",
+      "For λ = 1/2, y = x, giving (±1/√2, ±1/√2) with matching signs and f = 1/2.",
+      "For λ = −1/2, y = −x, giving opposite signs and f = −1/2. The circle is compact, so these largest and smallest candidate values are the global extrema."
+    ],
+    "trap": "Do not silently divide by x or y and lose zero-coordinate candidates in other problems. Singular constraint points, boundaries and inequality constraints need separate attention.",
+    "challenge": "Maximize x + y on x² + y² = 2.",
+    "solution": "The equations 1 = 2λx and 1 = 2λy imply x = y. The candidates are (1, 1) and (−1, −1). Compare values: maximum 2 at (1, 1), minimum −2 at (−1, −1).",
+    "questions": [
+      {
+        "prompt": "What is the maximum of xy on x² + y² = 1?",
+        "answer": 0.5,
+        "hint": "Try x = y, then apply the circle constraint.",
+        "explain": "At equal-sign coordinates of magnitude 1/√2, the product is 1/2."
+      },
+      {
+        "prompt": "Which equation must accompany ∇f = λ∇g?",
+        "options": [
+          "f = 0",
+          "λ = 0",
+          "The original constraint g = c",
+          "∇g = 0"
+        ],
+        "answer": 2,
+        "hint": "The point must still be feasible.",
+        "explain": "Gradient alignment does not by itself ensure that the candidate lies on the constraint."
+      }
+    ],
+    "resource": "https://openstax.org/books/calculus-volume-3/pages/4-8-lagrange-multipliers",
+    "lab": "gradient-lab"
+  }
+]
