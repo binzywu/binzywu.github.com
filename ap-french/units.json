@@ -1,0 +1,230 @@
+[
+  {
+    "id": "1",
+    "title": "Familles et communautés",
+    "englishTitle": "Families and Communities",
+    "intro": "Read social contexts and respond with a suitable register, precise evidence and inclusive language.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-1-1",
+      "fr-1-2",
+      "fr-1-3",
+      "fr-1-4",
+      "fr-1-5",
+      "fr-1-6",
+      "fr-1-7"
+    ],
+    "sectionTitles": {
+      "1.1": "Partager un lieu de rencontre",
+      "1.2": "Raconter une mémoire familiale",
+      "1.3": "Négocier une responsabilité partagée",
+      "1.4": "Comparer sans généraliser",
+      "1.5": "Lire une annonce et ses conditions",
+      "1.6": "Défendre un projet d’entraide",
+      "1.7": "Annonce : un atelier déplacé"
+    },
+    "sourceTitle": "Bibliothèque de Québec",
+    "sourceUrl": "https://www.ville.quebec.qc.ca/citoyens/art-culture/bibliotheque/index.aspx",
+    "sourceTask": "Identify the institution, intended readers and services described; do not generalize one network to every library."
+  },
+  {
+    "id": "2",
+    "title": "Langue et culture",
+    "englishTitle": "Language and Culture",
+    "intro": "Interpret multilingual experiences, linguistic choices and cultural meaning without generalizing from one voice.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-2-1",
+      "fr-2-2",
+      "fr-2-3",
+      "fr-2-4",
+      "fr-2-5",
+      "fr-2-6",
+      "fr-2-7"
+    ],
+    "sectionTitles": {
+      "2.1": "Comprendre un parcours plurilingue",
+      "2.2": "Adapter le registre à son interlocuteur",
+      "2.3": "Interpréter une fête à partir de sources",
+      "2.4": "Reformuler sans copier ni déformer",
+      "2.5": "Comprendre une variété sans la dévaloriser",
+      "2.6": "Lire une statistique avec ses limites",
+      "2.7": "Entretien : apprendre une expression"
+    },
+    "sourceTitle": "OIF : langue française et plurilinguisme",
+    "sourceUrl": "https://www.francophonie.org/node/70",
+    "sourceTask": "Identify how an institution frames language diversity, then seek other voices and contexts."
+  },
+  {
+    "id": "3",
+    "title": "Art et créativité",
+    "englishTitle": "Art and Creativity",
+    "intro": "Discuss artistic choices, participation and cultural perspectives; practice research skills relevant to the current music theme.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-3-1",
+      "fr-3-2",
+      "fr-3-3",
+      "fr-3-4",
+      "fr-3-5",
+      "fr-3-6",
+      "fr-3-7"
+    ],
+    "sectionTitles": {
+      "3.1": "Décrire une œuvre avant de l’interpréter",
+      "3.2": "Relier musique et participation",
+      "3.3": "Comparer création et conservation",
+      "3.4": "Lire des chiffres sur un public",
+      "3.5": "Choisir une question de recherche sur la musique",
+      "3.6": "Répondre à une question imprévue",
+      "3.7": "Annonce : une répétition ouverte"
+    },
+    "sourceTitle": "Fête de la musique : organiser une rencontre",
+    "sourceUrl": "https://fetedelamusique.culture.gouv.fr/espace-organisateurs",
+    "sourceTask": "Distinguish participation guidance, stated aims and local conditions. Check the page date before using operational details."
+  },
+  {
+    "id": "4",
+    "title": "Sciences et technologies",
+    "englishTitle": "Science and Technology",
+    "intro": "Evaluate explanations and arguments about technology, distinguish evidence from claims and express conditions.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-4-1",
+      "fr-4-2",
+      "fr-4-3",
+      "fr-4-4",
+      "fr-4-5",
+      "fr-4-6",
+      "fr-4-7"
+    ],
+    "sectionTitles": {
+      "4.1": "Évaluer une innovation et ses usages",
+      "4.2": "Discuter de la vie privée sans inventer de règle",
+      "4.3": "Comprendre une explication scientifique",
+      "4.4": "Exprimer une condition avec précision",
+      "4.5": "Distinguer information et promotion",
+      "4.6": "Construire une concession utile",
+      "4.7": "Chronique : tester avant de conclure"
+    },
+    "sourceTitle": "CNIL : éducation au numérique",
+    "sourceUrl": "https://www.cnil.fr/fr/education-au-numerique-course-citoyenne-educap-city-paris",
+    "sourceTask": "Study the audience and educational purpose. This toolkit does not turn the page into legal advice."
+  },
+  {
+    "id": "5",
+    "title": "Vie contemporaine",
+    "englishTitle": "Contemporary Life",
+    "intro": "Navigate education, work, media, food, leisure and mobility while explaining trade-offs and viewpoints.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "5.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-5-1",
+      "fr-5-2",
+      "fr-5-3",
+      "fr-5-4",
+      "fr-5-5",
+      "fr-5-6",
+      "fr-5-7"
+    ],
+    "sectionTitles": {
+      "5.1": "Présenter un parcours d’études",
+      "5.2": "Lire un média en identifiant sa voix",
+      "5.3": "Parler d’alimentation sans réduire une culture",
+      "5.4": "Proposer un loisir accessible",
+      "5.5": "Interpréter un projet de déplacement",
+      "5.6": "Soutenir un argument avec plusieurs sources",
+      "5.7": "Message : une rencontre sur les études"
+    },
+    "sourceTitle": "TV5MONDE : vidéos et compréhension",
+    "sourceUrl": "https://apprendre.tv5monde.com/fr/collection-all",
+    "sourceTask": "Choose an authentic spoken source suitable for your level; record speaker, place, genre and context."
+  },
+  {
+    "id": "6",
+    "title": "Contextes mondiaux",
+    "englishTitle": "Global Contexts",
+    "intro": "Connect local examples to environmental, historical and planning questions using qualified comparisons.",
+    "prerequisites": "Sustained intermediate French reading and basic present/past narration. Use the contextual vocabulary and language notes as support.",
+    "sections": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6",
+      "6.7"
+    ],
+    "online": false,
+    "lessonIds": [
+      "fr-6-1",
+      "fr-6-2",
+      "fr-6-3",
+      "fr-6-4",
+      "fr-6-5",
+      "fr-6-6",
+      "fr-6-7"
+    ],
+    "sectionTitles": {
+      "6.1": "Relier un enjeu global à un exemple local",
+      "6.2": "Discuter un projet d’aménagement",
+      "6.3": "Interpréter un lieu de mémoire",
+      "6.4": "Comprendre un appel à la coopération",
+      "6.5": "Nuancer une relation de cause à effet",
+      "6.6": "Conclure avec précision et ouverture",
+      "6.7": "Entretien : observer un jardin"
+    },
+    "sourceTitle": "UNESCO : éducation au développement durable",
+    "sourceUrl": "https://www.unesco.org/fr/sustainable-development/education/need-know",
+    "sourceTask": "Separate the organization’s objectives from measured outcomes, and identify questions for a local comparison."
+  }
+]

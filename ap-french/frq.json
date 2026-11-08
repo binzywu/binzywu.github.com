@@ -1,0 +1,104 @@
+[
+  {
+    "unit": "1",
+    "title": "Lire une annonce et ses conditions",
+    "context": "La maison de quartier organise une rencontre entre générations samedi de quatorze heures à dix-sept heures. L'entrée est libre, mais les personnes souhaitant participer à l'atelier de cuisine doivent réserver leur place avant jeudi. Il est possible de venir uniquement pour la lecture partagée, qui commencera à quinze heures. Les recettes apportées seront présentées comme des propositions personnelles, et non comme des traditions communes à tous les habitants d'une région. Les organisateurs invitent chacun à raconter comment une recette a circulé dans son entourage. En cas de forte demande, une deuxième séance de cuisine pourra être proposée le mois suivant.",
+    "prompts": [
+      "Une amie veut seulement assister à la lecture. Expliquez-lui les informations utiles sans inventer de condition.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  },
+  {
+    "unit": "2",
+    "title": "Comprendre une variété sans la dévaloriser",
+    "context": "Dans notre club, nous écoutons des voix de plusieurs espaces francophones. Certains mots et certaines prononciations nous sont moins familiers. Au début, un élève voulait corriger tout ce qui différait de l'enregistrement du manuel. Une intervenante lui a demandé de distinguer une difficulté de compréhension d'une erreur. Le groupe a ensuite noté le contexte, recherché le sens des expressions et comparé plusieurs usages. Nous continuons à travailler la clarté de nos propres interventions, mais nous évitons de présenter une seule voix comme la mesure de toutes les autres. Comprendre la variation demande une écoute attentive, pas un jugement immédiat.",
+    "prompts": [
+      "Formulez une demande de clarification respectueuse pour une expression inconnue.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  },
+  {
+    "unit": "3",
+    "title": "Choisir une question de recherche sur la musique",
+    "context": "Maya souhaitait étudier « la musique dans le monde francophone ». Son professeur lui a demandé de choisir une question plus précise. Elle s'intéresse désormais à la manière dont une association présente les rencontres entre musiciens et public dans une ville donnée. Elle cherchera un programme, un entretien et un document décrivant le contexte de l'événement. Son carnet distinguera les informations confirmées, les interprétations et les questions encore ouvertes. Elle ne veut pas rédiger une conclusion avant d'avoir consulté les sources. Ce scénario est un exercice de méthode ; il ne remplace pas les consignes du projet officiel, qui doivent être obtenues auprès de son enseignant.",
+    "prompts": [
+      "Proposez une question précise et deux types de sources utiles, sans rédiger une présentation à rendre.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  },
+  {
+    "unit": "4",
+    "title": "Distinguer information et promotion",
+    "context": "Une annonce affirme qu'un nouveau service de révision « transforme les résultats en quelques jours ». Une présentation plus détaillée décrit seulement les fonctions disponibles : fiches, rappels et exercices. Elle ne fournit ni groupe de comparaison ni données sur les progrès. Une élève apprécie l'organisation proposée, mais refuse de reprendre la promesse dans son exposé comme un fait établi. Elle cherche qui produit chaque document et dans quel but. Son objectif n'est pas de rejeter tout service commercial ; elle veut distinguer ce que l'outil permet de faire de ce que son efficacité supposée reste à démontrer.",
+    "prompts": [
+      "Reformulez la promesse de manière prudente et fidèle à ce qui est documenté.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  },
+  {
+    "unit": "5",
+    "title": "Interpréter un projet de déplacement",
+    "context": "Pour une sortie, deux groupes ont préparé des itinéraires. Le premier propose un trajet rapide mais plusieurs changements ; le second prend davantage de temps et comporte moins de correspondances. La comparaison doit aussi tenir compte des personnes qui voyagent, du matériel transporté et de l'heure d'arrivée souhaitée. Une élève rappelle que « plus court » ne signifie pas toujours « plus simple ». Le groupe décide de vérifier les informations auprès des services concernés avant de réserver. Cette note est un exercice de comparaison : elle ne donne ni horaires réels ni recommandations de voyage pour une destination précise.",
+    "prompts": [
+      "Justifiez le choix d’un itinéraire en utilisant au moins deux critères.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  },
+  {
+    "unit": "6",
+    "title": "Nuancer une relation de cause à effet",
+    "context": "Après l'ouverture d'un nouvel espace de travail dans un quartier imaginaire, plusieurs commerces signalent une hausse de leur fréquentation. Un article attribue immédiatement cette évolution au nouvel espace. Une lectrice remarque que la période correspond aussi à des travaux terminés dans la rue et à une série d'événements. Elle ne nie pas une influence possible ; elle demande simplement ce que l'on peut établir avec les informations disponibles. Une comparaison sur une période plus longue et des observations d'autres rues pourraient aider. Le débat porte sur la solidité d'une explication, non sur l'interdiction de proposer des hypothèses.",
+    "prompts": [
+      "Reformulez la conclusion trop certaine de l’article et proposez une vérification.",
+      "Présentez un point de vue différent et répondez-y sans le caricaturer.",
+      "Quelle information manque pour renforcer votre réponse ?",
+      "Posez une question de suivi à votre interlocuteur."
+    ],
+    "criteria": [
+      "Anchor your interpretation in a specific detail from the fictional passage.",
+      "State a clear position and connect reasons with appropriate French expressions.",
+      "Acknowledge a limitation; do not turn a local example into a general cultural claim.",
+      "Revise verb forms, agreement, register and transitions; then say your response aloud."
+    ]
+  }
+]
