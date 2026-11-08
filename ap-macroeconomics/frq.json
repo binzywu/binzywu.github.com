@@ -1,0 +1,104 @@
+[
+  {
+    "unit": "1",
+    "title": "A production and trade comparison",
+    "context": "With fixed resources, A can make 30 solar panels or 10 pumps; B can make 20 panels or 10 pumps. Assume linear frontiers.",
+    "prompts": [
+      "Calculate opportunity cost of a pump for each.",
+      "Assign comparative advantages.",
+      "Offer mutually beneficial terms of trade.",
+      "Distinguish a movement along a frontier from an outward shift."
+    ],
+    "criteria": [
+      "A gives up 3 panels per pump; B gives up 2.",
+      "B has comparative advantage in pumps; A in panels.",
+      "A rate strictly between 2 and 3 panels per pump can benefit both.",
+      "Reallocation moves along a frontier; new resources or technology can move it outward."
+    ]
+  },
+  {
+    "unit": "2",
+    "title": "Reading economic indicators",
+    "context": "A fictional economy has C = 400, I = 100, G = 120, X = 60 and M = 80. Nominal GDP is 600 and the deflator is 120. There are 90 employed and 10 unemployed active job seekers.",
+    "prompts": [
+      "Calculate spending-side GDP.",
+      "Calculate real GDP from the nominal value and deflator.",
+      "Calculate unemployment.",
+      "Explain one reason these figures are insufficient to measure welfare."
+    ],
+    "criteria": [
+      "GDP = 400 + 100 + 120 + 60 − 80 = 600.",
+      "Real GDP = 600 / 1.2 = 500.",
+      "Unemployment = 10 / 100 × 100 = 10%.",
+      "Distribution, nonmarket activity and environmental quality are among the missing welfare dimensions."
+    ]
+  },
+  {
+    "unit": "3",
+    "title": "Closing a recessionary gap",
+    "context": "Output is 900 and potential output is 1000. MPC is 0.75. Use a fixed-price closed-economy multiplier with no taxes, imports or crowding out.",
+    "prompts": [
+      "Identify the gap and show it on an AD–AS graph.",
+      "Find the simple spending multiplier.",
+      "Calculate the G increase needed in this model.",
+      "Explain one reason the actual policy effect could differ."
+    ],
+    "criteria": [
+      "There is a recessionary gap of 100; show initial output left of LRAS.",
+      "Multiplier = 1 / 0.25 = 4.",
+      "Required G increase is 100 / 4 = 25.",
+      "Price changes, import leakage, timing and interest-rate responses can change the result; do not claim a guaranteed forecast."
+    ]
+  },
+  {
+    "unit": "4",
+    "title": "Policy under ample reserves",
+    "context": "A central bank has ample reserves and lowers its administered interest rates. Hold risk, expectations and other policy settings fixed.",
+    "prompts": [
+      "Identify the intended short-term market-rate direction.",
+      "Trace a possible investment and AD response.",
+      "Explain why an open-market purchase alone need not move the rate much in this regime.",
+      "Distinguish the real loanable-funds rate from the nominal money-market rate."
+    ],
+    "criteria": [
+      "Short-term rates tend to fall as administered rates fall.",
+      "Lower borrowing costs can raise investment and shift AD right, conditional on other determinants.",
+      "Reserve demand can be relatively flat in the ample-reserves range.",
+      "A real rate adjusts for inflation; diagrams must state the rate and market rather than mixing the two."
+    ]
+  },
+  {
+    "unit": "5",
+    "title": "Debt and longer-run effects",
+    "context": "Outlays are 320, revenues 280 and initial debt 1000. Ignore other debt adjustments. Assume a closed loanable-funds market with unchanged saving behavior.",
+    "prompts": [
+      "Calculate the deficit and new debt.",
+      "Show how extra public borrowing can affect the real rate.",
+      "Explain possible crowding out.",
+      "Describe a separate policy channel that could raise long-run capacity."
+    ],
+    "criteria": [
+      "Deficit = 40; simplified new debt = 1040.",
+      "Using the borrowing-demand convention, demand shifts right and the real rate rises.",
+      "Higher rates can lower private investment and future capital accumulation.",
+      "Productive education, infrastructure or research can raise capacity; assess effectiveness and opportunity costs rather than guaranteeing growth."
+    ]
+  },
+  {
+    "unit": "6",
+    "title": "Currency appreciation",
+    "context": "The rate moves from 0.8 to 1 foreign unit per domestic unit. A domestic item keeps a price of 50 domestic units. Assume flexible exchange rates and other goods prices fixed.",
+    "prompts": [
+      "Identify which currency appreciates.",
+      "Calculate the foreign buyer’s cost before and after.",
+      "Explain the usual net-export and AD channel.",
+      "Explain how a higher relative domestic real rate could help cause this exchange movement."
+    ],
+    "criteria": [
+      "The domestic currency appreciates in the stated quotation.",
+      "Foreign cost rises from 40 to 50 foreign units.",
+      "Domestic exports become less competitive and imports more attractive, tending to reduce NX and AD.",
+      "Higher relative real returns can attract capital inflows and raise demand for domestic currency, holding risk and expectations fixed."
+    ]
+  }
+]

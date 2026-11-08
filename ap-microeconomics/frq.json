@@ -1,0 +1,104 @@
+[
+  {
+    "unit": "1",
+    "title": "Two workshops and a trade",
+    "context": "In a day, workshop A can make 24 shelves or 12 chairs; workshop B can make 12 shelves or 12 chairs. Assume linear frontiers and no transport cost.",
+    "prompts": [
+      "Calculate each workshop’s opportunity cost of a chair.",
+      "Identify each comparative advantage.",
+      "Propose mutually beneficial terms for one chair.",
+      "Explain why consumption gains do not require the production frontier to shift."
+    ],
+    "criteria": [
+      "A: 2 shelves per chair; B: 1 shelf per chair.",
+      "B has comparative advantage in chairs; A in shelves.",
+      "Any strictly intermediate rate, such as 1.5 shelves per chair, benefits both at the margin.",
+      "Trade reallocates production and exchange; it expands feasible consumption without changing resources or technology."
+    ]
+  },
+  {
+    "unit": "2",
+    "title": "A taxed competitive market",
+    "context": "Demand is P = 100 − Q; supply is P = 20 + Q. A tax of 20 is imposed per unit. Assume no externalities and no other changes.",
+    "prompts": [
+      "Draw and label demand, supply and the tax wedge.",
+      "Find quantities before and after the tax.",
+      "Calculate buyer price, seller price and tax revenue.",
+      "Calculate deadweight loss and distinguish it from revenue."
+    ],
+    "criteria": [
+      "Before tax: Q = 40, P = 60.",
+      "After tax: 100 − Q = 40 + Q, so Q = 30.",
+      "Buyer price 70; seller price 50; revenue 20 × 30 = 600.",
+      "DWL = ½ × 20 × 10 = 100; revenue is a transfer, while DWL is lost total surplus."
+    ]
+  },
+  {
+    "unit": "3",
+    "title": "Produce or shut down?",
+    "context": "A price-taking firm’s profit-maximizing operating output is 20. Price is 8, AVC is 6, and ATC is 10. Assume the cost curves are consistent with that output.",
+    "prompts": [
+      "Calculate total revenue and total cost.",
+      "Calculate variable cost and fixed cost.",
+      "Compare operating profit with shutdown profit.",
+      "Explain the long-run implication if price and costs persist with free exit."
+    ],
+    "criteria": [
+      "TR = 160 and TC = 200.",
+      "VC = 120; FC = 80.",
+      "Operating profit is −40, versus −80 on shutdown, so operate in the short run.",
+      "Persistent inability to cover all economic costs leads to exit in the long run; a short-run loss alone does not require shutdown."
+    ]
+  },
+  {
+    "unit": "4",
+    "title": "A single-price monopoly",
+    "context": "Demand is P = 80 − Q, MR = 80 − 2Q, MC = 20, and ATC at the chosen output is 30. No externalities are present.",
+    "prompts": [
+      "Find the profit-maximizing output.",
+      "Read price from the correct curve.",
+      "Calculate profit.",
+      "Compare quantity with the allocatively efficient quantity and explain the difference."
+    ],
+    "criteria": [
+      "Set MR = MC: Q = 30.",
+      "Demand gives P = 50, not 20.",
+      "Profit = (50 − 30) × 30 = 600.",
+      "Efficient Q solves demand = MC, giving 60; monopoly restricts output and has P > MC."
+    ]
+  },
+  {
+    "unit": "5",
+    "title": "Hiring at a fixed wage",
+    "context": "Successive workers’ MRP values are 60, 50, 40, 30 and 20. Wage is fixed at 35. Other costs do not change.",
+    "prompts": [
+      "Choose the profit-maximizing number of workers.",
+      "Calculate payroll.",
+      "Explain a hiring-demand shift if product price rises in a competitive output market.",
+      "Explain why the same wage rule cannot be transferred unchanged to a uniform-wage monopsonist."
+    ],
+    "criteria": [
+      "Hire three: each has MRP at least 35; the fourth does not.",
+      "Payroll = 3 × 35 = 105.",
+      "MRP = MP × P rises at each employment level if MP is unchanged, shifting labor demand right.",
+      "A monopsonist faces rising labor supply, so MFC can exceed the wage and hiring uses MRP = MFC."
+    ]
+  },
+  {
+    "unit": "6",
+    "title": "Pricing an external cost",
+    "context": "Demand/MSB is 100 − Q. MPC is 20 + Q. Constant external damage is 10 per unit. Assume no other distortions.",
+    "prompts": [
+      "Find the uncorrected market quantity.",
+      "Find the efficient quantity.",
+      "Propose a per-unit corrective tax and explain the mechanism.",
+      "Name a measurement challenge and a distributional issue in applying the policy."
+    ],
+    "criteria": [
+      "Market Q = 40.",
+      "MSC = 30 + Q, so efficient Q = 35.",
+      "A tax of 10 aligns private cost with social cost at the efficient quantity.",
+      "Damage estimation and monitoring can be difficult; costs and revenue uses affect different groups differently."
+    ]
+  }
+]

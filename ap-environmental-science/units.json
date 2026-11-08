@@ -1,0 +1,254 @@
+[
+  {
+    "id": "1",
+    "title": "The Living World: Ecosystems",
+    "weight": "6–8%",
+    "intro": "Trace energy, matter and interactions through terrestrial and aquatic systems.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7",
+      "1.8",
+      "1.9",
+      "1.10",
+      "1.11"
+    ],
+    "lessonIds": [
+      "apes-1-1",
+      "apes-1-2",
+      "apes-1-3",
+      "apes-1-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Ecosystems and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">environmental gradients</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Carbon, nitrogen and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">phosphorus pathways</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Water balance and primary</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">productivity</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Food webs and trophic</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">transfer</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "2",
+    "title": "The Living World: Biodiversity",
+    "weight": "6–8%",
+    "intro": "Explain diversity, ecosystem services and responses to disturbance.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7"
+    ],
+    "lessonIds": [
+      "apes-2-1",
+      "apes-2-2",
+      "apes-2-3",
+      "apes-2-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Diversity and ecosystem</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">benefits</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Islands, fragmentation and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">tolerance</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Disturbance, selection and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">adaptation</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Succession and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">investigating recovery</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "3",
+    "title": "Populations",
+    "weight": "10–15%",
+    "intro": "Use life-history patterns, growth models and demographic evidence.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9"
+    ],
+    "lessonIds": [
+      "apes-3-1",
+      "apes-3-2",
+      "apes-3-3",
+      "apes-3-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Life histories and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">survivorship</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Growth, limiting factors</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and carrying capacity</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Age structures, fertility</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and population momentum</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Human growth and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">demographic transition</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "4",
+    "title": "Earth Systems and Resources",
+    "weight": "10–15%",
+    "intro": "Connect soils, water, atmospheric circulation and climate patterns.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "lessonIds": [
+      "apes-4-1",
+      "apes-4-2",
+      "apes-4-3",
+      "apes-4-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Plate motion and soil</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">development</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Soil texture and watershed</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">pathways</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Atmospheric circulation</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and the seasons</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Rain shadows and changing</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">Pacific conditions</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "5",
+    "title": "Land and Water Use",
+    "weight": "10–15%",
+    "intro": "Evaluate food production, resource extraction and sustainable land management.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "5.7",
+      "5.8",
+      "5.9",
+      "5.10",
+      "5.11",
+      "5.12",
+      "5.13",
+      "5.14",
+      "5.15",
+      "5.16",
+      "5.17"
+    ],
+    "lessonIds": [
+      "apes-5-1",
+      "apes-5-2",
+      "apes-5-3",
+      "apes-5-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Shared resources, forests</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and fisheries</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Agriculture, irrigation</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and livestock tradeoffs</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Pest control as an</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">adaptive decision</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Mining, cities and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">measuring a footprint</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "6",
+    "title": "Energy Resources and Consumption",
+    "weight": "10–15%",
+    "intro": "Compare energy sources using units, efficiency and environmental tradeoffs.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6",
+      "6.7",
+      "6.8",
+      "6.9",
+      "6.10",
+      "6.11",
+      "6.12",
+      "6.13"
+    ],
+    "lessonIds": [
+      "apes-6-1",
+      "apes-6-2",
+      "apes-6-3",
+      "apes-6-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Energy units, demand and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">efficiency</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Fossil fuels, nuclear</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">power and biomass</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Solar, wind, geothermal</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and hydrogen</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Hydropower and evaluating</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">alternatives</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "7",
+    "title": "Atmospheric Pollution",
+    "weight": "7–10%",
+    "intro": "Trace pollutant formation, transport, exposure and control.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5",
+      "7.6",
+      "7.7",
+      "7.8"
+    ],
+    "lessonIds": [
+      "apes-7-1",
+      "apes-7-2",
+      "apes-7-3",
+      "apes-7-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Primary emissions and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">secondary smog</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Inversions and indoor air</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">pathways</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Emission controls and acid</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">deposition</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Noise and designing a</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">field comparison</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "8",
+    "title": "Aquatic and Terrestrial Pollution",
+    "weight": "7–10%",
+    "intro": "Connect pollutant sources to pathways, effects and treatment.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "8.6",
+      "8.7",
+      "8.8",
+      "8.9",
+      "8.10",
+      "8.11",
+      "8.12",
+      "8.13",
+      "8.14",
+      "8.15"
+    ],
+    "lessonIds": [
+      "apes-8-1",
+      "apes-8-2",
+      "apes-8-3",
+      "apes-8-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Pollution sources,</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">wetlands and nutrient</text><text x=\"107\" y=\"79\" text-anchor=\"middle\" font-size=\"12\">loading</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Thermal pollution,</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">persistence and food-web</text><text x=\"327\" y=\"79\" text-anchor=\"middle\" font-size=\"12\">concentration</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Waste prevention and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">sewage treatment</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Dose-response evidence and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">public-health pathways</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "9",
+    "title": "Global Change",
+    "weight": "15–20%",
+    "intro": "Explain climate processes, ocean change and threats to biodiversity.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "9.1",
+      "9.2",
+      "9.3",
+      "9.4",
+      "9.5",
+      "9.6",
+      "9.7",
+      "9.8",
+      "9.9",
+      "9.10"
+    ],
+    "lessonIds": [
+      "apes-9-1",
+      "apes-9-2",
+      "apes-9-3",
+      "apes-9-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Ozone protection and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">atmospheric location</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Greenhouse forcing and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">feedbacks</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Ocean heat, chemistry and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">coastal effects</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#27694e\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Biodiversity threats and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">testing a solution</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  }
+]

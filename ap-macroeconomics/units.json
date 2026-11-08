@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "title": "Basic Economic Concepts",
+    "weight": "5–10%",
+    "intro": "Build scarcity, trade and market reasoning before moving to the whole economy.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6"
+    ],
+    "lessonIds": [
+      "macro-1-1",
+      "macro-1-2",
+      "macro-1-3",
+      "macro-1-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Scarcity and production</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">possibilities</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Specialization and the</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">terms of trade</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Demand and supply as</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">separate decisions</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Equilibrium and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">simultaneous shifts</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "2",
+    "title": "Economic Indicators and the Business Cycle",
+    "weight": "12–17%",
+    "intro": "Measure output, unemployment and prices, then distinguish levels from rates of change.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7"
+    ],
+    "lessonIds": [
+      "macro-2-1",
+      "macro-2-2",
+      "macro-2-3",
+      "macro-2-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">GDP, circular flow and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">what is omitted</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Labor force and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">unemployment</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Price indices, inflation</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and real output</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Expansion, contraction and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">turning points</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "3",
+    "title": "National Income and Price Determination",
+    "weight": "17–27%",
+    "intro": "Use aggregate demand and supply to explain short-run changes and adjustment.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9"
+    ],
+    "lessonIds": [
+      "macro-3-1",
+      "macro-3-2",
+      "macro-3-3",
+      "macro-3-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Aggregate demand and the</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">simple multiplier</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Short-run supply and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">equilibrium shocks</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Long-run self-adjustment</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Fiscal actions and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">automatic stabilizers</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "4",
+    "title": "Financial Sector",
+    "weight": "18–23%",
+    "intro": "Connect saving, assets, money, banking and monetary policy.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7"
+    ],
+    "lessonIds": [
+      "macro-4-1",
+      "macro-4-2",
+      "macro-4-3",
+      "macro-4-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Assets, bond prices and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">real returns</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Money, bank balance sheets</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and deposit creation</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Monetary policy with</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">limited and ample reserves</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Saving, investment and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">loanable funds</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "5",
+    "title": "Long-Run Consequences of Stabilization Policies",
+    "weight": "20–30%",
+    "intro": "Trace inflation, debt, crowding out and productive capacity over time.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.6",
+      "5.7"
+    ],
+    "lessonIds": [
+      "macro-5-1",
+      "macro-5-2",
+      "macro-5-3",
+      "macro-5-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Stabilization and the</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">Phillips curve</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Money growth and long-run</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">inflation</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Deficits, debt and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">crowding out</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Growth and productive</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">capacity</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "6",
+    "title": "Open Economy—International Trade and Finance",
+    "weight": "10–13%",
+    "intro": "Link exchange rates, international payments, capital flows and net exports.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6"
+    ],
+    "lessonIds": [
+      "macro-6-1",
+      "macro-6-2",
+      "macro-6-3",
+      "macro-6-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">International transactions</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and accounting</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Exchange-rate quotations</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">and currency demand</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Policy, interest</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">differences and capital</text><text x=\"547\" y=\"79\" text-anchor=\"middle\" font-size=\"12\">flows</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#285a8c\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Net exports and open-</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">economy transmission</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  }
+]

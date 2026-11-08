@@ -1,0 +1,155 @@
+[
+  {
+    "unit": "1",
+    "title": "Nutrient runoff investigation",
+    "context": "A pond receives runoff from several fields. A researcher proposes testing vegetated buffers using independent replicated field plots.",
+    "prompts": [
+      "State a testable hypothesis linking buffers to phosphorus loading.",
+      "Identify independent and dependent variables.",
+      "Describe a suitable control and one confounder.",
+      "Explain the nutrient-to-oxygen mechanism being investigated."
+    ],
+    "criteria": [
+      "Predict buffer plots will have lower phosphorus mass in runoff under comparable events.",
+      "Independent variable: buffer treatment; response: phosphorus load, measured using both concentration and volume.",
+      "Use randomly assigned comparable unbuffered plots; control slope, rainfall and fertilizer input.",
+      "Nutrient stimulation of biomass followed by respiration and decomposition can deplete oxygen; nutrients do not simply consume it directly."
+    ]
+  },
+  {
+    "unit": "2",
+    "title": "Diversity after disturbance",
+    "context": "Before disturbance, a site has counts 10, 10, 10 and 10 for four species. Later it has 34, 2, 2 and 2. Total abundance is unchanged.",
+    "prompts": [
+      "Compare richness.",
+      "Compare evenness.",
+      "Explain why these data alone do not establish the cause.",
+      "Propose a design to test a management action."
+    ],
+    "criteria": [
+      "Richness remains four.",
+      "Evenness falls as one species dominates.",
+      "Other site conditions, sampling and time effects could differ; before-after association alone is insufficient.",
+      "Use replicated comparable treatment and control plots, consistent sampling and a defined ecological response."
+    ]
+  },
+  {
+    "unit": "3",
+    "title": "Population calculations",
+    "context": "A population has crude birth rate 25 and death rate 10 per thousand. Assume no migration and constant rates only for the calculation.",
+    "prompts": [
+      "Calculate natural increase as a percentage.",
+      "Estimate doubling time.",
+      "Explain how migration would enter total growth.",
+      "Explain why the estimate is not a reliable fixed long-run prediction."
+    ],
+    "criteria": [
+      "RNI = (25 − 10) / 10 = 1.5%.",
+      "Rule-of-70 estimate is 70 / 1.5 ≈ 46.7 years.",
+      "Add immigration and subtract emigration in the population balance.",
+      "Fertility, mortality, age structure and resources can change; constant exponential growth is an assumption."
+    ]
+  },
+  {
+    "unit": "4",
+    "title": "A watershed storm budget",
+    "context": "A 20 mm storm falls on a 10000 m² site. Assume runoff coefficient 0.6 before a design change and 0.4 after, with the same storm and area.",
+    "prompts": [
+      "Convert depth and calculate rainfall volume.",
+      "Calculate runoff before and after.",
+      "Calculate percent runoff reduction.",
+      "Explain a model limitation and a field measurement needed."
+    ],
+    "criteria": [
+      "20 mm = 0.02 m; rainfall volume = 200 m³.",
+      "Before 120 m³; after 80 m³.",
+      "Reduction = 40 / 120 × 100 ≈ 33.3%.",
+      "A constant coefficient omits soil saturation and timing; measure actual event runoff under comparable conditions."
+    ]
+  },
+  {
+    "unit": "5",
+    "title": "Irrigation improvement",
+    "context": "A farm supplies 600 m³ of useful crop water with withdrawals of 1000 m³. A proposed system supplies the same amount using 750 m³.",
+    "prompts": [
+      "Calculate efficiency before and after.",
+      "Calculate withdrawal savings.",
+      "Explain why basin savings could differ.",
+      "Name one soil or crop outcome to monitor."
+    ],
+    "criteria": [
+      "Before 60%; after 80%.",
+      "Withdrawals fall by 250 m³, or 25%.",
+      "Changed return flows or expanded irrigated area can change basin-wide results.",
+      "Monitor soil salinity, crop yield or another justified indicator with consistent methods."
+    ]
+  },
+  {
+    "unit": "6",
+    "title": "Comparing electricity services",
+    "context": "A device uses 2 kW for 5 hours daily. A replacement provides the same service at 1.2 kW for the same time. Evaluate only operating electricity here.",
+    "prompts": [
+      "Calculate daily energy use for both.",
+      "Calculate daily and 30-day savings.",
+      "Calculate percent operating-energy reduction.",
+      "Identify one impact excluded from this boundary."
+    ],
+    "criteria": [
+      "Before 10 kWh/day; after 6 kWh/day.",
+      "Savings are 4 kWh/day and 120 kWh over 30 days.",
+      "Reduction = 4 / 10 × 100 = 40%.",
+      "Manufacturing, disposal, upstream generation and changes in use are excluded; do not call the operating calculation a full life-cycle result."
+    ]
+  },
+  {
+    "unit": "7",
+    "title": "An emissions-control test",
+    "context": "A plant’s measured particulate mass flow falls from 100 to 15 kg/day after a filter is installed. Production rate is held constant during comparable tests.",
+    "prompts": [
+      "Calculate removal efficiency.",
+      "Distinguish particulate control from CO2 control.",
+      "Describe one design feature strengthening the comparison.",
+      "Name a residual management issue."
+    ],
+    "criteria": [
+      "Removal is 85%.",
+      "A particle filter does not automatically remove gaseous CO2.",
+      "Use repeated comparable inlet/outlet tests, instrument calibration and control of operating conditions.",
+      "Captured waste needs handling and disposal; verify maintenance and actual long-term performance."
+    ]
+  },
+  {
+    "unit": "8",
+    "title": "Treatment and loading",
+    "context": "Wastewater enters at 200 mg/L of an organic-demand indicator and leaves at 40 mg/L. Flow is 100000 L/day at both locations for this calculation.",
+    "prompts": [
+      "Calculate concentration-removal efficiency.",
+      "Calculate daily incoming and outgoing indicator mass in kg.",
+      "Explain one downstream oxygen implication.",
+      "Explain what this indicator does not establish."
+    ],
+    "criteria": [
+      "Removal is 80%.",
+      "Incoming 20 kg/day; outgoing 4 kg/day, using 1000000 mg per kg.",
+      "Lower biodegradable organic loading can reduce downstream oxygen consumption during decomposition.",
+      "This result alone does not establish removal of all pathogens, nutrients or toxicants."
+    ]
+  },
+  {
+    "unit": "9",
+    "title": "Testing habitat management",
+    "context": "A treated site’s focal population rises from 100 to 130; an untreated site rises from 100 to 120 over the same period.",
+    "prompts": [
+      "Calculate each percent change.",
+      "Explain why treated-site improvement alone does not prove effectiveness.",
+      "Propose a stronger design.",
+      "Name one tradeoff or additional response to monitor."
+    ],
+    "criteria": [
+      "Treated +30%; untreated +20%.",
+      "A background trend or site difference could contribute; do not attribute the full increase to treatment.",
+      "Use replicated comparable sites, random assignment where feasible and consistent repeated sampling.",
+      "Monitor effects on other species, habitat quality, cost or another justified unintended outcome."
+    ]
+  }
+]

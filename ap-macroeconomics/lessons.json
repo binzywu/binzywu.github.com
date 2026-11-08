@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "macro-1-1",
+    "unit": "1",
+    "sections": [
+      "1.1",
+      "1.2"
+    ],
+    "part": "Basic Economic Concepts",
+    "title": "Scarcity and production possibilities",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Scarcity requires choosing among competing uses of resources. A production frontier shows efficient combinations with fixed resources and technology. Moving along it changes the output mix; moving outward requires expanded productive capacity. Opportunity cost is the next-best forgone alternative. A point inside the frontier can reflect unemployment or inefficient resource use, so an economy can increase current output without moving its frontier.",
+    "formula": "Opportunity cost = output forgone / output gained",
+    "steps": [
+      "An economy reallocates resources from 50 units of food and 10 machines to 38 food and 14 machines.",
+      "It gains four machines and gives up 12 food.",
+      "The opportunity cost over the interval is three food per machine.",
+      "This movement changes the mix, not the economy’s production frontier."
+    ],
+    "trap": "Growth of current output from an interior point need not mean growth of productive capacity.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: An economy reallocates resources from 50 units of food and 10 machines to 38 food and 14 machines. It gains four machines and gives up 12 food. The opportunity cost over the interval is three food per machine. This movement changes the mix, not the economy’s production frontier. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which observation indicates productive inefficiency in a frontier model?",
+        "options": [
+          "An unattainable point beyond the frontier.",
+          "A frontier shifted outward by technology.",
+          "An attainable point inside the frontier.",
+          "A point on the frontier."
+        ],
+        "answer": 2,
+        "hint": "Growth of current output from an interior point need not mean growth of productive capacity.",
+        "explain": "An attainable point inside the frontier."
+      },
+      {
+        "prompt": "A move gains 6 machines and sacrifices 18 units of food. What is the opportunity cost per machine in food?",
+        "answer": 3,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "18 / 6 = 3 food per machine."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-1-2",
+    "unit": "1",
+    "sections": [
+      "1.3"
+    ],
+    "part": "Basic Economic Concepts",
+    "title": "Specialization and the terms of trade",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Comparative advantage depends on relative opportunity costs; absolute advantage depends on productivity. A country with lower opportunity cost in a good can specialize in that good and trade at terms between the countries’ opportunity costs. This can expand consumption possibilities without shifting production possibilities. It does not guarantee equal gains for every person or eliminate adjustment costs. State whether the data describe output per resource or resources per output before comparing.",
+    "formula": "A mutually beneficial exchange rate lies between opportunity costs",
+    "steps": [
+      "A can make 20 cloth or 10 grain per day; B can make 12 cloth or 12 grain.",
+      "A’s opportunity cost of grain is two cloth; B’s is one cloth.",
+      "B has comparative advantage in grain.",
+      "At 1.5 cloth per grain, B gains relative to domestic production and A saves relative to its own grain cost."
+    ],
+    "trap": "Do not reverse the ratio when moving between output data and input-time data.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A can make 20 cloth or 10 grain per day; B can make 12 cloth or 12 grain. A’s opportunity cost of grain is two cloth; B’s is one cloth. B has comparative advantage in grain. At 1.5 cloth per grain, B gains relative to domestic production and A saves relative to its own grain cost. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "What determines comparative advantage?",
+        "options": [
+          "Having absolute advantage in every good.",
+          "Lower opportunity cost.",
+          "Higher total GDP alone.",
+          "A larger population alone."
+        ],
+        "answer": 1,
+        "hint": "Do not reverse the ratio when moving between output data and input-time data.",
+        "explain": "Lower opportunity cost."
+      },
+      {
+        "prompt": "If 8 grain requires giving up 24 cloth, what is the cost of one grain in cloth?",
+        "answer": 3,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "24 / 8 = 3 cloth."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-1-3",
+    "unit": "1",
+    "sections": [
+      "1.4",
+      "1.5"
+    ],
+    "part": "Basic Economic Concepts",
+    "title": "Demand and supply as separate decisions",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "A demand curve describes purchases at different own prices, holding other influences fixed. A supply curve describes sales on the same basis. Income and preferences can shift demand; input costs and technology can shift supply. A change in the good’s own price moves along a curve. The market model is a starting point for relative-price reasoning; the economy-wide aggregate demand model later uses different mechanisms.",
+    "formula": "Own-price change → movement; nonprice determinant change → shift",
+    "steps": [
+      "A production technology reduces unit cost.",
+      "At each price firms now offer more, so supply shifts right.",
+      "With demand unchanged, equilibrium price falls and quantity rises.",
+      "The lower price causes movement along demand, not a demand shift."
+    ],
+    "trap": "Do not call every increase in purchases an increase in demand.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A production technology reduces unit cost. At each price firms now offer more, so supply shifts right. With demand unchanged, equilibrium price falls and quantity rises. The lower price causes movement along demand, not a demand shift. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which event shifts demand for a normal good right?",
+        "options": [
+          "Higher buyer income, other things equal.",
+          "A lower own price alone.",
+          "Cheaper raw materials alone.",
+          "An increase in sellers’ productivity alone."
+        ],
+        "answer": 0,
+        "hint": "Do not call every increase in purchases an increase in demand.",
+        "explain": "Higher buyer income, other things equal."
+      },
+      {
+        "prompt": "At a price, buyers demand 90 units and sellers supply 70. What is the shortage?",
+        "answer": 20,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "90 − 70 = 20 units."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-1-4",
+    "unit": "1",
+    "sections": [
+      "1.6"
+    ],
+    "part": "Basic Economic Concepts",
+    "title": "Equilibrium and simultaneous shifts",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "At equilibrium planned purchases equal planned sales. Below the equilibrium price, a shortage tends to push price upward; above it, a surplus tends to push price downward. A new equilibrium can be traced after a curve shifts. When supply and demand shift together, a direction can be uncertain: increases in both raise quantity, but their effects on price oppose one another. Graph both changes before deciding which outcomes are determinate.",
+    "formula": "Set Qd = Qs, or inverse demand price = inverse supply price",
+    "steps": [
+      "Demand is P = 70 − Q and supply is P = 10 + Q.",
+      "Equating them gives 2Q = 60.",
+      "Equilibrium quantity is 30 and price is 40.",
+      "A rightward demand shift with supply fixed raises both price and quantity."
+    ],
+    "trap": "A shortage is a quantity difference at a specified price, not a shift of demand.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Demand is P = 70 − Q and supply is P = 10 + Q. Equating them gives 2Q = 60. Equilibrium quantity is 30 and price is 40. A rightward demand shift with supply fixed raises both price and quantity. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "If demand increases and supply decreases, what is certain?",
+        "options": [
+          "Quantity rises; price is ambiguous.",
+          "Price falls; quantity is fixed.",
+          "Both price and quantity must fall.",
+          "Price rises; quantity is ambiguous."
+        ],
+        "answer": 3,
+        "hint": "A shortage is a quantity difference at a specified price, not a shift of demand.",
+        "explain": "Price rises; quantity is ambiguous."
+      },
+      {
+        "prompt": "For P = 100 − Q and P = 20 + Q, what is equilibrium price?",
+        "answer": 60,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "Q = 40, so P = 20 + 40 = 60."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-2-1",
+    "unit": "2",
+    "sections": [
+      "2.1",
+      "2.2"
+    ],
+    "part": "Economic Indicators and the Business Cycle",
+    "title": "GDP, circular flow and what is omitted",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "GDP measures the market value of final goods and services produced within an economy during a period. Spending on domestic production becomes income to producers. Count final production once: intermediate inputs are already embodied in final value. Transfers and transactions in existing financial assets are not purchases of current production. GDP omits many nonmarket activities and does not directly measure distribution, leisure or environmental quality, so it is not a complete welfare measure.",
+    "formula": "GDP = C + I + G + (X − M)",
+    "steps": [
+      "Consumption is 500, investment 100, government purchases 150, exports 80 and imports 60.",
+      "Net exports are 20.",
+      "GDP is 500 + 100 + 150 + 20 = 770.",
+      "Imports are subtracted to remove foreign production already included in other spending categories, not because imports are inherently harmful."
+    ],
+    "trap": "Government transfers are not government purchases in GDP.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Consumption is 500, investment 100, government purchases 150, exports 80 and imports 60. Net exports are 20. GDP is 500 + 100 + 150 + 20 = 770. Imports are subtracted to remove foreign production already included in other spending categories, not because imports are inherently harmful. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which directly adds to current domestic GDP?",
+        "options": [
+          "Selling a used table with no new dealer service.",
+          "A newly produced domestic machine sold to a business.",
+          "A transfer payment with no current production.",
+          "Reselling an existing share."
+        ],
+        "answer": 1,
+        "hint": "Government transfers are not government purchases in GDP.",
+        "explain": "A newly produced domestic machine sold to a business."
+      },
+      {
+        "prompt": "C = 400, I = 80, G = 120, X = 50 and M = 70. What is GDP?",
+        "answer": 580,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "400 + 80 + 120 + 50 − 70 = 580."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-2-2",
+    "unit": "2",
+    "sections": [
+      "2.3"
+    ],
+    "part": "Economic Indicators and the Business Cycle",
+    "title": "Labor force and unemployment",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The labor force consists of employed people and unemployed people actively seeking work under the measurement definition. The unemployment rate uses the labor force, not the entire population, as its denominator. Discouraged workers who stop searching leave the labor force and can make the measured unemployment rate fall without more employment. Frictional and structural unemployment remain at the natural rate; cyclical unemployment is associated with deviations from full-employment output.",
+    "formula": "Unemployment rate = unemployed / labor force × 100%; participation = labor force / eligible population × 100%",
+    "steps": [
+      "There are 180 employed people and 20 unemployed active job seekers.",
+      "The labor force is 200.",
+      "The unemployment rate is 20 / 200 × 100 = 10%.",
+      "If some discouraged workers stop searching, interpret the lower rate alongside participation rather than assuming employment rose."
+    ],
+    "trap": "Someone without a job is not automatically classified as unemployed.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: There are 180 employed people and 20 unemployed active job seekers. The labor force is 200. The unemployment rate is 20 / 200 × 100 = 10%. If some discouraged workers stop searching, interpret the lower rate alongside participation rather than assuming employment rose. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "A discouraged worker stops searching. With other quantities fixed, what happens?",
+        "options": [
+          "Both unemployed count and labor force fall.",
+          "Employment rises automatically.",
+          "The labor force rises.",
+          "Every measure of underutilization becomes zero."
+        ],
+        "answer": 0,
+        "hint": "Someone without a job is not automatically classified as unemployed.",
+        "explain": "Both unemployed count and labor force fall."
+      },
+      {
+        "prompt": "There are 240 employed and 10 unemployed active searchers. What is the unemployment rate as a percentage?",
+        "answer": 4,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "10 / (240 + 10) × 100 = 4%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-2-3",
+    "unit": "2",
+    "sections": [
+      "2.4",
+      "2.5",
+      "2.6"
+    ],
+    "part": "Economic Indicators and the Business Cycle",
+    "title": "Price indices, inflation and real output",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "A price index compares the cost of a specified basket or set of production weights across time. Inflation is the percentage change in the index, not its level. Nominal GDP uses current prices; real GDP removes price changes using base-period valuation or the relevant chained method. Unexpected inflation redistributes purchasing power between parties to fixed nominal contracts; borrowers can gain while lenders lose when inflation exceeds expectations. A slowing inflation rate still means prices rise if inflation remains positive.",
+    "formula": "Inflation = (new index − old index) / old index × 100%; real GDP = nominal GDP / (deflator / 100)",
+    "steps": [
+      "The price index rises from 120 to 126.",
+      "The increase is 6 relative to the old index 120.",
+      "Inflation is 5%.",
+      "If nominal GDP is 630 and the GDP deflator is 126, real GDP is 630 / 1.26 = 500."
+    ],
+    "trap": "A decline in inflation from 6% to 3% is disinflation, not deflation.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: The price index rises from 120 to 126. The increase is 6 relative to the old index 120. Inflation is 5%. If nominal GDP is 630 and the GDP deflator is 126, real GDP is 630 / 1.26 = 500. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Who typically benefits from unexpectedly high inflation on a fixed nominal loan?",
+        "options": [
+          "The lender, by automatic indexation in every contract.",
+          "Both parties equally in every case.",
+          "Neither party can ever be affected.",
+          "The borrower, who repays in money with less purchasing power."
+        ],
+        "answer": 3,
+        "hint": "A decline in inflation from 6% to 3% is disinflation, not deflation.",
+        "explain": "The borrower, who repays in money with less purchasing power."
+      },
+      {
+        "prompt": "An index rises from 200 to 210. What is inflation in percent?",
+        "answer": 5,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "(210 − 200) / 200 × 100 = 5%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-2-4",
+    "unit": "2",
+    "sections": [
+      "2.7"
+    ],
+    "part": "Economic Indicators and the Business Cycle",
+    "title": "Expansion, contraction and turning points",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The business cycle alternates expansion and contraction in real economic activity. Peaks and troughs are turning points between those phases. An expansion does not require every household’s income to rise; a contraction does not mean all prices must fall. Potential output is a sustainable benchmark rather than a rigid maximum. Compare real output with potential and changes over time separately: output can grow while still below potential.",
+    "formula": "Output gap = (actual real output − potential output) / potential output × 100%",
+    "steps": [
+      "Potential output is 1000 while actual output rises from 900 to 950.",
+      "The economy is expanding over this interval.",
+      "Actual output remains below potential.",
+      "Its gap at 950 is (950 − 1000) / 1000 × 100 = −5%, so growth alone does not prove full employment."
+    ],
+    "trap": "Peaks and troughs are turning points; expansion and contraction are the cycle’s phases.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Potential output is 1000 while actual output rises from 900 to 950. The economy is expanding over this interval. Actual output remains below potential. Its gap at 950 is (950 − 1000) / 1000 × 100 = −5%, so growth alone does not prove full employment. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Output rises but remains below potential. Which statement can be true?",
+        "options": [
+          "A peak is necessarily occurring now.",
+          "There can be no cyclical unemployment.",
+          "An expansion occurs alongside a negative output gap.",
+          "The economy must be contracting."
+        ],
+        "answer": 2,
+        "hint": "Peaks and troughs are turning points; expansion and contraction are the cycle’s phases.",
+        "explain": "An expansion occurs alongside a negative output gap."
+      },
+      {
+        "prompt": "Actual output is 960 and potential output is 1000. What is the signed output gap in percent?",
+        "answer": -4,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "(960 − 1000) / 1000 × 100 = −4%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "adas"
+  },
+  {
+    "id": "macro-3-1",
+    "unit": "3",
+    "sections": [
+      "3.1",
+      "3.2"
+    ],
+    "part": "National Income and Price Determination",
+    "title": "Aggregate demand and the simple multiplier",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Aggregate demand shows desired total spending on domestic final output at different price levels. Its downward slope reflects wealth, interest-rate and exchange-rate channels rather than the single-good substitution story. Autonomous spending shifts AD. In the simple closed-economy model without taxes, imports, price changes or crowding out, repeated spending makes the total output response exceed the initial change. Real-world responses depend on leakages and supply conditions.",
+    "formula": "Simple spending multiplier = 1 / (1 − MPC); tax multiplier = −MPC / (1 − MPC)",
+    "steps": [
+      "Households spend 0.75 of extra income.",
+      "The simple spending multiplier is 1 / 0.25 = 4.",
+      "An autonomous purchase increase of 20 raises equilibrium output by 80 under the stated assumptions.",
+      "A tax cut of 20 has a smaller initial consumption effect, so its simple total effect is 60."
+    ],
+    "trap": "Do not apply the simple multiplier as an unconditional forecast when prices or interest rates change.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Households spend 0.75 of extra income. The simple spending multiplier is 1 / 0.25 = 4. An autonomous purchase increase of 20 raises equilibrium output by 80 under the stated assumptions. A tax cut of 20 has a smaller initial consumption effect, so its simple total effect is 60. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Why is the simple tax multiplier smaller in absolute value than the spending multiplier?",
+        "options": [
+          "Some of the tax change is initially saved.",
+          "Government purchases never enter AD.",
+          "MPC is always zero.",
+          "Taxes only affect aggregate supply."
+        ],
+        "answer": 0,
+        "hint": "Do not apply the simple multiplier as an unconditional forecast when prices or interest rates change.",
+        "explain": "Some of the tax change is initially saved."
+      },
+      {
+        "prompt": "MPC is 0.8 in the simple model. What is the government spending multiplier?",
+        "answer": 5,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "1 / (1 − 0.8) = 5."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "multiplier"
+  },
+  {
+    "id": "macro-3-2",
+    "unit": "3",
+    "sections": [
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6"
+    ],
+    "part": "National Income and Price Determination",
+    "title": "Short-run supply and equilibrium shocks",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "SRAS slopes upward when some input prices or expectations adjust slowly. LRAS is vertical at potential output in the benchmark model. AD–AS equilibrium determines real output and the price level. A negative supply shock shifts SRAS left, raising prices while lowering output: a demand expansion does not create this same combination by itself. Identify the curve, direction and horizon before predicting output, unemployment and prices.",
+    "formula": "AD increase with SRAS fixed → higher short-run output and price level",
+    "steps": [
+      "An energy cost shock raises firms’ production costs.",
+      "SRAS shifts left with AD held fixed.",
+      "The price level rises and real output falls in the short run.",
+      "Cyclical unemployment rises; this combination is often called stagflation."
+    ],
+    "trap": "A change in the price level is movement along AD, not an AD shift by itself.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: An energy cost shock raises firms’ production costs. SRAS shifts left with AD held fixed. The price level rises and real output falls in the short run. Cyclical unemployment rises; this combination is often called stagflation. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "A negative SRAS shock with AD unchanged does what initially?",
+        "options": [
+          "Lowers both the price level and output.",
+          "Raises output and lowers the price level.",
+          "Shifts LRAS right automatically.",
+          "Raises the price level and lowers real output."
+        ],
+        "answer": 3,
+        "hint": "A change in the price level is movement along AD, not an AD shift by itself.",
+        "explain": "Raises the price level and lowers real output."
+      },
+      {
+        "prompt": "Actual output falls from 1000 to 950. What is the percentage decline relative to 1000?",
+        "answer": 5,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "(1000 − 950) / 1000 × 100 = 5%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "adas"
+  },
+  {
+    "id": "macro-3-3",
+    "unit": "3",
+    "sections": [
+      "3.7"
+    ],
+    "part": "National Income and Price Determination",
+    "title": "Long-run self-adjustment",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Following a demand shock, short-run output can differ from potential because nominal wages and other input prices adjust slowly. In a recessionary gap, downward pressure on wages can lower costs and shift SRAS right over time. In an inflationary gap, rising wages can shift SRAS left. If productive capacity is unchanged, the long-run benchmark returns output to LRAS. The speed and costs of adjustment are separate empirical questions.",
+    "formula": "Demand shock alone with fixed potential output: long-run real output returns to potential",
+    "steps": [
+      "AD falls while wages initially remain sticky.",
+      "Output falls below potential and unemployment rises.",
+      "Over time lower nominal wages reduce production costs, shifting SRAS right.",
+      "Output returns toward potential at a lower price level, assuming no lasting supply-side damage."
+    ],
+    "trap": "LRAS does not automatically move just because AD has shifted.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: AD falls while wages initially remain sticky. Output falls below potential and unemployment rises. Over time lower nominal wages reduce production costs, shifting SRAS right. Output returns toward potential at a lower price level, assuming no lasting supply-side damage. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "In the benchmark, what closes a recessionary gap without policy?",
+        "options": [
+          "AD must rise from a change in its price level alone.",
+          "Nominal wages rise and shift SRAS left.",
+          "Falling input costs shift SRAS right over time.",
+          "LRAS always shifts left immediately."
+        ],
+        "answer": 2,
+        "hint": "LRAS does not automatically move just because AD has shifted.",
+        "explain": "Falling input costs shift SRAS right over time."
+      },
+      {
+        "prompt": "Potential output is 800 and actual output is 740. What output increase is needed to return to potential?",
+        "answer": 60,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "800 − 740 = 60 output units."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "adas"
+  },
+  {
+    "id": "macro-3-4",
+    "unit": "3",
+    "sections": [
+      "3.8",
+      "3.9"
+    ],
+    "part": "National Income and Price Determination",
+    "title": "Fiscal actions and automatic stabilizers",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Expansionary fiscal policy raises government purchases or reduces taxes to support AD; contractionary policy works in the opposite direction. Automatic stabilizers operate through existing rules: in downturns, tax receipts fall and some transfer payments rise without new legislation. Timing, crowding out and supply conditions can limit the effect of discretionary action. Distinguish a change in government purchases from a transfer-induced change in consumption.",
+    "formula": "Simple model: ΔY = spending multiplier × ΔG",
+    "steps": [
+      "A recessionary gap is 100 in a fixed-price model with MPC 0.75.",
+      "The spending multiplier is 4.",
+      "An increase in government purchases of 25 could close the gap under the model’s assumptions.",
+      "Existing unemployment benefits can separately cushion disposable income without being counted directly as G in GDP."
+    ],
+    "trap": "Automatic stabilizers do not require a new discretionary vote for each downturn.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A recessionary gap is 100 in a fixed-price model with MPC 0.75. The spending multiplier is 4. An increase in government purchases of 25 could close the gap under the model’s assumptions. Existing unemployment benefits can separately cushion disposable income without being counted directly as G in GDP. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which is an automatic stabilizer under existing rules?",
+        "options": [
+          "A one-time law changing the sales tax rate.",
+          "Tax receipts fall as taxable incomes fall.",
+          "A newly passed infrastructure bill.",
+          "A central bank buys securities."
+        ],
+        "answer": 1,
+        "hint": "Automatic stabilizers do not require a new discretionary vote for each downturn.",
+        "explain": "Tax receipts fall as taxable incomes fall."
+      },
+      {
+        "prompt": "With spending multiplier 5 and a recessionary output gap of 200, what increase in G closes it in the simple model?",
+        "answer": 40,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "200 / 5 = 40."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "multiplier"
+  },
+  {
+    "id": "macro-4-1",
+    "unit": "4",
+    "sections": [
+      "4.1",
+      "4.2"
+    ],
+    "part": "Financial Sector",
+    "title": "Assets, bond prices and real returns",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Financial assets are claims on future payments. A bond’s fixed payments become less attractive when market interest rates rise, so its price falls. Stocks represent ownership rather than a promised fixed payment. The nominal interest rate is stated in money terms; the real interest rate adjusts for inflation. The common subtraction formula is an approximation; the exact relationship uses a ratio. Expected inflation matters when contracts are set, while realized inflation determines the ex post real return.",
+    "formula": "Approximate real interest rate = nominal rate − inflation rate",
+    "steps": [
+      "A one-year nominal rate is 7% and expected inflation is 3%.",
+      "The approximate expected real rate is 4%.",
+      "If actual inflation turns out to be 5%, the approximate realized real rate is 2%.",
+      "For a fixed future bond payment, a higher discount rate lowers its current price."
+    ],
+    "trap": "Do not confuse a bond’s price with its interest yield; they move oppositely for fixed payments.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A one-year nominal rate is 7% and expected inflation is 3%. The approximate expected real rate is 4%. If actual inflation turns out to be 5%, the approximate realized real rate is 2%. For a fixed future bond payment, a higher discount rate lowers its current price. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "What happens to an existing fixed-payment bond’s price when market rates rise?",
+        "options": [
+          "It must rise.",
+          "It becomes equal to GDP.",
+          "Its payment changes automatically in every contract.",
+          "It falls, other things equal."
+        ],
+        "answer": 3,
+        "hint": "Do not confuse a bond’s price with its interest yield; they move oppositely for fixed payments.",
+        "explain": "It falls, other things equal."
+      },
+      {
+        "prompt": "A nominal interest rate is 8% and inflation is 3%. What is the approximate real interest rate in percent?",
+        "answer": 5,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "8 − 3 = 5%, using the approximation."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-4-2",
+    "unit": "4",
+    "sections": [
+      "4.3",
+      "4.4"
+    ],
+    "part": "Financial Sector",
+    "title": "Money, bank balance sheets and deposit creation",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Money functions as a medium of exchange, unit of account and store of value. Bank reserves are bank assets, while customer deposits are bank liabilities. Lending can create deposits, subject to constraints and the monetary framework. The textbook reciprocal-reserve multiplier gives a maximum under restrictive assumptions: all excess reserves are lent and loans redeposit with no cash leakage. It is not a universal description of actual banking, particularly in an ample-reserves system.",
+    "formula": "Textbook maximum deposit multiplier = 1 / reserve ratio, under stated assumptions",
+    "steps": [
+      "A bank receives a new cash deposit of 100 and the assumed required reserve ratio is 20%.",
+      "It must retain 20 and can initially lend 80 if it holds no excess reserves.",
+      "With full redepositing and repeated maximum lending, total deposits can reach 500 from that new reserve injection.",
+      "The maximum additional loans are 400; distinguish total deposits from additional lending."
+    ],
+    "trap": "The initial deposit is included in total deposits; do not count it twice or assume the theoretical maximum is guaranteed.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A bank receives a new cash deposit of 100 and the assumed required reserve ratio is 20%. It must retain 20 and can initially lend 80 if it holds no excess reserves. With full redepositing and repeated maximum lending, total deposits can reach 500 from that new reserve injection. The maximum additional loans are 400; distinguish total deposits from additional lending. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "On a bank’s balance sheet, customer deposits are what?",
+        "options": [
+          "Bank equity by definition.",
+          "Central-bank bonds owned by every customer.",
+          "Liabilities of the bank.",
+          "The bank’s physical reserves."
+        ],
+        "answer": 2,
+        "hint": "The initial deposit is included in total deposits; do not count it twice or assume the theoretical maximum is guaranteed.",
+        "explain": "Liabilities of the bank."
+      },
+      {
+        "prompt": "In the restrictive textbook model, what is the maximum deposit multiplier at a 25% reserve ratio?",
+        "answer": 4,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "1 / 0.25 = 4."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-4-3",
+    "unit": "4",
+    "sections": [
+      "4.5",
+      "4.6"
+    ],
+    "part": "Financial Sector",
+    "title": "Monetary policy with limited and ample reserves",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The traditional money-market model relates a nominal interest rate to money demand and a fixed nominal money supply. Under limited reserves, reserve-supply changes can move an overnight rate along reserve demand. Under ample reserves, administered rates such as interest on reserves are central tools for steering short-term rates; changing reserve quantity alone may have little effect within the flat region. Lower policy rates can support interest-sensitive spending, but transmission is neither immediate nor guaranteed.",
+    "formula": "Expansionary rate policy → lower short-term rates → more interest-sensitive spending, other things equal",
+    "steps": [
+      "A central bank operating with ample reserves lowers its administered rates.",
+      "This lowers incentives to hold or lend reserves at previously higher rates.",
+      "Market short-term rates tend to move down.",
+      "Lower borrowing rates can increase investment and consumption, shifting AD right if other influences are unchanged."
+    ],
+    "trap": "Do not assume every bond purchase lowers rates equally in an ample-reserves regime.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A central bank operating with ample reserves lowers its administered rates. This lowers incentives to hold or lend reserves at previously higher rates. Market short-term rates tend to move down. Lower borrowing rates can increase investment and consumption, shifting AD right if other influences are unchanged. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "In an ample-reserves system, which tool can directly steer short-term rates?",
+        "options": [
+          "Changing the economy’s physical capital instantly.",
+          "Changing administered rates, including interest on reserves.",
+          "Assuming the deposit multiplier always binds.",
+          "Holding all administered rates fixed by definition."
+        ],
+        "answer": 1,
+        "hint": "Do not assume every bond purchase lowers rates equally in an ample-reserves regime.",
+        "explain": "Changing administered rates, including interest on reserves."
+      },
+      {
+        "prompt": "A policy rate falls from 5% to 3%. By how many percentage points did it fall?",
+        "answer": 2,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "5 − 3 = 2 percentage points, distinct from a 40% relative decrease."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-4-4",
+    "unit": "4",
+    "sections": [
+      "4.7"
+    ],
+    "part": "Financial Sector",
+    "title": "Saving, investment and loanable funds",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The loanable-funds model relates the real interest rate to desired saving and borrowing. More saving shifts supply right, lowering the equilibrium real rate and increasing funds exchanged. Higher expected investment returns shift demand right. Government borrowing can increase demand for loanable funds and raise the real rate under stated assumptions. Specify the diagram’s convention: some presentations instead model reduced national saving as a supply shift. Do not shift both for the same event.",
+    "formula": "Loanable-funds equilibrium: saving supplied = borrowing demanded at a real interest rate",
+    "steps": [
+      "Expected returns to new capital improve.",
+      "Firms seek more borrowing at each real interest rate.",
+      "Loanable-funds demand shifts right while saving supply is unchanged.",
+      "The real rate and equilibrium funds rise in this closed-economy comparison."
+    ],
+    "trap": "The money market uses a nominal rate; the loanable-funds model uses a real rate.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Expected returns to new capital improve. Firms seek more borrowing at each real interest rate. Loanable-funds demand shifts right while saving supply is unchanged. The real rate and equilibrium funds rise in this closed-economy comparison. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "An increase in desired saving with demand unchanged tends to do what?",
+        "options": [
+          "Lower the real rate and raise funds exchanged.",
+          "Raise the real rate and lower funds exchanged.",
+          "Shift borrowing demand left automatically.",
+          "Eliminate investment."
+        ],
+        "answer": 0,
+        "hint": "The money market uses a nominal rate; the loanable-funds model uses a real rate.",
+        "explain": "Lower the real rate and raise funds exchanged."
+      },
+      {
+        "prompt": "A saver receives a nominal return of 6% with inflation 2%. What approximate real rate belongs in real-return comparisons?",
+        "answer": 4,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "6 − 2 = 4%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-5-1",
+    "unit": "5",
+    "sections": [
+      "5.1",
+      "5.2"
+    ],
+    "part": "Long-Run Consequences of Stabilization Policies",
+    "title": "Stabilization and the Phillips curve",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "In the short run, AD changes can create an inverse relationship between inflation and unemployment along a given short-run Phillips curve. Changes in expected inflation or supply conditions shift that curve. The long-run Phillips curve is vertical at the natural unemployment rate in the benchmark; there is no permanent inflation-unemployment tradeoff from repeatedly surprising people with higher inflation. A supply shock can worsen both inflation and unemployment, so the short-run curve is not a universal fixed law.",
+    "formula": "AD expansion: move toward higher inflation and lower unemployment on a given SRPC",
+    "steps": [
+      "Expansionary policy raises AD from a recessionary position.",
+      "Short-run output rises and cyclical unemployment falls.",
+      "Inflation pressure increases, represented by a movement along the given SRPC.",
+      "If expected inflation later rises, the SRPC shifts upward; the long-run natural rate is not permanently reduced by demand alone."
+    ],
+    "trap": "A supply shock shifts the SRPC; it is not movement caused solely by AD.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Expansionary policy raises AD from a recessionary position. Short-run output rises and cyclical unemployment falls. Inflation pressure increases, represented by a movement along the given SRPC. If expected inflation later rises, the SRPC shifts upward; the long-run natural rate is not permanently reduced by demand alone. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "What can shift the SRPC upward?",
+        "options": [
+          "A change in the graph’s scale only.",
+          "A permanently guaranteed inverse long-run tradeoff.",
+          "Higher expected inflation.",
+          "Lower unemployment from an AD increase alone on an unchanged curve."
+        ],
+        "answer": 2,
+        "hint": "A supply shock shifts the SRPC; it is not movement caused solely by AD.",
+        "explain": "Higher expected inflation."
+      },
+      {
+        "prompt": "Unemployment is 7% and the natural rate is 4%. What is cyclical unemployment in percentage points?",
+        "answer": 3,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "7 − 4 = 3 percentage points."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "adas"
+  },
+  {
+    "id": "macro-5-2",
+    "unit": "5",
+    "sections": [
+      "5.3"
+    ],
+    "part": "Long-Run Consequences of Stabilization Policies",
+    "title": "Money growth and long-run inflation",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The quantity equation relates the money stock, its velocity, the price level and real output. It is an identity when velocity is defined consistently. Predicting inflation from money growth requires assumptions about velocity and real output growth. In the long-run classical benchmark, sustained money growth beyond real output growth raises inflation if velocity is stable; changes in nominal variables alone do not permanently raise productive capacity. Short-run money demand and supply responses can complicate this relationship.",
+    "formula": "MV = PY; approximate inflation = money growth + velocity growth − real output growth",
+    "steps": [
+      "Money grows 6%, velocity is stable and real output grows 2%.",
+      "The approximate growth-rate equation gives inflation of 4%.",
+      "This result depends on stable velocity.",
+      "If velocity falls, the same money growth can coexist with lower inflation, so inspect assumptions before applying the shortcut."
+    ],
+    "trap": "The quantity equation by itself does not prove velocity is constant.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Money grows 6%, velocity is stable and real output grows 2%. The approximate growth-rate equation gives inflation of 4%. This result depends on stable velocity. If velocity falls, the same money growth can coexist with lower inflation, so inspect assumptions before applying the shortcut. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which assumption is needed for the simple money-growth-minus-output-growth inflation rule?",
+        "options": [
+          "Money having no role as a medium of exchange.",
+          "Stable velocity.",
+          "Zero real output in every year.",
+          "A permanently falling price level."
+        ],
+        "answer": 1,
+        "hint": "The quantity equation by itself does not prove velocity is constant.",
+        "explain": "Stable velocity."
+      },
+      {
+        "prompt": "Money grows 7%, velocity is unchanged and real output grows 3%. What is approximate inflation in percent?",
+        "answer": 4,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "7 + 0 − 3 = 4%."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-5-3",
+    "unit": "5",
+    "sections": [
+      "5.4",
+      "5.5"
+    ],
+    "part": "Long-Run Consequences of Stabilization Policies",
+    "title": "Deficits, debt and crowding out",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "A deficit is a flow: government outlays exceed revenues during a period. Debt is a stock of accumulated borrowing subject to repayments and other accounting changes. In the closed-economy loanable-funds model with saving behavior held fixed, more government borrowing can raise real interest rates and reduce private investment. This crowding-out effect can offset some short-run fiscal stimulus and affect future capital formation. Its size depends on conditions, including monetary response and foreign capital.",
+    "formula": "Deficit = outlays − revenues; simplified next debt = current debt + deficit",
+    "steps": [
+      "Government outlays are 300 and revenues 260.",
+      "The deficit is 40.",
+      "If initial debt is 500 with no other changes, next debt is 540.",
+      "If the borrowing raises real rates, some interest-sensitive private investment can be crowded out; the deficit is not the same number as total debt."
+    ],
+    "trap": "A smaller positive deficit still adds to debt in this simplified accounting.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Government outlays are 300 and revenues 260. The deficit is 40. If initial debt is 500 with no other changes, next debt is 540. If the borrowing raises real rates, some interest-sensitive private investment can be crowded out; the deficit is not the same number as total debt. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which is a stock measured at a point in time?",
+        "options": [
+          "Government debt.",
+          "Annual deficit.",
+          "Annual tax receipts.",
+          "Annual public purchases."
+        ],
+        "answer": 0,
+        "hint": "A smaller positive deficit still adds to debt in this simplified accounting.",
+        "explain": "Government debt."
+      },
+      {
+        "prompt": "Outlays are 450 and revenues 390. What is the budget deficit?",
+        "answer": 60,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "450 − 390 = 60."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-5-4",
+    "unit": "5",
+    "sections": [
+      "5.6",
+      "5.7"
+    ],
+    "part": "Long-Run Consequences of Stabilization Policies",
+    "title": "Growth and productive capacity",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Long-run growth in real output per person depends on productivity, capital, human skills, technology and institutions. A larger labor force can raise total output without raising output per person. Saving and investment can expand physical capital; education and research can raise human capital or technology. Policy comparisons must consider opportunity costs, incentives and implementation rather than treating any spending label as guaranteed growth. Growth shifts LRAS and the production frontier outward.",
+    "formula": "Real GDP per capita = real GDP / population",
+    "steps": [
+      "Real output is 1200 and population is 100.",
+      "Output per person is 12.",
+      "Later output rises to 1320 while population rises to 110.",
+      "Output per person remains 12, so total growth did not increase the per-person measure in this example."
+    ],
+    "trap": "A temporary AD expansion is not the same as a rise in long-run productive capacity.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Real output is 1200 and population is 100. Output per person is 12. Later output rises to 1320 while population rises to 110. Output per person remains 12, so total growth did not increase the per-person measure in this example. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which most directly increases long-run productive capacity?",
+        "options": [
+          "A rise in prices with unchanged production.",
+          "Reclassifying existing spending only.",
+          "Moving along an unchanged AD curve.",
+          "A sustained productivity improvement."
+        ],
+        "answer": 3,
+        "hint": "A temporary AD expansion is not the same as a rise in long-run productive capacity.",
+        "explain": "A sustained productivity improvement."
+      },
+      {
+        "prompt": "Real GDP is 1800 and population is 150. What is real GDP per capita?",
+        "answer": 12,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "1800 / 150 = 12 output units per person."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-6-1",
+    "unit": "6",
+    "sections": [
+      "6.1"
+    ],
+    "part": "Open Economy—International Trade and Finance",
+    "title": "International transactions and accounting",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "The current account records trade in goods and services plus relevant income and transfer flows. The financial account records transactions in financial assets. A current-account deficit is associated with offsetting financing flows under consistent accounting conventions, allowing for capital-account items and statistical discrepancies. Some presentations describe capital inflow as positive financing even when official asset/liability sign conventions differ. State the convention and identify the real transaction before assigning a sign.",
+    "formula": "Trade balance = exports − imports; current account includes more than trade",
+    "steps": [
+      "Exports are 80 and imports 100, so the trade balance is −20.",
+      "Assume no net income or transfers and no other accounting items.",
+      "The current account is then −20.",
+      "It is financed by an offsetting net financial inflow of 20 using the inflow-positive classroom convention."
+    ],
+    "trap": "A trade deficit does not by itself mean the balance-of-payments accounts fail to balance.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Exports are 80 and imports 100, so the trade balance is −20. Assume no net income or transfers and no other accounting items. The current account is then −20. It is financed by an offsetting net financial inflow of 20 using the inflow-positive classroom convention. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Buying a foreign bond is primarily recorded as what kind of transaction?",
+        "options": [
+          "A change in unemployment classification.",
+          "A financial-asset transaction.",
+          "A purchase of a newly produced domestic final good.",
+          "A unilateral increase in domestic exports."
+        ],
+        "answer": 1,
+        "hint": "A trade deficit does not by itself mean the balance-of-payments accounts fail to balance.",
+        "explain": "A financial-asset transaction."
+      },
+      {
+        "prompt": "Exports are 140 and imports 175. What is the signed trade balance?",
+        "answer": -35,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "140 − 175 = −35."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework"
+  },
+  {
+    "id": "macro-6-2",
+    "unit": "6",
+    "sections": [
+      "6.2",
+      "6.3"
+    ],
+    "part": "Open Economy—International Trade and Finance",
+    "title": "Exchange-rate quotations and currency demand",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "An exchange rate is the price of one currency in another; every graph and calculation needs an explicit quotation. If the domestic currency buys more foreign currency, it appreciates. Foreign purchases of domestic goods or assets can increase demand for domestic currency. Domestic purchases abroad can increase its supply in the foreign-exchange market. Supply and demand refer to the currency named on the graph, not to an unspecified country in general.",
+    "formula": "Foreign-currency cost = domestic amount × foreign units per domestic unit",
+    "steps": [
+      "The exchange rate is 0.8 foreign units per domestic unit.",
+      "A domestic item costing 50 costs a foreign buyer 40 foreign units.",
+      "If the domestic currency appreciates to 1 foreign unit per domestic unit, the same item costs the buyer 50.",
+      "The item becomes more expensive in foreign currency with its domestic price fixed."
+    ],
+    "trap": "An increase in a quoted rate can mean appreciation or depreciation depending on which currency is in the denominator.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: The exchange rate is 0.8 foreign units per domestic unit. A domestic item costing 50 costs a foreign buyer 40 foreign units. If the domestic currency appreciates to 1 foreign unit per domestic unit, the same item costs the buyer 50. The item becomes more expensive in foreign currency with its domestic price fixed. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "At a rate quoted as foreign units per domestic unit, a rise means what?",
+        "options": [
+          "Domestic appreciation.",
+          "Domestic depreciation.",
+          "No exchange-rate change.",
+          "A guaranteed trade surplus."
+        ],
+        "answer": 0,
+        "hint": "An increase in a quoted rate can mean appreciation or depreciation depending on which currency is in the denominator.",
+        "explain": "Domestic appreciation."
+      },
+      {
+        "prompt": "One domestic unit buys 1.2 foreign units. How many foreign units equal 50 domestic units?",
+        "answer": 60,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "50 × 1.2 = 60 foreign units."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "forex"
+  },
+  {
+    "id": "macro-6-3",
+    "unit": "6",
+    "sections": [
+      "6.4",
+      "6.6"
+    ],
+    "part": "Open Economy—International Trade and Finance",
+    "title": "Policy, interest differences and capital flows",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Other things equal, a higher domestic real interest rate relative to foreign rates can attract financial inflows as investors seek returns. Demand for domestic currency can rise and the currency can appreciate under a floating exchange rate. Expectations and risk can change the result, so the interest differential alone is not a guaranteed forecast. Trace the policy to the interest rate and then to the named currency’s demand rather than jumping directly to exports.",
+    "formula": "Higher relative real return → potential capital inflow → currency appreciation, other things equal",
+    "steps": [
+      "Domestic real interest rises above a foreign rate, with risk and expected exchange changes held fixed.",
+      "Foreign investors seek more domestic assets.",
+      "Demand for domestic currency shifts right.",
+      "The currency appreciates in a floating market; this can reduce net exports later through relative prices."
+    ],
+    "trap": "Use relative real returns and stated assumptions, not just a domestic nominal interest rate.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: Domestic real interest rises above a foreign rate, with risk and expected exchange changes held fixed. Foreign investors seek more domestic assets. Demand for domestic currency shifts right. The currency appreciates in a floating market; this can reduce net exports later through relative prices. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "Which can raise demand for domestic currency, other things equal?",
+        "options": [
+          "Domestic buyers purchasing only foreign assets.",
+          "A fall in foreign demand for domestic exports.",
+          "A guaranteed simultaneous fall in all domestic asset returns.",
+          "Foreign investors purchasing domestic assets."
+        ],
+        "answer": 3,
+        "hint": "Use relative real returns and stated assumptions, not just a domestic nominal interest rate.",
+        "explain": "Foreign investors purchasing domestic assets."
+      },
+      {
+        "prompt": "Domestic real return is 5% and foreign real return is 2%. What is the domestic advantage in percentage points?",
+        "answer": 3,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "5 − 2 = 3 percentage points, before risk or expected currency changes."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "forex"
+  },
+  {
+    "id": "macro-6-4",
+    "unit": "6",
+    "sections": [
+      "6.5"
+    ],
+    "part": "Open Economy—International Trade and Finance",
+    "title": "Net exports and open-economy transmission",
+    "time": "15–20 min",
+    "goal": "Explain the mechanism, work through an example, and test your reasoning.",
+    "skill": "Explain · calculate · interpret",
+    "idea": "Domestic currency appreciation makes domestic goods more costly to foreign buyers and foreign goods cheaper to domestic buyers, holding nominal product prices fixed. Exports tend to fall and imports tend to rise, reducing net exports and AD in the simplified model. Depreciation tends to work in reverse. The response depends on elasticities, contracts and adjustment lags, so immediate trade balances need not follow the eventual direction. Exchange-rate effects can offset or reinforce domestic policy.",
+    "formula": "Net exports = X − M; appreciation tends to reduce NX, other things equal",
+    "steps": [
+      "A currency appreciation occurs with domestic and foreign goods prices fixed.",
+      "Exports in the example fall from 100 to 90 while imports rise from 80 to 85.",
+      "Net exports fall from 20 to 5.",
+      "The net-export component of AD falls by 15; a multiplier effect requires additional assumptions."
+    ],
+    "trap": "Do not confuse cheaper imports for domestic buyers with a guaranteed rise in domestic net exports.",
+    "challenge": "Reconstruct the worked example on paper. Label the quantities or graph axes, explain each causal step, then state one assumption that could change the result.",
+    "solution": "A complete explanation should include these links: A currency appreciation occurs with domestic and foreign goods prices fixed. Exports in the example fall from 100 to 90 while imports rise from 80 to 85. Net exports fall from 20 to 5. The net-export component of AD falls by 15; a multiplier effect requires additional assumptions. State the model assumptions; the example is not a forecast or an observed result.",
+    "questions": [
+      {
+        "prompt": "What is the standard relative-price channel of domestic appreciation?",
+        "options": [
+          "Imports become more expensive to domestic buyers.",
+          "Both countries’ goods become free.",
+          "Exports become less competitive and imports more attractive.",
+          "Domestic exports become cheaper to foreign buyers."
+        ],
+        "answer": 2,
+        "hint": "Do not confuse cheaper imports for domestic buyers with a guaranteed rise in domestic net exports.",
+        "explain": "Exports become less competitive and imports more attractive."
+      },
+      {
+        "prompt": "Exports fall to 75 and imports rise to 95. What is signed net exports?",
+        "answer": -20,
+        "hint": "Identify the units and substitute into the relationship above. Enter a number or fraction without unit symbols.",
+        "explain": "75 − 95 = −20."
+      }
+    ],
+    "resource": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "resourceLabel": "Official course framework",
+    "lab": "forex"
+  }
+]

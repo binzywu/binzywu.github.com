@@ -1,0 +1,140 @@
+[
+  {
+    "id": "1",
+    "title": "Basic Economic Concepts",
+    "weight": "12–15%",
+    "intro": "Use opportunity cost and marginal reasoning to explain choices under scarcity.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6"
+    ],
+    "lessonIds": [
+      "micro-1-1",
+      "micro-1-2",
+      "micro-1-3",
+      "micro-1-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Scarcity, systems and the</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">next-best alternative</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Reading a production</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">frontier</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Comparative advantage and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">gains from exchange</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Marginal choice and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">consumer allocation</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "2",
+    "title": "Supply and Demand",
+    "weight": "20–25%",
+    "intro": "Trace market changes, responsiveness, surplus and policy effects.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7",
+      "2.8",
+      "2.9"
+    ],
+    "lessonIds": [
+      "micro-2-1",
+      "micro-2-2",
+      "micro-2-3",
+      "micro-2-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Demand, supply and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">equilibrium shifts</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Elasticity and revenue</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Taxes, ceilings and market</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">surplus</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">World prices, imports and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">tariffs</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "3",
+    "title": "Production, Cost, and the Perfect Competition Model",
+    "weight": "22–25%",
+    "intro": "Connect production decisions to costs, profit and entry or exit.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7"
+    ],
+    "lessonIds": [
+      "micro-3-1",
+      "micro-3-2",
+      "micro-3-3",
+      "micro-3-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Production and short-run</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">costs</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Scale and the meaning of</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">profit</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Choosing output and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">deciding whether to shut</text><text x=\"547\" y=\"79\" text-anchor=\"middle\" font-size=\"12\">down</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Competitive adjustment and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">efficiency</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "4",
+    "title": "Imperfect Competition",
+    "weight": "15–22%",
+    "intro": "Compare price-setting firms, strategic choices and welfare.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5"
+    ],
+    "lessonIds": [
+      "micro-4-1",
+      "micro-4-2",
+      "micro-4-3",
+      "micro-4-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Market power and monopoly</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">decisions</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Price discrimination and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">differentiated sellers</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Strategic choices and Nash</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">equilibrium</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Regulating a natural</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">monopoly</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "5",
+    "title": "Factor Markets",
+    "weight": "10–13%",
+    "intro": "Explain the demand for inputs and the determination of wages.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4"
+    ],
+    "lessonIds": [
+      "micro-5-1",
+      "micro-5-2",
+      "micro-5-3",
+      "micro-5-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Derived demand for labor</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Shifts in input demand and</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">supply</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Competitive hiring and</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">marginal factor cost</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Monopsony and a carefully</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">set wage floor</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  },
+  {
+    "id": "6",
+    "title": "Market Failure and the Role of Government",
+    "weight": "8–13%",
+    "intro": "Compare private incentives with social outcomes and evaluate policy tradeoffs.",
+    "prerequisites": "Read quantities and units carefully; use earlier units to explain each causal link.",
+    "sections": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5"
+    ],
+    "lessonIds": [
+      "micro-6-1",
+      "micro-6-2",
+      "micro-6-3",
+      "micro-6-4"
+    ],
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 890 100\" role=\"img\" aria-label=\"Four lessons in this unit, in study order\"><rect x=\"5\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"107\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 1</text><text x=\"107\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">External costs and</text><text x=\"107\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">efficient output</text><rect x=\"225\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"327\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 2</text><text x=\"327\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Public goods and common</text><text x=\"327\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">resources</text><rect x=\"445\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"547\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 3</text><text x=\"547\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Choosing and evaluating</text><text x=\"547\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">interventions</text><rect x=\"665\" y=\"6\" width=\"205\" height=\"88\" rx=\"9\" fill=\"#edf4f8\" stroke=\"#80502b\"/><text x=\"767\" y=\"25\" text-anchor=\"middle\" font-size=\"12\">Lesson 4</text><text x=\"767\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Inequality, income and</text><text x=\"767\" y=\"62\" text-anchor=\"middle\" font-size=\"12\">redistribution</text></svg>",
+    "diagramCaption": "Learning route: four grouped lessons. Open a lesson for its specific topic references, worked example and practice checks."
+  }
+]
