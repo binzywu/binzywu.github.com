@@ -196,3 +196,24 @@ for(const x of [-1,0,.5,1]){
  const p=.5*x*Math.exp(x),pp=.5*(x+2)*Math.exp(x);near(pp-p,Math.exp(x));
 }
 console.log(`PASS: ${Object.keys(computations).length} new numerical answers independently recalculated, including quadrature, finite differences and ODE substitution.`);
+
+// Completion badges derive from saved question flags, including legacy lesson IDs.
+evaluate("solved={'sequences-0':true,'sequences-1':true,'partial-sums-0':true};current=lessons.findIndex(l=>l.id==='sequences');renderNav()");
+assert.ok(element('lesson-list').innerHTML.includes('data-lesson="sequences" data-complete="true" aria-label="Lesson completed">✓ Completed</span>'));
+assert.ok(element('lesson-list').innerHTML.includes('data-lesson="partial-sums" data-complete="false" aria-label="1 of 2 checks solved">1/2</span>'));
+evaluate("current=0;renderNav();current=lessons.findIndex(l=>l.id==='sequences');renderNav()");
+assert.ok(element('lesson-list').innerHTML.includes('aria-label="Lesson completed">✓ Completed</span>'));
+// Answer submissions call progress() without reconstructing the navigation.
+const badge={dataset:{lesson:'partial-sums'},attributes:{},setAttribute(k,v){this.attributes[k]=v}};
+const originalQuery=context.document.querySelectorAll;
+context.document.querySelectorAll=selector=>selector==='.done'?[badge]:[];
+evaluate("solved['partial-sums-1']=true;progress()");
+assert.equal(badge.textContent,'✓ Completed');assert.equal(badge.attributes['data-complete'],'true');assert.equal(badge.attributes['aria-label'],'Lesson completed');
+evaluate("solved={};progress()");assert.equal(badge.textContent,'');assert.equal(badge.attributes['data-complete'],'false');
+context.document.querySelectorAll=originalQuery;
+// A fresh page context restores the same marker from the existing storage key.
+const reloadContext={...context,localStorage:{getItem:key=>key==='beyond-bc-practice-v1'?JSON.stringify({'sequences-0':true,'sequences-1':true}):null,setItem(){}}};
+vm.createContext(reloadContext);vm.runInContext(code,reloadContext);
+vm.runInContext("current=lessons.findIndex(l=>l.id==='sequences');renderNav()",reloadContext);
+assert.ok(element('lesson-list').innerHTML.includes('data-lesson="sequences" data-complete="true" aria-label="Lesson completed">✓ Completed</span>'));
+console.log('PASS: completed and partial list markers, immediate answer updates, reset, unit switching and saved progress reload.');
