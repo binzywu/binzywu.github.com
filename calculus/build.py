@@ -6,9 +6,14 @@ from math_notation import enrich
 root = Path(__file__).resolve().parent
 lessons = json.loads((root / 'lessons.json').read_text())
 enrich(lessons)
+units = json.loads((root / 'units.json').read_text())
+assert {l['unit'] for l in lessons} == {u['id'] for u in units}
+for unit in units:
+    assert set(unit['sections']) == {section for lesson in lessons if lesson['unit'] == unit['id'] for section in lesson['sections']}
 assert len({lesson['id'] for lesson in lessons}) == len(lessons)
 page = (root / 'template.html').read_text()
 for marker, content in {
+    '__UNIT_DATA__': json.dumps(units, ensure_ascii=False).replace('</', '<\\/'),
     '__LESSON_DATA__': json.dumps(lessons, ensure_ascii=False).replace('</', '<\\/'),
     '__NEXT_LABS__': (root / 'next-labs.html').read_text(),
     '__NEXT_LAB_SCRIPT__': (root / 'next-labs.js').read_text(),
@@ -17,4 +22,4 @@ for marker, content in {
     assert page.count(marker) == 1, marker
     page = page.replace(marker, content)
 (root / 'index.html').write_text(page)
-print(f'Built {len(lessons)} lessons, {sum(len(x["questions"]) for x in lessons)} checks, 6 labs.')
+print(f'Built {len(units)} units, {len(lessons)} lessons, {sum(len(x["questions"]) for x in lessons)} checks, 6 labs.')

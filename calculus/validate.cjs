@@ -6,6 +6,8 @@ code=code.slice(0,code.indexOf('const initial=lessons.findIndex'));
 const elements=new Map();
 function element(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',hidden:false,style:{},dataset:{},viewBox:{baseVal:{width:id.includes('chart')?900:500,height:310}},addEventListener(){},setAttribute(){},scrollIntoView(){},focus(){}});return elements.get(id)}
 element('lesson-data').textContent=JSON.stringify(lessons);
+const units=JSON.parse(page.match(/<script id="unit-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+element('unit-data').textContent=JSON.stringify(units);
 const defaults={'series-type':'geometric',terms:'30',ratio:'.5','power-p':'2','taylor-function':'exp',degree:'3','eval-x':'.5','point-a':'1','point-b':'2','slice-mode':'x','curve-kind':'parabola','curve-t':'0','vector-angle':'60','vector-length':'2','gradient-a':'1','gradient-b':'1','gradient-angle':'0'};
 for(const [k,v]of Object.entries(defaults))element(k).value=v;
 const context={console,Math,JSON,Number,String,Array,Set,Map,document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>element('generic')},localStorage:{getItem:()=>null,setItem(){}},location:{hash:''},window:{addEventListener(){},confirm:()=>false}};
@@ -44,12 +46,13 @@ for(let i=0;i<lessons.length;i++){
 }
 // Verify the authored numerical practice answers independently.
 const expected=[2.5,6,0,.008,5,1/24,-.25,.75,1,7,8,3,1,4,8,-.5,12,.2,10,2,8,.5];
-const actual=lessons.flatMap(l=>l.questions.filter(q=>!q.options).map(q=>q.answer));assert.deepEqual(actual,expected);
+const legacyIds=['sequences', 'partial-sums', 'positive-tests', 'ratio-root', 'alternating', 'power', 'taylor', 'series-tools', 'parametric', 'polar', 'vector-basics', 'dot-cross', 'lines-planes', 'vectors-preview', 'arc-curvature', 'surfaces', 'multivariable-limits', 'partials-preview', 'tangent-plane', 'chain-rule', 'gradient', 'optimization', 'lagrange'];
+const actual=legacyIds.map(id=>lessons.find(l=>l.id===id)).flatMap(l=>l.questions.filter(q=>!q.options).map(q=>q.answer));assert.deepEqual(actual,expected);
 assert.ok(1/101<.01);near(1/125,.008);near(1/121,.008264462809917356);
 near(1.2213333333333334,1+.2+.2**2/2+.2**3/6);
 assert.ok(Math.abs(Math.log(1.2)-(.2-.2**2/2+.2**3/3))<.2**4/4);
 for(const l of lessons)for(const q of l.questions)if(q.options)assert.ok(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length);
-assert.equal(lessons.length,23);assert.equal(lessons.flatMap(l=>l.questions).length,46);
+assert.equal(lessons.length,111);assert.equal(lessons.flatMap(l=>l.questions).length,222);
 for(const l of lessons)assert.ok(l.formulaMathML.includes('<math')&&l.formulaNote);
 // Guided reveals leave quiz state intact and can restart independently.
 evaluate('current=0;renderLesson()');
@@ -75,12 +78,12 @@ for(const bad of ['{', 'null', '[]', '{}',JSON.stringify({format:'beyond-bc-prog
 context.localStorage.setItem=()=>{throw Error('storage unavailable')};
 assert.equal(evaluate(`mergeProgressBackup(${JSON.stringify(exported)})`).saved,false);
 context.localStorage.setItem=()=>{};
-assert.equal(new Set(lessons.map(l=>l.id)).size,23);
+assert.equal(new Set(lessons.map(l=>l.id)).size,111);
 assert.ok(lessons.some(l=>l.id==='vectors-preview')&&lessons.some(l=>l.id==='partials-preview'));
-for(const l of lessons)assert.ok(page.includes(`id="${l.lab}"`),l.lab);
+for(const l of lessons)if(l.lab)assert.ok(page.includes(`id="${l.lab}"`),l.lab);
 // Old completion keys remain valid despite the reordered lessons.
 evaluate("solved={'vectors-preview-0':true,'partials-preview-1':true};progress()");
-assert.equal(element('progress-label').textContent,'2 of 46 checks solved');
+assert.equal(element('progress-label').textContent,'2 of 222 checks solved');
 // Independent geometry checks and finite-difference checks of curve derivatives.
 for(const kind of ['parabola','circle','cardioid'])for(const t of [-Math.PI,-1,0,1,Math.PI]){
  const d=evaluate(`curveState('${kind}',${t})`),h=1e-5;
@@ -122,4 +125,74 @@ for(const x of [-2,-.5,0,2])for(const y of [-2,0,3]){
 let area=0;const N=10000,dt=Math.PI/N;
 for(let i=0;i<N;i++){const t=-Math.PI/2+(i+.5)*dt;area+=.5*(2*Math.cos(t))**2*dt;}
 near(area,Math.PI,1e-8);
-console.log(`PASS: 23 lesson renders, 46 answer definitions, ${bounds} Taylor-bound cases, ${plots} plot renders, preserved progress keys, and independent geometry/derivative/area checks.`);
+console.log(`PASS: 17 units, 115 section mappings, 111 lesson renders, 222 answer definitions, ${bounds} Taylor-bound cases, ${plots} plot renders, preserved progress keys, and independent geometry/derivative/area checks.`);
+
+// The chapter selector, filtered navigation, deep-link targets and unit counts agree.
+assert.deepEqual(units.map(u=>u.id),['P',...Array.from({length:16},(_,i)=>String(i+1))]);
+assert.equal(units.flatMap(u=>u.sections).length,115);
+for(const u of units){
+ const items=lessons.filter(l=>l.unit===u.id);
+ assert.deepEqual(items.map(l=>l.id),u.lessonIds);
+ assert.deepEqual([...new Set(items.flatMap(l=>l.sections))].sort(),[...u.sections].sort());
+ evaluate(`current=${lessons.indexOf(items[0])};renderLesson()`);
+ assert.equal(element('unit-select').value,u.id);
+ assert.ok(element('unit-summary').innerHTML.includes(u.title.replaceAll('&','&amp;')));
+ for(const l of lessons)assert.equal(element('lesson-list').innerHTML.includes(`href="#${l.id}"`),l.unit===u.id);
+ const c=evaluate(`unitCounts(units.find(u=>u.id===${JSON.stringify(u.id)}))`);
+ assert.equal(c.total,2*items.length);
+ for(const l of items){
+  assert.equal(l.questions.length,2);assert.ok(l.steps.length>=4);
+  for(const key of ['idea','formula','trap','challenge','solution','goal'])assert.ok(l[key]?.length>0,l.id+' '+key);
+  assert.ok(/^https:\/\//.test(l.resource));
+ }
+}
+assert.equal((element('course-map').innerHTML.match(/<article/g)||[]).length,17);
+for(const u of units){evaluate(`navigate(${lessons.findIndex(l=>l.id===u.lessonIds[0])})`);assert.equal(context.location.hash,u.lessonIds[0]);}
+console.log('PASS: chapter order, per-unit navigation, course map, metadata, and direct lesson links.');
+// Independent quadrature and finite differences exercise the authored new mathematics.
+function integrate(f,a,b,n=20000){const h=(b-a)/n;let s=0;for(let i=0;i<n;i++)s+=f(a+(i+.5)*h);return s*h}
+function derivative(f,x,h=1e-5){return(f(x+h)-f(x-h))/(2*h)}
+function numericAnswer(id){const l=lessons.find(l=>l.id===id);assert.ok(l,id);return l.questions.find(q=>!q.options).answer}
+const computations={
+ 'linear-models':(13-5)/(6-2),'functions-domain':(2*3)**2+1,'trig-review':Math.cos(Math.PI),
+ 'calculus-preview':(3**2-1**2)/(3-1),'analytic-limits':Math.sin(3e-7)/1e-7,
+ 'derivative-definition':derivative(x=>x*x,4),'basic-derivatives':derivative(x=>x**3-5*x,2),
+ 'product-quotient':derivative(x=>x*x*(x+1),1),'single-chain':derivative(x=>(3*x+1)**2,1),
+ 'implicit':derivative(x=>Math.sqrt(25-x*x),4),'related-rates':derivative(t=>(3+2*t)**2,0),
+ 'mean-value':((6*6-2*2)/(6-2))/2,'first-derivative-test':(-1)**3-3*(-1),
+ 'single-optimization':(12/4)**2,'newton':(2+2/2)/2,'single-differentials':6*.02,
+ 'antiderivatives':2**2+7,'area-sums':(0**2+1**2)*1,'definite-integrals':integrate(()=>2,0,3),
+ 'ftc':integrate(x=>3*x*x,0,2),'substitution':integrate(x=>2*x*(x*x+1),0,1),
+ 'log-derivative':derivative(x=>Math.log(x*x+1),2),'log-integrals':integrate(x=>1/x,1,2)/Math.log(2),
+ 'inverse-functions':1/5,'exponential-calculus':derivative(x=>Math.exp(2*x),0),'other-bases':5*3**2,
+ 'lhopital':Math.expm1(2e-7)/1e-7,'inverse-trig-derivatives':derivative(Math.atan,1),
+ 'inverse-trig-integrals':integrate(x=>1/(1+x*x),0,1)/Math.PI,'hyperbolic':(Math.exp(0)+Math.exp(-0))/2,
+ 'euler':2+.1*2,'growth-decay':120*2**(-6/2),'separable-logistic':20,'linear-ode':6/3,
+ 'between-curves':integrate(()=>2,1,4),'washers':integrate(()=>4,0,3),'shells':2*integrate(x=>x*x,0,1),
+ 'length-revolution':integrate(()=>Math.sqrt(1),2,7),'work':integrate(x=>8*x,0,1),
+ 'centroids':(1*0+3*4)/(1+3),'fluid-force':integrate(y=>2*y,0,3),'integration-strategy':integrate(x=>2*x+3,0,1),
+ 'parts':integrate(x=>x*Math.exp(x),0,1),'trig-integrals':integrate(x=>Math.sin(x)*Math.cos(x),0,Math.PI/2),
+ 'trig-substitution':integrate(x=>Math.sqrt(1-x*x),0,1)/Math.PI,'partial-fractions':1,
+ 'numerical-integration':(0+2*1+4)/2,'tables-techniques':1/3,'improper-integrals':1,
+ 'taylor-equality':1/(4*3*2),'conics':Math.sqrt(16),'parametric-integrals':integrate(t=>3*t*2,0,1),
+ 'polar-length':integrate(()=>4,0,Math.PI/2)/Math.PI,'polar-conics':8/(1+1/3),
+ 'quadric-surfaces':Math.sqrt(16),'spatial-coordinates':Math.hypot(2,-3,6),
+ 'vector-integration':integrate(t=>2*t,0,2),'tangent-normal':3**2/3,'normal-lines':Math.hypot(2,4,4),
+ 'multivariable-applications':(10/2)**2,'iterated-area':integrate(x=>x,0,2),
+ 'double-integrals':integrate(x=>x+.5,0,1),'polar-double':2*integrate(r=>r**3,0,1),
+ 'planar-mass':4*2*3,'surface-area-double':Math.hypot(1,1,0)**2,'triple-integrals':2*3*4,
+ 'triple-other-coordinates':2*integrate(r=>r*r,0,1)*integrate(phi=>Math.sin(phi),0,Math.PI),
+ 'jacobians':Math.abs(3*4-0),'vector-fields':derivative(x=>2*x,1)+derivative(y=>3*y,1)+derivative(z=>4*z,1),
+ 'line-integrals':integrate(()=>2,0,3),'conservative':3*4-1*2,'green':2,'parametric-surfaces':2*3,
+ 'surface-integrals':5*1,'divergence-theorem':3*1,'stokes':4,
+ 'exact-ode':1**2+1*1+1**2,'second-order-homogeneous':(5+Math.sqrt(25-24))/2,
+ 'second-order-forced':6/2,'ode-series':3/(2*1)
+};
+for(const [id,value]of Object.entries(computations))near(numericAnswer(id),value,2e-6);
+// Check ODE solutions by substitution rather than only comparing stored coefficients.
+for(const x of [-1,0,.5,1]){
+ const y=2-Math.exp(-2*x),yp=2*Math.exp(-2*x);near(yp+2*y,4);
+ const z=-Math.exp(x)+Math.exp(2*x),zp=-Math.exp(x)+2*Math.exp(2*x),zpp=-Math.exp(x)+4*Math.exp(2*x);near(zpp-3*zp+2*z,0);
+ const p=.5*x*Math.exp(x),pp=.5*(x+2)*Math.exp(x);near(pp-p,Math.exp(x));
+}
+console.log(`PASS: ${Object.keys(computations).length} new numerical answers independently recalculated, including quadrature, finite differences and ODE substitution.`);

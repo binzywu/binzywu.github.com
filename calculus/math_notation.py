@@ -55,8 +55,11 @@ FORMULAS={
 }
 
 def enrich(lessons):
-    assert set(FORMULAS) == {l['id'] for l in lessons}
+    assert set(FORMULAS).issubset({l['id'] for l in lessons})
     for lesson in lessons:
+        if lesson['id'] not in FORMULAS:
+            assert lesson.get('formulaMathML', '').startswith('<math'), lesson['id']
+            continue
         expressions, note = FORMULAS[lesson['id']]
         lesson['formulaMathML'] = ''.join(tag('math', expr, xmlns='http://www.w3.org/1998/Math/MathML', display='block') for expr in expressions)
         lesson['formulaNote'] = note
