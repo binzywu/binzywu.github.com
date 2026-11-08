@@ -1,0 +1,310 @@
+[
+  {
+    "id": "1",
+    "title": "Chemistry of Life",
+    "sections": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6",
+      "1.7"
+    ],
+    "weight": "8–11%",
+    "intro": "Explain how molecular structure shapes interactions in water and biological molecules.",
+    "prerequisites": "Basic chemistry: atoms, bonds and charges.",
+    "online": false,
+    "lessonIds": [
+      "bio-1-1",
+      "bio-1-2",
+      "bio-1-3",
+      "bio-1-4",
+      "bio-1-5",
+      "bio-1-6",
+      "bio-1-7"
+    ],
+    "sectionTitles": {
+      "1.1": "Connect water’s polarity to its behavior",
+      "1.2": "Track atoms through living systems",
+      "1.3": "Build and break biological polymers",
+      "1.4": "Explain carbohydrate structure and storage",
+      "1.5": "Predict lipid behavior from molecular structure",
+      "1.6": "Read nucleic-acid structure and direction",
+      "1.7": "Link protein sequence, folding and function"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"Two polar water molecules joined by a dashed hydrogen bond. Solid lines join oxygen and hydrogen within each molecule.\"><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><g stroke=\"#17654e\" stroke-width=\"3\"><path d=\"M150 80L110 130M150 80L200 130M405 130L365 80M405 130L455 80\"/><path d=\"M215 130L378 130\" stroke-dasharray=\"6 5\" stroke-width=\"2\"/></g><g fill=\"#17654e\"><circle cx=\"150\" cy=\"80\" r=\"23\"/><circle cx=\"405\" cy=\"130\" r=\"23\"/></g><g fill=\"#cee7dc\" stroke=\"#17654e\"><circle cx=\"110\" cy=\"130\" r=\"15\"/><circle cx=\"200\" cy=\"130\" r=\"15\"/><circle cx=\"365\" cy=\"80\" r=\"15\"/><circle cx=\"455\" cy=\"80\" r=\"15\"/></g><g font-family=\"system-ui,sans-serif\" font-size=\"16\" text-anchor=\"middle\"><text x=\"150\" y=\"86\" fill=\"white\">O</text><text x=\"405\" y=\"136\" fill=\"white\">O</text><text x=\"110\" y=\"136\">H</text><text x=\"200\" y=\"136\">H</text><text x=\"365\" y=\"86\">H</text><text x=\"455\" y=\"86\">H</text><text x=\"150\" y=\"44\">δ−</text><text x=\"405\" y=\"174\">δ−</text><text x=\"85\" y=\"151\">δ+</text><text x=\"211\" y=\"165\">δ+</text><text x=\"355\" y=\"48\">δ+</text><text x=\"470\" y=\"48\">δ+</text><text x=\"295\" y=\"110\" font-size=\"14\">Hydrogen bond</text></g></svg>",
+    "diagramCaption": "Solid lines represent polar covalent O–H bonds within molecules; the dashed line represents a hydrogen bond between a partially positive H and a partially negative O. This is a schematic, not a distance scale."
+  },
+  {
+    "id": "2",
+    "title": "Cells",
+    "sections": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7",
+      "2.8",
+      "2.9",
+      "2.10"
+    ],
+    "weight": "10–13%",
+    "intro": "Connect cell structures, size, membranes and transport to cellular function.",
+    "prerequisites": "Unit 1: water and biological molecules.",
+    "online": false,
+    "lessonIds": [
+      "bio-2-1",
+      "bio-2-2",
+      "bio-2-3",
+      "bio-2-4",
+      "bio-2-5",
+      "bio-2-6",
+      "bio-2-7",
+      "bio-2-8",
+      "bio-2-9",
+      "bio-2-10"
+    ],
+    "sectionTitles": {
+      "2.1": "Match cell components to their functions",
+      "2.2": "Use surface area and volume to explain cell size",
+      "2.3": "Read the membrane as a fluid molecular system",
+      "2.4": "Predict which substances cross a lipid bilayer",
+      "2.5": "Distinguish passive movement from active transport",
+      "2.6": "Explain facilitated diffusion without adding an energy pump",
+      "2.7": "Predict water movement using water potential",
+      "2.8": "Compare pumps and bulk transport",
+      "2.9": "Explain why compartments help cells coordinate reactions",
+      "2.10": "Evaluate evidence for endosymbiotic origins"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"A simplified membrane cross-section. Heads face the aqueous surroundings and tails occupy the interior.\"><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><circle cx=\"35\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M32 74L28 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M38 74L42 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"35\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M32 121L28 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M38 121L42 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M67 74L63 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M73 74L77 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M67 121L63 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M73 121L77 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"105\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M102 74L98 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M108 74L112 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"105\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M102 121L98 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M108 121L112 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M137 74L133 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M143 74L147 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M137 121L133 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M143 121L147 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"175\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M172 74L168 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M178 74L182 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"175\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M172 121L168 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M178 121L182 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M207 74L203 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M213 74L217 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M207 121L203 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M213 121L217 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"245\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M242 74L238 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M248 74L252 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"245\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M242 121L238 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M248 121L252 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M277 74L273 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M283 74L287 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M277 121L273 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M283 121L287 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"315\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M312 74L308 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M318 74L322 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"315\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M312 121L308 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M318 121L322 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M347 74L343 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M353 74L357 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M347 121L343 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M353 121L357 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M382 74L378 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M388 74L392 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M382 121L378 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M388 121L392 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"420\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M417 74L413 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M423 74L427 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"420\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M417 121L413 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M423 121L427 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"455\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M452 74L448 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M458 74L462 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"455\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M452 121L448 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M458 121L462 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"490\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M487 74L483 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M493 74L497 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"490\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M487 121L483 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M493 121L497 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"525\" cy=\"65\" r=\"9\" fill=\"#17654e\"/><path d=\"M522 74L518 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M528 74L532 90\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><circle cx=\"525\" cy=\"130\" r=\"9\" fill=\"#17654e\"/><path d=\"M522 121L518 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M528 121L532 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><text x=\"285\" y=\"30\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Water-facing heads</text><text x=\"285\" y=\"175\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Hydrophobic tails face the bilayer interior.</text></svg>",
+    "diagramCaption": "A simplified membrane cross-section. Heads face the aqueous surroundings and tails occupy the interior."
+  },
+  {
+    "id": "3",
+    "title": "Cellular Energetics",
+    "sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5"
+    ],
+    "weight": "12–16%",
+    "intro": "Track matter, electrons and energy through enzymes, photosynthesis and respiration.",
+    "prerequisites": "Units 1–2: molecular interactions and cellular compartments.",
+    "online": false,
+    "lessonIds": [
+      "bio-3-1",
+      "bio-3-2",
+      "bio-3-3",
+      "bio-3-4",
+      "bio-3-5"
+    ],
+    "sectionTitles": {
+      "3.1": "Explain what enzymes change in a reaction",
+      "3.2": "Design a test of environmental effects on enzymes",
+      "3.3": "Track free energy and coupled reactions",
+      "3.4": "Follow light energy into chemical products",
+      "3.5": "Trace respiration from oxidation to ATP synthesis"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"Chemiosmosis couples electron-transfer processes to a proton gradient and ATP synthesis; this schematic omits molecular detail.\"><defs><marker id=\"bio-arrow-3\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0L10 5L0 10Z\" fill=\"#17654e\"/></marker></defs><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><rect x=\"10\" y=\"62\" width=\"165\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"92.5\" y=\"92\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Electron transfer</text><path d=\"M175 86L210 86\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-3)\"/><rect x=\"210\" y=\"62\" width=\"150\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">H⁺ gradient</text><path d=\"M360 86L395 86\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-3)\"/><rect x=\"395\" y=\"62\" width=\"165\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"477.5\" y=\"92\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">ATP synthesis</text><text x=\"285\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Connections show energetic coupling, not conversion of electrons into ATP atoms.</text></svg>",
+    "diagramCaption": "Chemiosmosis couples electron-transfer processes to a proton gradient and ATP synthesis; this schematic omits molecular detail."
+  },
+  {
+    "id": "4",
+    "title": "Cell Communication and Cell Cycle",
+    "sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6"
+    ],
+    "weight": "10–15%",
+    "intro": "Follow signals from reception to response, and explain how feedback regulates division.",
+    "prerequisites": "Units 1–3: proteins, membranes and ATP.",
+    "online": false,
+    "lessonIds": [
+      "bio-4-1",
+      "bio-4-2",
+      "bio-4-3",
+      "bio-4-4",
+      "bio-4-5",
+      "bio-4-6"
+    ],
+    "sectionTitles": {
+      "4.1": "Distinguish local and distant cell signals",
+      "4.2": "Separate reception, transduction and response",
+      "4.3": "Predict the effect of changing a signaling pathway",
+      "4.4": "Distinguish stabilizing and amplifying feedback",
+      "4.5": "Track DNA and chromosomes through the cell cycle",
+      "4.6": "Explain checkpoints and uncontrolled proliferation"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"Three conceptual stages of a signaling pathway; actual pathways can branch, inhibit and amplify.\"><defs><marker id=\"bio-arrow-4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0L10 5L0 10Z\" fill=\"#17654e\"/></marker></defs><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><rect x=\"10\" y=\"65\" width=\"150\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"85.0\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Reception</text><path d=\"M160 89L205 89\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-4)\"/><rect x=\"205\" y=\"65\" width=\"150\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"280.0\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Relay</text><path d=\"M355 89L400 89\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-4)\"/><rect x=\"400\" y=\"65\" width=\"150\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"475.0\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Response</text><text x=\"285\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">A downstream defect can interrupt the response after normal reception.</text></svg>",
+    "diagramCaption": "Three conceptual stages of a signaling pathway; actual pathways can branch, inhibit and amplify."
+  },
+  {
+    "id": "5",
+    "title": "Heredity",
+    "sections": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5"
+    ],
+    "weight": "8–11%",
+    "intro": "Explain how chromosome behavior produces inheritance patterns and variation.",
+    "prerequisites": "Units 1–2 and 4: nucleic acids, chromosomes and division.",
+    "online": false,
+    "lessonIds": [
+      "bio-5-1",
+      "bio-5-2",
+      "bio-5-3",
+      "bio-5-4",
+      "bio-5-5"
+    ],
+    "sectionTitles": {
+      "5.1": "Explain how meiosis reduces chromosome sets",
+      "5.2": "Identify sources of variation in sexual reproduction",
+      "5.3": "Calculate inheritance probabilities from gametes",
+      "5.4": "Recognize inheritance beyond a simple dominant-recessive model",
+      "5.5": "Separate environmental effects from genotype differences"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"Meiosis sequence: a diploid cell undergoes meiosis I separating homologs, then meiosis II separating sisters.\"><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><g fill=\"#e4f3ec\" stroke=\"#17654e\"><rect x=\"10\" y=\"55\" width=\"145\" height=\"48\" rx=\"10\"/><rect x=\"210\" y=\"55\" width=\"145\" height=\"48\" rx=\"10\"/><rect x=\"410\" y=\"55\" width=\"145\" height=\"48\" rx=\"10\"/></g><g font-family=\"system-ui,sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#183b32\"><text x=\"82\" y=\"85\">Diploid cell</text><text x=\"282\" y=\"85\">Meiosis I</text><text x=\"482\" y=\"85\">Meiosis II</text><text x=\"182\" y=\"85\">→</text><text x=\"382\" y=\"85\">→</text><text x=\"282\" y=\"132\" font-size=\"14\">Homologs apart</text><text x=\"482\" y=\"132\" font-size=\"14\">Sisters apart</text><text x=\"282\" y=\"172\" font-size=\"14\">One DNA replication precedes the two divisions.</text></g></svg>",
+    "diagramCaption": "One replication is followed by two divisions. The boxes distinguish what separates in meiosis I and II, rather than depicting chromosome counts."
+  },
+  {
+    "id": "6",
+    "title": "Gene Expression and Regulation",
+    "sections": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6",
+      "6.7",
+      "6.8"
+    ],
+    "weight": "12–16%",
+    "intro": "Trace genetic information from DNA to functional products and test how expression is regulated.",
+    "prerequisites": "Units 1–2 and 5: nucleic acids, proteins and inheritance.",
+    "online": false,
+    "lessonIds": [
+      "bio-6-1",
+      "bio-6-2",
+      "bio-6-3",
+      "bio-6-4",
+      "bio-6-5",
+      "bio-6-6",
+      "bio-6-7",
+      "bio-6-8"
+    ],
+    "sectionTitles": {
+      "6.1": "Use DNA and RNA structure to predict molecular interactions",
+      "6.2": "Explain replication with strand direction and a template",
+      "6.3": "Distinguish transcription from RNA processing",
+      "6.4": "Translate codons into a polypeptide",
+      "6.5": "Explain regulation at multiple levels",
+      "6.6": "Connect cell specialization to differential expression",
+      "6.7": "Predict mutation effects without assuming a fixed outcome",
+      "6.8": "Interpret biotechnology experiments and controls"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"A simplified information-flow model for protein-coding genes; it does not claim every RNA is translated.\"><defs><marker id=\"bio-arrow-6\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0L10 5L0 10Z\" fill=\"#17654e\"/></marker></defs><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><rect x=\"10\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"82.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">DNA</text><path d=\"M155 84L210 84\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-6)\"/><rect x=\"210\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"282.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">RNA</text><path d=\"M355 84L410 84\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-6)\"/><rect x=\"410\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"482.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Polypeptide</text><text x=\"181\" y=\"40\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">transcribe</text><text x=\"383\" y=\"40\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">translate</text><text x=\"285\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Many RNAs function without being translated.</text></svg>",
+    "diagramCaption": "A simplified information-flow model for protein-coding genes; it does not claim every RNA is translated."
+  },
+  {
+    "id": "7",
+    "title": "Natural Selection",
+    "sections": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5",
+      "7.6",
+      "7.7",
+      "7.8",
+      "7.9",
+      "7.10",
+      "7.11",
+      "7.12"
+    ],
+    "weight": "13–20%",
+    "intro": "Explain population change using heritable variation, evolutionary mechanisms and evidence.",
+    "prerequisites": "Units 5–6: inheritance, mutations and gene expression.",
+    "online": false,
+    "lessonIds": [
+      "bio-7-1",
+      "bio-7-2",
+      "bio-7-3",
+      "bio-7-4",
+      "bio-7-5",
+      "bio-7-6",
+      "bio-7-7",
+      "bio-7-8",
+      "bio-7-9",
+      "bio-7-10",
+      "bio-7-11",
+      "bio-7-12"
+    ],
+    "sectionTitles": {
+      "7.1": "Explain the conditions for natural selection",
+      "7.2": "Analyze fitness as a relative reproductive outcome",
+      "7.3": "Distinguish human selection from directed mutation",
+      "7.4": "Calculate allele frequencies and identify evolutionary forces",
+      "7.5": "Use Hardy–Weinberg as a null model",
+      "7.6": "Compare independent lines of evolutionary evidence",
+      "7.7": "Explain common ancestry without ranking living species",
+      "7.8": "Recognize evolution as an ongoing population process",
+      "7.9": "Read a phylogenetic tree by its branching pattern",
+      "7.10": "Explain reproductive isolation and speciation",
+      "7.11": "Distinguish the origin and maintenance of variation",
+      "7.12": "Evaluate testable models for early life"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"A and B are sister tips in this rooted topology. Branch lengths have no time scale, and none of the living tips is shown as another tip’s ancestor.\"><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><path d=\"M50 95L150 95\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M150 95L150 150\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M150 150L470 150\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M150 95L280 95\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M280 45L280 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M280 45L470 45\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><path d=\"M280 105L470 105\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\"/><text x=\"510\" y=\"50\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">A</text><text x=\"510\" y=\"110\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">B</text><text x=\"510\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">C</text><text x=\"92\" y=\"72\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Root</text></svg>",
+    "diagramCaption": "A and B are sister tips in this rooted topology. Branch lengths have no time scale, and none of the living tips is shown as another tip’s ancestor."
+  },
+  {
+    "id": "8",
+    "title": "Ecology",
+    "sections": [
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "8.6",
+      "8.7"
+    ],
+    "weight": "10–15%",
+    "intro": "Analyze energy flow, population dynamics and interactions across ecological systems.",
+    "prerequisites": "Units 1–7: energy, physiology and evolutionary mechanisms.",
+    "online": false,
+    "lessonIds": [
+      "bio-8-1",
+      "bio-8-2",
+      "bio-8-3",
+      "bio-8-4",
+      "bio-8-5",
+      "bio-8-6",
+      "bio-8-7"
+    ],
+    "sectionTitles": {
+      "8.1": "Design experiments on responses to the environment",
+      "8.2": "Track energy flow and matter cycling in ecosystems",
+      "8.3": "Model population growth with explicit assumptions",
+      "8.4": "Distinguish density dependence from density independence",
+      "8.5": "Analyze interactions and compare community data",
+      "8.6": "Distinguish richness, evenness and ecological effects",
+      "8.7": "Evaluate ecosystem disruptions and alternative explanations"
+    },
+    "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 190\" role=\"img\" aria-label=\"A simplified food-chain model. Real food webs contain additional links, and matter cycles while energy flows.\"><defs><marker id=\"bio-arrow-8\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\"><path d=\"M0 0L10 5L0 10Z\" fill=\"#17654e\"/></marker></defs><rect width=\"570\" height=\"190\" rx=\"12\" fill=\"#f6fbf8\"/><rect x=\"10\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"82.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Producer</text><path d=\"M155 84L210 84\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-8)\"/><rect x=\"210\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"282.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Herbivore</text><path d=\"M355 84L410 84\" fill=\"none\" stroke=\"#17654e\" stroke-width=\"2\" marker-end=\"url(#bio-arrow-8)\"/><rect x=\"410\" y=\"60\" width=\"145\" height=\"48\" rx=\"10\" fill=\"#e4f3ec\" stroke=\"#17654e\"/><text x=\"482.5\" y=\"90\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Predator</text><text x=\"285\" y=\"150\" text-anchor=\"middle\" font-size=\"16\" fill=\"#183b32\">Arrows show an energy-transfer direction; heat is lost at transfers.</text></svg>",
+    "diagramCaption": "A simplified food-chain model. Real food webs contain additional links, and matter cycles while energy flows."
+  }
+]

@@ -1,0 +1,2913 @@
+[
+  {
+    "id": "bio-1-1",
+    "unit": "1",
+    "sections": [
+      "1.1"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Connect water’s polarity to its behavior",
+    "time": "20–30 min",
+    "goal": "Connect water’s polarity to its behavior. Practice: connect structure and function.",
+    "idea": "Oxygen attracts shared electrons more strongly than hydrogen, giving a water molecule partial charges. Attractions between different molecules produce cohesion, adhesion and high heat capacity. The O–H bonds inside a molecule are polar covalent; hydrogen bonds connect suitable partial charges across molecules.",
+    "formula": "Molecular polarity → hydrogen bonding → emergent properties",
+    "steps": [
+      "Two identical water samples receive the same energy, while two equal-mass oil samples serve as a comparison.",
+      "Keep mass, starting temperature and heating time constant.",
+      "A smaller temperature rise in water is consistent with greater specific heat.",
+      "Use molecular interactions to explain the difference; this comparison alone does not measure every individual hydrogen bond."
+    ],
+    "trap": "Hydrogen bonds between molecules are not the covalent bonds holding each water molecule together.",
+    "challenge": "Explain how evaporation can cool a leaf even when the remaining water does not boil.",
+    "solution": "Escaping molecules carry energy away. Energy is needed to overcome intermolecular attractions, so the remaining leaf-water system can lose thermal energy.",
+    "questions": [
+      {
+        "prompt": "Which interaction joins adjacent water molecules?",
+        "options": [
+          "Attraction between a partially positive H and a partially negative O.",
+          "A new covalent bond joining every oxygen atom.",
+          "Transfer of a complete electron between each pair.",
+          "Repulsion between their oxygen ends."
+        ],
+        "answer": 0,
+        "explain": "Attraction between a partially positive H and a partially negative O.",
+        "hint": "Hydrogen bonds between molecules are not the covalent bonds holding each water molecule together."
+      },
+      {
+        "prompt": "What best explains water rising along a narrow glass tube?",
+        "options": [
+          "Only covalent bonding to glass.",
+          "A loss of molecular polarity.",
+          "Water molecules becoming nonpolar.",
+          "Adhesion to glass and cohesion among water molecules."
+        ],
+        "answer": 3,
+        "explain": "Adhesion to glass and cohesion among water molecules.",
+        "hint": "Hydrogen bonds between molecules are not the covalent bonds holding each water molecule together."
+      }
+    ],
+    "skill": "Connect structure and function",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-2",
+    "unit": "1",
+    "sections": [
+      "1.2"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Track atoms through living systems",
+    "time": "20–30 min",
+    "goal": "Track atoms through living systems. Practice: track matter.",
+    "idea": "Organisms obtain atoms from their environment and rearrange them into molecules. Carbon forms diverse skeletons; nitrogen occurs in proteins and nucleic acids, phosphorus in nucleic acids and phospholipids, and sulfur in some amino acids. Growth requires matter as well as usable energy.",
+    "formula": "Matter is rearranged; energy is transferred",
+    "steps": [
+      "A plant grows in light while receiving carbon dioxide, water and mineral nutrients.",
+      "Identify CO₂ as a major source of carbon in its organic molecules.",
+      "Nitrogen-containing nutrients supply atoms needed for amino acids and nucleotides.",
+      "More light cannot replace a missing required element; energy does not become nitrogen atoms."
+    ],
+    "trap": "Most plant biomass carbon does not come from the soil, and energy is not a material building block.",
+    "challenge": "A culture receives sugar but no available nitrogen. Predict a molecular consequence of prolonged growth.",
+    "solution": "New protein and nucleic-acid synthesis becomes limited because both require nitrogen. Stored nitrogen may temporarily support synthesis.",
+    "questions": [
+      {
+        "prompt": "Which pair both contain nitrogen?",
+        "options": [
+          "Only carbohydrates and triglycerides.",
+          "Water and oxygen gas.",
+          "Only starch and cellulose.",
+          "Proteins and nucleic acids."
+        ],
+        "answer": 3,
+        "explain": "Proteins and nucleic acids.",
+        "hint": "Most plant biomass carbon does not come from the soil, and energy is not a material building block."
+      },
+      {
+        "prompt": "What primarily supplies carbon atoms to a photosynthetic plant?",
+        "options": [
+          "Mineral phosphorus converted into carbon.",
+          "Oxygen released during photosynthesis.",
+          "Carbon dioxide incorporated into organic molecules.",
+          "Sunlight converted directly into carbon atoms."
+        ],
+        "answer": 2,
+        "explain": "Carbon dioxide incorporated into organic molecules.",
+        "hint": "Most plant biomass carbon does not come from the soil, and energy is not a material building block."
+      }
+    ],
+    "skill": "Track matter",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-3",
+    "unit": "1",
+    "sections": [
+      "1.3"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Build and break biological polymers",
+    "time": "20–30 min",
+    "goal": "Build and break biological polymers. Practice: use a molecular model.",
+    "idea": "Many large biological molecules assemble from smaller subunits. Condensation reactions join subunits with net water removal; hydrolysis uses water to break a bond. Enzymes control these processes in cells. Lipids are a diverse group and are not generally repeating-monomer polymers.",
+    "formula": "Assembly: subunits join; hydrolysis: water helps split a bond",
+    "steps": [
+      "A chain contains five linked subunits with four connecting bonds.",
+      "Cleaving one bond by hydrolysis produces two shorter fragments.",
+      "Complete hydrolysis of all four connecting bonds requires four water molecules in this simplified accounting.",
+      "The subunits remain matter: breaking a polymer does not erase its atoms."
+    ],
+    "trap": "Breaking a bond requires energy; the net energy change depends on all bonds broken and formed.",
+    "challenge": "How many linking bonds connect eight subunits in one unbranched chain, and how many hydrolysis events split it completely?",
+    "solution": "There are seven linking bonds and seven cleavage events, assuming one bond per adjacent pair and no branches.",
+    "questions": [
+      {
+        "prompt": "Which change is hydrolysis?",
+        "options": [
+          "All atoms in the polymer disappear.",
+          "Only electrons are added without bond changes.",
+          "A water molecule participates in splitting a connecting bond.",
+          "Water is always the only product of polymer breakdown."
+        ],
+        "answer": 2,
+        "explain": "A water molecule participates in splitting a connecting bond.",
+        "hint": "Breaking a bond requires energy; the net energy change depends on all bonds broken and formed."
+      },
+      {
+        "prompt": "How many connecting bonds join six subunits in one unbranched chain?",
+        "answer": 5,
+        "hint": "Count the gaps between adjacent subunits.",
+        "explain": "Six subunits joined end to end have five connecting bonds."
+      }
+    ],
+    "skill": "Use a molecular model",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-4",
+    "unit": "1",
+    "sections": [
+      "1.4"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Explain carbohydrate structure and storage",
+    "time": "20–30 min",
+    "goal": "Explain carbohydrate structure and storage. Practice: connect structure and function.",
+    "idea": "Monosaccharides can be linked into carbohydrates with different functions. Linkage geometry and branching affect accessibility to enzymes and structural strength. Starch and glycogen support storage, while cellulose contributes to plant cell walls. A common building block does not guarantee an identical biological role.",
+    "formula": "Subunit identity + linkage + branching → function",
+    "steps": [
+      "Compare starch and cellulose made from glucose subunits.",
+      "Their glycosidic linkages have different orientations.",
+      "An enzyme that fits one linkage need not catalyze breakdown of the other.",
+      "A human’s inability to digest cellulose reflects enzyme specificity, not an absence of chemical energy in cellulose."
+    ],
+    "trap": "All glucose-based polymers are not interchangeable food sources for every organism.",
+    "challenge": "Predict what happens if an organism acquires a functional enzyme that hydrolyzes a previously unusable polysaccharide.",
+    "solution": "It may gain access to its subunits, if transport and downstream metabolism also support their use. Enzyme activity alone does not guarantee complete assimilation.",
+    "questions": [
+      {
+        "prompt": "Why can cellulose and starch have different properties?",
+        "options": [
+          "Only cellulose is made of atoms.",
+          "Their glucose units are connected in different linkage arrangements.",
+          "Cellulose contains no carbon.",
+          "Starch has no covalent bonds."
+        ],
+        "answer": 1,
+        "explain": "Their glucose units are connected in different linkage arrangements.",
+        "hint": "All glucose-based polymers are not interchangeable food sources for every organism."
+      },
+      {
+        "prompt": "Which is a structural carbohydrate in plant cells?",
+        "options": [
+          "Cellulose in the cell wall.",
+          "Triglyceride in a lipid droplet.",
+          "DNA in a chromosome.",
+          "ATP in a solution."
+        ],
+        "answer": 0,
+        "explain": "Cellulose in the cell wall.",
+        "hint": "All glucose-based polymers are not interchangeable food sources for every organism."
+      }
+    ],
+    "skill": "Connect structure and function",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-5",
+    "unit": "1",
+    "sections": [
+      "1.5"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Predict lipid behavior from molecular structure",
+    "time": "20–30 min",
+    "goal": "Predict lipid behavior from molecular structure. Practice: predict a structural change.",
+    "idea": "Hydrocarbon-rich regions interact poorly with water. Triglycerides contain glycerol and fatty acids and store energy; phospholipids have hydrophilic heads and hydrophobic tails, favoring bilayers. Cis double bonds introduce bends that often reduce close packing. Steroids have a different ring-based structure.",
+    "formula": "Amphipathic phospholipids self-organize in water",
+    "steps": [
+      "Compare membranes at the same temperature with different proportions of cis-unsaturated tails.",
+      "Bends in unsaturated tails reduce close packing.",
+      "This often increases fluidity relative to comparable saturated tails.",
+      "State the comparison conditions: temperature, tail length and sterols can also affect membrane behavior."
+    ],
+    "trap": "A phospholipid head and its tails do not have the same interaction with water.",
+    "challenge": "Explain why a bilayer can form without each phospholipid being individually placed by an enzyme.",
+    "solution": "Interactions with water favor heads exposed to water and tails sheltered inside. Self-organization follows physical interactions, although cells actively synthesize and modify membranes.",
+    "questions": [
+      {
+        "prompt": "Which arrangement is favored in a bilayer?",
+        "options": [
+          "Hydrophilic heads face water and hydrophobic tails face inward.",
+          "Hydrophobic tails face water on both sides.",
+          "All heads gather in a dry central layer.",
+          "Each molecule becomes completely water-soluble."
+        ],
+        "answer": 0,
+        "explain": "Hydrophilic heads face water and hydrophobic tails face inward.",
+        "hint": "A phospholipid head and its tails do not have the same interaction with water."
+      },
+      {
+        "prompt": "A cis double bond generally does what to a fatty-acid tail?",
+        "options": [
+          "Adds an amino-acid sequence.",
+          "Turns the tail into DNA.",
+          "Eliminates all carbon atoms.",
+          "Introduces a bend that can reduce tight packing."
+        ],
+        "answer": 3,
+        "explain": "Introduces a bend that can reduce tight packing.",
+        "hint": "A phospholipid head and its tails do not have the same interaction with water."
+      }
+    ],
+    "skill": "Predict a structural change",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-6",
+    "unit": "1",
+    "sections": [
+      "1.6"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Read nucleic-acid structure and direction",
+    "time": "20–30 min",
+    "goal": "Read nucleic-acid structure and direction. Practice: read a molecular representation.",
+    "idea": "A nucleotide contains a sugar, phosphate and nitrogenous base. Covalent sugar-phosphate backbones have directionality, conventionally 5′ to 3′. DNA’s complementary strands run antiparallel. RNA usually contains ribose and uracil rather than DNA’s deoxyribose and thymine.",
+    "formula": "DNA base pairs: A–T and G–C",
+    "steps": [
+      "One DNA strand is labeled 5′–AGTC–3′.",
+      "Pair each base to obtain 3′–TCAG–5′ on the opposite strand.",
+      "If the complementary strand must be written 5′ to 3′, reverse its displayed order: 5′–GACT–3′.",
+      "Keep base pairing and strand orientation as separate checks."
+    ],
+    "trap": "Complementing bases without reversing direction when requested creates an orientation error.",
+    "challenge": "Write the complementary antiparallel strand for 5′–ATGC–3′.",
+    "solution": "It is 3′–TACG–5′, or 5′–GCAT–3′ when written in the standard opposite direction.",
+    "questions": [
+      {
+        "prompt": "Which feature distinguishes a nucleotide from an amino acid?",
+        "options": [
+          "A nucleotide always has an amino-acid R group.",
+          "Only amino acids contain atoms.",
+          "Nucleotides cannot join into chains.",
+          "A nucleotide includes a sugar, phosphate and nitrogenous base."
+        ],
+        "answer": 3,
+        "explain": "A nucleotide includes a sugar, phosphate and nitrogenous base.",
+        "hint": "Complementing bases without reversing direction when requested creates an orientation error."
+      },
+      {
+        "prompt": "Opposite 5′–AGTC–3′, which strand is correctly paired?",
+        "options": [
+          "3′–AGTC–5′.",
+          "3′–UCAG–5′ as the complementary DNA strand.",
+          "3′–TCAG–5′.",
+          "5′–TCAG–3′ without reversing the displayed order."
+        ],
+        "answer": 2,
+        "explain": "3′–TCAG–5′.",
+        "hint": "Complementing bases without reversing direction when requested creates an orientation error."
+      }
+    ],
+    "skill": "Read a molecular representation",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-1-7",
+    "unit": "1",
+    "sections": [
+      "1.7"
+    ],
+    "part": "Chemistry of Life",
+    "title": "Link protein sequence, folding and function",
+    "time": "20–30 min",
+    "goal": "Link protein sequence, folding and function. Practice: design a controlled comparison.",
+    "idea": "Amino acids join by peptide bonds. Their side chains influence folding through hydrophobic effects, hydrogen bonding, ionic interactions and sometimes disulfide bonds. A change in sequence or environment can alter function by changing shape, charge or dynamics. Some proteins contain several interacting polypeptides.",
+    "formula": "Sequence → folding and interactions → biological activity",
+    "steps": [
+      "A substitution replaces a charged surface residue with a hydrophobic residue.",
+      "Predict a changed interaction with water or another molecule rather than assuming every mutation destroys the protein.",
+      "Compare activity of purified original and altered protein at equal concentration.",
+      "A measured difference supports a functional effect; additional structural evidence is needed to identify the exact folding change."
+    ],
+    "trap": "Denaturation usually disrupts higher-order structure without first hydrolyzing every peptide bond.",
+    "challenge": "Why might an extreme pH reduce enzyme activity?",
+    "solution": "Changing protonation can alter ionic interactions or active-site chemistry, changing folding or catalysis. Reduced activity need not mean complete backbone destruction.",
+    "questions": [
+      {
+        "prompt": "What directly specifies a protein’s primary structure?",
+        "options": [
+          "The number of surrounding water molecules.",
+          "The order of phospholipids in a membrane.",
+          "Its amino-acid sequence.",
+          "Only its temperature."
+        ],
+        "answer": 2,
+        "explain": "Its amino-acid sequence.",
+        "hint": "Denaturation usually disrupts higher-order structure without first hydrolyzing every peptide bond."
+      },
+      {
+        "prompt": "Which comparison best isolates a substitution’s effect on activity?",
+        "options": [
+          "Only a photograph of the original organism.",
+          "Equal protein amounts tested under otherwise matched conditions.",
+          "Different protein amounts at different temperatures.",
+          "One protein measured once without a control."
+        ],
+        "answer": 1,
+        "explain": "Equal protein amounts tested under otherwise matched conditions.",
+        "hint": "Denaturation usually disrupts higher-order structure without first hydrolyzing every peptide bond."
+      }
+    ],
+    "skill": "Design a controlled comparison",
+    "resource": "https://openstax.org/books/biology-2e/pages/2-introduction"
+  },
+  {
+    "id": "bio-2-1",
+    "unit": "2",
+    "sections": [
+      "2.1"
+    ],
+    "part": "Cells",
+    "title": "Match cell components to their functions",
+    "time": "20–30 min",
+    "goal": "Match cell components to their functions. Practice: trace a cellular pathway.",
+    "idea": "Cell structures divide tasks without operating independently. Ribosomes synthesize proteins; the nucleus stores most eukaryotic DNA; rough ER and Golgi participate in processing and trafficking many exported proteins. Mitochondria transform energy, and the cytoskeleton supports organization and movement. Prokaryotes also have membranes, DNA and ribosomes.",
+    "formula": "Structures interact in a cellular system",
+    "steps": [
+      "Trace a protein destined for secretion.",
+      "A ribosome associated with rough ER synthesizes it into the endomembrane pathway.",
+      "Vesicular trafficking carries it through processing and sorting compartments including the Golgi.",
+      "Disrupting Golgi trafficking can reduce secretion without directly preventing every ribosome from making protein."
+    ],
+    "trap": "Prokaryotes lack a membrane-bound nucleus but do not lack DNA or ribosomes.",
+    "challenge": "Predict the effect of blocking vesicle fusion at the plasma membrane on a secreted protein.",
+    "solution": "The protein may accumulate in intracellular vesicles and less reaches the exterior; its synthesis may continue initially.",
+    "questions": [
+      {
+        "prompt": "Which structure directly performs translation?",
+        "options": [
+          "A cellulose wall.",
+          "A ribosome.",
+          "A Golgi cisterna.",
+          "A phospholipid head."
+        ],
+        "answer": 1,
+        "explain": "A ribosome.",
+        "hint": "Prokaryotes lack a membrane-bound nucleus but do not lack DNA or ribosomes."
+      },
+      {
+        "prompt": "Which feature occurs in both typical bacterial and animal cells?",
+        "options": [
+          "Ribosomes and a plasma membrane.",
+          "A membrane-bound nucleus.",
+          "Chloroplasts.",
+          "A cellulose wall."
+        ],
+        "answer": 0,
+        "explain": "Ribosomes and a plasma membrane.",
+        "hint": "Prokaryotes lack a membrane-bound nucleus but do not lack DNA or ribosomes."
+      }
+    ],
+    "skill": "Trace a cellular pathway",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-2",
+    "unit": "2",
+    "sections": [
+      "2.2"
+    ],
+    "part": "Cells",
+    "title": "Use surface area and volume to explain cell size",
+    "time": "20–30 min",
+    "goal": "Use surface area and volume to explain cell size. Practice: calculate and interpret a ratio.",
+    "idea": "Exchange occurs across a surface while metabolic demand often scales with volume. As a shape grows without changing proportions, volume increases faster than surface area. Cells can alter shape, divide or create folds to increase exchange area relative to volume.",
+    "formula": "Cube: SA = 6s²; V = s³; SA/V = 6/s",
+    "steps": [
+      "For a cube with side 1, surface area is 6 and volume is 1.",
+      "Doubling the side gives area 24 and volume 8.",
+      "The ratio drops from 6 to 3, even though total surface area increases.",
+      "A smaller ratio can make exchange less sufficient relative to internal demand, depending on transport conditions."
+    ],
+    "trap": "A larger cell can have more total surface area while having less area per unit volume.",
+    "challenge": "Calculate surface-area-to-volume ratios for cubes with sides 2 and 4. Explain the trend.",
+    "solution": "The ratios are 3 and 1.5 inverse length units. Doubling size halves the ratio for this shape.",
+    "questions": [
+      {
+        "prompt": "What is SA/V for a cube with side length 3?",
+        "answer": 2,
+        "hint": "Use 6/s.",
+        "explain": "6/3 = 2 inverse length units."
+      },
+      {
+        "prompt": "Why can a long thin shape improve exchange relative to volume?",
+        "options": [
+          "It removes all need for diffusion.",
+          "It makes volume mathematically zero.",
+          "It turns the membrane into a nucleus.",
+          "It can provide more surface area for a given volume."
+        ],
+        "answer": 3,
+        "explain": "It can provide more surface area for a given volume.",
+        "hint": "A larger cell can have more total surface area while having less area per unit volume."
+      }
+    ],
+    "skill": "Calculate and interpret a ratio",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-3",
+    "unit": "2",
+    "sections": [
+      "2.3"
+    ],
+    "part": "Cells",
+    "title": "Read the membrane as a fluid molecular system",
+    "time": "20–30 min",
+    "goal": "Read the membrane as a fluid molecular system. Practice: interpret a membrane model.",
+    "idea": "A membrane is a dynamic bilayer containing proteins and other components. Hydrophobic cores limit movement of many polar substances. Membrane proteins provide channels, transporters, receptors and anchors. Lipids and many proteins can move laterally, although attachments and interactions constrain motion.",
+    "formula": "Bilayer organization + proteins → selective functions",
+    "steps": [
+      "A fluorescent label marks one region of a membrane.",
+      "Over time the label spreads laterally.",
+      "This supports mobility of the labeled components within the membrane.",
+      "It does not show that every membrane component moves freely or that the bilayer is equally permeable to every solute."
+    ],
+    "trap": "Fluid does not mean the membrane lacks organization or selectivity.",
+    "challenge": "Explain why a channel protein needs both membrane-compatible and water-compatible regions.",
+    "solution": "Its outward-facing regions interact with the lipid core, while a suitable interior can provide a passage for selected hydrophilic particles.",
+    "questions": [
+      {
+        "prompt": "What forms the hydrophobic core of a phospholipid bilayer?",
+        "options": [
+          "The aqueous cytosol.",
+          "The exposed phosphate heads.",
+          "The extracellular fluid.",
+          "The fatty-acid tails."
+        ],
+        "answer": 3,
+        "explain": "The fatty-acid tails.",
+        "hint": "Fluid does not mean the membrane lacks organization or selectivity."
+      },
+      {
+        "prompt": "Which protein function directly supports recognition of an external signal?",
+        "options": [
+          "A sterol reads a codon.",
+          "A wall enzyme creates a nucleus.",
+          "A receptor binds a suitable signaling molecule.",
+          "A ribosome copies a membrane."
+        ],
+        "answer": 2,
+        "explain": "A receptor binds a suitable signaling molecule.",
+        "hint": "Fluid does not mean the membrane lacks organization or selectivity."
+      }
+    ],
+    "skill": "Interpret a membrane model",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-4",
+    "unit": "2",
+    "sections": [
+      "2.4"
+    ],
+    "part": "Cells",
+    "title": "Predict which substances cross a lipid bilayer",
+    "time": "20–30 min",
+    "goal": "Predict which substances cross a lipid bilayer. Practice: predict transport.",
+    "idea": "Small nonpolar molecules cross a lipid bilayer more readily than ions and many large polar molecules. Charge, polarity, size and available transport proteins all matter. Water can cross membranes and often moves rapidly through aquaporins. Selective permeability allows distinct cellular environments.",
+    "formula": "Permeability depends on properties and pathways",
+    "steps": [
+      "Compare O₂ and Na⁺ crossing a protein-free lipid membrane.",
+      "O₂ is small and nonpolar, favoring passage through the hydrophobic interior.",
+      "Charged Na⁺ faces a large energetic barrier without an appropriate protein pathway.",
+      "Adding a sodium-selective channel changes ion permeability without making all solutes equally permeable."
+    ],
+    "trap": "Concentration difference alone does not remove the hydrophobic barrier to a charged solute.",
+    "challenge": "Why can a membrane be permeable to oxygen while restricting glucose?",
+    "solution": "Their molecular properties differ: oxygen is small and nonpolar, whereas glucose is larger and polar and usually relies on transport proteins for efficient passage.",
+    "questions": [
+      {
+        "prompt": "Which crosses a protein-free bilayer most readily among these choices?",
+        "options": [
+          "A large charged protein.",
+          "A chromosome.",
+          "Oxygen gas.",
+          "A sodium ion."
+        ],
+        "answer": 2,
+        "explain": "Oxygen gas.",
+        "hint": "Concentration difference alone does not remove the hydrophobic barrier to a charged solute."
+      },
+      {
+        "prompt": "What can increase water permeability?",
+        "options": [
+          "Converting phospholipids into chromosomes.",
+          "Functional aquaporin channels.",
+          "Removing all water from both sides.",
+          "Making every solute nonpolar."
+        ],
+        "answer": 1,
+        "explain": "Functional aquaporin channels.",
+        "hint": "Concentration difference alone does not remove the hydrophobic barrier to a charged solute."
+      }
+    ],
+    "skill": "Predict transport",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-5",
+    "unit": "2",
+    "sections": [
+      "2.5"
+    ],
+    "part": "Cells",
+    "title": "Distinguish passive movement from active transport",
+    "time": "20–30 min",
+    "goal": "Distinguish passive movement from active transport. Practice: explain energy coupling.",
+    "idea": "Passive transport follows a favorable concentration or electrochemical gradient and does not require direct energy input to drive that movement. Active transport moves a substance against its electrochemical gradient by coupling to an energy source. Gradients themselves can store usable energy.",
+    "formula": "Gradient direction + energy coupling identify the process",
+    "steps": [
+      "A cell maintains high internal K⁺ despite its tendency to leave under specified conditions.",
+      "A pump couples transport to ATP hydrolysis.",
+      "Inhibiting ATP supply can reduce that pump’s transport rate.",
+      "Existing gradients may persist temporarily; inhibition does not erase every gradient instantaneously."
+    ],
+    "trap": "Protein-mediated transport is not automatically active; channels can mediate passive transport.",
+    "challenge": "A transporter uses inward Na⁺ movement to drive glucose entry against its gradient. Explain the energy source.",
+    "solution": "Energy stored in the Na⁺ electrochemical gradient drives coupled glucose uptake. A separate pump may have established that gradient.",
+    "questions": [
+      {
+        "prompt": "Which observation best indicates active transport?",
+        "options": [
+          "Water crossing by osmosis.",
+          "Uphill transport coupled to an energy source.",
+          "Movement through any protein.",
+          "A solute moving down its gradient."
+        ],
+        "answer": 1,
+        "explain": "Uphill transport coupled to an energy source.",
+        "hint": "Protein-mediated transport is not automatically active; channels can mediate passive transport."
+      },
+      {
+        "prompt": "What can power secondary active transport directly?",
+        "options": [
+          "Downhill movement of a different solute.",
+          "Only direct ATP binding to the cotransporter in every case.",
+          "The destruction of the membrane.",
+          "The absence of all gradients."
+        ],
+        "answer": 0,
+        "explain": "Downhill movement of a different solute.",
+        "hint": "Protein-mediated transport is not automatically active; channels can mediate passive transport."
+      }
+    ],
+    "skill": "Explain energy coupling",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-6",
+    "unit": "2",
+    "sections": [
+      "2.6"
+    ],
+    "part": "Cells",
+    "title": "Explain facilitated diffusion without adding an energy pump",
+    "time": "20–30 min",
+    "goal": "Explain facilitated diffusion without adding an energy pump. Practice: interpret a rate curve.",
+    "idea": "Channels and carriers can accelerate passive movement of specific substances down their electrochemical gradients. Carrier transport can saturate when binding and cycling are limiting. Opening an ion channel permits movement in the direction favored by the full electrochemical gradient, not concentration alone.",
+    "formula": "Facilitated diffusion uses proteins but remains passive",
+    "steps": [
+      "A carrier transports a sugar into a cell with lower internal sugar concentration.",
+      "At low external sugar, increasing concentration raises influx.",
+      "At high concentration, influx approaches a plateau as carrier availability limits rate.",
+      "This saturation does not by itself show ATP-driven uphill transport."
+    ],
+    "trap": "A channel does not determine direction independently of the electrochemical gradient.",
+    "challenge": "Why might doubling carrier number increase maximal influx without changing whether movement is passive?",
+    "solution": "More carriers can increase transport capacity. The energy direction remains downhill, so it is still passive.",
+    "questions": [
+      {
+        "prompt": "What distinguishes facilitated diffusion from simple diffusion?",
+        "options": [
+          "A suitable membrane protein provides a pathway.",
+          "It always consumes ATP directly.",
+          "It always moves solute uphill.",
+          "It occurs only through a cellulose wall."
+        ],
+        "answer": 0,
+        "explain": "A suitable membrane protein provides a pathway.",
+        "hint": "A channel does not determine direction independently of the electrochemical gradient."
+      },
+      {
+        "prompt": "What can explain a carrier-mediated transport plateau?",
+        "options": [
+          "The disappearance of every molecule in the solution.",
+          "A conversion of solute into ATP.",
+          "Proof that the cell has stopped all metabolism.",
+          "A limited number of carriers cycling at a finite rate."
+        ],
+        "answer": 3,
+        "explain": "A limited number of carriers cycling at a finite rate.",
+        "hint": "A channel does not determine direction independently of the electrochemical gradient."
+      }
+    ],
+    "skill": "Interpret a rate curve",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-7",
+    "unit": "2",
+    "sections": [
+      "2.7"
+    ],
+    "part": "Cells",
+    "title": "Predict water movement using water potential",
+    "time": "20–30 min",
+    "goal": "Predict water movement using water potential. Practice: calculate and explain a gradient.",
+    "idea": "Water moves from higher water potential toward lower water potential. Water potential includes solute and pressure components. With equal pressure and effectively nonpenetrating solute, more solute lowers water potential. Tonicity depends on solutes that do not readily cross the membrane.",
+    "formula": "Ψ = Ψs + Ψp; Ψs = −iCRT",
+    "steps": [
+      "Compare a cell containing 0.3 M nonpenetrating solute with 0.1 M outside at equal pressure and temperature.",
+      "The cell has the more negative solute potential.",
+      "Initial net water movement is inward.",
+      "Rising pressure in a walled cell can oppose further entry; equal water potential, not necessarily equal solute concentration, defines equilibrium."
+    ],
+    "trap": "Tonicity is not determined by total concentration of every solute when some solutes readily cross.",
+    "challenge": "For i=1, C=0.2 M, R=0.0831 L·bar/(mol·K), T=300 K, calculate solute potential.",
+    "solution": "Ψs = −1×0.2×0.0831×300 = −4.986 bar. Include any pressure potential separately.",
+    "questions": [
+      {
+        "prompt": "At equal pressure, initial water movement is toward the side with…",
+        "options": [
+          "Lower concentration of that solute.",
+          "Fewer water channels regardless of gradient.",
+          "Higher water potential.",
+          "Higher concentration of a nonpenetrating solute."
+        ],
+        "answer": 3,
+        "explain": "Higher concentration of a nonpenetrating solute.",
+        "hint": "Tonicity is not determined by total concentration of every solute when some solutes readily cross."
+      },
+      {
+        "prompt": "Using i=1, C=0.1 M, R=0.0831 and T=300 K, what is Ψs in bar?",
+        "answer": -2.493,
+        "hint": "Apply −iCRT and keep the negative sign.",
+        "explain": "−1×0.1×0.0831×300 = −2.493 bar."
+      }
+    ],
+    "skill": "Calculate and explain a gradient",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction",
+    "lab": "osmosis-lab"
+  },
+  {
+    "id": "bio-2-8",
+    "unit": "2",
+    "sections": [
+      "2.8"
+    ],
+    "part": "Cells",
+    "title": "Compare pumps and bulk transport",
+    "time": "20–30 min",
+    "goal": "Compare pumps and bulk transport. Practice: compare mechanisms.",
+    "idea": "Primary active pumps couple energy input to transport. Vesicles move larger cargo through endocytosis or exocytosis. These mechanisms differ from passive channels and from one another in cargo handling and membrane rearrangement. Cells regulate each to control exchange and signaling.",
+    "formula": "Pumps move selected particles; vesicles move packaged cargo",
+    "steps": [
+      "A cell exports a large protein that cannot cross the lipid core directly.",
+      "The protein is packaged in a vesicle.",
+      "Fusion with the plasma membrane releases the cargo outside.",
+      "Vesicle membrane can become part of the plasma membrane, linking secretion to membrane recycling."
+    ],
+    "trap": "Exocytosis is not diffusion of a protein through the bilayer’s hydrophobic interior.",
+    "challenge": "Contrast receptor-mediated endocytosis with movement through an ion channel.",
+    "solution": "Endocytosis internalizes selected material in a membrane-bound vesicle; a channel provides a selective passage for ions without packaging each ion in a vesicle.",
+    "questions": [
+      {
+        "prompt": "Which event is exocytosis?",
+        "options": [
+          "DNA replicates before division.",
+          "A chromosome pairs with its homolog.",
+          "An intracellular vesicle fuses with the plasma membrane and releases cargo.",
+          "A free oxygen molecule crosses a bilayer."
+        ],
+        "answer": 2,
+        "explain": "An intracellular vesicle fuses with the plasma membrane and releases cargo.",
+        "hint": "Exocytosis is not diffusion of a protein through the bilayer’s hydrophobic interior."
+      },
+      {
+        "prompt": "Which mechanism can engulf a large extracellular particle?",
+        "options": [
+          "Translation of a codon.",
+          "Endocytosis, including phagocytosis in suitable cells.",
+          "A ribosome’s A site.",
+          "Only simple diffusion through lipids."
+        ],
+        "answer": 1,
+        "explain": "Endocytosis, including phagocytosis in suitable cells.",
+        "hint": "Exocytosis is not diffusion of a protein through the bilayer’s hydrophobic interior."
+      }
+    ],
+    "skill": "Compare mechanisms",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-9",
+    "unit": "2",
+    "sections": [
+      "2.9"
+    ],
+    "part": "Cells",
+    "title": "Explain why compartments help cells coordinate reactions",
+    "time": "20–30 min",
+    "goal": "Explain why compartments help cells coordinate reactions. Practice: connect structure and energetics.",
+    "idea": "Internal membranes create regions with distinct conditions, concentrate components and separate incompatible processes. Compartmentalization also requires controlled transport between regions. A compartment is useful because of its maintained chemical environment and interactions, not merely because it has a name.",
+    "formula": "A boundary can maintain local conditions for a process",
+    "steps": [
+      "Lysosomal enzymes function in an acidic lumen.",
+      "A membrane separates the lumen from the cytosol.",
+      "Proton transport helps maintain the pH difference.",
+      "A failure to maintain acidity can reduce digestion even if the enzyme protein remains present."
+    ],
+    "trap": "A compartment’s function depends on transport and conditions as well as the enzymes it contains.",
+    "challenge": "How does the inner mitochondrial membrane support ATP production?",
+    "solution": "It separates regions so electron transport can establish a proton gradient, and ATP synthase couples proton flow to ATP formation.",
+    "questions": [
+      {
+        "prompt": "What is an advantage of compartmentalization?",
+        "options": [
+          "It removes the need for enzymes.",
+          "Different processes can operate in maintained local chemical environments.",
+          "All compartments must have identical pH.",
+          "No transport between regions is needed."
+        ],
+        "answer": 1,
+        "explain": "Different processes can operate in maintained local chemical environments.",
+        "hint": "A compartment’s function depends on transport and conditions as well as the enzymes it contains."
+      },
+      {
+        "prompt": "Why can loss of a proton gradient reduce ATP synthesis?",
+        "options": [
+          "It removes an energy source used by ATP synthase.",
+          "It changes every gene into RNA.",
+          "It proves oxygen is directly converted to ATP.",
+          "It eliminates every mitochondrial membrane protein."
+        ],
+        "answer": 0,
+        "explain": "It removes an energy source used by ATP synthase.",
+        "hint": "A compartment’s function depends on transport and conditions as well as the enzymes it contains."
+      }
+    ],
+    "skill": "Connect structure and energetics",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-2-10",
+    "unit": "2",
+    "sections": [
+      "2.10"
+    ],
+    "part": "Cells",
+    "title": "Evaluate evidence for endosymbiotic origins",
+    "time": "20–30 min",
+    "goal": "Evaluate evidence for endosymbiotic origins. Practice: evaluate evidence.",
+    "idea": "Mitochondria and chloroplasts share several features with bacteria, including their own genetic material and bacterial-like aspects of division and protein synthesis. These observations support descent from endosymbiotic ancestors. Modern organelles also depend on host-cell genes and extensive integration.",
+    "formula": "Multiple independent similarities support an ancestry model",
+    "steps": [
+      "Observe that mitochondria contain DNA and divide within cells.",
+      "Compare their molecular sequences and cellular features with bacterial lineages.",
+      "Consistent evidence across these independent features supports shared ancestry.",
+      "Do not infer that a modern mitochondrion is a free-living bacterium or that every internal membrane arose the same way."
+    ],
+    "trap": "A useful evolutionary inference relies on converging evidence rather than one superficial resemblance.",
+    "challenge": "Explain why mitochondrial dependence on nuclear genes does not refute endosymbiosis.",
+    "solution": "Long-term integration can include gene transfer and functional dependence. The hypothesis concerns ancestry, not present-day independence.",
+    "questions": [
+      {
+        "prompt": "Which observation supports endosymbiosis?",
+        "options": [
+          "Bacterial-like genetic and division features of mitochondria.",
+          "All organelles are identical to cell walls.",
+          "Mitochondria contain no nucleic acids.",
+          "Ribosomes are visible only in plants."
+        ],
+        "answer": 0,
+        "explain": "Bacterial-like genetic and division features of mitochondria.",
+        "hint": "A useful evolutionary inference relies on converging evidence rather than one superficial resemblance."
+      },
+      {
+        "prompt": "What would strengthen an ancestry inference?",
+        "options": [
+          "Only two structures having the same color.",
+          "A single unsupported diagram.",
+          "Assuming all similarities must be convergent.",
+          "Concordant evidence from molecular sequences and multiple cellular traits."
+        ],
+        "answer": 3,
+        "explain": "Concordant evidence from molecular sequences and multiple cellular traits.",
+        "hint": "A useful evolutionary inference relies on converging evidence rather than one superficial resemblance."
+      }
+    ],
+    "skill": "Evaluate evidence",
+    "resource": "https://openstax.org/books/biology-2e/pages/4-introduction"
+  },
+  {
+    "id": "bio-3-1",
+    "unit": "3",
+    "sections": [
+      "3.1"
+    ],
+    "part": "Cellular Energetics",
+    "title": "Explain what enzymes change in a reaction",
+    "time": "20–30 min",
+    "goal": "Explain what enzymes change in a reaction. Practice: interpret a mechanism.",
+    "idea": "Enzymes accelerate reactions by providing a pathway with lower activation energy. They do not change the reaction’s overall free-energy difference or equilibrium position. Binding depends on molecular interactions, and an enzyme is regenerated rather than consumed as a stoichiometric reactant.",
+    "formula": "Catalysis lowers the activation barrier, not ΔG",
+    "steps": [
+      "An uncatalyzed reaction reaches the same equilibrium composition very slowly.",
+      "Adding an enzyme speeds approach to that composition.",
+      "Both forward and reverse processes can be accelerated.",
+      "The enzyme has changed kinetics, not the free-energy difference between reactants and products."
+    ],
+    "trap": "Faster does not mean a previously unfavorable reaction has become thermodynamically favorable.",
+    "challenge": "Explain why adding an enzyme can increase product formed in ten seconds without increasing the final equilibrium product fraction.",
+    "solution": "The enzyme speeds the approach to equilibrium. At a fixed early time more product may be present, while the equilibrium balance remains unchanged.",
+    "questions": [
+      {
+        "prompt": "What does a catalyst lower?",
+        "options": [
+          "The free energy of products in every case.",
+          "The number of atoms conserved.",
+          "The equilibrium constant in every case.",
+          "The activation energy of a reaction pathway."
+        ],
+        "answer": 3,
+        "explain": "The activation energy of a reaction pathway.",
+        "hint": "Faster does not mean a previously unfavorable reaction has become thermodynamically favorable."
+      },
+      {
+        "prompt": "Why can a reaction rate plateau as substrate increases?",
+        "options": [
+          "Substrate becomes nonphysical.",
+          "All reactions stop at high substrate.",
+          "Enzyme capacity can become limiting.",
+          "Enzymes must be destroyed after each collision."
+        ],
+        "answer": 2,
+        "explain": "Enzyme capacity can become limiting.",
+        "hint": "Faster does not mean a previously unfavorable reaction has become thermodynamically favorable."
+      }
+    ],
+    "skill": "Interpret a mechanism",
+    "resource": "https://openstax.org/books/biology-2e/pages/6-introduction",
+    "lab": "enzyme-lab"
+  },
+  {
+    "id": "bio-3-2",
+    "unit": "3",
+    "sections": [
+      "3.2"
+    ],
+    "part": "Cellular Energetics",
+    "title": "Design a test of environmental effects on enzymes",
+    "time": "20–30 min",
+    "goal": "Design a test of environmental effects on enzymes. Practice: design an investigation.",
+    "idea": "Temperature and pH can change catalytic interactions and protein structure. An optimum depends on the particular enzyme and conditions. Separate changes in reaction chemistry from confounding effects on substrate, detector performance and enzyme amount. Use replication to estimate variability.",
+    "formula": "Change one factor; measure an initial rate with controls",
+    "steps": [
+      "Test equal enzyme amounts at three pH values with matched substrate concentration.",
+      "Use buffers and suitable blanks to correct background signal.",
+      "Estimate early slopes before substrate depletion changes the comparison.",
+      "A lower rate at one pH shows a condition-dependent effect, not by itself irreversible denaturation."
+    ],
+    "trap": "A rate difference alone cannot distinguish reversible changes in charge from permanent structural damage.",
+    "challenge": "How would you test whether heat damage persists after cooling?",
+    "solution": "Heat one sample, keep a matched unheated sample, then assay both at the same final temperature and substrate concentration. Persistent loss supports lasting impairment.",
+    "questions": [
+      {
+        "prompt": "Which variable should remain constant when testing pH effects?",
+        "options": [
+          "The independent variable pH.",
+          "The result being measured.",
+          "Enzyme amount and initial substrate concentration.",
+          "Only the name of the test tube."
+        ],
+        "answer": 2,
+        "explain": "Enzyme amount and initial substrate concentration.",
+        "hint": "A rate difference alone cannot distinguish reversible changes in charge from permanent structural damage."
+      },
+      {
+        "prompt": "What is a suitable dependent variable?",
+        "options": [
+          "The number of amino acids assumed without measurement.",
+          "Initial product formation per unit time.",
+          "The pH value selected by the investigator.",
+          "The label of the buffer bottle."
+        ],
+        "answer": 1,
+        "explain": "Initial product formation per unit time.",
+        "hint": "A rate difference alone cannot distinguish reversible changes in charge from permanent structural damage."
+      }
+    ],
+    "skill": "Design an investigation",
+    "resource": "https://openstax.org/books/biology-2e/pages/6-introduction",
+    "lab": "enzyme-lab"
+  },
+  {
+    "id": "bio-3-3",
+    "unit": "3",
+    "sections": [
+      "3.3"
+    ],
+    "part": "Cellular Energetics",
+    "title": "Track free energy and coupled reactions",
+    "time": "20–30 min",
+    "goal": "Track free energy and coupled reactions. Practice: use quantitative reasoning.",
+    "idea": "Cells maintain organization through energy transfers while the total entropy of system plus surroundings can increase. ATP hydrolysis can be coupled mechanistically to otherwise unfavorable processes. Breaking an ATP bond alone requires energy; the complete hydrolysis reaction can release usable free energy because of all reactant-product interactions.",
+    "formula": "Coupled ΔG values add when reactions are mechanistically linked",
+    "steps": [
+      "An unfavorable step has ΔG=+12 kJ/mol under stated conditions.",
+      "A coupled reaction contributes −25 kJ/mol.",
+      "The combined ΔG is −13 kJ/mol.",
+      "A negative combined value supports favorability, but a functioning coupling mechanism and suitable kinetics are still needed."
+    ],
+    "trap": "ATP is not energy itself, and adding ATP to a mixture does not automatically couple every reaction.",
+    "challenge": "Combine a +18 kJ/mol reaction with a −30 kJ/mol coupled reaction. Interpret the result.",
+    "solution": "The total is −12 kJ/mol under those conditions. It is thermodynamically favorable when the proposed coupling actually links the processes.",
+    "questions": [
+      {
+        "prompt": "What is the combined ΔG for +10 and −24 kJ/mol?",
+        "answer": -14,
+        "hint": "Add the signed free-energy changes.",
+        "explain": "10−24=−14 kJ/mol."
+      },
+      {
+        "prompt": "What best describes ATP’s role?",
+        "options": [
+          "Its reactions can transfer free energy through coupled cellular processes.",
+          "It creates matter from nothing.",
+          "Its bonds release energy simply by being broken in isolation.",
+          "It makes every reaction instantaneous."
+        ],
+        "answer": 0,
+        "explain": "Its reactions can transfer free energy through coupled cellular processes.",
+        "hint": "ATP is not energy itself, and adding ATP to a mixture does not automatically couple every reaction."
+      }
+    ],
+    "skill": "Use quantitative reasoning",
+    "resource": "https://openstax.org/books/biology-2e/pages/6-introduction"
+  },
+  {
+    "id": "bio-3-4",
+    "unit": "3",
+    "sections": [
+      "3.4"
+    ],
+    "part": "Cellular Energetics",
+    "title": "Follow light energy into chemical products",
+    "time": "20–30 min",
+    "goal": "Follow light energy into chemical products. Practice: track matter and energy.",
+    "idea": "Light-dependent reactions transfer energy through pigments and electron carriers, producing ATP and NADPH while water supplies replacement electrons and oxygen is released. Carbon fixation and reduction in the Calvin cycle use ATP and NADPH to build carbon compounds. Matter sources must be distinguished from energy sources.",
+    "formula": "Water supplies electrons; CO₂ supplies fixed carbon",
+    "steps": [
+      "Trace oxygen atoms from labeled water during photosynthesis.",
+      "Labeled oxygen can appear in released O₂, supporting water as its source.",
+      "Separately trace CO₂ carbon into organic compounds.",
+      "These tracers distinguish sources of matter without treating sunlight as a carbon-containing reactant."
+    ],
+    "trap": "The oxygen gas released by photosynthesis is not simply the oxygen removed from carbon dioxide.",
+    "challenge": "Predict an early effect of blocking electron flow in the light reactions.",
+    "solution": "ATP and NADPH production can decrease, limiting Calvin-cycle reactions that depend on them. Previously stored intermediates may permit short-term activity.",
+    "questions": [
+      {
+        "prompt": "What is the source of carbon incorporated into newly fixed organic molecules?",
+        "options": [
+          "Carbon dioxide.",
+          "Photons converted into carbon atoms.",
+          "Released oxygen gas.",
+          "Chlorophyll converted stoichiometrically into sugar."
+        ],
+        "answer": 0,
+        "explain": "Carbon dioxide.",
+        "hint": "The oxygen gas released by photosynthesis is not simply the oxygen removed from carbon dioxide."
+      },
+      {
+        "prompt": "What do ATP and NADPH provide to carbon reduction pathways?",
+        "options": [
+          "A replacement for all carbon atoms.",
+          "A permanent supply of oxygen gas with no electron transfer.",
+          "Only structural cellulose.",
+          "Usable energy and reducing power."
+        ],
+        "answer": 3,
+        "explain": "Usable energy and reducing power.",
+        "hint": "The oxygen gas released by photosynthesis is not simply the oxygen removed from carbon dioxide."
+      }
+    ],
+    "skill": "Track matter and energy",
+    "resource": "https://openstax.org/books/biology-2e/pages/6-introduction"
+  },
+  {
+    "id": "bio-3-5",
+    "unit": "3",
+    "sections": [
+      "3.5"
+    ],
+    "part": "Cellular Energetics",
+    "title": "Trace respiration from oxidation to ATP synthesis",
+    "time": "20–30 min",
+    "goal": "Trace respiration from oxidation to ATP synthesis. Practice: explain a perturbation.",
+    "idea": "Cells oxidize organic molecules and transfer electrons through carriers. Glycolysis can generate ATP by substrate-level phosphorylation. In aerobic respiration, electron transport helps establish a proton gradient that powers ATP synthase, with oxygen as the final electron acceptor. Fermentation regenerates NAD⁺ so glycolysis can continue.",
+    "formula": "Electron transfer → proton gradient → ATP synthesis",
+    "steps": [
+      "A mitochondrial preparation receives electron donors and oxygen.",
+      "Electron transport builds a gradient across the inner membrane.",
+      "A proton leak dissipates part of that gradient.",
+      "ATP production can fall even if electron flow continues; coupling efficiency and electron flow are different measurements."
+    ],
+    "trap": "Most ATP in aerobic respiration is not made directly by glycolysis, and fermentation does not itself add a large extra ATP yield.",
+    "challenge": "Why can oxygen removal reduce ATP production even when glucose remains abundant?",
+    "solution": "Electron transport cannot transfer electrons normally to its final acceptor, impairing carrier oxidation and gradient maintenance. Glycolysis may continue if NAD⁺ is regenerated by another pathway.",
+    "questions": [
+      {
+        "prompt": "What directly powers ATP synthase in oxidative phosphorylation?",
+        "options": [
+          "Oxygen binding directly to ADP.",
+          "DNA replication at a ribosome.",
+          "The diffusion of glucose through a chromosome.",
+          "A favorable proton electrochemical gradient."
+        ],
+        "answer": 3,
+        "explain": "A favorable proton electrochemical gradient.",
+        "hint": "Most ATP in aerobic respiration is not made directly by glycolysis, and fermentation does not itself add a large extra ATP yield."
+      },
+      {
+        "prompt": "What is an important role of fermentation?",
+        "options": [
+          "Producing oxygen from carbon dioxide.",
+          "Creating glucose without any matter inputs.",
+          "Regenerating NAD⁺ to support continued glycolysis.",
+          "Replacing every mitochondrial membrane with ethanol."
+        ],
+        "answer": 2,
+        "explain": "Regenerating NAD⁺ to support continued glycolysis.",
+        "hint": "Most ATP in aerobic respiration is not made directly by glycolysis, and fermentation does not itself add a large extra ATP yield."
+      }
+    ],
+    "skill": "Explain a perturbation",
+    "resource": "https://openstax.org/books/biology-2e/pages/6-introduction"
+  },
+  {
+    "id": "bio-4-1",
+    "unit": "4",
+    "sections": [
+      "4.1"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Distinguish local and distant cell signals",
+    "time": "20–30 min",
+    "goal": "Distinguish local and distant cell signals. Practice: explain specificity.",
+    "idea": "Cells communicate through direct contact and secreted signals acting over different distances. A target responds when it has suitable reception and response machinery. Signal concentration alone does not determine the response of every neighboring cell. Different cells can interpret the same signal differently.",
+    "formula": "Signal availability + receptor + cellular machinery → response",
+    "steps": [
+      "A hormone is present near two cell types.",
+      "Only one has a functional receptor for it.",
+      "That cell responds while the other does not under the tested conditions.",
+      "This supports receptor-dependent specificity; it does not imply the second cell cannot respond to any signal."
+    ],
+    "trap": "Being exposed to a signal does not guarantee a response.",
+    "challenge": "Explain how one hormone can produce different responses in different target tissues.",
+    "solution": "Receptors, relay components and regulated genes can differ among tissues, producing different downstream responses.",
+    "questions": [
+      {
+        "prompt": "Why might a nearby cell fail to respond to a ligand?",
+        "options": [
+          "Only cell size determines signal specificity.",
+          "No molecules can cross extracellular space.",
+          "It lacks a suitable receptor or downstream response machinery.",
+          "All nearby cells always respond identically."
+        ],
+        "answer": 2,
+        "explain": "It lacks a suitable receptor or downstream response machinery.",
+        "hint": "Being exposed to a signal does not guarantee a response."
+      },
+      {
+        "prompt": "Which is an example of direct-contact signaling?",
+        "options": [
+          "A mutation occurring during DNA replication.",
+          "Interaction of membrane-associated signaling components on adjacent cells.",
+          "An endocrine hormone traveling long distances.",
+          "A photon entering a chloroplast."
+        ],
+        "answer": 1,
+        "explain": "Interaction of membrane-associated signaling components on adjacent cells.",
+        "hint": "Being exposed to a signal does not guarantee a response."
+      }
+    ],
+    "skill": "Explain specificity",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-4-2",
+    "unit": "4",
+    "sections": [
+      "4.2"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Separate reception, transduction and response",
+    "time": "20–30 min",
+    "goal": "Separate reception, transduction and response. Practice: read a pathway model.",
+    "idea": "A signal is received by a receptor, relayed through molecular changes and translated into a cellular response. Some receptors are membrane-associated, while suitable small molecules can act through intracellular receptors. Ligand binding can change receptor conformation rather than carrying the ligand through every downstream step.",
+    "formula": "Reception → intracellular relay → response",
+    "steps": [
+      "A membrane receptor binds a ligand outside the cell.",
+      "The receptor’s intracellular state changes.",
+      "A relay activates a transcription factor.",
+      "Altered gene expression is the response; the ligand did not need to enter the nucleus itself."
+    ],
+    "trap": "The receptor, relay and response are different stages, even when a diagram compresses them into arrows.",
+    "challenge": "A receptor binds normally but cannot activate its relay. Predict the response.",
+    "solution": "Reception can occur while the downstream response is reduced or absent. This helps localize the defect after binding.",
+    "questions": [
+      {
+        "prompt": "Which event is reception?",
+        "options": [
+          "The destruction of every signaling molecule.",
+          "A suitable ligand binds and changes a receptor’s state.",
+          "A final increase in enzyme activity only.",
+          "DNA segregating in meiosis."
+        ],
+        "answer": 1,
+        "explain": "A suitable ligand binds and changes a receptor’s state.",
+        "hint": "The receptor, relay and response are different stages, even when a diagram compresses them into arrows."
+      },
+      {
+        "prompt": "What can explain response without ligand entry into the cytosol?",
+        "options": [
+          "A membrane receptor relays information across the membrane.",
+          "The ligand must become a chromosome.",
+          "The lipid bilayer is absent.",
+          "Every receptor lies in the nucleus."
+        ],
+        "answer": 0,
+        "explain": "A membrane receptor relays information across the membrane.",
+        "hint": "The receptor, relay and response are different stages, even when a diagram compresses them into arrows."
+      }
+    ],
+    "skill": "Read a pathway model",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-4-3",
+    "unit": "4",
+    "sections": [
+      "4.3"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Predict the effect of changing a signaling pathway",
+    "time": "20–30 min",
+    "goal": "Predict the effect of changing a signaling pathway. Practice: analyze a perturbation.",
+    "idea": "Signaling pathways can use phosphorylation, second messengers and amplification. A small upstream event can affect many downstream molecules. Predict mutations by distinguishing activating and inhibitory links, and do not infer pathway order from correlation alone. Perturbation experiments can reveal dependencies.",
+    "formula": "Track the sign and order of each interaction",
+    "steps": [
+      "A pathway is receptor → kinase A → kinase B → response.",
+      "Inhibiting A prevents B activation in this simplified model.",
+      "A permanently active B can restore the response despite A inhibition if no other required A-dependent step exists.",
+      "This rescue supports B acting downstream, subject to the model’s assumptions."
+    ],
+    "trap": "Phosphorylation does not activate every protein; its effect depends on the target.",
+    "challenge": "What does amplification mean in a signaling cascade?",
+    "solution": "One active component influences many downstream targets, potentially multiplying the number of activated molecules without creating energy or matter.",
+    "questions": [
+      {
+        "prompt": "A required downstream kinase is inactive. What may happen?",
+        "options": [
+          "The response can fail even when receptor binding is normal.",
+          "Every upstream molecule must disappear.",
+          "The ligand necessarily enters DNA.",
+          "The cell becomes genetically haploid."
+        ],
+        "answer": 0,
+        "explain": "The response can fail even when receptor binding is normal.",
+        "hint": "Phosphorylation does not activate every protein; its effect depends on the target."
+      },
+      {
+        "prompt": "What does a phosphatase do?",
+        "options": [
+          "Always activates every target protein.",
+          "Copies DNA into RNA.",
+          "Creates a phospholipid bilayer from chromosomes.",
+          "Removes a phosphate group from suitable targets."
+        ],
+        "answer": 3,
+        "explain": "Removes a phosphate group from suitable targets.",
+        "hint": "Phosphorylation does not activate every protein; its effect depends on the target."
+      }
+    ],
+    "skill": "Analyze a perturbation",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-4-4",
+    "unit": "4",
+    "sections": [
+      "4.4"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Distinguish stabilizing and amplifying feedback",
+    "time": "20–30 min",
+    "goal": "Distinguish stabilizing and amplifying feedback. Practice: explain regulation.",
+    "idea": "Negative feedback counteracts a change in a regulated variable; positive feedback reinforces a process until another event stops it. Positive and negative describe relationships, not whether an outcome is beneficial. Identify the variable, sensor and response rather than classifying by the direction of one arrow.",
+    "formula": "Negative feedback opposes deviation; positive feedback reinforces change",
+    "steps": [
+      "A rise in a regulated variable activates a response that lowers it.",
+      "Identify this as negative feedback around that variable.",
+      "If the response instead further raises the variable, the loop is positive.",
+      "A real system can include several loops; define the loop being analyzed."
+    ],
+    "trap": "A decreasing variable is not automatically negative feedback; the response must oppose the original deviation.",
+    "challenge": "Explain why a positive-feedback loop generally needs a stopping condition.",
+    "solution": "Its self-reinforcement does not by itself restore a set point, so termination can require resource limits, an external event or another regulatory mechanism.",
+    "questions": [
+      {
+        "prompt": "Which is a negative-feedback relationship?",
+        "options": [
+          "A rise always causes a further rise.",
+          "Any harmful outcome.",
+          "Any chemical reaction with negative ΔG.",
+          "A deviation triggers a response that reduces that deviation."
+        ],
+        "answer": 3,
+        "explain": "A deviation triggers a response that reduces that deviation.",
+        "hint": "A decreasing variable is not automatically negative feedback; the response must oppose the original deviation."
+      },
+      {
+        "prompt": "What is required to classify feedback correctly?",
+        "options": [
+          "Count chromosomes in the diagram.",
+          "Assume all regulation is positive feedback.",
+          "Identify how the response affects the originally changing variable.",
+          "Look only at whether a graph slopes downward."
+        ],
+        "answer": 2,
+        "explain": "Identify how the response affects the originally changing variable.",
+        "hint": "A decreasing variable is not automatically negative feedback; the response must oppose the original deviation."
+      }
+    ],
+    "skill": "Explain regulation",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-4-5",
+    "unit": "4",
+    "sections": [
+      "4.5"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Track DNA and chromosomes through the cell cycle",
+    "time": "20–30 min",
+    "goal": "Track DNA and chromosomes through the cell cycle. Practice: interpret counts and cell diagrams.",
+    "idea": "DNA replication occurs in S phase, producing sister chromatids. Mitosis separates replicated chromosomes, and cytokinesis partitions the cell. Chromosome number is commonly counted by centromeres: replication doubles DNA amount without immediately doubling the chromosome count. Cell-cycle stages can be estimated from population snapshots under suitable assumptions.",
+    "formula": "G₁ → S → G₂ → mitosis → cytokinesis",
+    "steps": [
+      "A diploid cell has four chromosomes before replication.",
+      "After S phase it still has four replicated chromosomes, now containing eight chromatids.",
+      "Sister chromatids separate during mitosis.",
+      "Each typical daughter nucleus receives four chromosomes, barring segregation errors."
+    ],
+    "trap": "Chromosome number, chromatid number and DNA amount are not interchangeable.",
+    "challenge": "In a snapshot, 30 of 150 comparable cycling cells are in mitosis. Estimate the mitotic fraction and state a limitation.",
+    "solution": "The fraction is 0.20 or 20%. Interpreting it as time fraction assumes a representative steady cycling population and comparable detectability.",
+    "questions": [
+      {
+        "prompt": "Of 200 cells, 40 are observed in mitosis. What percentage is mitotic?",
+        "answer": 20,
+        "hint": "Divide 40 by 200 and multiply by 100.",
+        "explain": "40/200×100=20%."
+      },
+      {
+        "prompt": "When does DNA replication normally occur?",
+        "options": [
+          "Only during G₁ before S phase begins.",
+          "During S phase.",
+          "Only during cytokinesis.",
+          "After sister chromatids enter separate daughter cells."
+        ],
+        "answer": 1,
+        "explain": "During S phase.",
+        "hint": "Chromosome number, chromatid number and DNA amount are not interchangeable."
+      }
+    ],
+    "skill": "Interpret counts and cell diagrams",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-4-6",
+    "unit": "4",
+    "sections": [
+      "4.6"
+    ],
+    "part": "Cell Communication and Cell Cycle",
+    "title": "Explain checkpoints and uncontrolled proliferation",
+    "time": "20–30 min",
+    "goal": "Explain checkpoints and uncontrolled proliferation. Practice: use evidence to support a mechanism.",
+    "idea": "Cell-cycle transitions are regulated by interacting proteins and signals. Checkpoints can delay progression when conditions such as DNA integrity or chromosome attachment are unsuitable. Mutations affecting growth signals, repair or checkpoint control can contribute to cancer, but uncontrolled proliferation is not explained by one universal mutation.",
+    "formula": "Regulatory failures can uncouple division from normal controls",
+    "steps": [
+      "A cell accumulates DNA damage before division.",
+      "In one genotype, a checkpoint delays progression.",
+      "In another, a defective regulator allows progression despite damage.",
+      "A higher mutation burden in descendants is consistent with impaired control, but experiments must distinguish repair failure from other causes."
+    ],
+    "trap": "Cancer is not simply any cell dividing; normal tissues also undergo regulated division.",
+    "challenge": "Predict why loss of a growth-inhibitory regulator can increase proliferation.",
+    "solution": "The normal inhibitory constraint can be reduced, allowing more cells to pass a transition when they otherwise would not.",
+    "questions": [
+      {
+        "prompt": "What is a checkpoint’s potential function?",
+        "options": [
+          "Force every cell to divide continuously.",
+          "Delay progression until a required condition is satisfied.",
+          "Guarantee every mutation is harmless.",
+          "Replicate DNA during every phase."
+        ],
+        "answer": 1,
+        "explain": "Delay progression until a required condition is satisfied.",
+        "hint": "Cancer is not simply any cell dividing; normal tissues also undergo regulated division."
+      },
+      {
+        "prompt": "Which comparison tests a regulator’s role most directly?",
+        "options": [
+          "Matched cells differing in regulator function, measured under controlled conditions.",
+          "Different species in unrelated environments without controls.",
+          "Only a diagram showing an arrow.",
+          "One cell photographed once without a comparison."
+        ],
+        "answer": 0,
+        "explain": "Matched cells differing in regulator function, measured under controlled conditions.",
+        "hint": "Cancer is not simply any cell dividing; normal tissues also undergo regulated division."
+      }
+    ],
+    "skill": "Use evidence to support a mechanism",
+    "resource": "https://openstax.org/books/biology-2e/pages/9-introduction"
+  },
+  {
+    "id": "bio-5-1",
+    "unit": "5",
+    "sections": [
+      "5.1"
+    ],
+    "part": "Heredity",
+    "title": "Explain how meiosis reduces chromosome sets",
+    "time": "20–30 min",
+    "goal": "Explain how meiosis reduces chromosome sets. Practice: interpret chromosome models.",
+    "idea": "One round of DNA replication is followed by two meiotic divisions. Homologous chromosomes separate in meiosis I, and sister chromatids usually separate in meiosis II. The result is a reduction in chromosome-set number, providing a basis for sexual reproduction without repeated doubling of ploidy each generation.",
+    "formula": "Replication once; division twice; chromosome sets reduced",
+    "steps": [
+      "Begin with a diploid cell containing six chromosomes in three homologous pairs.",
+      "After replication it has six duplicated chromosomes.",
+      "Meiosis I separates homologs so each product has three duplicated chromosomes.",
+      "Meiosis II separates chromatids, yielding haploid products with three chromosomes each in the usual model."
+    ],
+    "trap": "Homologous chromosomes are not the same as sister chromatids.",
+    "challenge": "Predict the effect of homolog nondisjunction in meiosis I on chromosome numbers in meiotic products.",
+    "solution": "Products can carry an extra chromosome or lack that chromosome, because the homologs failed to distribute to opposite cells.",
+    "questions": [
+      {
+        "prompt": "A diploid organism has 2n=10. How many chromosomes are normally in a gamete?",
+        "answer": 5,
+        "hint": "A normal gamete has one set rather than two.",
+        "explain": "n=10/2=5."
+      },
+      {
+        "prompt": "What normally separates in meiosis I?",
+        "options": [
+          "Only nucleotide bases.",
+          "All sister chromatids in the same way as meiosis II.",
+          "Ribosomal subunits.",
+          "Homologous chromosomes."
+        ],
+        "answer": 3,
+        "explain": "Homologous chromosomes.",
+        "hint": "Homologous chromosomes are not the same as sister chromatids."
+      }
+    ],
+    "skill": "Interpret chromosome models",
+    "resource": "https://openstax.org/books/biology-2e/pages/12-introduction"
+  },
+  {
+    "id": "bio-5-2",
+    "unit": "5",
+    "sections": [
+      "5.2"
+    ],
+    "part": "Heredity",
+    "title": "Identify sources of variation in sexual reproduction",
+    "time": "20–30 min",
+    "goal": "Identify sources of variation in sexual reproduction. Practice: use a probability model.",
+    "idea": "Crossing over between nonsister chromatids and independent assortment generate new combinations of existing alleles. Random fertilization adds more combinations. Mutation can introduce new alleles; reshuffling alone does not create every possible new allele sequence. Genes on the same chromosome may not assort independently.",
+    "formula": "Crossing over + assortment + fertilization reshuffle alleles",
+    "steps": [
+      "Consider a species with three homologous chromosome pairs.",
+      "Ignoring crossing over, each pair offers two parental-origin choices for a gamete.",
+      "Independent orientation gives 2³=8 possible combinations under this simplified count.",
+      "Crossing over can create additional combinations within chromosomes, so eight is not a complete count of all possible gamete genotypes."
+    ],
+    "trap": "Independent assortment is not a rule that every pair of genes is unlinked.",
+    "challenge": "Explain why siblings can differ genetically despite having the same parents.",
+    "solution": "Parental meiosis generates varied gametes through assortment and recombination, and fertilization combines different gametes.",
+    "questions": [
+      {
+        "prompt": "Ignoring crossing over, how many parental-origin chromosome combinations are possible for n=4?",
+        "answer": 16,
+        "hint": "Use 2ⁿ under independent orientation.",
+        "explain": "2⁴=16."
+      },
+      {
+        "prompt": "Which process directly recombines homologous DNA segments?",
+        "options": [
+          "Translation at a ribosome.",
+          "Simple diffusion through a bilayer.",
+          "Crossing over between nonsister chromatids.",
+          "Cytokinesis alone."
+        ],
+        "answer": 2,
+        "explain": "Crossing over between nonsister chromatids.",
+        "hint": "Independent assortment is not a rule that every pair of genes is unlinked."
+      }
+    ],
+    "skill": "Use a probability model",
+    "resource": "https://openstax.org/books/biology-2e/pages/12-introduction"
+  },
+  {
+    "id": "bio-5-3",
+    "unit": "5",
+    "sections": [
+      "5.3"
+    ],
+    "part": "Heredity",
+    "title": "Calculate inheritance probabilities from gametes",
+    "time": "20–30 min",
+    "goal": "Calculate inheritance probabilities from gametes. Practice: calculate inheritance probabilities.",
+    "idea": "For a simple diploid locus, each parent contributes one allele per offspring. Under specified segregation and fertilization assumptions, gamete probabilities combine to give genotype probabilities. Dominance describes phenotype in a heterozygote, not allele frequency, fitness or transmission probability.",
+    "formula": "Aa × Aa → 1/4 AA, 1/2 Aa, 1/4 aa",
+    "steps": [
+      "List A and a gametes from each Aa parent with probability 1/2 each.",
+      "Combine independent gamete draws to obtain AA,Aa,aA,aa.",
+      "Merge Aa and aA as the same genotype, giving 1:2:1.",
+      "With complete dominance, the phenotype ratio is 3:1, but small samples need not match it exactly."
+    ],
+    "trap": "A recessive allele is not necessarily rare, harmful or less likely to be transmitted by a heterozygote.",
+    "challenge": "For Aa × aa, predict genotype and complete-dominance phenotype probabilities.",
+    "solution": "Half the offspring are expected to be Aa and half aa, so the two phenotype probabilities are each 1/2.",
+    "questions": [
+      {
+        "prompt": "For Aa × Aa, what is the probability of genotype aa? Enter a decimal.",
+        "answer": 0.25,
+        "hint": "Both parents must contribute a, each with probability 1/2.",
+        "explain": "(1/2)(1/2)=1/4=0.25."
+      },
+      {
+        "prompt": "Under complete dominance, what does a dominant phenotype reveal?",
+        "options": [
+          "The organism transmits only A.",
+          "The genotype may be AA or Aa.",
+          "The genotype must be AA.",
+          "The recessive allele is absent from the population."
+        ],
+        "answer": 1,
+        "explain": "The genotype may be AA or Aa.",
+        "hint": "A recessive allele is not necessarily rare, harmful or less likely to be transmitted by a heterozygote."
+      }
+    ],
+    "skill": "Calculate inheritance probabilities",
+    "resource": "https://openstax.org/books/biology-2e/pages/12-introduction",
+    "lab": "punnett-lab"
+  },
+  {
+    "id": "bio-5-4",
+    "unit": "5",
+    "sections": [
+      "5.4"
+    ],
+    "part": "Heredity",
+    "title": "Recognize inheritance beyond a simple dominant-recessive model",
+    "time": "20–30 min",
+    "goal": "Recognize inheritance beyond a simple dominant-recessive model. Practice: compare inheritance models.",
+    "idea": "Inheritance can involve incomplete dominance, codominance, sex linkage, linked loci, multiple alleles or interactions among genes. Distinguish the genotype model from the phenotype mapping. A result that differs from 3:1 is evidence to evaluate alternative models, not automatic proof that segregation has failed.",
+    "formula": "Genotype probabilities and phenotype rules are separate",
+    "steps": [
+      "In a model flower, RR is red, Rr is pink and rr is white.",
+      "Cross two Rr plants to obtain genotype probabilities 1/4,1/2,1/4.",
+      "Because heterozygotes have a distinct phenotype, phenotypes also follow 1:2:1.",
+      "This is incomplete dominance under the model, without changing the segregation probabilities."
+    ],
+    "trap": "A 1:2:1 phenotype ratio can coexist with normal allele segregation.",
+    "challenge": "Why can linked genes produce fewer recombinant offspring than an independent-assortment model predicts?",
+    "solution": "Loci on the same chromosome can be inherited together unless recombination separates them. Recombination frequency depends on genetic distance and other factors.",
+    "questions": [
+      {
+        "prompt": "Which example is codominance?",
+        "options": [
+          "Only one sex can ever inherit the locus.",
+          "Both allele-associated products are detectably expressed in a heterozygote.",
+          "Every heterozygote has an intermediate blend by definition.",
+          "One allele disappears from the genome."
+        ],
+        "answer": 1,
+        "explain": "Both allele-associated products are detectably expressed in a heterozygote.",
+        "hint": "A 1:2:1 phenotype ratio can coexist with normal allele segregation."
+      },
+      {
+        "prompt": "Under incomplete dominance, what fraction of Rr × Rr offspring is expected to be heterozygous?",
+        "answer": 0.5,
+        "hint": "Combine the two unlike-allele gamete pairings.",
+        "explain": "Aa-style segregation gives two heterozygote pairings out of four: 1/2."
+      }
+    ],
+    "skill": "Compare inheritance models",
+    "resource": "https://openstax.org/books/biology-2e/pages/12-introduction",
+    "lab": "punnett-lab"
+  },
+  {
+    "id": "bio-5-5",
+    "unit": "5",
+    "sections": [
+      "5.5"
+    ],
+    "part": "Heredity",
+    "title": "Separate environmental effects from genotype differences",
+    "time": "20–30 min",
+    "goal": "Separate environmental effects from genotype differences. Practice: design a factorial comparison.",
+    "idea": "Phenotype can depend on genotype, environment and their interaction. A common-environment comparison can reduce environmental variation; a reciprocal or factorial design can reveal different responses among genotypes. An environmentally induced change in an individual is not automatically a heritable allele change.",
+    "formula": "Phenotype depends on genotype and environment",
+    "steps": [
+      "Grow two genotypes under both low and high light with replication.",
+      "Compare light effects within each genotype.",
+      "Compare genotype effects within each light condition.",
+      "If responses differ between genotypes, the pattern supports genotype-by-environment interaction under the tested conditions."
+    ],
+    "trap": "Phenotypic similarity does not prove identical genotypes, and plasticity does not itself establish evolutionary change.",
+    "challenge": "Why is a common garden useful when comparing plants from two locations?",
+    "solution": "Growing them under shared conditions helps separate persistent genetic or inherited differences from effects of their original environments, while not eliminating every possible confound.",
+    "questions": [
+      {
+        "prompt": "What design best tests genotype-by-environment interaction?",
+        "options": [
+          "Test each genotype in each environment with replication.",
+          "Use one genotype in one environment and another elsewhere only.",
+          "Measure only the largest plant.",
+          "Assume every observed difference is genetic."
+        ],
+        "answer": 0,
+        "explain": "Test each genotype in each environment with replication.",
+        "hint": "Phenotypic similarity does not prove identical genotypes, and plasticity does not itself establish evolutionary change."
+      },
+      {
+        "prompt": "A plant grows taller in shade without an allele change. This illustrates…",
+        "options": [
+          "Proof of speciation in that individual.",
+          "A required change in chromosome number.",
+          "The disappearance of inheritance.",
+          "Phenotypic plasticity."
+        ],
+        "answer": 3,
+        "explain": "Phenotypic plasticity.",
+        "hint": "Phenotypic similarity does not prove identical genotypes, and plasticity does not itself establish evolutionary change."
+      }
+    ],
+    "skill": "Design a factorial comparison",
+    "resource": "https://openstax.org/books/biology-2e/pages/12-introduction"
+  },
+  {
+    "id": "bio-6-1",
+    "unit": "6",
+    "sections": [
+      "6.1"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Use DNA and RNA structure to predict molecular interactions",
+    "time": "20–30 min",
+    "goal": "Use DNA and RNA structure to predict molecular interactions. Practice: interpret a sequence.",
+    "idea": "Complementary base pairing and backbone directionality constrain information transfer. DNA is usually double stranded, while RNA can fold into diverse functional structures. A sequence has to be identified as coding, template or RNA before converting it. Some genetic information is carried by RNA in viruses.",
+    "formula": "Complementarity requires both base identity and strand direction",
+    "steps": [
+      "A DNA coding strand is 5′–ATGCCA–3′.",
+      "Its template partner is 3′–TACGGT–5′.",
+      "An RNA transcript matching this coding region is 5′–AUGCCA–3′.",
+      "The transcript matches the coding strand except U replaces T; polymerase actually reads the template."
+    ],
+    "trap": "Transcribing a coding strand by simply complementing it gives the wrong RNA sequence for that orientation.",
+    "challenge": "Explain why a DNA sequence without direction labels can be ambiguous.",
+    "solution": "Complementary antiparallel orientations lead to different written sequences. Direction and strand identity are needed to specify a transcript unambiguously.",
+    "questions": [
+      {
+        "prompt": "Which RNA corresponds to coding DNA 5′–ATG–3′?",
+        "options": [
+          "5′–UAC–3′.",
+          "3′–AUG–5′ as the same directional transcript.",
+          "5′–ATG–3′ with thymine unchanged.",
+          "5′–AUG–3′."
+        ],
+        "answer": 3,
+        "explain": "5′–AUG–3′.",
+        "hint": "Transcribing a coding strand by simply complementing it gives the wrong RNA sequence for that orientation."
+      },
+      {
+        "prompt": "Which molecule can fold into a functional catalyst in some systems?",
+        "options": [
+          "Only cellulose.",
+          "Oxygen gas.",
+          "RNA.",
+          "Only a phospholipid tail."
+        ],
+        "answer": 2,
+        "explain": "RNA.",
+        "hint": "Transcribing a coding strand by simply complementing it gives the wrong RNA sequence for that orientation."
+      }
+    ],
+    "skill": "Interpret a sequence",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-2",
+    "unit": "6",
+    "sections": [
+      "6.2"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Explain replication with strand direction and a template",
+    "time": "20–30 min",
+    "goal": "Explain replication with strand direction and a template. Practice: trace a molecular model.",
+    "idea": "DNA replication is semiconservative: each daughter duplex contains an old strand and a newly synthesized strand. Polymerases extend from a suitable 3′ end and synthesize new DNA 5′ to 3′. Leading and lagging synthesis accommodate antiparallel templates at replication forks. Proofreading reduces but does not eliminate errors.",
+    "formula": "Each new duplex: one parental strand + one new strand",
+    "steps": [
+      "Start with one double-stranded DNA molecule and label both old strands.",
+      "After one replication, each of two daughter duplexes contains one old labeled strand.",
+      "After another round without labeling new strands, two of four duplexes still contain an original labeled strand.",
+      "Track physical strands rather than assuming every nucleotide in every daughter is old."
+    ],
+    "trap": "The lagging strand is still synthesized 5′ to 3′, in discontinuous pieces.",
+    "challenge": "Why are primers needed in ordinary DNA replication?",
+    "solution": "Replicative DNA polymerases require an existing suitable 3′ end to extend. Priming supplies a starting point; primer handling differs across systems.",
+    "questions": [
+      {
+        "prompt": "One DNA duplex undergoes two complete replication rounds. How many duplexes result?",
+        "answer": 4,
+        "hint": "The number doubles each completed round.",
+        "explain": "1×2²=4 duplexes."
+      },
+      {
+        "prompt": "What does semiconservative mean?",
+        "options": [
+          "Only half of each gene is copied.",
+          "Each daughter duplex contains one parental strand.",
+          "Each daughter contains only parental DNA.",
+          "All old strands are destroyed before synthesis."
+        ],
+        "answer": 1,
+        "explain": "Each daughter duplex contains one parental strand.",
+        "hint": "The lagging strand is still synthesized 5′ to 3′, in discontinuous pieces."
+      }
+    ],
+    "skill": "Trace a molecular model",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-3",
+    "unit": "6",
+    "sections": [
+      "6.3"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Distinguish transcription from RNA processing",
+    "time": "20–30 min",
+    "goal": "Distinguish transcription from RNA processing. Practice: explain information processing.",
+    "idea": "RNA polymerase synthesizes an RNA strand from a DNA template. In many eukaryotic protein-coding genes, the initial transcript is processed by capping, splicing and polyadenylation. Alternative splicing can generate different mature transcripts from the same gene. Not every RNA is translated into protein.",
+    "formula": "DNA template → RNA; processing can alter the mature transcript",
+    "steps": [
+      "A simplified pre-mRNA contains exon A, intron X and exon B.",
+      "Splicing removes the intron and joins the exons.",
+      "Alternative exon inclusion can yield different mature RNA forms.",
+      "A change in splicing can alter the protein product without changing the DNA sequence during that processing event."
+    ],
+    "trap": "Splicing removes RNA segments; it does not normally delete those introns from the organism’s genomic DNA.",
+    "challenge": "Predict an effect of a mutation that disrupts a splice site.",
+    "solution": "It can cause altered exon joining or intron retention, potentially changing the mature RNA and encoded protein. The actual outcome depends on the transcript and context.",
+    "questions": [
+      {
+        "prompt": "Which enzyme synthesizes RNA from a DNA template?",
+        "options": [
+          "A phospholipid carrier.",
+          "RNA polymerase.",
+          "A ribosome.",
+          "ATP synthase."
+        ],
+        "answer": 1,
+        "explain": "RNA polymerase.",
+        "hint": "Splicing removes RNA segments; it does not normally delete those introns from the organism’s genomic DNA."
+      },
+      {
+        "prompt": "What can alternative splicing change?",
+        "options": [
+          "The combination of exons in mature RNA.",
+          "The direction in which all DNA polymerases synthesize.",
+          "The number of homologs inherited at fertilization.",
+          "Every amino acid’s chemical identity."
+        ],
+        "answer": 0,
+        "explain": "The combination of exons in mature RNA.",
+        "hint": "Splicing removes RNA segments; it does not normally delete those introns from the organism’s genomic DNA."
+      }
+    ],
+    "skill": "Explain information processing",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-4",
+    "unit": "6",
+    "sections": [
+      "6.4"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Translate codons into a polypeptide",
+    "time": "20–30 min",
+    "goal": "Translate codons into a polypeptide. Practice: read a sequence model.",
+    "idea": "Ribosomes read mRNA codons while tRNAs deliver amino acids according to anticodon-codon interactions and charging specificity. The reading frame determines how bases are grouped. Start and stop signals delimit translation in a given context; a stop codon does not encode an ordinary amino acid.",
+    "formula": "mRNA is read 5′ to 3′ in a defined reading frame",
+    "steps": [
+      "Use a simplified coding segment 5′–AUG GCU UAA–3′.",
+      "AUG specifies methionine in this initiation example; GCU specifies alanine.",
+      "UAA is a stop signal, so this segment produces a two-amino-acid peptide.",
+      "Reading the same bases from a shifted starting position would produce different codon groups."
+    ],
+    "trap": "tRNAs do not normally carry a stop amino acid; termination uses release factors.",
+    "challenge": "A coding region has four sense codons followed by a stop codon. How many amino acids does it specify in this simplified model?",
+    "solution": "Four amino acids; the stop codon signals termination rather than adding a fifth amino acid.",
+    "questions": [
+      {
+        "prompt": "A simplified mRNA has 12 sense codons followed by one stop codon. How many amino acids are encoded?",
+        "answer": 12,
+        "hint": "Count sense codons, excluding the stop.",
+        "explain": "Each sense codon specifies one amino acid in the stated model."
+      },
+      {
+        "prompt": "What primarily sets codon grouping?",
+        "options": [
+          "The total number of phospholipids in the cell.",
+          "The order in which an investigator writes amino acids backward.",
+          "The location of the Golgi membrane.",
+          "The translation reading frame established at initiation."
+        ],
+        "answer": 3,
+        "explain": "The translation reading frame established at initiation.",
+        "hint": "tRNAs do not normally carry a stop amino acid; termination uses release factors."
+      }
+    ],
+    "skill": "Read a sequence model",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-5",
+    "unit": "6",
+    "sections": [
+      "6.5"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Explain regulation at multiple levels",
+    "time": "20–30 min",
+    "goal": "Explain regulation at multiple levels. Practice: predict regulatory effects.",
+    "idea": "Gene expression can be controlled through chromatin state, transcription factors, RNA processing and stability, translation or protein turnover. A bacterial operon illustrates coordinated regulation, but it is not a universal model for every eukaryotic gene. Regulatory predictions require knowing whether a component activates or represses a target.",
+    "formula": "The same gene can be expressed at different levels",
+    "steps": [
+      "A repressor binds near a promoter and reduces transcription in a model system.",
+      "A ligand prevents that repressor from binding.",
+      "Transcription can increase if other required components are present.",
+      "The DNA coding sequence has not changed; the regulatory state has."
+    ],
+    "trap": "Removing repression does not guarantee maximal expression if an activator or required resource is still missing.",
+    "challenge": "Predict an effect of shortening an mRNA’s lifetime while leaving its transcription rate unchanged.",
+    "solution": "Steady-state mRNA abundance can decrease, which may reduce protein production depending on translation and protein stability.",
+    "questions": [
+      {
+        "prompt": "Which can change expression without changing the coding sequence?",
+        "options": [
+          "Only substituting every coding nucleotide.",
+          "Only changing chromosome number.",
+          "Deleting all ribosomes from the species.",
+          "A change in regulatory-protein binding."
+        ],
+        "answer": 3,
+        "explain": "A change in regulatory-protein binding.",
+        "hint": "Removing repression does not guarantee maximal expression if an activator or required resource is still missing."
+      },
+      {
+        "prompt": "What is a direct effect of a transcriptional repressor in the stated model?",
+        "options": [
+          "Conversion of RNA into a lipid.",
+          "Separation of homologous chromosomes.",
+          "Reduced transcription when it occupies the relevant regulatory site.",
+          "Always increased translation of every mRNA."
+        ],
+        "answer": 2,
+        "explain": "Reduced transcription when it occupies the relevant regulatory site.",
+        "hint": "Removing repression does not guarantee maximal expression if an activator or required resource is still missing."
+      }
+    ],
+    "skill": "Predict regulatory effects",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-6",
+    "unit": "6",
+    "sections": [
+      "6.6"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Connect cell specialization to differential expression",
+    "time": "20–30 min",
+    "goal": "Connect cell specialization to differential expression. Practice: connect information to phenotype.",
+    "idea": "Many differentiated cells in an organism retain broadly the same genome yet express different subsets of genes. Regulatory networks and signals establish different proteins and cellular structures. A specialized phenotype does not generally require deleting every gene unused in that cell, although exceptions and genome changes exist in particular cell types.",
+    "formula": "Shared genetic information + different expression programs → specialization",
+    "steps": [
+      "Compare a muscle cell and a secretory cell from the same organism.",
+      "Both may retain the gene for a particular contractile protein.",
+      "Their transcript and protein abundances can differ.",
+      "Differences in expression and cell organization explain many functional differences without invoking entirely unrelated genomes."
+    ],
+    "trap": "Having a gene does not mean every cell expresses it at the same level.",
+    "challenge": "Why can a transcription-factor mutation affect several cell types or many downstream genes?",
+    "solution": "A factor can regulate multiple targets and participate in developmental networks, so changing its activity can have broad downstream effects.",
+    "questions": [
+      {
+        "prompt": "What commonly explains differences between differentiated nucleated cell types?",
+        "options": [
+          "Only one cell type has any DNA.",
+          "All differences require changes in the genetic code.",
+          "Different gene-expression patterns and cellular organization.",
+          "Each type necessarily has a completely unrelated genome."
+        ],
+        "answer": 2,
+        "explain": "Different gene-expression patterns and cellular organization.",
+        "hint": "Having a gene does not mean every cell expresses it at the same level."
+      },
+      {
+        "prompt": "Which measurement directly tests differential transcription most closely?",
+        "options": [
+          "Assuming every detectable protein is equally transcribed now.",
+          "Comparing relevant RNA abundances under controlled conditions.",
+          "Counting only the organism’s limbs.",
+          "Measuring the color of an empty tube."
+        ],
+        "answer": 1,
+        "explain": "Comparing relevant RNA abundances under controlled conditions.",
+        "hint": "Having a gene does not mean every cell expresses it at the same level."
+      }
+    ],
+    "skill": "Connect information to phenotype",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-7",
+    "unit": "6",
+    "sections": [
+      "6.7"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Predict mutation effects without assuming a fixed outcome",
+    "time": "20–30 min",
+    "goal": "Predict mutation effects without assuming a fixed outcome. Practice: predict a sequence perturbation.",
+    "idea": "Mutations can affect coding sequences, regulatory regions or chromosome structure. A substitution may be synonymous, missense or nonsense depending on context. Insertions or deletions can shift a coding frame if their length is not a multiple of three. Effects vary with location, environment and gene function.",
+    "formula": "Sequence change → possible molecular effect → possible phenotype",
+    "steps": [
+      "Insert one base early in a coding region.",
+      "Downstream codon grouping changes unless another event restores the frame.",
+      "The new sequence can encode altered amino acids or encounter an early stop.",
+      "Predict an effect probabilistically; some mutations have little detectable impact in a given assay."
+    ],
+    "trap": "Mutations do not arise because an organism needs a specific adaptive change.",
+    "challenge": "Compare a three-base insertion with a one-base insertion in a coding region.",
+    "solution": "A three-base insertion can add an amino acid without shifting the downstream frame; a one-base insertion usually shifts it. Both can still affect function.",
+    "questions": [
+      {
+        "prompt": "Which change most directly creates a frameshift in a coding region?",
+        "options": [
+          "A change only in the amount of surrounding water.",
+          "Insertion of one nucleotide.",
+          "Insertion of exactly three nucleotides without other changes.",
+          "A synonymous single-base substitution."
+        ],
+        "answer": 1,
+        "explain": "Insertion of one nucleotide.",
+        "hint": "Mutations do not arise because an organism needs a specific adaptive change."
+      },
+      {
+        "prompt": "A substitution produces the same amino acid. It is…",
+        "options": [
+          "Synonymous with respect to that codon, though other effects may still be possible.",
+          "Necessarily a whole-chromosome deletion.",
+          "Proof that no molecular process could ever be affected.",
+          "Always a frameshift."
+        ],
+        "answer": 0,
+        "explain": "Synonymous with respect to that codon, though other effects may still be possible.",
+        "hint": "Mutations do not arise because an organism needs a specific adaptive change."
+      }
+    ],
+    "skill": "Predict a sequence perturbation",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-6-8",
+    "unit": "6",
+    "sections": [
+      "6.8"
+    ],
+    "part": "Gene Expression and Regulation",
+    "title": "Interpret biotechnology experiments and controls",
+    "time": "20–30 min",
+    "goal": "Interpret biotechnology experiments and controls. Practice: evaluate experimental controls.",
+    "idea": "PCR amplifies a target DNA region using primers and a heat-stable polymerase. Gel electrophoresis separates DNA fragments largely by size under suitable conditions, with smaller fragments generally moving farther. Genetic engineering can modify sequences, while sequencing reads them. Controls are needed to detect contamination and interpret missing products.",
+    "formula": "Methods answer different questions; controls constrain interpretation",
+    "steps": [
+      "Run PCR with template DNA, a positive control and a no-template control.",
+      "A band in the no-template control suggests contamination or an unintended product.",
+      "A missing sample band could reflect absent target or a technical failure.",
+      "The positive control and product identity checks help distinguish explanations."
+    ],
+    "trap": "A band’s location alone does not establish its complete DNA sequence or biological function.",
+    "challenge": "After five ideal PCR cycles starting from one target duplex, how many target copies are expected? State a limitation.",
+    "solution": "The ideal count is 2⁵=32. Real amplification efficiency, primer specificity and reagent limits can reduce or complicate that ideal model.",
+    "questions": [
+      {
+        "prompt": "Starting with one target duplex, how many copies follow four ideal PCR doublings?",
+        "answer": 16,
+        "hint": "Use 2⁴.",
+        "explain": "Four ideal cycles multiply the target count by 16."
+      },
+      {
+        "prompt": "Which control helps detect contamination in PCR reagents?",
+        "options": [
+          "Only a photograph of the thermocycler.",
+          "A sample using a different gel color but no comparison.",
+          "The absence of all primers from every tube.",
+          "A no-template control processed with the other tubes."
+        ],
+        "answer": 3,
+        "explain": "A no-template control processed with the other tubes.",
+        "hint": "A band’s location alone does not establish its complete DNA sequence or biological function."
+      }
+    ],
+    "skill": "Evaluate experimental controls",
+    "resource": "https://openstax.org/books/biology-2e/pages/15-introduction"
+  },
+  {
+    "id": "bio-7-1",
+    "unit": "7",
+    "sections": [
+      "7.1"
+    ],
+    "part": "Natural Selection",
+    "title": "Explain the conditions for natural selection",
+    "time": "20–30 min",
+    "goal": "Explain the conditions for natural selection. Practice: explain an evolutionary mechanism.",
+    "idea": "Natural selection requires heritable variation associated with differences in survival or reproduction in a particular environment. Populations change across generations as contributions to the next generation differ. Individuals can acclimate, but an individual’s need does not directly generate the specific inherited variation that solves it.",
+    "formula": "Heritable variation + differential reproduction → population change",
+    "steps": [
+      "A population includes two heritable color variants before a habitat change.",
+      "Predators capture one variant more frequently under the new conditions.",
+      "If survivors contribute unequally to offspring, color-associated allele frequencies can change.",
+      "The habitat filtered preexisting variation rather than instructing every organism to mutate toward the favored color."
+    ],
+    "trap": "Individuals do not evolve a population’s allele frequency during their own lifetime.",
+    "challenge": "Why must a favored trait be heritable for selection on that trait to produce a lasting inherited shift?",
+    "solution": "Offspring must tend to inherit the relevant variation. A purely noninherited difference can affect individual survival without being transmitted as that trait.",
+    "questions": [
+      {
+        "prompt": "Which condition is necessary for natural selection on an inherited trait?",
+        "options": [
+          "A conscious decision by every organism.",
+          "Identical genotypes and identical reproductive success.",
+          "A guarantee that every mutation is beneficial.",
+          "Trait-associated differences in reproductive contribution."
+        ],
+        "answer": 3,
+        "explain": "Trait-associated differences in reproductive contribution.",
+        "hint": "Individuals do not evolve a population’s allele frequency during their own lifetime."
+      },
+      {
+        "prompt": "A population becomes more resistant after exposure. Which explanation is consistent with selection?",
+        "options": [
+          "Each individual changes every allele because it needs to.",
+          "All allele frequencies must remain unchanged.",
+          "Heritable resistant variants contribute more offspring under exposure.",
+          "Exposure directs every mutation to the same useful sequence."
+        ],
+        "answer": 2,
+        "explain": "Heritable resistant variants contribute more offspring under exposure.",
+        "hint": "Individuals do not evolve a population’s allele frequency during their own lifetime."
+      }
+    ],
+    "skill": "Explain an evolutionary mechanism",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-2",
+    "unit": "7",
+    "sections": [
+      "7.2"
+    ],
+    "part": "Natural Selection",
+    "title": "Analyze fitness as a relative reproductive outcome",
+    "time": "20–30 min",
+    "goal": "Analyze fitness as a relative reproductive outcome. Practice: interpret selection data.",
+    "idea": "Fitness is evaluated relative to reproductive contribution in a specified environment. Different selection patterns can favor one extreme, both extremes or intermediate phenotypes. A trait beneficial in one environment can be disadvantageous in another; adaptation is not a universal march toward perfection.",
+    "formula": "Compare reproductive contributions under specified conditions",
+    "steps": [
+      "Two genotypes begin at the same abundance.",
+      "Under treatment, one produces on average two viable descendants and the other one.",
+      "Relative contribution favors the first in that setting.",
+      "Change the environment and measure again before claiming it is always the fitter genotype."
+    ],
+    "trap": "Survival matters through its effects on reproduction; long life alone does not guarantee higher evolutionary fitness.",
+    "challenge": "Explain how a trade-off can maintain variation when no genotype is best in every situation.",
+    "solution": "Different conditions or life-history costs can favor different variants, preventing one from having an advantage across all contexts.",
+    "questions": [
+      {
+        "prompt": "Which measurement most directly estimates fitness in a simple model?",
+        "options": [
+          "The number of mutations regardless of effects.",
+          "How complex an organism looks.",
+          "Relative contribution of viable offspring to later generations.",
+          "Body size alone in every species."
+        ],
+        "answer": 2,
+        "explain": "Relative contribution of viable offspring to later generations.",
+        "hint": "Survival matters through its effects on reproduction; long life alone does not guarantee higher evolutionary fitness."
+      },
+      {
+        "prompt": "Selection favoring intermediate values is called…",
+        "options": [
+          "A universal increase in mutation rate.",
+          "Stabilizing selection.",
+          "Directional selection toward one extreme by definition.",
+          "Random genetic drift by definition."
+        ],
+        "answer": 1,
+        "explain": "Stabilizing selection.",
+        "hint": "Survival matters through its effects on reproduction; long life alone does not guarantee higher evolutionary fitness."
+      }
+    ],
+    "skill": "Interpret selection data",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction",
+    "lab": "allele-lab"
+  },
+  {
+    "id": "bio-7-3",
+    "unit": "7",
+    "sections": [
+      "7.3"
+    ],
+    "part": "Natural Selection",
+    "title": "Distinguish human selection from directed mutation",
+    "time": "20–30 min",
+    "goal": "Distinguish human selection from directed mutation. Practice: design an evolutionary comparison.",
+    "idea": "Artificial selection occurs when humans preferentially breed organisms with desired heritable traits. It changes reproductive contributions through a chosen criterion. It can shift trait distributions but can also increase inbreeding or correlated undesirable traits. The breeder’s intention does not make mutations occur exactly as needed.",
+    "formula": "Human choice changes which inherited variants reproduce",
+    "steps": [
+      "A breeder chooses plants with larger seeds from each generation.",
+      "If seed-size variation has a heritable component, the offspring distribution can shift.",
+      "Compare with randomly chosen parents under matched growing conditions.",
+      "A difference supports response to selection, while shared environments and correlated traits still require attention."
+    ],
+    "trap": "Artificial selection changes reproduction; it is not the same process as editing a specific DNA sequence.",
+    "challenge": "Why might selecting a trait fail to change it strongly over generations?",
+    "solution": "Much observed variation might be environmental, or genetic constraints and trade-offs may limit response.",
+    "questions": [
+      {
+        "prompt": "What makes selection artificial?",
+        "options": [
+          "Every offspring is genetically identical.",
+          "Humans choose breeding contributions according to desired traits.",
+          "Mutations become perfectly predictable.",
+          "Inheritance no longer operates."
+        ],
+        "answer": 1,
+        "explain": "Humans choose breeding contributions according to desired traits.",
+        "hint": "Artificial selection changes reproduction; it is not the same process as editing a specific DNA sequence."
+      },
+      {
+        "prompt": "What is a useful control for a breeding-selection experiment?",
+        "options": [
+          "A comparable population with random parent choice.",
+          "A different species in an unrelated habitat only.",
+          "The largest selected offspring alone.",
+          "A photograph without measurements."
+        ],
+        "answer": 0,
+        "explain": "A comparable population with random parent choice.",
+        "hint": "Artificial selection changes reproduction; it is not the same process as editing a specific DNA sequence."
+      }
+    ],
+    "skill": "Design an evolutionary comparison",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-4",
+    "unit": "7",
+    "sections": [
+      "7.4"
+    ],
+    "part": "Natural Selection",
+    "title": "Calculate allele frequencies and identify evolutionary forces",
+    "time": "20–30 min",
+    "goal": "Calculate allele frequencies and identify evolutionary forces. Practice: calculate allele frequency.",
+    "idea": "Population genetics tracks alleles across generations. Selection, mutation, migration and random sampling can alter frequencies. Genetic drift can be especially strong in small populations and is not directed toward adaptive outcomes. Gene flow moves alleles among populations through successful migrants or gametes.",
+    "formula": "p(A) = [2N(AA) + N(Aa)] / (2N)",
+    "steps": [
+      "In 50 diploid individuals, count 20 AA,20 Aa and10 aa.",
+      "There are 100 gene copies at this locus.",
+      "A copies number 2×20+20=60, so p=0.60.",
+      "This calculation does not require assuming Hardy–Weinberg equilibrium."
+    ],
+    "trap": "An allele frequency can be calculated from counts without inferring that genotype frequencies are at equilibrium.",
+    "challenge": "A storm leaves a small random set of survivors. Explain why an allele-frequency shift need not be adaptive.",
+    "solution": "Chance survival can sample alleles unevenly even when the allele had no effect on storm survival. That is drift, with possible bottleneck effects.",
+    "questions": [
+      {
+        "prompt": "Among 100 diploid individuals, 40 are AA,40 Aa,20 aa. What is p(A)?",
+        "answer": 0.6,
+        "hint": "Count A copies and divide by 200.",
+        "explain": "(2×40+40)/(2×100)=120/200=0.6."
+      },
+      {
+        "prompt": "What is gene flow?",
+        "options": [
+          "Only a new mutation in one isolated individual.",
+          "Translation within one cell.",
+          "A guaranteed loss of every rare allele.",
+          "Movement of alleles between populations through successful reproduction."
+        ],
+        "answer": 3,
+        "explain": "Movement of alleles between populations through successful reproduction.",
+        "hint": "An allele frequency can be calculated from counts without inferring that genotype frequencies are at equilibrium."
+      }
+    ],
+    "skill": "Calculate allele frequency",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction",
+    "lab": "allele-lab"
+  },
+  {
+    "id": "bio-7-5",
+    "unit": "7",
+    "sections": [
+      "7.5"
+    ],
+    "part": "Natural Selection",
+    "title": "Use Hardy–Weinberg as a null model",
+    "time": "20–30 min",
+    "goal": "Use Hardy–Weinberg as a null model. Practice: use a population null model.",
+    "idea": "For a diploid two-allele locus, random mating predicts genotype frequencies p²,2pq,q² when its model assumptions apply. Stable allele frequencies additionally require no selection, migration or mutation and a sufficiently large population to neglect drift. Deviation can motivate further investigation without identifying a unique cause.",
+    "formula": "p+q=1; p²+2pq+q²=1",
+    "steps": [
+      "Suppose q=0.2 for allele a in a population meeting the stated model.",
+      "Then p=0.8.",
+      "Expected genotype frequencies are AA=0.64,Aa=0.32,aa=0.04.",
+      "In 200 individuals, expected counts are128,64,8; actual random samples can differ."
+    ],
+    "trap": "Dominant-phenotype frequency is not p. Inferring q from a recessive phenotype requires model assumptions and the correct phenotype mapping.",
+    "challenge": "Under the model, recessive phenotype frequency is0.09 with complete dominance. Find q,p and expected heterozygote frequency.",
+    "solution": "q=√0.09=0.3,p=0.7,so2pq=0.42. These are model-dependent inferences.",
+    "questions": [
+      {
+        "prompt": "For p=0.7 and q=0.3 under Hardy–Weinberg, what is expected heterozygote frequency?",
+        "answer": 0.42,
+        "hint": "Use2pq.",
+        "explain": "2×0.7×0.3=0.42."
+      },
+      {
+        "prompt": "A sample differs from Hardy–Weinberg expectations. What follows?",
+        "options": [
+          "Every gene has mutated.",
+          "The sample automatically establishes a new species.",
+          "Several biological or sampling explanations may need testing.",
+          "Selection is proven as the only possible cause."
+        ],
+        "answer": 2,
+        "explain": "Several biological or sampling explanations may need testing.",
+        "hint": "Dominant-phenotype frequency is not p. Inferring q from a recessive phenotype requires model assumptions and the correct phenotype mapping."
+      }
+    ],
+    "skill": "Use a population null model",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction",
+    "lab": "allele-lab"
+  },
+  {
+    "id": "bio-7-6",
+    "unit": "7",
+    "sections": [
+      "7.6"
+    ],
+    "part": "Natural Selection",
+    "title": "Compare independent lines of evolutionary evidence",
+    "time": "20–30 min",
+    "goal": "Compare independent lines of evolutionary evidence. Practice: evaluate evolutionary evidence.",
+    "idea": "Fossils, molecular sequences, biogeography and homologous structures can support evolutionary relationships. Evidence is strongest when independent observations agree with a testable ancestry model. Similar function alone can reflect convergence, so function and ancestry must be distinguished. Fossil records are informative despite incomplete sampling.",
+    "formula": "Converging evidence strengthens an ancestry inference",
+    "steps": [
+      "Two lineages share a detailed anatomical pattern and several sequence similarities.",
+      "Compare these features with outgroups and alternative relationships.",
+      "Agreement across independent features supports a proposed shared ancestry.",
+      "A similar streamlined shape alone might instead reflect similar environmental selection."
+    ],
+    "trap": "A missing fossil for one interval does not imply that all other evolutionary evidence disappears.",
+    "challenge": "Contrast homologous and analogous traits.",
+    "solution": "Homologous traits derive from a shared ancestral feature; analogous similarities can arise independently through convergence. Shared function alone does not settle the distinction.",
+    "questions": [
+      {
+        "prompt": "What most strengthens a proposed relationship?",
+        "options": [
+          "Only similar size.",
+          "Ignoring contradictory observations.",
+          "Concordant molecular, anatomical and historical evidence.",
+          "Only similar habitat use."
+        ],
+        "answer": 2,
+        "explain": "Concordant molecular, anatomical and historical evidence.",
+        "hint": "A missing fossil for one interval does not imply that all other evolutionary evidence disappears."
+      },
+      {
+        "prompt": "Which similarity can arise by convergent evolution?",
+        "options": [
+          "An individual’s unchanged genotype between measurements.",
+          "A similar functional shape evolving independently in different lineages.",
+          "Only a shared nucleotide inherited from a recent ancestor.",
+          "Every chromosome in two clones."
+        ],
+        "answer": 1,
+        "explain": "A similar functional shape evolving independently in different lineages.",
+        "hint": "A missing fossil for one interval does not imply that all other evolutionary evidence disappears."
+      }
+    ],
+    "skill": "Evaluate evolutionary evidence",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-7",
+    "unit": "7",
+    "sections": [
+      "7.7"
+    ],
+    "part": "Natural Selection",
+    "title": "Explain common ancestry without ranking living species",
+    "time": "20–30 min",
+    "goal": "Explain common ancestry without ranking living species. Practice: explain common ancestry.",
+    "idea": "Shared molecular machinery and inherited features support common ancestry. Modern lineages have all continued evolving since divergence. A living species placed near another on a tree is not automatically its direct ancestor, and common ancestry does not mean organisms are identical in all traits.",
+    "formula": "Shared descent can explain nested similarities",
+    "steps": [
+      "Compare a conserved molecular system across several lineages.",
+      "Shared detailed features can be inherited from an ancestral system.",
+      "New lineage-specific changes accumulate after divergence.",
+      "Use a branching model rather than placing living species on a ladder from primitive to advanced."
+    ],
+    "trap": "A modern organism is not inherently an unevolved version of another modern organism.",
+    "challenge": "Why do closely related species often share more sequence similarity at a homologous locus?",
+    "solution": "They often share a more recent common ancestor and have had less time for independent changes, although rates, selection and gene histories complicate simple comparisons.",
+    "questions": [
+      {
+        "prompt": "What does a branching tree represent?",
+        "options": [
+          "Only the current body sizes of species.",
+          "Hypotheses about shared ancestry and divergence.",
+          "A ranking of moral value.",
+          "A guarantee that one living tip is the parent of another."
+        ],
+        "answer": 1,
+        "explain": "Hypotheses about shared ancestry and divergence.",
+        "hint": "A modern organism is not inherently an unevolved version of another modern organism."
+      },
+      {
+        "prompt": "Why can conserved machinery support common ancestry?",
+        "options": [
+          "Complex shared molecular features can be inherited from a shared ancestral system.",
+          "Every similarity must prove an identical recent ancestor.",
+          "Evolution predicts no similarities.",
+          "Only fossils can provide evidence."
+        ],
+        "answer": 0,
+        "explain": "Complex shared molecular features can be inherited from a shared ancestral system.",
+        "hint": "A modern organism is not inherently an unevolved version of another modern organism."
+      }
+    ],
+    "skill": "Explain common ancestry",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-8",
+    "unit": "7",
+    "sections": [
+      "7.8"
+    ],
+    "part": "Natural Selection",
+    "title": "Recognize evolution as an ongoing population process",
+    "time": "20–30 min",
+    "goal": "Recognize evolution as an ongoing population process. Practice: design a temporal comparison.",
+    "idea": "Evolution can be observed as inherited population changes across generations. Resistance, shifts in life-history traits and responses to altered environments can be studied with temporal data and experiments. Separate population change from an individual’s reversible response. Scientific conclusions should match measured inheritance and sampling evidence.",
+    "formula": "Measure heritable variation across generations",
+    "steps": [
+      "Measure resistance before and after several reproductive cycles under exposure.",
+      "Compare with unexposed control populations.",
+      "Test whether resistance persists in descendants under common conditions.",
+      "A persistent inherited shift supports evolution, whereas a temporary response in exposed individuals alone is insufficient."
+    ],
+    "trap": "Evolution does not stop when a lineage appears well adapted.",
+    "challenge": "How can common-environment testing help distinguish acclimation from inherited change?",
+    "solution": "It reduces immediate environmental differences, allowing persistent descendant differences to be examined; additional genetic or inheritance evidence can refine the conclusion.",
+    "questions": [
+      {
+        "prompt": "Which observation best supports an evolutionary change?",
+        "options": [
+          "A heritable trait-frequency shift across generations.",
+          "A single leaf wilting and recovering within an hour.",
+          "One organism choosing a new location.",
+          "An unreplicated change in a detector setting."
+        ],
+        "answer": 0,
+        "explain": "A heritable trait-frequency shift across generations.",
+        "hint": "Evolution does not stop when a lineage appears well adapted."
+      },
+      {
+        "prompt": "Why retain unexposed control populations?",
+        "options": [
+          "To guarantee no mutations ever occur.",
+          "To force identical allele frequencies in every replicate.",
+          "To eliminate the need for replication.",
+          "To compare changes that occur without the experimental exposure."
+        ],
+        "answer": 3,
+        "explain": "To compare changes that occur without the experimental exposure.",
+        "hint": "Evolution does not stop when a lineage appears well adapted."
+      }
+    ],
+    "skill": "Design a temporal comparison",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-9",
+    "unit": "7",
+    "sections": [
+      "7.9"
+    ],
+    "part": "Natural Selection",
+    "title": "Read a phylogenetic tree by its branching pattern",
+    "time": "20–30 min",
+    "goal": "Read a phylogenetic tree by its branching pattern. Practice: analyze a visual representation.",
+    "idea": "A tree’s topology represents relationships; rotating branches around a node does not change those relationships. A clade includes an ancestor and all its descendants. Time or amount of change is represented by branch length only when a scale or interpretation is explicitly given. Similar tip placement on a page is not a measure of relatedness.",
+    "formula": "Most recent shared ancestor determines sister relationships",
+    "steps": [
+      "A rooted topology places A and B together, with C branching earlier.",
+      "A and B share a more recent common ancestor with each other than with C.",
+      "Rotating the A-B node swaps their drawn positions without changing ancestry.",
+      "Do not infer that A evolved from living B or that an unscaled branch gives an exact date."
+    ],
+    "trap": "Horizontal spacing or tip order alone does not establish relatedness.",
+    "challenge": "A tree shows ((A,B),C). Is A more closely related to C than B is? Explain.",
+    "solution": "No. A and B share the same relevant common ancestor with C in that topology. Their page positions do not create different relationships.",
+    "questions": [
+      {
+        "prompt": "What remains unchanged when a node’s branches are rotated?",
+        "options": [
+          "The identity of the common ancestors is erased.",
+          "Every lineage becomes a direct ancestor of another tip.",
+          "Time runs backward.",
+          "The tree’s ancestry relationships."
+        ],
+        "answer": 3,
+        "explain": "The tree’s ancestry relationships.",
+        "hint": "Horizontal spacing or tip order alone does not establish relatedness."
+      },
+      {
+        "prompt": "What defines a clade?",
+        "options": [
+          "Only the living tip farthest to the right.",
+          "All organisms excluding an arbitrarily chosen descendant.",
+          "An ancestor and all descendants represented from it.",
+          "Any two species with similar color."
+        ],
+        "answer": 2,
+        "explain": "An ancestor and all descendants represented from it.",
+        "hint": "Horizontal spacing or tip order alone does not establish relatedness."
+      }
+    ],
+    "skill": "Analyze a visual representation",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-10",
+    "unit": "7",
+    "sections": [
+      "7.10"
+    ],
+    "part": "Natural Selection",
+    "title": "Explain reproductive isolation and speciation",
+    "time": "20–30 min",
+    "goal": "Explain reproductive isolation and speciation. Practice: explain a speciation model.",
+    "idea": "Reduced gene flow can allow populations to diverge, while reproductive barriers limit successful interbreeding. Barriers can act before fertilization or after hybrid formation. Geographic isolation can promote divergence but does not alone guarantee a new species. Species concepts have different uses and limits, especially for asexual organisms and fossils.",
+    "formula": "Reduced gene flow + divergence can produce reproductive isolation",
+    "steps": [
+      "A geographic barrier separates a breeding population.",
+      "Mutation, drift and selection can change each population independently.",
+      "Later contact may reveal reduced mating or reduced hybrid fertility.",
+      "The barrier’s existence alone did not prove isolation; reproductive or other relevant evidence is needed."
+    ],
+    "trap": "Speciation is not simply one individual moving to a new habitat.",
+    "challenge": "Contrast a mating-time barrier with low hybrid fertility.",
+    "solution": "Different mating times can prevent fertilization, a prezygotic barrier. Low hybrid fertility acts after a hybrid forms, a postzygotic barrier.",
+    "questions": [
+      {
+        "prompt": "Which is a prezygotic barrier?",
+        "options": [
+          "Death of hybrid offspring after birth.",
+          "Reduced fertility of surviving hybrids.",
+          "Different mating seasons that prevent interbreeding.",
+          "Sterile hybrids after fertilization."
+        ],
+        "answer": 2,
+        "explain": "Different mating seasons that prevent interbreeding.",
+        "hint": "Speciation is not simply one individual moving to a new habitat."
+      },
+      {
+        "prompt": "Why does geographic separation not guarantee speciation?",
+        "options": [
+          "Gene flow always increases without contact.",
+          "Reproductive isolation may not develop, and populations can remain compatible.",
+          "Separated populations cannot mutate.",
+          "All individuals must become genetically identical."
+        ],
+        "answer": 1,
+        "explain": "Reproductive isolation may not develop, and populations can remain compatible.",
+        "hint": "Speciation is not simply one individual moving to a new habitat."
+      }
+    ],
+    "skill": "Explain a speciation model",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-7-11",
+    "unit": "7",
+    "sections": [
+      "7.11"
+    ],
+    "part": "Natural Selection",
+    "title": "Distinguish the origin and maintenance of variation",
+    "time": "20–30 min",
+    "goal": "Distinguish the origin and maintenance of variation. Practice: analyze variation.",
+    "idea": "Mutation introduces new sequence variants; recombination reshuffles existing alleles. Selection, drift and gene flow influence variation over time. Environmental dependence, heterozygote advantage or other balancing processes can maintain multiple alleles. Genetic variation is a population property, not proof that every variant is adaptive.",
+    "formula": "New variants arise; population processes alter their frequencies",
+    "steps": [
+      "Two alleles remain in a population where heterozygotes have the highest reproductive contribution under specified conditions.",
+      "Each homozygote is relatively disadvantaged in that model.",
+      "Selection can maintain both alleles rather than removing all but one.",
+      "The predicted outcome depends on fitness relationships and the rest of the population model."
+    ],
+    "trap": "Natural selection can maintain variation; it does not always eliminate every alternative allele.",
+    "challenge": "Why can a harmful allele persist?",
+    "solution": "Its effects may be recessive, context dependent or offset by other fitness effects; mutation, migration and drift can also contribute. A specific case needs evidence.",
+    "questions": [
+      {
+        "prompt": "What directly introduces a new DNA sequence variant?",
+        "options": [
+          "A membrane channel opening.",
+          "Mutation.",
+          "Independent assortment alone without any sequence change.",
+          "A stable genotype being translated twice."
+        ],
+        "answer": 1,
+        "explain": "Mutation.",
+        "hint": "Natural selection can maintain variation; it does not always eliminate every alternative allele."
+      },
+      {
+        "prompt": "Which can maintain alleles through balancing selection?",
+        "options": [
+          "Higher relative fitness of heterozygotes than either homozygote in the stated environment.",
+          "A requirement that all genotypes reproduce identically forever.",
+          "No reproduction in any genotype.",
+          "A guaranteed absence of mutation in every species."
+        ],
+        "answer": 0,
+        "explain": "Higher relative fitness of heterozygotes than either homozygote in the stated environment.",
+        "hint": "Natural selection can maintain variation; it does not always eliminate every alternative allele."
+      }
+    ],
+    "skill": "Analyze variation",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction",
+    "lab": "allele-lab"
+  },
+  {
+    "id": "bio-7-12",
+    "unit": "7",
+    "sections": [
+      "7.12"
+    ],
+    "part": "Natural Selection",
+    "title": "Evaluate testable models for early life",
+    "time": "20–30 min",
+    "goal": "Evaluate testable models for early life. Practice: evaluate limits of evidence.",
+    "idea": "Origins-of-life research investigates plausible steps such as abiotic synthesis, compartment formation and self-replicating chemical systems. Early Earth differed from the modern oxygen-rich atmosphere. Laboratory plausibility does not prove that one exact historical pathway occurred. RNA can combine information storage with catalytic activity, motivating some hypotheses.",
+    "formula": "A successful model demonstrates possibility, not a complete historical reconstruction",
+    "steps": [
+      "A controlled experiment produces organic molecules from simpler inputs under selected conditions.",
+      "Identify what inputs and energy sources were supplied.",
+      "Compare with controls that omit key conditions.",
+      "The result supports chemical plausibility under those conditions, not the spontaneous appearance of a modern cell or proof of the unique historical route."
+    ],
+    "trap": "Modern biological structures cannot be assumed to have appeared fully formed in one step.",
+    "challenge": "Why are compartment-like structures relevant to early-life models?",
+    "solution": "Boundaries can concentrate components and connect a chemical system’s properties to persistence and reproduction-like behavior, without alone demonstrating a living cell.",
+    "questions": [
+      {
+        "prompt": "What does abiotic synthesis in an experiment establish most directly?",
+        "options": [
+          "Certain molecules can form under the tested nonliving conditions.",
+          "The exact historical origin of every organism is proven.",
+          "A modern cell was necessarily created.",
+          "No other pathway could have occurred."
+        ],
+        "answer": 0,
+        "explain": "Certain molecules can form under the tested nonliving conditions.",
+        "hint": "Modern biological structures cannot be assumed to have appeared fully formed in one step."
+      },
+      {
+        "prompt": "Why is RNA relevant to some early-life hypotheses?",
+        "options": [
+          "It contains no chemical bonds.",
+          "It cannot interact with other molecules.",
+          "It is always more stable than DNA under every condition.",
+          "It can carry sequence information and, in some forms, catalyze reactions."
+        ],
+        "answer": 3,
+        "explain": "It can carry sequence information and, in some forms, catalyze reactions.",
+        "hint": "Modern biological structures cannot be assumed to have appeared fully formed in one step."
+      }
+    ],
+    "skill": "Evaluate limits of evidence",
+    "resource": "https://openstax.org/books/biology-2e/pages/19-introduction"
+  },
+  {
+    "id": "bio-8-1",
+    "unit": "8",
+    "sections": [
+      "8.1"
+    ],
+    "part": "Ecology",
+    "title": "Design experiments on responses to the environment",
+    "time": "20–30 min",
+    "goal": "Design experiments on responses to the environment. Practice: design an investigation.",
+    "idea": "Organisms respond to cues through mechanisms shaped by evolution and development. Distinguish a behavioral or physiological response from an inherited population change. To test a cue, control alternatives such as temperature, moisture, chemical concentration and position effects, and use replication and appropriate randomization.",
+    "formula": "A cue-response claim needs a controlled comparison",
+    "steps": [
+      "Place organisms in a chamber with one shaded and one lit side.",
+      "Randomize which side receives shade across trials and monitor temperature.",
+      "Record locations after a predefined interval using independent replicates.",
+      "Greater shaded-side occupancy supports a light-associated response only to the extent that confounding variables are controlled."
+    ],
+    "trap": "Movement toward one side does not identify its cause if several conditions differ together.",
+    "challenge": "How would you test whether moisture rather than light explains a chamber preference?",
+    "solution": "Manipulate moisture independently of light, ideally with a factorial design and replication, while controlling temperature and chamber position.",
+    "questions": [
+      {
+        "prompt": "What is an important control in a two-sided choice chamber?",
+        "options": [
+          "Always put the treatment on the left.",
+          "Count only the first organism.",
+          "Change temperature and light together without measurement.",
+          "Counterbalance side assignments and control other environmental differences."
+        ],
+        "answer": 3,
+        "explain": "Counterbalance side assignments and control other environmental differences.",
+        "hint": "Movement toward one side does not identify its cause if several conditions differ together."
+      },
+      {
+        "prompt": "A reversible response within an individual is automatically…",
+        "options": [
+          "A change in population allele frequency.",
+          "Evidence that inheritance is absent.",
+          "Neither proof of inherited evolutionary change nor proof of a DNA mutation.",
+          "Proof of a new species."
+        ],
+        "answer": 2,
+        "explain": "Neither proof of inherited evolutionary change nor proof of a DNA mutation.",
+        "hint": "Movement toward one side does not identify its cause if several conditions differ together."
+      }
+    ],
+    "skill": "Design an investigation",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction"
+  },
+  {
+    "id": "bio-8-2",
+    "unit": "8",
+    "sections": [
+      "8.2"
+    ],
+    "part": "Ecology",
+    "title": "Track energy flow and matter cycling in ecosystems",
+    "time": "20–30 min",
+    "goal": "Track energy flow and matter cycling in ecosystems. Practice: track energy quantitatively.",
+    "idea": "Energy enters most ecosystems through primary production and leaves transfers partly as heat. Matter is recycled through biological and environmental processes. Trophic transfer efficiencies vary, so a fixed percentage is a model assumption, not a universal constant. Net primary production is energy retained after producer respiration.",
+    "formula": "NPP = GPP − producer respiration",
+    "steps": [
+      "A simplified system has GPP=1200 energy units and producer respiration=500.",
+      "NPP is700 units available for producer growth and related transfers.",
+      "If a model assumes10% transfer to an herbivore level, that transfer is70 units.",
+      "The assumption does not mean all real ecosystems transfer exactly10%, and energy is not recycled like atoms."
+    ],
+    "trap": "Energy flows through ecosystems; matter can cycle. Decomposers do not recycle used energy back into sunlight.",
+    "challenge": "If GPP is900 and producer respiration350, calculate NPP and explain what the subtraction represents.",
+    "solution": "NPP=550 units. Producer respiration uses part of the captured energy, leaving net stored production.",
+    "questions": [
+      {
+        "prompt": "For GPP=1000 and producer respiration=400, what is NPP?",
+        "answer": 600,
+        "hint": "Subtract producer respiration from gross production.",
+        "explain": "1000−400=600 energy units in the stated interval."
+      },
+      {
+        "prompt": "Why is energy usually lower at higher trophic levels?",
+        "options": [
+          "Every ecosystem has exactly the same transfer percentage.",
+          "Transfers involve respiration, heat and material not consumed or assimilated.",
+          "Matter disappears completely at each transfer.",
+          "Consumers create energy from nothing."
+        ],
+        "answer": 1,
+        "explain": "Transfers involve respiration, heat and material not consumed or assimilated.",
+        "hint": "Energy flows through ecosystems; matter can cycle. Decomposers do not recycle used energy back into sunlight."
+      }
+    ],
+    "skill": "Track energy quantitatively",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction"
+  },
+  {
+    "id": "bio-8-3",
+    "unit": "8",
+    "sections": [
+      "8.3"
+    ],
+    "part": "Ecology",
+    "title": "Model population growth with explicit assumptions",
+    "time": "20–30 min",
+    "goal": "Model population growth with explicit assumptions. Practice: interpret a population model.",
+    "idea": "Population change reflects births, deaths, immigration and emigration. Exponential growth assumes a constant per-capita rate in a simplified setting. Logistic growth adds a density-related limitation through carrying capacity K. Real populations can fluctuate, experience delays and face changing environments.",
+    "formula": "Exponential: dN/dt=rN; logistic: dN/dt=rN(1−N/K)",
+    "steps": [
+      "A population has N=100,r=0.2 per time unit and K=500 in a logistic model.",
+      "Its instantaneous predicted change is0.2×100×(1−100/500)=16 individuals per time unit.",
+      "This is a rate at that state, not automatically the exact net change over a whole interval.",
+      "Compare measured time-series data with the model rather than assuming every population follows a smooth curve."
+    ],
+    "trap": "Carrying capacity is not necessarily a fixed property of a species independent of its environment.",
+    "challenge": "For N=200,r=0.1,K=400, calculate the logistic instantaneous growth rate.",
+    "solution": "0.1×200×(1−200/400)=10 individuals per time unit.",
+    "questions": [
+      {
+        "prompt": "For N=100,r=0.2,K=500, what is the logistic instantaneous growth rate?",
+        "answer": 16,
+        "hint": "Use rN(1−N/K).",
+        "explain": "0.2×100×0.8=16 individuals per time unit."
+      },
+      {
+        "prompt": "Which event directly adds individuals to a local population?",
+        "options": [
+          "Immigration.",
+          "Emigration.",
+          "Death without replacement.",
+          "A decrease in resource supply by itself."
+        ],
+        "answer": 0,
+        "explain": "Immigration.",
+        "hint": "Carrying capacity is not necessarily a fixed property of a species independent of its environment."
+      }
+    ],
+    "skill": "Interpret a population model",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction",
+    "lab": "population-lab"
+  },
+  {
+    "id": "bio-8-4",
+    "unit": "8",
+    "sections": [
+      "8.4"
+    ],
+    "part": "Ecology",
+    "title": "Distinguish density dependence from density independence",
+    "time": "20–30 min",
+    "goal": "Distinguish density dependence from density independence. Practice: analyze density data.",
+    "idea": "A density-dependent factor has effects that vary with population density, such as some forms of competition or disease transmission. Density-independent disturbances can act without their per-capita effect being determined by density. Real effects can interact, and a model’s K may shift as conditions change.",
+    "formula": "Ask how per-capita effects change with density",
+    "steps": [
+      "Maintain replicate populations at several starting densities with equal resource supply per container.",
+      "Measure per-capita growth over the same interval.",
+      "A decline in per-capita growth with density is consistent with density limitation.",
+      "Check alternative explanations such as waste accumulation or altered encounter rates rather than naming competition without evidence."
+    ],
+    "trap": "A factor being severe does not make it density dependent; the relationship to density matters.",
+    "challenge": "Why can adding food raise carrying capacity in one system but not another?",
+    "solution": "Food may be limiting in the first system while another factor such as habitat space or water limits the second.",
+    "questions": [
+      {
+        "prompt": "Which observation supports density dependence?",
+        "options": [
+          "Per-capita growth falls as density rises under controlled conditions.",
+          "A storm occurs once in a calendar year.",
+          "A population is large in one photograph.",
+          "Every individual has the same genotype."
+        ],
+        "answer": 0,
+        "explain": "Per-capita growth falls as density rises under controlled conditions.",
+        "hint": "A factor being severe does not make it density dependent; the relationship to density matters."
+      },
+      {
+        "prompt": "What can change K in a logistic interpretation?",
+        "options": [
+          "Only changing the species name.",
+          "Nothing; K is universally immutable.",
+          "A different axis color without a biological change.",
+          "A sustained change in limiting resources or environmental conditions."
+        ],
+        "answer": 3,
+        "explain": "A sustained change in limiting resources or environmental conditions.",
+        "hint": "A factor being severe does not make it density dependent; the relationship to density matters."
+      }
+    ],
+    "skill": "Analyze density data",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction",
+    "lab": "population-lab"
+  },
+  {
+    "id": "bio-8-5",
+    "unit": "8",
+    "sections": [
+      "8.5"
+    ],
+    "part": "Ecology",
+    "title": "Analyze interactions and compare community data",
+    "time": "20–30 min",
+    "goal": "Analyze interactions and compare community data. Practice: analyze evidence and uncertainty.",
+    "idea": "Competition, predation, herbivory, parasitism and mutualism affect interacting populations. Effects depend on context and can be indirect. Community comparisons require suitable sampling and uncertainty estimates. Error-bar interpretation depends on whether bars show variability, standard error or confidence intervals; overlap alone is not a universal significance test.",
+    "formula": "Interaction effects can propagate through a community",
+    "steps": [
+      "Exclude a predator from replicated plots while retaining matched control plots.",
+      "Measure herbivore abundance and plant biomass over time.",
+      "More herbivores and less plant biomass after exclusion are consistent with a trophic cascade.",
+      "Replication, initial comparability and other changes determine how strongly the experiment supports that causal interpretation."
+    ],
+    "trap": "Correlation alone does not prove a direct interaction or exclude indirect causes.",
+    "challenge": "A graph has overlapping standard-deviation bars. Can you automatically conclude no difference in means?",
+    "solution": "No. Standard deviation describes spread, and overlap is not a universal test of mean differences. Identify the bars and use a suitable analysis and design.",
+    "questions": [
+      {
+        "prompt": "Which interaction benefits both partners under the stated conditions?",
+        "options": [
+          "Competition by definition.",
+          "Predation by definition.",
+          "Parasitism by definition.",
+          "Mutualism."
+        ],
+        "answer": 3,
+        "explain": "Mutualism.",
+        "hint": "Correlation alone does not prove a direct interaction or exclude indirect causes."
+      },
+      {
+        "prompt": "Which statement about error bars is most defensible?",
+        "options": [
+          "No overlap proves the treatment mechanism uniquely.",
+          "Error bars make replication unnecessary.",
+          "Interpret them using their definition, sampling and analysis rather than overlap alone.",
+          "Any overlap proves the means identical."
+        ],
+        "answer": 2,
+        "explain": "Interpret them using their definition, sampling and analysis rather than overlap alone.",
+        "hint": "Correlation alone does not prove a direct interaction or exclude indirect causes."
+      }
+    ],
+    "skill": "Analyze evidence and uncertainty",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction",
+    "lab": "chi-lab"
+  },
+  {
+    "id": "bio-8-6",
+    "unit": "8",
+    "sections": [
+      "8.6"
+    ],
+    "part": "Ecology",
+    "title": "Distinguish richness, evenness and ecological effects",
+    "time": "20–30 min",
+    "goal": "Distinguish richness, evenness and ecological effects. Practice: compare community representations.",
+    "idea": "Biodiversity includes multiple levels, such as genetic, species and ecosystem variation. Species richness counts species; evenness describes their relative abundances. Communities with the same richness can differ strongly in composition and function. The effects of losing a species depend on its roles and the broader interaction network.",
+    "formula": "Richness and relative abundance describe different properties",
+    "steps": [
+      "Community A has four species with25 individuals each.",
+      "Community B has four species with97,1,1,1 individuals.",
+      "Both have richness4, but A is more even.",
+      "This comparison alone does not prove identical stability or productivity; those outcomes need separate evidence."
+    ],
+    "trap": "More species does not automatically guarantee every possible measure of ecosystem function is higher.",
+    "challenge": "Why can removal of a keystone species have a large effect despite low abundance?",
+    "solution": "Its interactions can strongly organize the community, so abundance alone does not measure the magnitude of its ecological influence.",
+    "questions": [
+      {
+        "prompt": "A sample contains five distinct species with unequal abundances. What is its observed species richness?",
+        "answer": 5,
+        "hint": "Richness counts distinct species, not total individuals.",
+        "explain": "Five different species means observed richness5."
+      },
+      {
+        "prompt": "Which comparison isolates evenness at equal richness?",
+        "options": [
+          "Only comparing total leaf area.",
+          "Same number of species but different relative abundance distributions.",
+          "Different numbers of species with no abundance data only.",
+          "One sample measured without a count."
+        ],
+        "answer": 1,
+        "explain": "Same number of species but different relative abundance distributions.",
+        "hint": "More species does not automatically guarantee every possible measure of ecosystem function is higher."
+      }
+    ],
+    "skill": "Compare community representations",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction"
+  },
+  {
+    "id": "bio-8-7",
+    "unit": "8",
+    "sections": [
+      "8.7"
+    ],
+    "part": "Ecology",
+    "title": "Evaluate ecosystem disruptions and alternative explanations",
+    "time": "20–30 min",
+    "goal": "Evaluate ecosystem disruptions and alternative explanations. Practice: evaluate a hypothesis.",
+    "idea": "Invasive species, habitat change, nutrient enrichment and climate-related shifts can alter communities. Effects can be indirect and depend on local conditions. A disruption can favor preexisting variants through selection, but does not direct specific adaptive mutations. Evaluate predictions using controlled or carefully designed observational evidence.",
+    "formula": "Identify a perturbation, mechanism, evidence and uncertainty",
+    "steps": [
+      "Extra nutrients enter a lake.",
+      "Increased primary production can supply more organic matter for decomposition.",
+      "Microbial respiration during decomposition can lower dissolved oxygen.",
+      "Oxygen loss is therefore compatible with nutrient-driven eutrophication, but temperature, flow and other factors should also be measured."
+    ],
+    "trap": "More nutrient input does not always mean more oxygen available to every organism over time.",
+    "challenge": "Why can a newly introduced species increase rapidly in one location but not another?",
+    "solution": "Predators, competitors, resources, climate and reproductive opportunities differ. Introduction alone does not guarantee invasiveness.",
+    "questions": [
+      {
+        "prompt": "What can connect nutrient enrichment to oxygen depletion?",
+        "options": [
+          "Only fish create all dissolved oxygen.",
+          "Decomposition-associated respiration consuming dissolved oxygen.",
+          "Nutrients directly remove all oxygen atoms from water molecules.",
+          "Photosynthesis never occurs in lakes."
+        ],
+        "answer": 1,
+        "explain": "Decomposition-associated respiration consuming dissolved oxygen.",
+        "hint": "More nutrient input does not always mean more oxygen available to every organism over time."
+      },
+      {
+        "prompt": "What is a defensible response to a chi-square test that fails to reject a null model?",
+        "options": [
+          "The data do not provide sufficient evidence against that model under the test assumptions.",
+          "The null model is proven permanently true.",
+          "Every alternative mechanism is impossible.",
+          "The sample must exactly match every expected count."
+        ],
+        "answer": 0,
+        "explain": "The data do not provide sufficient evidence against that model under the test assumptions.",
+        "hint": "More nutrient input does not always mean more oxygen available to every organism over time."
+      }
+    ],
+    "skill": "Evaluate a hypothesis",
+    "resource": "https://openstax.org/books/biology-2e/pages/45-introduction",
+    "lab": "chi-lab"
+  }
+]
